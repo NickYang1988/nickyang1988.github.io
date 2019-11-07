@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>svn on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/svn/</link>
+    <description>Recent content in svn on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 31 Mar 2012 13:35:51 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/svn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源代码]如何删除svn版本控制文件夹</title>
+      <link>https://cppfans.org/1212.html</link>
+      <pubDate>Sat, 31 Mar 2012 13:35:51 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1212.html</guid>
+      <description>许多时候，我们拿到的代码都是带有版本控制文件的，比如说.svn文件夹，这些文件非常大， 占用了很多硬盘，但是自己删除也很慢，工具下来也不好用，</description>
+    </item>
+    
+  </channel>
+</rss>

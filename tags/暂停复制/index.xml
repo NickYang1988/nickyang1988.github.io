@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>暂停复制 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%9A%82%E5%81%9C%E5%A4%8D%E5%88%B6/</link>
+    <description>Recent content in 暂停复制 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 24 Aug 2011 10:32:26 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%9A%82%E5%81%9C%E5%A4%8D%E5%88%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[操作系统][图]Windows 8 复制粘贴功能截图出现 可暂停复制</title>
+      <link>https://cppfans.org/733.html</link>
+      <pubDate>Wed, 24 Aug 2011 10:32:26 +0000</pubDate>
+      
+      <guid>https://cppfans.org/733.html</guid>
+      <description>Windows 8团队今天撰文描述了自Windows 95以来有关于复制、粘贴任务的最大改进，并公布了一系列图像。从图中我们可以看到Windows的复制和粘</description>
+    </item>
+    
+  </channel>
+</rss>

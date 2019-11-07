@@ -1,0 +1,627 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[网络开发]IOCP完整例子 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[网络开发]IOCP完整例子">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[网络开发]IOCP完整例子 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1267.html" itemprop="url">
+        [网络开发]IOCP完整例子
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-04-09">
+    2012-04-09
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1154 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <blockquote>
+<p>本文是我在学习IOCP的时候，第一次写一个完整的例子出来，当然了，参考了CSDN上一些朋友的博客，大部分都是按照他们的思路写的，毕竟我是初学者，参考现成的学起来比较快。当然了，真正用到项目中的IOCP肯定不止这么简单的，还有内存池，环形缓冲区，socket连接池等高端内容，后面我会参考一些例子，写出一个完整的给大家看。</p>
+</blockquote>
+
+<pre class="lang:c++ decode:true">/************************************************************************
+
+        FileName:iocp.h
+        Author  :eliteYang
+        http://www.cppfans.org
+
+************************************************************************/
+#ifndef __IOCP_H__
+#define __IOCP_H__
+
+#include
+#include 
+
+#define DefaultPort 20000
+#define DataBuffSize 8 * 1024
+
+typedef struct
+{
+    OVERLAPPED overlapped;
+    WSABUF databuff;
+    CHAR buffer[ DataBuffSize ];
+    DWORD bytesSend;
+    DWORD bytesRecv;
+}PER_IO_OPERATEION_DATA, *LPPER_IO_OPERATION_DATA;
+
+typedef struct
+{
+    SOCKET socket;
+}PER_HANDLE_DATA, *LPPER_HANDLE_DATA;
+
+#endif</pre>
+
+<p>前面讲过IOCP里面一个很重要的东西就是IO重叠了，所以结构体里有一个OVERLAPPED结构。</p>
+
+<pre class="lang:c++ decode:true">/************************************************************************
+
+        FileName:iocp.cpp
+        Author  :eliteYang
+        http://www.cppfans.org
+
+************************************************************************/
+
+#include "iocp.h"
+#include 
+
+using namespace std;
+
+#pragma comment( lib, "Ws2_32.lib" )
+
+DWORD WINAPI ServerWorkThread( LPVOID CompletionPortID );
+
+void main()
+{
+
+    SOCKET acceptSocket;
+    HANDLE completionPort;
+    LPPER_HANDLE_DATA pHandleData;
+    LPPER_IO_OPERATION_DATA pIoData;
+    DWORD recvBytes;
+    DWORD flags;
+
+    WSADATA wsaData;
+    DWORD ret;
+    if ( ret = WSAStartup( 0x0202, &wsaData ) != 0 )
+    {
+        std::cout &lt;&lt; "WSAStartup failed. Error:" &lt;&lt; ret &lt;&lt; std::endl;
+        return;
+    }
+
+    completionPort = CreateIoCompletionPort( INVALID_HANDLE_VALUE, NULL, 0, 0 );
+    if ( completionPort == NULL )
+    {
+        std::cout &lt;&lt; "CreateIoCompletionPort failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+        return;
+    }
+
+    SYSTEM_INFO mySysInfo;
+    GetSystemInfo( &mySysInfo );
+
+    // 创建 2 * CPU核数 + 1 个线程
+    DWORD threadID;
+    for ( DWORD i = 0; i &lt; ( mySysInfo.dwNumberOfProcessors * 2 + 1 ); ++i )
+    {
+        HANDLE threadHandle;
+        threadHandle = CreateThread( NULL, 0, ServerWorkThread, completionPort, 0, &threadID );
+        if ( threadHandle == NULL )
+        {
+            std::cout &lt;&lt; "CreateThread failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return;
+        }
+
+        CloseHandle( threadHandle );
+    }
+
+    // 启动一个监听socket
+    SOCKET listenSocket = WSASocket( AF_INET, SOCK_STREAM, 0, NULL, 0, WSA_FLAG_OVERLAPPED );
+    if ( listenSocket == INVALID_SOCKET )
+    {
+        std::cout &lt;&lt; " WSASocket( listenSocket ) failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+        return;
+    }
+
+    SOCKADDR_IN internetAddr;
+    internetAddr.sin_family = AF_INET;
+    internetAddr.sin_addr.s_addr = htonl( INADDR_ANY );
+    internetAddr.sin_port = htons( DefaultPort );
+
+    // 绑定监听端口
+    if ( bind( listenSocket, (PSOCKADDR)&internetAddr, sizeof( internetAddr ) ) == SOCKET_ERROR )
+    {
+        std::cout &lt;&lt; "Bind failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+        return;
+    }
+
+    if ( listen( listenSocket, 5 ) ==  SOCKET_ERROR )
+    {
+        std::cout &lt;&lt; "listen failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+        return;
+    }
+
+    // 开始死循环，处理数据
+    while ( 1 )
+    {
+        acceptSocket = WSAAccept( listenSocket, NULL, NULL, NULL, 0 );
+        if ( acceptSocket == SOCKET_ERROR )
+        {
+            std::cout &lt;&lt; "WSAAccept failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return;
+        }
+
+        pHandleData = (LPPER_HANDLE_DATA)GlobalAlloc( GPTR, sizeof( PER_HANDLE_DATA ) );
+        if ( pHandleData = NULL )
+        {
+            std::cout &lt;&lt; "GlobalAlloc( HandleData ) failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return;
+        }
+
+        pHandleData-&gt;socket = acceptSocket;
+        if ( CreateIoCompletionPort( (HANDLE)acceptSocket, completionPort, (ULONG_PTR)pHandleData, 0 ) == NULL )
+        {
+            std::cout &lt;&lt; "CreateIoCompletionPort failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return;
+        }
+
+        pIoData = ( LPPER_IO_OPERATION_DATA )GlobalAlloc( GPTR, sizeof( PER_IO_OPERATEION_DATA ) );
+        if ( pIoData == NULL )
+        {
+            std::cout &lt;&lt; "GlobalAlloc( IoData ) failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return;
+        }
+
+        ZeroMemory( &( pIoData-&gt;overlapped ), sizeof( pIoData-&gt;overlapped ) );
+        pIoData-&gt;bytesSend = 0;
+        pIoData-&gt;bytesRecv = 0;
+        pIoData-&gt;databuff.len = DataBuffSize;
+        pIoData-&gt;databuff.buf = pIoData-&gt;buffer;
+
+        flags = 0;
+        if ( WSARecv( acceptSocket, &(pIoData-&gt;databuff), 1, &recvBytes, &flags, &(pIoData-&gt;overlapped), NULL ) == SOCKET_ERROR )
+        {
+            if ( WSAGetLastError() != ERROR_IO_PENDING )
+            {
+                std::cout &lt;&lt; "WSARecv() failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+                return;
+            }
+            else
+            {
+                std::cout &lt;&lt; "WSARecv() io pending" &lt;&lt; std::endl;
+                return;
+            }
+        }
+    }
+}
+
+DWORD WINAPI ServerWorkThread( LPVOID CompletionPortID )
+{
+    HANDLE complationPort = (HANDLE)CompletionPortID;
+    DWORD bytesTransferred;
+    LPPER_HANDLE_DATA pHandleData = NULL;
+    LPPER_IO_OPERATION_DATA pIoData = NULL;
+    DWORD sendBytes = 0;
+    DWORD recvBytes = 0;
+    DWORD flags;
+
+    while ( 1 )
+    {
+        if ( GetQueuedCompletionStatus( complationPort, &bytesTransferred, (PULONG_PTR)&pHandleData, (LPOVERLAPPED *)&pIoData, INFINITE ) == 0 )
+        {
+            std::cout &lt;&lt; "GetQueuedCompletionStatus failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+            return 0;
+        }
+
+        // 检查数据是否已经传输完了
+        if ( bytesTransferred == 0 )
+        {
+            std::cout &lt;&lt; " Start closing socket..." &lt;&lt; std::endl;
+            if ( CloseHandle( (HANDLE)pHandleData-&gt;socket ) == SOCKET_ERROR )
+            {
+                std::cout &lt;&lt; "Close socket failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+                return 0;
+            }
+
+            GlobalFree( pHandleData );
+            GlobalFree( pIoData );
+            continue;
+        }
+
+        // 检查管道里是否有数据
+        if ( pIoData-&gt;bytesRecv == 0 )
+        {
+            pIoData-&gt;bytesRecv = bytesTransferred;
+            pIoData-&gt;bytesSend = 0;
+        }
+        else
+        {
+            pIoData-&gt;bytesSend += bytesTransferred;
+        }
+
+        // 数据没有发完，继续发送
+        if ( pIoData-&gt;bytesRecv &gt; pIoData-&gt;bytesSend )
+        {
+            ZeroMemory( &(pIoData-&gt;overlapped), sizeof( OVERLAPPED ) );
+            pIoData-&gt;databuff.buf = pIoData-&gt;buffer + pIoData-&gt;bytesSend;
+            pIoData-&gt;databuff.len = pIoData-&gt;bytesRecv - pIoData-&gt;bytesSend;
+
+            // 发送数据出去
+            if ( WSASend( pHandleData-&gt;socket, &(pIoData-&gt;databuff), 1, &sendBytes, 0, &(pIoData-&gt;overlapped), NULL ) == SOCKET_ERROR )
+            {
+                if ( WSAGetLastError() != ERROR_IO_PENDING )
+                {
+                    std::cout &lt;&lt; "WSASend() failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+                    return 0;
+                }
+                else
+                {
+                    std::cout &lt;&lt; "WSASend() failed. io pending. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+                    return 0;
+                }
+            }
+
+            std::cout &lt;&lt; "Send " &lt;&lt; pIoData-&gt;buffer &lt;&lt; std::endl;
+        }
+        else
+        {
+            pIoData-&gt;bytesRecv = 0;
+            flags = 0;
+
+            ZeroMemory( &(pIoData-&gt;overlapped), sizeof( OVERLAPPED ) );
+            pIoData-&gt;databuff.len = DataBuffSize;
+            pIoData-&gt;databuff.buf = pIoData-&gt;buffer;
+
+            if ( WSARecv( pHandleData-&gt;socket, &(pIoData-&gt;databuff), 1, &recvBytes, &flags, &(pIoData-&gt;overlapped), NULL ) == SOCKET_ERROR )
+            {
+                if ( WSAGetLastError() != ERROR_IO_PENDING )
+                {
+                    std::cout &lt;&lt; "WSARecv() failed. Error:" &lt;&lt; GetLastError() &lt;&lt; std::endl;
+                    return 0;
+                }
+                else
+                {
+                    std::cout &lt;&lt; "WSARecv() io pending" &lt;&lt; std::endl;
+                    return 0;
+                }
+            }
+        }
+    }
+}</pre>
+
+<p>整个过程还是类似于最基础的socket连接方式，主要部分就是使用IOCP的两个函数，创建IOCP和检测当前的状态。</p>
+
+<p>大家先凑活看吧，后面本博客会有更精彩的IOCP内容呈现给大家，我也是逐步在学习，大家稍安勿躁。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/iocp" rel="tag" title="IOCP">#IOCP#</a>
+    
+    <a href="https://cppfans.org/tags/socket" rel="tag" title="Socket">#Socket#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%bd%91%e7%bb%9cc&#43;&#43;" rel="tag" title="网络，C&#43;&#43;">#网络，C&#43;&#43;#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1294.html" rel="next" title="[源码分享]Aion模拟器">
+        <i class="fa fa-chevron-left"></i> [源码分享]Aion模拟器
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1239.html" rel="prev" title="[网络开发]Raknet文档翻译(1)——Startup">
+        [网络开发]Raknet文档翻译(1)——Startup <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

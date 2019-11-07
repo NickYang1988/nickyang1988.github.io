@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>115网盘 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/115%E7%BD%91%E7%9B%98/</link>
+    <description>Recent content in 115网盘 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 20 Aug 2012 16:23:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/115%E7%BD%91%E7%9B%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>更换博客资源通知！</title>
+      <link>https://cppfans.org/1347.html</link>
+      <pubDate>Mon, 20 Aug 2012 16:23:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1347.html</guid>
+      <description>各位朋友，大家深夜好，最近由于115网盘分享功能关闭，算不上关闭，只是好友才能分享，并且分享的时候还得选择，近两天我已经碰到近30位朋友留言</description>
+    </item>
+    
+  </channel>
+</rss>

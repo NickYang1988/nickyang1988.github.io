@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>解密 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%A7%A3%E5%AF%86/</link>
+    <description>Recent content in 解密 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 07 Nov 2011 15:11:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%A7%A3%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[加密解密]使用CryptoAPI进行文件加密解密——源码</title>
+      <link>https://cppfans.org/985.html</link>
+      <pubDate>Mon, 07 Nov 2011 15:11:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/985.html</guid>
+      <description>前一篇简单介绍了下CryptoAPI的东西，这篇就将那点代码放出来给大家看看，以作交流参考目的。 [cpp] /************************ FileName:CryptoDefine.h Author :eliteYang Mail :elite_yang@163.com Desc :加密需要的常量定义 ************************/ #ifndef __CRYPTO_DEFINE_H_ #define</description>
+    </item>
+    
+  </channel>
+</rss>

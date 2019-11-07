@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>erlang on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/erlang/</link>
+    <description>Recent content in erlang on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 17 May 2012 13:41:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/erlang/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源码分享]Erlang TCP 服务器代码</title>
+      <link>https://cppfans.org/1321.html</link>
+      <pubDate>Thu, 17 May 2012 13:41:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1321.html</guid>
+      <description>Erlang是一种通用的并行程序设计语言，它由瑞典电信设备制造商爱立信所辖的计算机科学研究室开发，目的是创造一种可以应付大规模开发活动的程序</description>
+    </item>
+    
+  </channel>
+</rss>

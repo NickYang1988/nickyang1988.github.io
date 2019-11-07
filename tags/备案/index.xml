@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>备案 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%A4%87%E6%A1%88/</link>
+    <description>Recent content in 备案 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 21 Nov 2011 15:21:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%A4%87%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于11.21博客访问异常的说明</title>
+      <link>https://cppfans.org/1011.html</link>
+      <pubDate>Mon, 21 Nov 2011 15:21:19 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1011.html</guid>
+      <description>今天打开博客发现速度很慢，而且有几率打不开，ping了一下发现丢包很严重，与IDC说了下，原来是37段内的主机均出现大量丢包的问题，估计是出</description>
+    </item>
+    
+  </channel>
+</rss>

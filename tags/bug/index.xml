@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bug on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/bug/</link>
+    <description>Recent content in bug on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 21 Oct 2012 13:12:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/bug/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress多说评论插件严重问题</title>
+      <link>https://cppfans.org/1386.html</link>
+      <pubDate>Sun, 21 Oct 2012 13:12:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1386.html</guid>
+      <description>多说是一款社会化评论插件，自从安装了之后，评论一直都很正常，而且评论回复也方便多了。最近多说插件突然出现评论回复后一直提示未查看，最新评论显</description>
+    </item>
+    
+  </channel>
+</rss>

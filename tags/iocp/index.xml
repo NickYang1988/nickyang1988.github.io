@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>IOCP on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/iocp/</link>
+    <description>Recent content in IOCP on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 09 Apr 2012 13:49:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/iocp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]IOCP完整例子</title>
+      <link>https://cppfans.org/1267.html</link>
+      <pubDate>Mon, 09 Apr 2012 13:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1267.html</guid>
+      <description>本文是我在学习IOCP的时候，第一次写一个完整的例子出来，当然了，参考了CSDN上一些朋友的博客，大部分都是按照他们的思路写的，毕竟我是初学</description>
+    </item>
+    
+    <item>
+      <title>IOCP浅析[二]——IOCP出现的意义和函数接口</title>
+      <link>https://cppfans.org/1089.html</link>
+      <pubDate>Sun, 19 Feb 2012 14:14:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1089.html</guid>
+      <description>上一篇《IOCP浅析》中翻翻的谈了一下IOCP的简单含义，这篇稍微深入讨论下IOCP到底有什么好的，让大家将他推向神坛，同时简单的讨论下基本</description>
+    </item>
+    
+    <item>
+      <title>IOCP浅析</title>
+      <link>https://cppfans.org/1054.html</link>
+      <pubDate>Mon, 16 Jan 2012 14:44:14 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1054.html</guid>
+      <description>这一年半来一直在做游戏项目逻辑层，学会了不少东西，觉得自己应该看看服务器底层的东西了，主要的东西就是网络模块，网络模块是沿用以前项目的，在 我</description>
+    </item>
+    
+  </channel>
+</rss>

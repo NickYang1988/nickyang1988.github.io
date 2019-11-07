@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>错误修改 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%94%99%E8%AF%AF%E4%BF%AE%E6%94%B9/</link>
+    <description>Recent content in 错误修改 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 26 Oct 2012 02:00:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%94%99%E8%AF%AF%E4%BF%AE%E6%94%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>修改Weisay sample主题中的阅读次数错误</title>
+      <link>https://cppfans.org/1390.html</link>
+      <pubDate>Fri, 26 Oct 2012 02:00:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1390.html</guid>
+      <description>weisay sample这个主题自从我换上之后就再也没换过主题了，该主题功能挺强大的，而且看起来很素雅，一直很喜欢。自己也经常修改修改这个主题的一些小</description>
+    </item>
+    
+  </channel>
+</rss>

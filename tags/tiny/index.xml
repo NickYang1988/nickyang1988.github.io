@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tiny on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/tiny/</link>
+    <description>Recent content in Tiny on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 11 Jun 2012 13:48:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/tiny/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[WordPress]主题：企业设计风(Tiny) 和 科技资讯风(Wpboxedtech)</title>
+      <link>https://cppfans.org/1336.html</link>
+      <pubDate>Mon, 11 Jun 2012 13:48:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1336.html</guid>
+      <description>本次为大家带来的两款主题是各有特色，一款是国内某位前端设计者开发的主题，另一款是国外主题，但是国内很多人在用。 1.Tiny主题 如其名，非常的</description>
+    </item>
+    
+  </channel>
+</rss>

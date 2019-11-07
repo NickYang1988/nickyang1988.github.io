@@ -1,0 +1,584 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>iOS8.0更新内容 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="iOS8.0更新内容">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="iOS8.0更新内容 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1723.html" itemprop="url">
+        iOS8.0更新内容
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2014-09-18">
+    2014-09-18
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2490 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>iOS 8</p>
+
+<p>本更新推出了数百个新功能，其中包括：</p>
+
+<p>• “信息”功能改进</p>
+
+<p>◦ 一按一扫即可发送语音、视频和照片</p>
+
+<p>◦ 提供群发信息选项来命名对话、添加联系人、移除联系人或离开对话</p>
+
+<p>◦ 新增详细信息视图，提供“勿扰模式”、位置共享和附件视图等</p>
+
+<p>• “照片”功能改进</p>
+
+<p>◦ 在智能编辑工具中轻扫来调整光效和颜色</p>
+
+<p>◦ 微调控件可调整曝光、亮度、对比度、高光和阴影等</p>
+
+<p>◦ 可按日期、位置或相簿名称搜索，也可使用智能建议</p>
+
+<p>◦ 提供慢动作视频、连拍快照、全景照片和延时摄影的智能相簿</p>
+
+<p>◦ “照片”直接支持第三方滤镜和编辑工具</p>
+
+<p>◦ 您在 iPhoto 中的照片和元数据将迁移到“照片”。相册、日记和幻灯片会转换成仅包含照片的相簿。运行 iOS 8 或更高版本的设备不支持 iOS 版 iPhoto</p>
+
+<p>• “相机”功能改进</p>
+
+<p>◦ 延时摄影模式</p>
+
+<p>◦ 拍摄计时器</p>
+
+<p>◦ 拍摄前轻轻一推即可调整曝光，将照片调亮或调暗</p>
+
+<p>◦ iPhone 5s 的前置相机支持连拍模式</p>
+
+<p>◦ iPad Air 和 iPad mini（配备 Retina 显示屏）支持全景模式</p>
+
+<p>• QuickType 键盘</p>
+
+<p>◦ 按照您的写作风格，并根据不同的收件人和应用程序来预测输入文字</p>
+
+<p>◦ 以下语言支持输入预测功能：英文（澳大利亚、加拿大、英国、美国）、法文（加拿大、法国、瑞士）、德文（德国、瑞士）、意大利文、葡萄牙文（巴西）、西班牙文和泰文</p>
+
+<p>◦ 支持第三方键盘</p>
+
+<p>• 健康</p>
+
+<p>◦ 新增“健康”应用程序，健康和健身数据的图表汇总方便易读</p>
+
+<p>◦ 可与其他应用程序共享数据，让您能够更全面地管理您的健康和健身状况</p>
+
+<p>◦ 可将过敏反应、医疗状况等信息加入“医疗急救卡”，并可设置从锁定屏幕调用急救卡信息</p>
+
+<p>◦ 适用于 iPhone 和 iPod touch</p>
+
+<p>• 家人共享</p>
+
+<p>◦ 最多可与六位家人共享 iTunes、iBooks 和 App Store 的购买项目</p>
+
+<p>◦ 使用同一张信用卡支付家庭购买项目，并通过“购买前询问”功能批准子女购物</p>
+
+<p>◦ 轻松共享家庭照片、家庭日历、位置信息等等</p>
+
+<p>• iCloud Drive</p>
+
+<p>◦ 将您的所有文稿储存到 iCloud，并从 iPhone、iPad、iPod touch、Mac 或 PC 取用</p>
+
+<p>◦ 在多个相互兼容的应用程序之间共享同一文件</p>
+
+<p>◦ 在一个设备上编辑的内容会自动更新到所有设备</p>
+
+<p>• “连续互通”功能让您的 iPhone、iPad 和 Mac 无缝合作</p>
+
+<p>◦ Handoff 让您可以在一个设备上开始一项工作，并在另一台设备上即时继续</p>
+
+<p>◦ 在 iPad 或 Mac 上接打电话并接发 SMS 短信或彩信</p>
+
+<p>◦ Instant Hotspot 热点功能可让您的其他设备自动使用您的蜂窝移动网络上网</p>
+
+<p>◦ AirDrop 兼容 OS X Yosemite</p>
+
+<p>◦ 适用于 iPhone 5 或更高版本，iPad（第 4 代）、iPad Air、iPad mini 和 iPod touch（第 5 代）</p>
+
+<p>• Spotlight 功能改进</p>
+
+<p>◦ 可显示以下建议：维基百科词条、附近地点、影片（仅限美国）、热门网站、App Store、iTunes Store 和 iBooks Store</p>
+
+<p>◦ Safari 支持“最常点选”和搜索建议的同时也支持 Spotlight 建议</p>
+
+<p>◦ 支持美国、英国、奥地利、澳大利亚、比利时、加拿大、法国、德国、意大利、日本、荷兰、西班牙和瑞士等国的当地语言</p>
+
+<p>• “邮件”功能改进</p>
+
+<p>◦ 编写邮件时只需向下一扫即可从草稿跳到收件箱</p>
+
+<p>◦ 日历事件和联系人的智能建议</p>
+
+<p>◦ VIP 主题邮件串</p>
+
+<p>• Siri 功能改进</p>
+
+<p>◦ 改善了响应速度、可靠度和准确性</p>
+
+<p>◦ “嘿，Siri”选项可以在您的设备接上电源时用语音启动 Siri</p>
+
+<p>◦ 流化语音识别</p>
+
+<p>◦ 配合 Shazam 来回答“正在播放什么歌曲？”等问题</p>
+
+<p>◦ 从 iTunes Store 购物</p>
+
+<p>• Safari 功能改进</p>
+
+<p>◦ 支持 DuckDuckGo 搜索引擎</p>
+
+<p>◦ 每个标签页都可无痕浏览</p>
+
+<p>◦ 在“共享的链接”中订阅 RSS 提要</p>
+
+<p>◦ 使用“相机”来扫描和输入信用卡信息</p>
+
+<p>• “地图”功能改进</p>
+
+<p>◦ Flyover 城市导览</p>
+
+<p>◦ 在“电话”和“通讯录”中显示“地图”位置卡片</p>
+
+<p>◦ “日历”事件中内嵌地图视图及行程时长通知</p>
+
+<p>• App Store 功能改进</p>
+
+<p>◦ 全新“探索”标签页让分类浏览更简便</p>
+
+<p>◦ “搜索”标签页中会显示最热门的搜索</p>
+
+<p>◦ 滚动浏览搜索结果</p>
+
+<p>◦ 应用程序视频预览</p>
+
+<p>◦ “编辑选荐”标记</p>
+
+<p>• 在多任务视图快速访问重要联系人</p>
+
+<p>• “信息”、“邮件”、“日历”、“提醒事项”和已启用的第三方应用程序的交互式通知</p>
+
+<p>• 新增“提示”应用程序帮助您充分利用 iOS 设备的更多功能</p>
+
+<p>• iOS 内建 iBooks 应用程序，现加入自动夜间模式及系列丛书的全新组织方式</p>
+
+<p>• iOS 内建“播客”应用程序</p>
+
+<p>• 显示应用程序的耗电量</p>
+
+<p>• iCloud 钥匙串可以使用已存储的网站密码来轻松登录相关联的应用程序</p>
+
+<p>• FaceTime 音频来电等待</p>
+
+<p>• 在“备忘录”中编辑多信息文本</p>
+
+<p>• 点对点 AirPlay 搜索及回放</p>
+
+<p>• 企业功能</p>
+
+<p>◦ 除“邮件”和第三方应用程序外，数据保护功能已扩大至“日历”、“通讯录”、“信息”、“提醒事项”和“备忘录”</p>
+
+<p>◦ 对每封邮件进行 S/MIME 邮件控制</p>
+
+<p>◦ 改进了用户界面，让用户更容易理解设备的远程管理</p>
+
+<p>◦ Exchange 上可设置自动回复</p>
+
+<p>◦ 在“日历”邀请中查看空闲/忙碌状态</p>
+
+<p>◦ MDM 管理的图书可以自动推送给用户</p>
+
+<p>• 辅助功能</p>
+
+<p>◦ “缩放”功能重新设计后采用单手操控，并提供包括画中画在内的多种缩放模式</p>
+
+<p>◦ “引导式访问”内建计时器并支持 Touch ID</p>
+
+<p>◦ “朗读屏幕”可通过手势或 Siri 命令来读出屏幕上的内容</p>
+
+<p>◦ VoiceOver 改进后包括 Alex 语音选项并支持盲文输入</p>
+
+<p>◦ 支持多设备使用 MFi 助听器，可在已配对的 iOS 之间无缝切换</p>
+
+<p>• 中国功能</p>
+
+<p>◦ 矢量地图</p>
+
+<p>◦ 逐向道路导航</p>
+
+<p>◦ 支持农历</p>
+
+<p>◦ 改进了输入预测功能</p>
+
+<p>◦ 改进了天气数据</p>
+
+<p>• 扩大语言支持</p>
+
+<p>◦ “听写”增加支持 22 种语言：克罗地亚文、加泰罗尼亚文、捷克文、丹麦文、荷兰文、芬兰文、希腊文、匈牙利文、印度尼西亚文、马来西亚文、挪威文、波兰文、葡萄牙文（巴西）、葡萄牙文（葡萄牙）、罗马尼亚文、俄文、斯洛伐克文、瑞典文、泰文、土耳其文、乌克兰文、越南文</p>
+
+<p>◦ 新键盘包括：英文（印度）、孟加拉文、菲律宾文、马拉地文、斯洛文尼亚文、乌尔都文</p>
+
+<p>◦ 印地文本地化</p>
+
+<p>◦ 以下语言新增选定字词的定义功能：俄文、葡萄牙文（巴西）、泰文、土耳其文</p>
+
+<p>◦ 西班牙文-英文双语字典</p>
+
+<p>◦ 土耳其文新增拼写检查功能</p>
+
+<p>◦ 文本至语音和 VoiceOver 功能支持希伯来文</p>
+
+<p>• 面向开发人员的新功能</p>
+
+<p>◦ 扩展性更佳：应用程序拥有全新共享选项并能够创建 widget，“照片”新增照片滤镜与编辑工具，支持第三方键盘</p>
+
+<p>◦ Metal：全新图形处理技术使游戏开发者能够推出移动设备版 3D 主机游戏</p>
+
+<p>◦ SpriteKit 和 SceneKit：专为增强版 2D 和 3D 游戏推出</p>
+
+<p>◦ HealthKit：使健康与健身应用程序得以共享各自的数据</p>
+
+<p>◦ HomeKit：全新功能，使用 Siri 来控制支持该功能的家居设备</p>
+
+<p>◦ Touch ID 支持：使用指纹轻松登录第三方应用程序</p>
+
+<p>◦ CloudKit：提供完善且有弹性的后端解决方案，帮助开发者减轻编写服务器代码和维护服务器的需求</p>
+
+<p>• 修复了错误</p>
+
+<p>部分功能可能仅限部分国家或地区使用。</p>
+
+<p>若要进一步了解本更新的安全性内容，请访问此网站：</p>
+
+<p><a href="http://support.apple.com/kb/HT1222?viewlocale=zh_CN">http://support.apple.com/kb/HT1222?viewlocale=zh_CN</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/ios" rel="tag" title="iOS">#iOS#</a>
+    
+    <a href="https://cppfans.org/tags/iphone" rel="tag" title="iPhone">#iPhone#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%9b%b4%e6%96%b0" rel="tag" title="更新">#更新#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1719.html" rel="next" title="linux下升级gcc的方法 - 亲测可用">
+        <i class="fa fa-chevron-left"></i> linux下升级gcc的方法 - 亲测可用
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1713.html" rel="prev" title="使用boost进行CRC64计算">
+        使用boost进行CRC64计算 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

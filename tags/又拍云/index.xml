@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>又拍云 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/</link>
+    <description>Recent content in 又拍云 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 30 Jan 2013 15:00:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%8F%88%E6%8B%8D%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>大家来参考，是否本博客需要增加又拍云存储呢？</title>
+      <link>https://cppfans.org/1450.html</link>
+      <pubDate>Wed, 30 Jan 2013 15:00:59 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1450.html</guid>
+      <description>看到很多人都用了又拍云存储，主要是用来做图片和文件的CDN加速，我抱着试试看的态度去注册了一个账号，第二天就收到申请体验通过的邮件了，并且有</description>
+    </item>
+    
+  </channel>
+</rss>

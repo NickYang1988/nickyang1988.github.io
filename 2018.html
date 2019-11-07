@@ -1,0 +1,429 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>记录《QMWS》服务器性能优化过程 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="记录《QMWS》服务器性能优化过程">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="记录《QMWS》服务器性能优化过程 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/2018.html" itemprop="url">
+        记录《QMWS》服务器性能优化过程
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-11-13">
+    2015-11-13
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1317 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <div id="attachment_2019" style="width: 810px" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-2019" class="size-full wp-image-2019" src="https://www.cppfans.org/wp-content/uploads/2015/11/performance.png" alt="性能优化(图片来自网络)" width="800" height="528" srcset="https://www.cppfans.org/wp-content/uploads/2015/11/performance.png 800w, https://www.cppfans.org/wp-content/uploads/2015/11/performance-300x198.png 300w" sizes="(max-width: 800px) 100vw, 800px" /></p> 
+  
+  <p id="caption-attachment-2019" class="wp-caption-text">
+    性能优化(图片来自网络)
+  </p>
+</div>
+
+<p>本文是为了记录下《QMWS》项目服务器在对外测试期间，性能表现和技术审核时的性能表现差距很大，从而做出的一些优化过程，期间还是比较头疼，接近两个连续通宵来修改。第一个通宵一直在查找问题和猜问题，找问题是如何出现的，第二天主要是解决对应的性能问题。</p>
+
+<p>性能问题主要集中在：</p>
+
+<p>内存使用过快</p>
+
+<p>内存泄露</p>
+
+<p>某些时间内协议过多</p>
+
+<p>逻辑功能处理不当</p>
+
+<p>其他网络消耗什么的暂时也没有考虑，下面详细说说这几个问题是如何引起的以及如何一步步解决的。</p>
+
+<p>1.内存使用过快问题</p>
+
+<p>我们项目使用的是C++后端，用了团队主程之前写的，后来我参与开发的一个开源的服务器数据管理框架NFrame，下面是github地址。</p>
+
+<div class="reposidget">
+  <header class="fontello"> <span class="fontello info"><a href="https://github.com/myst729/wp-reposidget" target="_blank">GitHub 仓库挂件 WordPress 插件</a></span></p> 
+  
+  <h2>
+    <a href="https://github.com/ketoo">ketoo</a><br /> <span> / </span><br /> <a href="https://github.com/ketoo/NoahGameFrame"><strong>NoahGameFrame</strong></a><br />
+  </h2></header> <section> 
+  
+  <p class="">
+    A fast, scalable, distributed game server engine/framework for C++, include actor library, network library,can be used as a real time multiplayer game engine ( MMO RPG/MOBA ), which support C#/Lua script/ Unity3d, Cocos2dx and plan to support Unreal.
+  </p>
+  
+  <p class=" homepage">
+    <a href="https://github.com/ketoo/NoahGameFrame/wiki"><strong>https://github.com/ketoo/NoahGameFrame/wiki</strong></a>
+  </p></section> <footer> 
+  
+  <span class="fontello star">2,129</span><span class="fontello fork">690</span><br /> <a class="" href="https://github.com/ketoo/NoahGameFrame/archive/master.zip">Download ZIP</a><br /> </footer>
+</div>
+
+<p>这个框架就不多做介绍了，有兴趣可以从github pull下来研究研究，或者加群讨论。</p>
+
+<p>这个框架的主要问题就是小的变量和内存申请太多了，导致产生了很多碎片，在linux系统上回收不够及时导致的，而且我们错误的估计了shared_ptr的能力了，智能指针确实能减少很多内存管理，但是生命周期却不好把握，所以我们临时用了大google的TCMalloc，每5分钟主动回收一次内存，确实解决了我们的问题。</p>
+
+<p>2.内存泄漏</p>
+
+<p>内存泄漏这块主要的问题还是代码上的漏洞，逻辑不够严谨，释放对象的时候因为一些判断导致对象没有被释放。还有就是一些数据管理上的问题，不是特别严重。</p>
+
+<p>3.某些操作下逻辑处理过多</p>
+
+<p>因为NFrame采用的是事件回调的方式来处理数据变动，我们会在自己感兴趣的属性(Property)和表(Record)数据上注册回调函数，从而做一些逻辑。这个时候就得特别注意逻辑需求了，因为某些时候属性会有多次变化，导致多次计算其他属性，我们遇到的问题就是当属性变化时计算多个武将的战斗力，如果某个操作导致了多个属性变化，就会导致成倍的战斗力计算，加重了逻辑负担。修改方式是去掉部分回调，在逻辑操作中特定的时候处理回调做的事情，从而降低调用次数。</p>
+
+<p>4.逻辑功能处理不当</p>
+
+<p>这个就是一些常见的问题了，经过重构整理以及性能测试就可以很好的看出来问题，就不多说了。</p>
+
+<p>&nbsp;</p>
+
+<p>推荐的一些工具：</p>
+
+<p>VLD C++内存泄漏检查工具</p>
+
+<p>VTune C++性能内存检查工具，完美和VS IDE结合，非常好用</p>
+
+<p>Valgrind linux下内存检查工具，缺点是没有IDE环境，报告不太容易看，不过分析还是蛮准确的</p>
+
+<p>Border check(DevPartner) 自动化测试/覆盖性测试工具，大borland_(估计很多人都没听过了)_出品，业界一流产品</p>
+
+<p>&nbsp;</p>
+
+<p>好的结果是问题基本已经排查到了，所以后续的版本测试基本没有特别大的性能问题，不过还是得争取高的压测结果。</p>
+
+<p>PS:线上环境和本地测试还是有很大差距，前些天看到一个测试方法，觉得很有意思，与大家分享下。是通过线上开一台功能服务器A，然后再开一台同样的功能服务器B，A和B做的事情完全相同，A是对外服务，B是内部测试服务器，A多做一件事情，将收到的消息顺便转发到B，B再按照收到的协议做处理，这样通过观察B的数据和性能就能模拟线上环境，从而更容易发现问题处理问题，这个东西github上也有对应的项目，叫TCP Copy，有兴趣的朋友可以看看。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e4%bc%98%e5%8c%96" rel="tag" title="优化">#优化#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%80%a7%e8%83%bd" rel="tag" title="性能">#性能#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%9c%8d%e5%8a%a1%e5%99%a8" rel="tag" title="服务器">#服务器#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/2020.html" rel="next" title="Docker初窥">
+        <i class="fa fa-chevron-left"></i> Docker初窥
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1997.html" rel="prev" title="最近我在做什么？">
+        最近我在做什么？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fedora16 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/fedora16/</link>
+    <description>Recent content in Fedora16 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 14 Nov 2011 14:51:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/fedora16/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[操作系统]Fedora16安装使用截图</title>
+      <link>https://cppfans.org/996.html</link>
+      <pubDate>Mon, 14 Nov 2011 14:51:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/996.html</guid>
+      <description>周末将Fedora16下载下来，在虚拟机里进行安装，3.6G，不算大，装的流程就不多说了，大家都懂的，随便截了几张图给大家瞧瞧就行了。 选择软</description>
+    </item>
+    
+    <item>
+      <title>[操作系统]Fedora16正式版发布</title>
+      <link>https://cppfans.org/992.html</link>
+      <pubDate>Wed, 09 Nov 2011 15:22:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/992.html</guid>
+      <description>2011年11月8号，等了许久的Fedora16正式版本发布，今天下载了一个，周末安装一个虚拟机看看效果，不知道我的2G内存还能不能给力一次</description>
+    </item>
+    
+  </channel>
+</rss>

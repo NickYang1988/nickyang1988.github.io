@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>雅安 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%9B%85%E5%AE%89/</link>
+    <description>Recent content in 雅安 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 22 Apr 2013 11:38:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%9B%85%E5%AE%89/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>祈福雅安，为同胞默哀!</title>
+      <link>https://cppfans.org/1475.html</link>
+      <pubDate>Mon, 22 Apr 2013 11:38:40 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1475.html</guid>
+      <description>关于4.20四川雅安7.0级地震的消息想必大家都知道了，就不多说了，新闻是铺天盖地的，其中有一些感动的新闻，也有一些对救灾中的负面新闻，也希</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mysqpp on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/mysqpp/</link>
+    <description>Recent content in mysqpp on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 19 Mar 2012 17:26:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/mysqpp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[资讯]腾讯斥巨资购买myapp.com域名，欲发力手机应用市场</title>
+      <link>https://cppfans.org/1181.html</link>
+      <pubDate>Mon, 19 Mar 2012 17:26:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1181.html</guid>
+      <description>近日，有网友爆料称腾讯斥巨资购买了mysapp.com域名，不过目前该网站会跳转到手机腾讯网页面，所以暂时还没有投入使用。 &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; 查了下</description>
+    </item>
+    
+  </channel>
+</rss>

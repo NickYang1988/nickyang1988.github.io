@@ -1,0 +1,389 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>浅析国内某种端游服务器架构 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="浅析国内某种端游服务器架构">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="浅析国内某种端游服务器架构 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1404.html" itemprop="url">
+        浅析国内某种端游服务器架构
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-11-15">
+    2012-11-15
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">791 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>做服务器开发两年了，也没学到太多的东西，更多的应该是处理问题的思路。而思路决定你如何处理问题，我觉得这个很关键，比你噼里啪啦的打了一通代码要好一些。</p>
+
+<p>现在逐渐从游戏服务器的逻辑层转到了稍微深层次一点的内容了，比如服务器架构，服务器AOI，网络底层，一些库等等，所以也慢慢的与大家分享交流下心得，免得闭门造车。</p>
+
+<p>国内的游戏大多架构都很适合国情，走马观花地看了一些服务器的架构，觉得设计都比较近似，今天我们先说一种服务器的架构，如下图：(点击查看大图，或者下载到本地查看)</p>
+
+<div style="width: 592px" class="wp-caption aligncenter">
+  <a href="https://kzj5va.blu.livefilestore.com/y1p6-oJcD2oOSpDYfc-1Mq9eST9tzVEd3-5rVB_Luf2SKY77O0KxLreLNSPTKcZ5nc52ClZUi73ZupMqmCf1moUIFtDaubBj4qw/server_arch.png?psid=1" target="_blank"  rel="nofollow" ><img class="  " title="一种常见的服务器架构" src="https://kzj5va.blu.livefilestore.com/y1p6-oJcD2oOSpDYfc-1Mq9eST9tzVEd3-5rVB_Luf2SKY77O0KxLreLNSPTKcZ5nc52ClZUi73ZupMqmCf1moUIFtDaubBj4qw/server_arch.png?psid=1" alt="一种常见的服务器架构" width="582" height="412" /></a></p> 
+  
+  <p class="wp-caption-text">
+    一种常见的服务器架构
+  </p>
+</div>
+
+<p>上图是一组服务器的分布图， 这种服务器架构比较适合多个单独服务器(国家/阵营)。它提供了跨服，中转，单服动态均衡等比较常见的功能。</p>
+
+<p>1.CenterServer负责整个服务器总控，提供服务器之间跳转，RMB到游戏币等功能</p>
+
+<p>2.LoginServer提供登陆服务</p>
+
+<p>3.GateServer提供客户端和服务器之间的消息转发</p>
+
+<p>4.GameServer提供游戏内逻辑处理，场景，怪物，NPC等一系列功能</p>
+
+<p>5.CharServer类似于与GameServer，不过逻辑单一，只处理获得角色，选取角色，进入不同的游戏世界GameServer</p>
+
+<p>6.DBServer提供数据存储服务</p>
+
+<p>7.Platform提供充值、账号、web、服务器监控、充值等服务</p>
+
+<p>8.PF_DBServer提供Platform的数据存储服务</p>
+
+<p>这种服务器架构好处就是跳转方便，多个GateServer均衡了消息转发的压力，并且CenterServer可以整体控制。缺点是每个GameServer是单独的，GameServer之间不能做到均衡，如果是多个国家/势力/阵营，那正好一个服务器一个国家/势力/阵营，但是如果是PVE休闲类的游戏，其实没有玩家的阵营之分的话，如果玩家数量较多，就会导致某个服务器压力过大，解决办法可以使用BW的服务器之间动态均衡负载的办法。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/server" rel="tag" title="Server">#Server#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%9c%8d%e5%8a%a1%e5%99%a8" rel="tag" title="服务器">#服务器#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%9e%b6%e6%9e%84" rel="tag" title="架构">#架构#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%b8%b8%e6%88%8f%e8%ae%be%e8%ae%a1" rel="tag" title="游戏设计">#游戏设计#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%bd%91%e6%b8%b8%e6%9c%8d%e5%8a%a1%e5%99%a8" rel="tag" title="网游服务器">#网游服务器#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1405.html" rel="next" title="赏析某程序员寒冬自助暖手程序">
+        <i class="fa fa-chevron-left"></i> 赏析某程序员寒冬自助暖手程序
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1402.html" rel="prev" title="Ubuntu下如何安装boost？">
+        Ubuntu下如何安装boost？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

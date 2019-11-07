@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>社会化 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%A4%BE%E4%BC%9A%E5%8C%96/</link>
+    <description>Recent content in 社会化 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 28 Aug 2011 13:53:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%A4%BE%E4%BC%9A%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网站工具]bShare社会化分享统计工具</title>
+      <link>https://cppfans.org/752.html</link>
+      <pubDate>Sun, 28 Aug 2011 13:53:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/752.html</guid>
+      <description>今天随便翻了一下CSDN发现上面用的是bShare的社会化分享工具，以前从来没见过这个工具，只是在自己的网站用过JiaThis工具，经常访问</description>
+    </item>
+    
+  </channel>
+</rss>

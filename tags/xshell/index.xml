@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xshell on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/xshell/</link>
+    <description>Recent content in xshell on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 21 Nov 2014 07:01:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/xshell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>收集的几个xshell的配色方案</title>
+      <link>https://cppfans.org/1749.html</link>
+      <pubDate>Fri, 21 Nov 2014 07:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1749.html</guid>
+      <description>经常使用xshell来操作Linux，不过现在xshell的School/home免费版本那几个配色方案都不怎么好看，在网上搜刮了几个配色方</description>
+    </item>
+    
+  </channel>
+</rss>

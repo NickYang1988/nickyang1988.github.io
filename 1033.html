@@ -1,0 +1,513 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>简单的模拟多线程引用计数原理 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="简单的模拟多线程引用计数原理">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="简单的模拟多线程引用计数原理 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1033.html" itemprop="url">
+        简单的模拟多线程引用计数原理
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-12-18">
+    2011-12-18
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">527 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>大家都知道多线程编程学习中有一个很重要的东西——引用计数，一个线程的生或死或运行状态都跟这个计数有关，他同样是在适当的时候加加减减的。这篇文章的目的就是模拟下简单的引用计数，原因是因为项目中GateServer莫名宕机，而且运维没有给过来宕机详细信息中的偏移地址，所以纵然我们又cod文件也没法查找问题所在，所以就想出了这样一个笨办法，在每个函数都加上调用计数，这样超过一定次数的我们就认为它可能是死递归，从而方便确定问题。下面给出一个简单的引用计数类的代码。（没有写成模板，因为模板的理解成本有点高，所以在项目中不太使用）</p>
+
+<p>[cpp]</p>
+
+<p>/*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong></p>
+
+<p>FileName:AutoRefCount.h</p>
+
+<p>Author :eliteYang</p>
+
+<p>URL :<a href="http://www.cppfans.org">http://www.cppfans.org</a></p>
+
+<p>Desc :引用计数</p>
+
+<p>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>/</p>
+
+<p>#ifndef __AUTO_REF_COUNT_H\__</p>
+
+<p>#define __AUTO_REF_COUNT_H\__</p>
+
+<p>#pragma once</p>
+
+<p>class RefCount</p>
+
+<p>{</p>
+
+<p>public:</p>
+
+<p>RefCount() : _refCount( 0 ){}</p>
+
+<p>~RefCount(){}</p>
+
+<p>void AddRefCount(){ ++_refCount; }</p>
+
+<p>void DecRefCount()</p>
+
+<p>{</p>
+
+<p>&ndash;_refCount;</p>
+
+<p>if ( _refCount &lt; 0 )</p>
+
+<p>{ _refCount = 0; }</p>
+
+<p>}</p>
+
+<p>int GetRefCount(){ return _refCount; }</p>
+
+<p>private:</p>
+
+<p>int _refCount;</p>
+
+<p>};</p>
+
+<p>class PtrRefCount</p>
+
+<p>{</p>
+
+<p>public:</p>
+
+<p>PtrRefCount( RefCount* pRef, int nValue = 100 ) : pRefCount( pRef ), nCount( nValue )</p>
+
+<p>{</p>
+
+<p>if ( NULL != pRefCount )</p>
+
+<p>{</p>
+
+<p>pRefCount-&gt;AddRefCount();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>~PtrRefCount()</p>
+
+<p>{</p>
+
+<p>if ( NULL != pRefCount )</p>
+
+<p>{</p>
+
+<p>pRefCount-&gt;DecRefCount();</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>bool CheckCount( char* szFunction )</p>
+
+<p>{</p>
+
+<p>if ( NULL == pRefCount )</p>
+
+<p>{ return false; }</p>
+
+<p>if ( pRefCount-&gt;GetRefCount() &gt; nCount )</p>
+
+<p>{</p>
+
+<p>std::cout &lt;&lt; &ldquo;Function &rdquo; &lt;&lt; szFunction &lt;&lt; &ldquo; call error, maybe dead recursion, please check the code&rdquo; &lt;&lt; std::endl;</p>
+
+<p>return false;</p>
+
+<p>}</p>
+
+<p>return true;</p>
+
+<p>}</p>
+
+<p>private:</p>
+
+<p>RefCount* pRefCount;</p>
+
+<p>const int nCount;</p>
+
+<p>};</p>
+
+<p>#endif</p>
+
+<p>[/cpp]</p>
+
+<p>下载我们写一个例子来测试下，我们故意写一个死递归来检验代码。如下：</p>
+
+<p>[cpp]</p>
+
+<p>#include &ldquo;AutoRefCount.h&rdquo;</p>
+
+<p>#include <iostream></p>
+
+<p>#define __FUNCTION_CALL_COUNT__ RefCount _ref; </p>
+
+<p>PtrRefCount ptrRef( &amp;_ref ); </p>
+
+<p>ptrRef.CheckCount( __FUNCTION__ );</p>
+
+<p>void function()</p>
+
+<p>{</p>
+
+<p>__FUNCTION_CALL_COUNT__;</p>
+
+<p>function();</p>
+
+<p>}</p>
+
+<p>int _tmain(int argc, _TCHAR* argv[])</p>
+
+<p>{</p>
+
+<p>function();</p>
+
+<p>return 0;</p>
+
+<p>}</p>
+
+<p>[/cpp]</p>
+
+<p>结果我们发现打出了该函数可能死递归的Log，这样我们就方便查找问题了。希望对你有用！</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c&#43;&#43;" rel="tag" title="C&#43;&#43;">#C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bc%95%e7%94%a8%e8%ae%a1%e6%95%b0" rel="tag" title="引用计数">#引用计数#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%a8%a1%e6%8b%9f" rel="tag" title="模拟">#模拟#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%ba%90%e7%a0%81" rel="tag" title="源码">#源码#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1051.html" rel="next" title="2011年小结">
+        <i class="fa fa-chevron-left"></i> 2011年小结
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1018.html" rel="prev" title="[网络开发]ZeroMQ初体验——hello world">
+        [网络开发]ZeroMQ初体验——hello world <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Word on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/word/</link>
+    <description>Recent content in Word on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 08 Jul 2011 19:35:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/word/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件资讯]WordPress3.2正式发布</title>
+      <link>https://cppfans.org/539.html</link>
+      <pubDate>Fri, 08 Jul 2011 19:35:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/539.html</guid>
+      <description>世界上用户量做多的开源博客系统Wordpress3.2版本正式发布了。 据国外媒体报道，博客平台WordPress昨日发布了代号为“Gersh</description>
+    </item>
+    
+  </channel>
+</rss>

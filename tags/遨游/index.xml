@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>遨游 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%81%A8%E6%B8%B8/</link>
+    <description>Recent content in 遨游 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 21 Jul 2011 15:01:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%81%A8%E6%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件资讯]全新快速访问 傲游3.1.4 Beta公测版发布</title>
+      <link>https://cppfans.org/589.html</link>
+      <pubDate>Thu, 21 Jul 2011 15:01:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/589.html</guid>
+      <description>&lt;p&gt;大家好, 今日发布傲游 3.1.4 系列的第一个Beta公测版本. 该版本包含了全新的快速访问和打印预览, 并为自动刷新提供了自定义时间支持, 为超级截图加入了窗体识别功能, 欢迎大家下载体验! 下载地址：&lt;/p&gt;
+
+&lt;p&gt;中文版 &lt;a href=&#34;http://dl.maxthon.cn/mx3/mx3.1.4.600cn-beta.exe&#34; target=&#34;_blank&#34;  rel=&#34;nofollow&#34; &gt;&lt;a href=&#34;http://dl.maxthon.cn/mx3/mx3.1.4.600cn-beta.exe&#34;&gt;http://dl.maxthon.cn/mx3/mx3.1.4.600cn-beta.exe&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MD5 = ccf56fd233855d1b57a334b066fa5d2e&lt;/p&gt;
+
+&lt;p&gt;国际版 &lt;a href=&#34;http://dl.maxthon.com/mx3/mx3.1.4.600-beta.exe&#34; target=&#34;_blank&#34;  rel=&#34;nofollow&#34; &gt;&lt;a href=&#34;http://dl.maxthon.com/mx3/mx3.1.4.600-beta.exe&#34;&gt;http://dl.maxthon.com/mx3/mx3.1.4.600-beta.exe&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MD5 = b90e6d839e54a6195c6e36ad2a955721&lt;/p&gt;
+
+&lt;p&gt;便携版 &lt;a href=&#34;http://dl.maxthon.cn/mx3/MaxthonPortable_3.1.4.600-beta.zip&#34; target=&#34;_blank&#34;  rel=&#34;nofollow&#34; &gt;&lt;a href=&#34;http://dl.maxthon.cn/mx3/MaxthonPortable_3.1.4.600-beta.zip&#34;&gt;http://dl.maxthon.cn/mx3/MaxthonPortable_3.1.4.600-beta.zip&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;MD5 = 0321b365caca2e13e90badc006d0bedd&lt;/p&gt;
+
+&lt;p&gt;本次更新加入了全新设计开发的快速访问, 用户可以将其背景替换为自己心仪的图片, 图片支持平铺, 居中, 自适应, 拉伸, 填充5种设置方式, 充分满足不同图片的定制需求.&lt;/p&gt;
+
+&lt;p&gt;从现在起, 每次按下新建标签按钮的时候, 都能看到自己喜欢的美美的图片儿啦!&lt;/p&gt;
+
+&lt;p&gt;下图为默认的天空背景, 这里通过设置将空白的格子隐藏, 用现在编辑们流行的话来讲, “小编顿时有了一种飘在云端的感觉” .&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;aligncenter&#34; src=&#34;http://img.cnbeta.com/newsimg/110721/1809160288369538.jpg&#34; alt=&#34;全新快速访问 傲游3.1.4Beta公测版发布&#34; width=&#34;602&#34; /&gt;**&lt;/p&gt;
+
+&lt;p&gt;本次更新包含的新特性有:**&lt;/p&gt;
+
+&lt;p&gt;[主框架]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;启用全新设计的快速访问, 用户可以自定义背景图, 可定义最多9 页快速访问内容.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;添加了打印预览功能.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;标签自动刷新可以指定时间.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[超级截图]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;超级截图现在能够识别窗体&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[皮肤]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;添加一款标签下置皮肤, 基于现代风格定制.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;本次更新对下列功能进行了优化:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;[收藏]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;优化收藏菜单打开速度.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[RSS 阅读器]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;优化 RSS 阅读器性能, 提高读取和更新速度.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;本次更新修正的问题/别扭如下:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;[主框架]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;某些时候搜索框周围会出现黑角显示错误.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;最小化浏览器时, 安装皮肤文件不能呼出主窗口.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;鼠标按下最小化/还原/关闭按钮后, 将鼠标移开按钮区域释放鼠标, 按钮仍然会被按下.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[Webkit 核心]&lt;/p&gt;
+
+&lt;p&gt;*使用Google Blogger上传图片一直显示上传中, 不会有结果.&lt;/p&gt;
+
+&lt;p&gt;[收藏]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;快捷组删除后会残留收藏项目.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;选中收藏栏文件夹后, 使用键盘左右箭头操作, 焦点不变.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[智能地址栏]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;与某些中文输入法冲突.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用百度输入法时光标会出现位置错误.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;选中地址栏中的网址, 然后在地址栏中输入中文, 第一次击键无效.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;紫光输入法启动状态下, 点击地址栏全选, 按Shift切换中英文输入, 光标移至行首.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[下载管理器]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;复制文件路径只复制了文件所在的文件夹而不是文件全路径.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如果用傲游下载器下载一个文件到网络磁盘中, 无法开始下载.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;新建下载对话框时, 选择下载目录的下拉菜单滚动条, 滚动条会自动滚回顶端.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[阅读模式]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;增强对部分类型网页的兼容性.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;豆瓣日志无法提取正文.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[资源嗅探器]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;某类网页中的 Flash 视频无法嗅探.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;嗅探器按文件大小排序,单位为MB的文件排序混乱.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;[团购点评]&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;点击”靠谱”按钮后, 点评数量不消失.&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

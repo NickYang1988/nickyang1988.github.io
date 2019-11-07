@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>手游 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%89%8B%E6%B8%B8/</link>
+    <description>Recent content in 手游 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Jul 2013 15:31:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%89%8B%E6%B8%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>谈谈当今的游戏行业(1)——是否端游已死，页游将死？</title>
+      <link>https://cppfans.org/1471.html</link>
+      <pubDate>Wed, 10 Jul 2013 15:31:50 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1471.html</guid>
+      <description>本系列文章可能有好几篇，现在暂时不能确定具体数量。这种发表观点类型的文章本来应该应该用微信来发布的，不过微信我还在申请公众平台审核，而且那公</description>
+    </item>
+    
+  </channel>
+</rss>

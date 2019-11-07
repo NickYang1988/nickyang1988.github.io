@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Studio on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/visual-studio/</link>
+    <description>Recent content in Visual Studio on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 20 Mar 2011 13:17:34 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/visual-studio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Studio 2010 Service Pack 1多国语言版下载</title>
+      <link>https://cppfans.org/314.html</link>
+      <pubDate>Sun, 20 Mar 2011 13:17:34 +0000</pubDate>
+      
+      <guid>https://cppfans.org/314.html</guid>
+      <description>最近忙着做项目，自己电脑上自从安装了VS2010之后都没怎么用，确实很好用，不过经常会出一些怪异的问题，比如拷贝不起作用等。刚刚看到VS21</description>
+    </item>
+    
+  </channel>
+</rss>

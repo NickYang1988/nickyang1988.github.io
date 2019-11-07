@@ -1,0 +1,537 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[投稿]operator delete异常分析 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[投稿]operator delete异常分析">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[投稿]operator delete异常分析 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1716.html" itemprop="url">
+        [投稿]operator delete异常分析
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2014-09-22">
+    2014-09-22
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">954 字 ~2分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>C 中delete表达式执行的操作是：1，调用析构函数；2，释放对象内存（operator delete(&hellip;)）。</p>
+
+<p>如果父类的析构函数没有声明为virtual函数，且子类中至少存在一个virtual函数，此时将子类的对象地址赋值给父类指针。当对父类的指针执行delete操作时,会调用父类析构函数，然后在释放内存时（即delete表达式执行的操作的2，释放对象内存）出现崩溃。</p>
+
+<p>然而如果子类中不存在一个virtual函数时，执行上面同样的操作就不会出现崩溃。</p>
+
+<p>原因分析如下：</p>
+
+<p>//已知本示例 父类的析构函数应声明为virtual函数。但是由于本程序不需要析构函数执行特殊的操作，所以delete父类指针pB同样可以释放内存，然而引起出乎意料的内//存释放异常。因此对本程序进行如下分析</p>
+
+<p>#include<iostream></p>
+
+<p>#include <cstdio></p>
+
+<p>using namespace std;</p>
+
+<p>class Base</p>
+
+<p>{</p>
+
+<p>public:</p>
+
+<p>~Base() {printf(&rdquo;\nBase::destructor.&ldquo;);}</p>
+
+<p>};</p>
+
+<p>class Derived: public Base</p>
+
+<p>{</p>
+
+<p>virtual void show()</p>
+
+<p>{</p>
+
+<p>cout&lt;&lt;&ldquo;show&rdquo;&lt;&lt;endl;</p>
+
+<p>}</p>
+
+<p>public:</p>
+
+<p>~Derived(){printf(&rdquo;\nDerived::destructor.&ldquo;);}</p>
+
+<p>};</p>
+
+<p>int main()</p>
+
+<p>{</p>
+
+<p>Base* pB=NULL;</p>
+
+<p>Derived *pD= new Derived;</p>
+
+<p>pB=pD;//此时pD得到的是(unsigned char*)pD 4的地址，所以执行operator delete时会发生崩溃（因为此时把vptr的内存当成了待释放的内存块的大小）。</p>
+
+<p>/*unsigned char *pC=(unsigned char*)pB;</p>
+
+<p>pC=pC-4;</p>
+
+<p>delete pC;//这样就可以释放new Derived分配的内存,而不会发生崩溃。</p>
+
+<p>*/</p>
+
+<p>delete pB;</p>
+
+<p>}</p>
+
+<p>其main函数对应的汇编代码如下(VC6.0)：</p>
+
+<p>int main()</p>
+
+<p>23: {</p>
+
+<p>00401060 push ebp</p>
+
+<p>00401061 mov ebp,esp</p>
+
+<p>00401063 push 0FFh</p>
+
+<p>00401065 push offset __ehhandler$_main (00416a0b)</p>
+
+<p>0040106A mov eax,fs:[00000000]</p>
+
+<p>00401070 push eax</p>
+
+<p>00401071 mov dword ptr fs:[0],esp</p>
+
+<p>00401078 sub esp,64h</p>
+
+<p>0040107B push ebx</p>
+
+<p>0040107C push esi</p>
+
+<p>0040107D push edi</p>
+
+<p>0040107E lea edi,[ebp-70h]</p>
+
+<p>00401081 mov ecx,19h</p>
+
+<p>00401086 mov eax,0CCCCCCCCh</p>
+
+<p>0040108B rep stos dword ptr [edi]</p>
+
+<p>24：Base* pB=NULL;</p>
+
+<p>0040108D mov dword ptr [ebp-10h],0</p>
+
+<p>25: Derived *pD= new Derived;</p>
+
+<p>00401094 push 4</p>
+
+<p>00401096 call operator new (00403780)</p>
+
+<p>0040109B add esp,4</p>
+
+<p>0040109E mov dword ptr [ebp-1Ch],eax //eax保存的是operator new（&hellip;）函数分配的内存的首地址。</p>
+
+<p>004010A1 mov dword ptr [ebp-4],0</p>
+
+<p>004010A8 cmp dword ptr [ebp-1Ch],0 //判断operator new(&hellip;)函数分配内存是否成功。</p>
+
+<p>004010AC je main 5Bh (004010bb)</p>
+
+<p>004010AE mov ecx,dword ptr [ebp-1Ch] //调用Derived::Derived（）函数，ecx保存的是内存指针。</p>
+
+<p>004010B1 call @ILT 35(Derived::Derived) (00401028)</p>
+
+<p>004010B6 mov dword ptr [ebp-28h],eax</p>
+
+<p>004010B9 jmp main 62h (004010c2)</p>
+
+<p>004010BB mov dword ptr [ebp-28h],0</p>
+
+<p>004010C2 mov eax,dword ptr [ebp-28h]</p>
+
+<p>004010C5 mov dword ptr [ebp-18h],eax</p>
+
+<p>004010C8 mov dword ptr [ebp-4],0FFFFFFFFh</p>
+
+<p>004010CF mov ecx,dword ptr [ebp-18h]</p>
+
+<p>004010D2 mov dword ptr [ebp-14h],ecx</p>
+
+<p>26: pB=pD;</p>
+
+<p>004010D5 cmp dword ptr [ebp-14h],0</p>
+
+<p>004010D9 je main 86h (004010e6)</p>
+
+<p>004010DB mov edx,dword ptr [ebp-14h]</p>
+
+<p>004010DE add edx,4</p>
+
+<p>004010E1 mov dword ptr [ebp-2Ch],edx</p>
+
+<p>004010E4 jmp main 8Dh (004010ed)</p>
+
+<p>004010E6 mov dword ptr [ebp-2Ch],0</p>
+
+<p>004010ED mov eax,dword ptr [ebp-2Ch]</p>
+
+<p>004010F0 mov dword ptr [ebp-10h],eax //pB=(unsinged char*)(pD) 4</p>
+
+<p>27:</p>
+
+<p>28: delete pB;</p>
+
+<p>004010F3 mov ecx,dword ptr [ebp-10h]</p>
+
+<p>004010F6 mov dword ptr [ebp-24h],ecx</p>
+
+<p>004010F9 mov edx,dword ptr [ebp-24h]</p>
+
+<p>004010FC mov dword ptr [ebp-20h],edx</p>
+
+<p>004010FF cmp dword ptr [ebp-20h],0</p>
+
+<p>00401103 je main 0B4h (00401114)</p>
+
+<p>00401105 push 1</p>
+
+<p>00401107 mov ecx,dword ptr [ebp-20h]</p>
+
+<p>0040110A call @ILT 20(Base::`scalar deleting destructor</p>
+
+<p>来源：<a href="http://blog.chinaunix.net/uid-26807100-id-4246741.html" target="_blank" rel="nofollow" ><a href="http://blog.chinaunix.net/uid-26807100-id-4246741.html">http://blog.chinaunix.net/uid-26807100-id-4246741.html</a></a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c&#43;&#43;" rel="tag" title="C&#43;&#43;">#C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/delete" rel="tag" title="delete">#delete#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bc%82%e5%b8%b8" rel="tag" title="异常">#异常#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1730.html" rel="next" title="google-breakpad在C&#43;&#43; 11下编译错误修改">
+        <i class="fa fa-chevron-left"></i> google-breakpad在C&#43;&#43; 11下编译错误修改
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1719.html" rel="prev" title="linux下升级gcc的方法 - 亲测可用">
+        linux下升级gcc的方法 - 亲测可用 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

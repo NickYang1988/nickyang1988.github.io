@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dlclose on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/dlclose/</link>
+    <description>Recent content in dlclose on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Dec 2013 14:15:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/dlclose/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux下link错误undefined reference&#39;dlclose&#39;</title>
+      <link>https://cppfans.org/1519.html</link>
+      <pubDate>Tue, 03 Dec 2013 14:15:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1519.html</guid>
+      <description>最近因为换了工作，服务器是在linux环境下，又开始捣鼓linux了，与同事两天的奋战中，发现差不多可以写一本《某哥的linux私房菜》了，</description>
+    </item>
+    
+  </channel>
+</rss>

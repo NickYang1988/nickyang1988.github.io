@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>大数据 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/</link>
+    <description>Recent content in 大数据 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Aug 2016 12:31:10 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A simple Spark test project</title>
+      <link>https://cppfans.org/2142.html</link>
+      <pubDate>Wed, 10 Aug 2016 12:31:10 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2142.html</guid>
+      <description>I start to learn Spark to process some log files, here is a simple example. How to build Spark, please see http://spark.apache.org/docs/latest/building-spark.html Scala file import org.apache.spark.SparkContext import org.apache.spark.SparkContext._ import org.apache.spark.SparkConf object SimpleApp { def main(args: Array[String]) { val conf = new SparkConf().setAppName(&#34;wordCount&#34;) val sc = new SparkContext(conf) val input = sc.textFile(&#34;/home/nickyang/develop/spark/spark-1.6.1/README.md&#34;) val words = input.flatMap(line =&amp;gt; line.split(&#34; &#34;)) val couts = words.map(word =&amp;gt; (word, 1)).reduceByKey{case (x, y) =&amp;gt; x +</description>
+    </item>
+    
+    <item>
+      <title>[转]单表60亿记录等大数据场景的MySQL优化和运维之道 | 高可用架构</title>
+      <link>https://cppfans.org/2030.html</link>
+      <pubDate>Wed, 18 Nov 2015 07:50:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2030.html</guid>
+      <description>此文是根据杨尚刚在【QCON高可用架构群】中，针对MySQL在单表海量记录等场景下，业界广泛关注的MySQL问题的经验分享整理而成，转发请注</description>
+    </item>
+    
+  </channel>
+</rss>

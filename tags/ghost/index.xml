@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ghost on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/ghost/</link>
+    <description>Recent content in Ghost on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Mar 2012 17:33:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/ghost/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源码]Norton Ghost C# 源代码</title>
+      <link>https://cppfans.org/1166.html</link>
+      <pubDate>Sat, 17 Mar 2012 17:33:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1166.html</guid>
+      <description>NortonGhost简介 NortonGhost为您的计算机提供高级备份和恢复。通过备份计算机的整个硬盘来保 护保存在计算机上的任何类型的数据</description>
+    </item>
+    
+  </channel>
+</rss>

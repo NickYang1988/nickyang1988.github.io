@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>避免错误 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%81%BF%E5%85%8D%E9%94%99%E8%AF%AF/</link>
+    <description>Recent content in 避免错误 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 01 Dec 2012 01:25:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%81%BF%E5%85%8D%E9%94%99%E8%AF%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]永远不要将三种东西放进数据库里</title>
+      <link>https://cppfans.org/1412.html</link>
+      <pubDate>Sat, 01 Dec 2012 01:25:40 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1412.html</guid>
+      <description>导读：作者Frank Wiles发 表了一篇博文,Frank Wiles曾在很多演讲里说过,改进你的系统的最好的方法是先避免做“蠢事”.并不是说你</description>
+    </item>
+    
+  </channel>
+</rss>

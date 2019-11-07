@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>demo on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/demo/</link>
+    <description>Recent content in demo on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 04 Mar 2016 10:23:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/demo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了</title>
+      <link>https://cppfans.org/2103.html</link>
+      <pubDate>Fri, 04 Mar 2016 10:23:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2103.html</guid>
+      <description>&amp;nbsp;编者按：不管是大公司还是创业公司，我们很多时候都需要去给别人 Demo 产品，给客户 Demo，给投资人 Demo。但很多时候你会发现你的产品</description>
+    </item>
+    
+  </channel>
+</rss>

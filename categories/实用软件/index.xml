@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>实用软件 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 实用软件 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 05 Feb 2018 06:34:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unity3D 2017.x Failed to start Unity Package Manager</title>
+      <link>https://cppfans.org/2233.html</link>
+      <pubDate>Mon, 05 Feb 2018 06:34:18 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2233.html</guid>
+      <description>升级到U3D 2017.x后，发现打开任何工程都会卡在Starting server处，经查看Editor.log后发现，是重试了几次后超时了，</description>
+    </item>
+    
+    <item>
+      <title>收集的几个xshell的配色方案</title>
+      <link>https://cppfans.org/1749.html</link>
+      <pubDate>Fri, 21 Nov 2014 07:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1749.html</guid>
+      <description>经常使用xshell来操作Linux，不过现在xshell的School/home免费版本那几个配色方案都不怎么好看，在网上搜刮了几个配色方</description>
+    </item>
+    
+    <item>
+      <title>goagent3.0.8解决翻墙404问题</title>
+      <link>https://cppfans.org/1514.html</link>
+      <pubDate>Thu, 14 Nov 2013 07:57:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1514.html</guid>
+      <description>貌似在双十一前几天，不知道GFW搞了什么东西，导致goagent无法翻墙，一直提示404错误。微博上很多人都在说，去看了下goagent项目</description>
+    </item>
+    
+    <item>
+      <title>wordpress百度分享工具条最新版本1.0发布</title>
+      <link>https://cppfans.org/1449.html</link>
+      <pubDate>Tue, 29 Jan 2013 01:10:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1449.html</guid>
+      <description>好长一段时间都没理会百度分享工具条了，最近看到倡萌将这个工具条进行了一些优化和精简(《WordPress添加仿异次元百度分享工具条》)，决定</description>
+    </item>
+    
+    <item>
+      <title>几款好的图床介绍！</title>
+      <link>https://cppfans.org/1375.html</link>
+      <pubDate>Mon, 08 Oct 2012 12:49:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1375.html</guid>
+      <description>我们这些写博客或者做论坛的站长可能会经常因为没有大的网站空间而发愁，因为没钱换大的空间，所以如果是经常文章中会插入一些图片的朋友就会费尽心思</description>
+    </item>
+    
+    <item>
+      <title>Windows下如何编译使用boost？</title>
+      <link>https://cppfans.org/1317.html</link>
+      <pubDate>Mon, 07 May 2012 16:25:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1317.html</guid>
+      <description>&lt;p&gt;最近在看boost::asio的东西，所以必须要用到boost库，下载了一个，所以与大家分享下boost库的编译方法。&lt;/p&gt;
+
+&lt;p&gt;本方法应该适用于boost的任何版本，应该适用于任何C++编译器(VC6.0可能对某些库不支持，因为模板的原因)，因为Linux没怎么用，所以只是分享下windows上的编译方法。&lt;/p&gt;
+
+&lt;p&gt;1.下载boost&lt;/p&gt;
+
+&lt;p&gt;从boost官网( &lt;a href=&#34;http://www.boost.org&#34; target=&#34;_blank&#34; rel=&#34;nofollow&#34; &gt;&lt;a href=&#34;http://www.boost.org&#34;&gt;http://www.boost.org&lt;/a&gt;&lt;/a&gt; )上下载最新的boost版本，现在最新是1.49版本，解压到自定义目录(为了后面好说明，这里假设为boost_1_49)&lt;/p&gt;
+
+&lt;p&gt;2.编译安装boost&lt;/p&gt;
+
+&lt;p&gt;boost_1_49目录下会有一个bootstrap.bat批处理，可以直接点击它，会在 boost_1_49\tools\build\v2 文件夹下生成两个exe，b2.exe；bjam.exe，拷贝这两个文件到boost_1_49目录下。从cmd命令进入到boost_1_49路径下，如果你不知道如何编译，可以输入&amp;ndash;help查看命令行帮助。&lt;/p&gt;
+
+&lt;p&gt;输入如下命令：&lt;/p&gt;
+
+&lt;pre class=&#34;lang:sh decode:true crayon-selected&#34;&gt;b2 toolset=msvc-10.0 --layout=versioned architecture=x86 address-model=64
+link=static variant=debug,release threading=multi runtime-link=static 
+--without-python --without-mpi --without-wave --without-graph 
+--without-math --without-serialization stage&lt;/pre&gt;
+
+&lt;p&gt;使用不同的命令对你使用boost也会产生很大的影响，因为CPU速度和硬盘现在都已经不是大问题了，所以本例中选择了除了不必要库的完全编译，当然了，你时间够，硬盘够，可以完全编译&lt;/p&gt;
+
+&lt;pre class=&#34;lang:sh decode:true&#34;&gt;b2 --toolset=msvc-10 --build-type=complete&lt;/pre&gt;
+
+&lt;p&gt;解释完以上的命令后，再说完全编译的后果。&lt;/p&gt;
+
+&lt;p&gt;1.toolset：表示编译器工具，我安装的是VS2010，所以是msvc-10(如果你是VS2005，可以使用msvc-8.0 VS2008是msvc-9.0)&lt;/p&gt;
+
+&lt;p&gt;2.architecture：表示架构，也就是你的CPU架构，x86,x64，因为我安装的是win7 32位，所以使用了x86的架构&lt;/p&gt;
+
+&lt;p&gt;3.instruction-set：表示指令集，依然是8086指令集&lt;/p&gt;
+
+&lt;p&gt;4.address-model：表示地址长度为32位&lt;/p&gt;
+
+&lt;p&gt;5.link：表示生成动态/静态链接库，动态链接库是shared，静态链接库是static，一般都会编译成静态库，因为给出程序的时候打包boost的库会非常庞大&lt;/p&gt;
+
+&lt;p&gt;6.variant：表示生成的Debug或者release版本，一般情况下会两种版本都会编译出来的&lt;/p&gt;
+
+&lt;p&gt;7.threading：表示单/多线程编译，一般我们的程序都会用到多线程，所以选择了multi&lt;/p&gt;
+
+&lt;p&gt;8.runtime-link：表示动态/静态链接C/C++运行时库(C/C++ Runtime)，我们选择了动态链接&lt;/p&gt;
+
+&lt;p&gt;9.without/with：表示不需要编译/需要编译哪些库，一些自己不用的库可以无需编译&lt;/p&gt;
+
+&lt;p&gt;10.stage/install：stage表示只生成库文件(DLL和Lib)，install还会生成包含头文件的include目录，推荐使用stage，因为boost_1_49\boost中就是boost库完整的头文件，所以无需再拷贝一份出来。编译出来的库会放在stage文件夹中&lt;/p&gt;
+
+&lt;p&gt;这样一份完整的boost库就生成了，剩下就是直接使用到项目中了。&lt;/p&gt;
+
+&lt;p&gt;上面的编译指令可以存成一个批处理，这样进入到boost_1_49目录后，只需要执行批处理就可以了，更方便。&lt;/p&gt;
+
+&lt;p&gt;(现在看到为什么不推荐使用完全编译了吧，因为完全编译会编译出各种组合的所有情况，需要占用更多的空间和时间，所以建议各位朋友还是放弃了吧)&lt;/p&gt;
+
+&lt;p&gt;使用的时候可以直接包含到项目中，然后在对应的文件中包含相应的头文件即可，例如&lt;/p&gt;
+
+&lt;pre class=&#34;lang:c++ decode:true&#34;&gt;#include &#34;boost/asio.hpp&#34;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>[开发工具]详解Visual Stdio之编译后事件</title>
+      <link>https://cppfans.org/1315.html</link>
+      <pubDate>Sun, 06 May 2012 07:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1315.html</guid>
+      <description>用VS做开发，通常最痛苦的事情就是配置工程了，建各种目录结构，加入各种库头文件和Lib，输出路径，编译后事件等等，说起来都很麻烦。 今天主要想</description>
+    </item>
+    
+    <item>
+      <title>[软件]如何使用分布式版本控制工具Git？</title>
+      <link>https://cppfans.org/1198.html</link>
+      <pubDate>Sun, 25 Mar 2012 16:10:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1198.html</guid>
+      <description>Git是一个由林纳斯·托瓦兹为了更好地管理linux内核开发而创立的分布式版本控制／软件配置管理软件。需要注意的是和GNU Interactive Tools，一个</description>
+    </item>
+    
+    <item>
+      <title>[编程工具]CppCheck代码检测工具</title>
+      <link>https://cppfans.org/1101.html</link>
+      <pubDate>Sun, 26 Feb 2012 11:27:15 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1101.html</guid>
+      <description>我们在写代码的时候通常会犯两样低级错误，这种低级错误和那种低级错误。在编译的时候可能不会报错，但是在程序运行的时候就会发现很奇怪的结果，莫名</description>
+    </item>
+    
+    <item>
+      <title>VMware下Fedora16不能全屏的简易解决办法</title>
+      <link>https://cppfans.org/1009.html</link>
+      <pubDate>Sat, 19 Nov 2011 06:23:15 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1009.html</guid>
+      <description>虚拟了Fedora之后，发现桌面并不能全屏，查了查vmware提供的帮助，大致是需要下载vmware tools然后挂载安装调整配置这种方法，</description>
+    </item>
+    
+    <item>
+      <title>[多图]TortoiseSVN配置管理使用</title>
+      <link>https://cppfans.org/349.html</link>
+      <pubDate>Sat, 16 Apr 2011 17:44:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/349.html</guid>
+      <description>本文最开始有我写在锋酷开发社区(www.flycode.org)，现转载过来供大家查看。 一.下载并安装TortoiseSVN程序，点击Nex</description>
+    </item>
+    
+  </channel>
+</rss>

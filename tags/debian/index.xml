@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/debian/</link>
+    <description>Recent content in Debian on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Sep 2011 11:37:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[操作系统]Linux Mint Debian 201109 (Gnome &amp; Xfce)发布</title>
+      <link>https://cppfans.org/781.html</link>
+      <pubDate>Sat, 17 Sep 2011 11:37:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/781.html</guid>
+      <description>Linux Mint Debian 201109 (Gnome &amp;amp; Xfce)发布,最新版本更新软件包、添加LM11的所有功能、兼容GTK2/3主题、安装过程改善。 LMDE全称Linux Mint Debian Edi</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,430 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>介绍一款源代码协作工具——极客讨论器 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="介绍一款源代码协作工具——极客讨论器">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="介绍一款源代码协作工具——极客讨论器 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1922.html" itemprop="url">
+        介绍一款源代码协作工具——极客讨论器
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-04-17">
+    2015-04-17
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E5%85%B6%E4%BB%96%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">其他文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1547 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>无意间翻到一个好用的软件，极客讨论器，下载下来玩了玩，发现功能还是蛮强大的。这里介绍给大家使用。</p>
+
+<p>先介绍下这个软件，</p>
+
+<p>极客讨论器是一款源代码批注和讨论工具。它的特点是可以直接在源代码选择要说明的部分，然后用消息来解释它。消息可以包含文字，图片，源代码补丁，链接其它项目的源代码等。消息保存在本地数据库中就是批注，发送给其他人或者发布到社区网站上就是讨论。消息和源代码之间可以互相检索，就像注释一样，但比起注释来有几大优点：</p>
+
+<p>1.有交互性。注释一般是和源代码同时由同一个人写的，无法沟通，消息可以相互间发送，能更好理解代码意图。</p>
+
+<p>2.有条理性。注释解释代码是静态的，而消息可以按流程来解释代码，一个流程一组消息。</p>
+
+<p>3.消息可以包含图片，文字，代码补丁，链接其它项目等优点。</p>
+
+<p>我是用的是个人版，是完全免费的，功能主要如下：</p>
+
+<p>个人版为个人批注源代码使用。支持内建本地版本库，以读写的方式连接远程版本库，以只读的方式连接远程版本库，映射远程版本库。</p>
+
+<p>主要特性如下：</p>
+
+<ul>
+<li>支持svn/svn+ssh/http/https/file协议的<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >subversion</a>版本库连接</li>
+<li>无需<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >subversion</a>服务器支持，内置版本库可以生成工具生成本地版本库管理源代码。</li>
+<li>内置<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >subversion</a>客户端可以对<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >subversion</a>服务器进行访问，完美兼容其它<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >subversion</a>客户端。</li>
+<li>支持远程版本库直接浏览，无需检出到本地。</li>
+<li>支持映射远程版本库到本地，作为远程版本库的本地拷贝，提供更快的访问，或者离线也可以访问。</li>
+<li>通过版本库导航栏便捷地查询版本日志，信息，文件。</li>
+<li>通过版本库导航栏便捷地比对版本文件列表和文件内容。</li>
+<li>支持通过提交/更新的方式，将本地工作区的增/删/改提交到版本库中，或者用版本库内任意版本更新本地工作区。</li>
+<li>提供本地工作区文件过滤。</li>
+<li>一键即可提交本地工作区修改到版本库，智能检测冲突并提供解决冲突界面。</li>
+<li>一键即可从版本库任意版本更新本地工作区，智能检测冲突并提供解决冲突界面。</li>
+<li>支持批注消息链接到源代码任意区域，以解释源代码。</li>
+<li>支持批注消息链接到其它版本库的源代码任意区域，以解释外部源代码调用关系。</li>
+<li>支持批注消息携带源代码补丁，可以修改源代码。</li>
+<li>批注消息内可包含文字，图片。编辑界面支持文字字体选择，截图。</li>
+<li>批注消息保存在本地数据库中。</li>
+<li>内置显示消息的界面，可以显示所有保存的消息，也可用多种条件过滤显示。</li>
+<li>消息名片界面，鼠标滑过批注消息即可查看关联的源代码和补丁，无需打开。</li>
+<li>源代码自动提示链接的批注消息，代码移动时链接的批注消息也会跟着移动，批注消息成为携带图片，链接，源代码补丁的外部注释。</li>
+</ul>
+
+<p>源码管理对每个程序员来说都是很纠结的事情，很多人在本地就根本不管理代码，导致代码遗失，代码看不懂等问题，而这个软件最大的特点就是不需要自己安装源码控制工具，自己内部嵌入了源码控制工具，而且操作非常简单，<a href="http://www.gtalkabout.cn/" target="_blank" rel="nofollow" >代码审查</a>更加简单方便。只需要两步就可以实现本地或者远程的源代码管理，如下图：</p>
+
+<div id="attachment_1924" style="width: 1170px" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-1924" class=" wp-image-1924" src="http://www.cppfans.org/wp-content/uploads/2015/04/gtalk_1.png" alt="gtalk_1" width="1160" height="752" /></p> 
+  
+  <p id="caption-attachment-1924" class="wp-caption-text">
+    gtalk服务器设定
+  </p>
+</div>
+
+<p>通过上面四个步骤即可将你的工程设置配置好,下来就可以编辑代码了，如下图：</p>
+
+<div id="attachment_1925" style="width: 1163px" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-1925" class="wp-image-1925" src="http://www.cppfans.org/wp-content/uploads/2015/04/gtalk_2.png" alt="gtalk_2" width="1153" height="726" srcset="https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_2-300x189.png 300w, https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_2-1024x646.png 1024w, https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_2-220x139.png 220w" sizes="(max-width: 1153px) 100vw, 1153px" /></p> 
+  
+  <p id="caption-attachment-1925" class="wp-caption-text">
+    gtalk工作区
+  </p>
+</div>
+
+<p>这个svn的版本控制很有意思，最下方通过向右拖动那个圆圈，即可完成<a href="http://www.gtalkabout.cn" target="_blank" rel="nofollow" >subversion</a> update功能，只需要一次，简化了操作，而且也很好理解。</p>
+
+<p>后面会支持<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >git</a>和hg。</p>
+
+<p>下来介绍下这个软件最具情怀的两个功能，</p>
+
+<p>第一个是全面回忆，可以通过 极客超能力菜单安装全面回忆，可以回忆出你修改后做的每一个记录，如下图</p>
+
+<div id="attachment_1926" style="width: 1042px" class="wp-caption aligncenter">
+  <img aria-describedby="caption-attachment-1926" class="size-full wp-image-1926" src="http://www.cppfans.org/wp-content/uploads/2015/04/gtalk_3.png" alt="gtalk全面回忆" width="1032" height="539" srcset="https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_3.png 1032w, https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_3-300x157.png 300w, https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_3-1024x535.png 1024w, https://www.cppfans.org/wp-content/uploads/2015/04/gtalk_3-220x115.png 220w" sizes="(max-width: 1032px) 100vw, 1032px" /></p> 
+  
+  <p id="caption-attachment-1926" class="wp-caption-text">
+    gtalk全面回忆
+  </p>
+</div>
+
+<p>第二个是支持支持通过软件发帖功能，让项目所有人员可以通过论坛看到一些问题，同时参加讨论，公司和团队可以通过现有的论坛和极客讨论器结合，实现软件发帖和看帖</p>
+
+<div style="width: 830px" class="wp-caption aligncenter">
+  <img class="" src="http://www.gtalkabout.cn/img/phpbb_post.png" alt="极客讨论器论坛发帖功能" width="820" height="480" /></p> 
+  
+  <p class="wp-caption-text">
+    极客讨论器论坛发帖功能
+  </p>
+</div>
+
+<p>功能还是非常多的，我才开始使用，还在继续摸索，大家可以去试试，<a href="http://www.gtalkabout.cn/" target="_blank"  rel="nofollow" >点此查看官网介绍和使用</a>。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/gtalk" rel="tag" title="gtalk">#gtalk#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%9e%81%e5%ae%a2%e8%ae%a8%e8%ae%ba%e5%99%a8" rel="tag" title="极客讨论器">#极客讨论器#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1933.html" rel="next" title="雅思准备中，加油加油">
+        <i class="fa fa-chevron-left"></i> 雅思准备中，加油加油
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1920.html" rel="prev" title="后续博客的方向">
+        后续博客的方向 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

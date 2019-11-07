@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>云计算 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/</link>
+    <description>Recent content in 云计算 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 28 Feb 2015 07:59:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]理解云计算：SaaS、PaaS与IaaS</title>
+      <link>https://cppfans.org/1840.html</link>
+      <pubDate>Sat, 28 Feb 2015 07:59:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1840.html</guid>
+      <description>作为一个广义的术语，云计算描述了一种范围广泛的服务。许多IT厂商都抓住了“云”这个概念，并将其作为产品的一种通用技术。对于公司而言，为了真正</description>
+    </item>
+    
+  </channel>
+</rss>

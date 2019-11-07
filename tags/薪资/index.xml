@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>薪资 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%96%AA%E8%B5%84/</link>
+    <description>Recent content in 薪资 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 Jan 2016 02:14:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%96%AA%E8%B5%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]程序员如何谋划出月薪3万</title>
+      <link>https://cppfans.org/2066.html</link>
+      <pubDate>Mon, 04 Jan 2016 02:14:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2066.html</guid>
+      <description>转载自：http://www.techug.com/how-to-plan 不久前我发表了一篇文章，“月薪3万的程序员都避开了哪些坑”，在我的</description>
+    </item>
+    
+  </channel>
+</rss>

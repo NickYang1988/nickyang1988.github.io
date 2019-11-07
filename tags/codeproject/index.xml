@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CodeProject on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/codeproject/</link>
+    <description>Recent content in CodeProject on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Oct 2012 14:23:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/codeproject/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[资讯]CodeProject更换浅Metro风格</title>
+      <link>https://cppfans.org/1377.html</link>
+      <pubDate>Wed, 10 Oct 2012 14:23:47 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1377.html</guid>
+      <description>相信很多人经常都会去CodeProject下载一些代码，或者看看新的技术使用，codeproject是一个类似于codeplex的网站，里面</description>
+    </item>
+    
+  </channel>
+</rss>

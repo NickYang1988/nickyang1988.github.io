@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络开发 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in 网络开发 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 16 Dec 2012 10:14:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浅析epoll - epoll函数深入讲解</title>
+      <link>https://cppfans.org/1418.html</link>
+      <pubDate>Sun, 16 Dec 2012 10:14:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1418.html</guid>
+      <description>前一篇大致讲了一下epoll是个什么东西，优点等内容，这篇延续上一篇的内容，主要是分析epoll的函数，epoll高性能的深入分析。 epol</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll-为何多路复用I/O要使用epoll</title>
+      <link>https://cppfans.org/1417.html</link>
+      <pubDate>Mon, 10 Dec 2012 01:20:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1417.html</guid>
+      <description>现如今，网络通讯中用epoll(linux)和IOCP(windows)几乎是大家津津乐道的东西，不为别的，就因为高效，所以大家喜欢用。IO</description>
+    </item>
+    
+    <item>
+      <title>IOCP浅析</title>
+      <link>https://cppfans.org/1054.html</link>
+      <pubDate>Mon, 16 Jan 2012 14:44:14 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1054.html</guid>
+      <description>这一年半来一直在做游戏项目逻辑层，学会了不少东西，觉得自己应该看看服务器底层的东西了，主要的东西就是网络模块，网络模块是沿用以前项目的，在 我</description>
+    </item>
+    
+  </channel>
+</rss>

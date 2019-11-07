@@ -1,0 +1,484 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/2103.html" itemprop="url">
+        [转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2016-03-04">
+    2016-03-04
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">6472 字 ~13分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <section class="single-post-header"> 
+
+<div class="single-post-header__headline">
+  <img class="image aligncenter" src="http://e.36krcnd.com/nil_class/dfe08256-d374-4188-9f49-a1e04f8e3d6d/d21b0ef41bd5ad6e69f570ad83cb39dbb6fd3c6c.jpg!heading" alt="为何你的产品 Demo 如此糟糕？因为你太注重产品本身了" />
+</div></section> 
+
+<p>&nbsp;<section class="article"></p>
+
+<p><strong>编者按：</strong>不管是大公司还是创业公司，我们很多时候都需要去给别人 Demo 产品，给客户 Demo，给投资人 Demo。但很多时候你会发现你的产品 Demo 并不尽如人意。为什么呢？如何才能做一个成功的产品 Demo 呢？本文就是为回答这个问题而来的。</p></p>
+
+<p>“有人会讨厌你，也有人会质疑你，然后你会想办法证明他们是错误的。” 这是 Robert Falcone 对于产品 Demo 的看法，他自己一生中做过太多的产品 Demo 了。Falcone 现在是营销软件公司 Monetate 的联合创始人，在他的带领下，Monetate 已经和上百家企业进行深入的合作，为了获取这些企业用户，他做过的产品 Demo 也已经数不胜数。最开始的时候，他做的很多产品 Demo 并不成功，不过他很好地从中吸取了经验和教训，并总结了一套行之有效的产品 Demo 宝典。</p>
+
+<p>“我之前以为产品 Demo 是一项很简单的工作，就是告诉人们这个产品是什么、有什么用途。然而每次当我做完产品 Demo 后，客户要么感觉非常困惑，要么非常礼貌地跟我说 ‘谢谢’，然后再也听不到他们的任何消息。” Falcone 说道。</p>
+
+<p>在一次又一次地从客户那里得到这样的反馈后，他决定破解产品 Demo 的成功秘诀。如果产品 Demo 的简单明了能够带来客户转化率，那么如何做到产品 Demo 的简单明了呢？为了能找到这个问题的答案，他不断地去做产品 Demo、做 A/B 测试、去观察、再去重复。他将自己的产品 Demo 经验和心得都写进了《去你的 Demo》（Just F*cking Demo) 这本书中，这本书最近还进入了 Amazon 新书畅销榜单。</p>
+
+<p>在这篇文章中，Falcone 分享了一个成功的产品 Demo 的结构、以及如何仅仅通过一次产品 Demo 就成功搞定客户的技巧与秘诀。</p>
+
+<p><strong>要搞砸一个产品 Demo 其实很简单</strong></p>
+
+<p><img class="before-fade-in after-fade-in aligncenter" src="http://c.36krcnd.com/nil_class/d52f02b9-749b-42ea-85bf-682115125cb0/20P58PICZ6w_1024.jpg!heading" alt="为何你的产品 Demo 如此糟糕？因为你太注重产品本身了" width="1024" data-img-size-val="746,495" /></p>
+
+<p>对我而言，我绝对算得上是我自己 Demo 的产品方面的专家，我自己也日复一日地向各种大公司 Demo 我们的 Monetate 这款产品，但很多时候还是无法成功地说服客户。很显然，对产品了然于心并不意味着你可以做一个成功的产品 Demo。</p>
+
+<p>此外，看你做产品 Demo 的人很少会就 Demo 给你任何反馈，这样你就不知道该如何提升产品 Demo 的水平。那些看你做产品 Demo 的人中的大多数通常只会出于礼貌性地感谢你能抽时间过来 Demo 产品并就此结束对话。他们不会就如何改善产品给你提任何建议，更不会针对如何更好地向他们做产品 Demo 给你提意见。</p>
+
+<p>“我会问他们：‘你理解我刚刚说的东西了吗？’，他们通常会回答：‘是的，理解了。’ 他们之所以这样回答是因为他们不想让自己看起来很蠢。不过你需要的肯定不仅是对方简单的一句：‘当然，我懂了。’ 你需要的实实在在的交易，是要他们购买你的产品。” Falcone 这样说道。</p>
+
+<p>经过一系列失败的产品 Demo 后，他意识到必须要认真分析到底是哪里出问题了，他必须学会让自己的 Demo 百战百胜。他并没有可以向客户寻求反馈，在他 Demo 的过程中，他会非常注意房间内各种微妙的变化，他开始注意对话的语调，并不断地测试和记录自己的发现。他还会看其他人做 Demo 的视频，以从中寻找实用的建议。</p>
+
+<p>他发现，<strong>人们在做产品 Demo 时最容易犯的一个错误、也是最大的一个错误在于不能给特定的展示对象做针对性地产品 Demo，无法引起客户的共鸣。</strong>例如，做产品 Demo 时，你不能从产品数十个功能和卖点中选取那几个能让展示对象（如特定的客户或投资者）产生共鸣的功能进行展示，从而促成交易。</p>
+
+<blockquote>
+<p><strong>成功的 Demo 并不一定非要完美适合产品，但必须要完美适合展示对象。</strong></p>
+</blockquote>
+
+<p>不管你的 Demo 对象是谁，你都需要好好花时间想想这个问题：在他们愿意达成交易之前，他们特别需要了解哪些东西？为确保能很好地回答这个问题，Falcone 专门针对产品 Demo 提出了 “你-他们-你” 的展示框架。你只需要给潜在客户展示他们需要知道的产品特性就行了，让他们知道你的产品是能帮助他们取得他们想要的结果的，这样你也能获得你要想的结果。一个 Demo 的成功与否取决于你的潜在客户是否能理解你的产品能带给他们的价值。</p>
+
+<p>为了能让产品 Demo 更有吸引人和说服力，Falcone 还专门研究了包括 Malcolm Glandwell 和 Simon Sinek 在内的很多著名商业演讲家的演讲视频，他甚至还研究了魔术师的表演，看他们是如何让听众 / 观众那么全神贯注地看他们说或做的事情的。他发现了一个共同的特点，这些人对听众真正关心的东西都有非常深刻的理解。“如果你知道客户最关心的是什么问题，你就能最大限度地将自己的产品与他们最关心的问题联系在一起，这样有利于取得最好的 Demo 效果。”</p>
+
+<p><strong>做到灵活充分的准备</strong></p>
+
+<p><img class="before-fade-in after-fade-in aligncenter" src="http://e.36krcnd.com/nil_class/d2df05cf-6daf-4d5a-af70-774ca4bfe7e6/20140404231706_MCYAd.thumb.600_0.jpeg!heading" alt="为何你的产品 Demo 如此糟糕？因为你太注重产品本身了" width="600" data-img-size-val="600,337" /></p>
+
+<p>很多时候，原本那些我认为是我的强项的东西反而正在托我的后腿。如果你是一款产品方面的专家，那么你在做产品 Demo 时就得非常小心了，因为你会不由自主地向客户展示产品的每一项细节功能，而这又是非常乏味的，很有可能让客户听着听着就睡着了，或是客户突然提了一个你之前没有预料到的问题，这势必会让你乱了阵脚。</p>
+
+<p>在做产品 Demo 前，与其想办法记住产品的每一个细节功能，还不如将这些准备时间用在思考你准备向客户问的问题以及他们可能会提的问题上面。如果对于这些问题你心中都已经有了答案，这才可以算作是有效的 Demo 准备。这时，你在 Demo 产品的时候便可以在各个 Demo 部分间顺畅转换，同时也能有效应对各种突发状况。注意，这些问题是专门针对客户准备的，你需要提前制作一个问题列表，确保能通过这些问题获得尽可能多的客户信息。</p>
+
+<blockquote>
+<p><strong>做产品 Demo 时，你需要的不是一个一层不变的固定方案，你需要的是一本玩法的指南，你需要了解所有玩法，但真正在做产品 Demo 时，你只需演示最符合当时需要的那几种玩法。</strong></p>
+</blockquote>
+
+<p>根据 Falcone 的经验，在所有的产品 Demo 中，有 10%的产品 Demo 无论如何都是会成功的，或许是因为展示对象之前曾与你一起共事过，或是第一次看你展示就特别欣赏你和你 Demo 的产品。还有 10% 的人不管你如何 Demo，他们都不会买你的帐，因为你给错误的客户群体展示了错误的解决方案。但是剩余的 80%的潜在客户将是你最主要的收入来源，对于这部分人群，你必须要想方设法搞定他们。</p>
+
+<p>根据 Falcone 的经历，在 Demo 前做好充分的准备是可以为你搞定那剩下的 80%的潜在客户的。什么样的 Demo 才算是一个成功的 Demo 呢？就是容许听众在 Demo 中途打断你，既容许听众让你停下来重新解释演示过的内容，也要容许听众让你加快进度，而这些干扰都不会影响到你、让你惊慌错乱。你只需要 Demo 那些听众需要知道的内容即可。Demo 时务必做到顺畅与灵活。如果你在 Demo 之前认真演练过的话，这是能够做到的，会让听众看来非常自然。</p>
+
+<p><strong>用 5 分钟时间发现客户的需求</strong></p>
+
+<p><img class="before-fade-in after-fade-in aligncenter" src="http://b.36krcnd.com/nil_class/767ea509-2f7c-4f9e-8d6f-fd1bc9e04196/99bOOOPIC4d_1024.jpg!heading" alt="为何你的产品 Demo 如此糟糕？因为你太注重产品本身了" width="1024" data-img-size-val="746,420" /></p>
+
+<p>为了能让客户很明显地感受到你的产品和他们的需求之间是有关联的，你需要尽可能快地了解客户。或许你在 Demo 之前已经对 Demo 对象做了一定的背景调查，然而为了能让 Demo 更有效，你需要做的远不止这些。几十年前，商学院一般都会建议商人们在卖东西之前尽可能多地了解客户，甚至还有一本书建议商人花一整天时间来跟客户交流，以便能全面了解客户的需求。这在现在已经不可能了，没人愿意给你这么长的时间让你了解他的需求。</p>
+
+<p>实际上，没有一个客户会愿意给你超过 1 小时的时间去做产品 Demo。所以在正式 Demo 之前，一定要尽可能地了解你的客户，你需要在 5 分钟之内就能了解他们的需求到底是什么。那么如何做呢？其实最好的方法就是直截了当地和客户说明：“在开始 Demo 前，我想先用 5 分钟时间来问大家一些问题，好让我了解你们最需要哪些功能。” 通过这种方式，Demo 双方就能形成共识，让客户直接参与到问答中。在 5 分钟的提问环节，时间控制非常重要。如果你把握不好时间超时了，客户可能就会要求你进入重点，这就意味着你已经失去了一个非常好的机会。</p>
+
+<p>为了能充分利用这 5 分钟的时间，你需要首先从问答中梳理出客户 “之前” 的状态。他们的需求痛点在哪里？是什么影响了他们的工作效率？然后再将注意力集中在他们 “以后” 所希望实现的理想状态。你的产品能够帮助他们完成什么目标，能帮助他们解决什么问题？他们对这样的一款产品有什么要求？谁会使用这款产品？在你的产品的帮助下，他们的公司会变成什么样子？</p>
+
+<p>如果能将 “之前” 和 “以后” 这两个问题搞清楚，就能让你的产品 Demo 变得更有针对性。当然，为了获得更精确的信息，你也可以在 Demo 过程中问问题。不过 Demo 之前的 5 分钟提问题的环境是最为重要的，直接关乎你是否能了解客户的需求。</p>
+
+<p>尽管这 5 分钟非常重要，但是你还是无法在这么短的时间内获取所有有价值的信息的。你需要知道，他们告诉你的东西只是他们真实感受和期待的冰山一角。所以你必须要利用一切可以利用的机会来获取更多的信息。你还会发现，如果听众认为你的 Demo 和他们的需求有相关性，他们便会为你提供越来越多的信息。</p>
+
+<p>正是通过这种方式，Falcone 最近成功搞定了一家大型电商的订单。在产品 Demo 的过程中，他了解到了一些关键性的细节信息：“我们需要真正了解客户正在面临的问题和挑战。他们所面临的最大的问题就是很难区分客户群体。为了推动营收增长，他们每个月的月底都会面向所有人进行打折促销。这家电商希望能够区分客户，给不同的客户群体提供最合适的折扣方案。” Falcone 了解了客户的这一需求后，他就在 Demo 产品时专门介绍了 Monetate 软件是如何能帮助对方解决这个问题的。</p>
+
+<p>在了解了他们最关心的问题后，我就有底气这样说：“我觉得你们最大的营收增长机会就是使用我接下来将展示的工具。下面我就为你们详细介绍这款工具，看它是如何能为你们实现营收的增长的。”  如此一来，我成了能为他们实现目标的值得信赖的顾问，让我与那些单纯向他们销售产品的其他竞争对手有本质的区别。</p>
+
+<p><strong>首先告诉客户结果，再解释过程</strong></p>
+
+<p>畅销书作家 Malcolm Gladwell 写的书之所以这么受欢迎，其中很大原因在于他讲故事的方式：先告诉你故事的结局是什么，然后再解释其中的前因后果。其实同样的结构也适用于产品 Demo 中。你可以首先让客户能想象、甚至体验用了你的产品或服务之后的工作和生活是什么样子的。在他们的脑海中形成了这种画面感后，再返回去向他们解释为什么用了你的产品后他们的生活 / 工作能变得更好。这也算是 5 分钟问答环节中药留意客户 “以后” 所希望实现的理想状态的一部分，然后再针对性地进行回答。</p>
+
+<p>迈克尔.乔丹是如何掀起一股运动鞋革命的？如果你回过头去重新看飞人乔丹拍过的电视广告的话，你就会发现，大家看完广告后之所以选择去买那款运动鞋并不是因为这是一款质量很好的产品，而是因为他们想和乔丹一样能飞。他们知道自己想成为什么样子，因此在做产品 Demo 时，你首先就要告诉他们你能帮他们实现的东西。</p>
+
+<blockquote>
+<p><strong>这是你们的目标，这是你们目前面临的问题，这是我们的产品帮你解决问题之后的样子。要尽快把这些信息告诉客户。</strong></p>
+</blockquote>
+
+<p>开头说完上面这部分内容后，如果客户给出以下这种回应：“嗯，不错，这正是我想要的。那你现在就告诉我你的产品是如何能帮我实现目标的。” 那么你离成功就不远了，这时你就可以向客户解释你的产品功能具体是如何能满足他们的需求的。</p>
+
+<p>在给客户 Demo Monetate 这款产品的时候，Falcone 通常会采用下面这个非常有效的方法：先展示客户自己目前的网站，再展示加入了他们希望加入的内容和服务之后的网站，即使用了 Monetate 后网站是什么样子。通过这种对比的方式后，如果你把解决方案直接放在他们面前，客户想拒绝都难。</p>
+
+<p>在 Demo 的时候，根据现场情况选择合适的展示语调也非常重要，可以选择热情洋溢，也可以表现得沉稳严肃。如果选择不恰当，则会适得其反。如果我的 Demo 对象是投资人，投资人说他只投那些真正具有革命性意义的 B2B 应用，这时我会表现得非常严肃和直接，告诉他为什么我的产品和市场上的其它产品是与众不同的。如果我的 Demo 对象是销售类公司，对方希望在没有 IT 的帮助下通过更快推内容来增加营收，这时我会用一种更具想象力的兴奋语气来向他们解释使用我们的产品是如何帮助他们实现这项目标的。</p>
+
+<blockquote>
+<p><strong>要学会洞察整个房间里微妙的变化，包括客户的用词、客户谈论自己的产品和你的产品的方式，这样你就能更快地了解双方。</strong></p>
+</blockquote>
+
+<p><strong>Demo 产品时要按从宏观到微观的顺序</strong></p>
+
+<p>介绍产品时要从宏观入手，等于为接下来详细的介绍内容搭建一个框架。你要记住，你要演示的对象中的大部分人对你所要演示的内容是一无所知的，也不知道这个产品是如何运作的。如果你担心无法详细介绍产品的各项功能或是漏掉什么内容就去太快介绍产品细节的话，那么你很有可能就会搞砸。</p>
+
+<p>你首先从宏观方面描述你的产品是如何能满足客户的需求的，然后再详细介绍产品的细节信息。如果客户能给出这样的反馈就最好了：“你刚刚介绍的产品的大概内容我了解了，整体上比较符合我们的需求，我想知道你的产品是如何具体满足我们的特殊需求的。”   在详细介绍产品的时候，你需要利用在之前的 5 分钟提问环节中发现的客户的需求来抓住他们的注意力。</p>
+
+<p>举个例子，假如你销售的是一款设备，这款设备最大的特点之一就是它非常小巧。你需要把介绍重点放在设备质量上，同时让用户知道你甚至可以将这款设备放在口袋里。这是这款设备的宏观信息。然后你可以再去介绍设备的具体功能，这是微观信息，例如支持无线充电、电池容量等信息。</p>
+
+<p>先展示产品的宏观信息，再介绍微观的具体功能，这样能够确保客户跟着你的逻辑走，让他们从一开始就对产品产生兴趣。如果接下来介绍的某些具体功能他们不感兴趣或是和他们的需求不相关，你要学会及时打住。如果你将自己准备的东西按照这个逻辑在大脑里多过几遍，那么你 Demo 的成功率就会越高。</p>
+
+<p><strong>掌控 Q&amp;A 环节</strong></p>
+
+<p><img class="before-fade-in after-fade-in aligncenter" src="http://a.36krcnd.com/nil_class/0fb2f152-3713-404e-93aa-0ab965b8be76/3944840022.jpg!heading" alt="为何你的产品 Demo 如此糟糕？因为你太注重产品本身了" width="560" data-img-size-val="560,315" /></p>
+
+<blockquote>
+<p>一个成功的 Demo 就是一次以产品为背景的对话。</p>
+</blockquote>
+
+<p>在理想情况下，在做产品 Demo 的过程中，你肯定希望大家能够提问交流，而不想讲 Demo 变成一场个人讲座。因此你可以尽早在 Demo 中问一些问题。</p>
+
+<p>为了能让大家都参与进来并加强双方的了解，你可以在 Demo 过程中问几类问题。第一类问题是开放式问题。这类问题的目的就是为了能让客户进行讨论。例如：当前工作流程中的哪一方面最让你崩溃？千万不要低估了你选择问的问题的重要性。即便你只想通过问问题让大家讨论，你也需要认真想想该问什么问题。一定要避免问那些无法和产品功能关联起来的问题。</p>
+
+<p>第二类问题是针对性的问题，问这种问题的目的是为了将 Demo 效果最大化。如果我发现了客户面临的一个非常大的挑战或想实现的目标，这时为了将我 Demo 的产品的影响最大化，我就可以问一个针对性的问题，例如：所有这些低效率工作都会浪费公司很多的钱，不是吗？。一般他们在同意这个说法之前都会先沉默一段时间。</p>
+
+<p>当然产品 Demo 最紧张的环节还是客户的提问环节。如果你发现自己无法很好回答对方的问题，那么你最好的办法就是 ‘回应式提问’，也就是说在他们提一个问题后你可以提出一个你自己的问题。首先要考虑他们问问题的目的，他们为什么要问这个问题？也许是因为他们真的对一些东西还不了解，也许是因为他们认为竞争对手的产品更好，或许他们质疑你的产品交付能力。你可以通过回应式提问的方式来了解其中的缘由。</p>
+
+<p>回应式问题可以帮你走出困境。Falcone 曾记得有一位客户问他：“你 Demo 的产品是否能根据用户的选择来自定义推送内容？” 他立刻说：“当然可以，我来给你展示一下如何做到的。” 演示完之后，客户竟然给出这样的反馈：“你知道吗，这个功能并不适合我们，如果每个人都能这样做的话，那就太糟糕了。”</p>
+
+<p>今天，如果面临同样的情景和问题，Falcone 不会立刻问题对方的问题，而是会提一个回应式的问题：“你们要推送什么特别种类的内容？你们团队中是谁在做这项工作？你希望每个人都有这么大的权限吗？” 如果你能针对对方的问题问出这一系列精心准备的问题的话，客户一般都会从中挑选对于他们来说最重要的问题去解释回答，这样你就能获得更多的数据信息。如果对方告诉我，他们只希望技术用户能够推送内容，我就会告诉他们 Monetate 是如何可以帮助他们做到这一点的。</p>
+
+<p><strong>总结</strong></p>
+
+<ul>
+<li><p>要尽可能地多地了解你的客户，甚至是他们的个人资料。Demo 前要多跑腿搜集尽可能多的资料，在正式 Demo 之前，先用 5 分钟时间去来了解他们真实的需求、挑战和目标。</p></li>
+
+<li><p>期待、准备、排练，直到你可以游刃有余得完成整个 Demo，做到 Demo 的信息充足、冷静沉稳、表达清晰。</p></li>
+
+<li><p>在 Demo 开始后，首先给客户他们想要的结果，让他们知道使用你的产品后他们的工作、生活是如何变得更好的，然后再解释原因。</p></li>
+
+<li><p>Demo 时要从宏观入手，让他们了解大致情况，这部分尽可能简单，不能让客户厌烦。然后再根据客户的特别需求来介绍相应的产品微观功能。</p></li>
+
+<li><p>在整个 Demo 过程中，都要掌控 Q&amp;A，尽可能让每个人都参与进来，同时要持续不断地强化产品卖点，并办法了解客户对产品的真实需求。</p></li>
+</ul>
+
+<p>本文编译自：<a href="http://firstround.com/review/Your-Product-Demos-Suck-Because-Theyre-Focused-on-Your-Product/#rt_e=eyJjYW1wYWlnbiI6InNlYXJjaCIsImNvbXBvbmVudCI6IkVudHJ5Q2FyZCIsIm9yZGVyIjowfQ%3D%3D" target="_blank"  rel="nofollow" >firstround.com</a>，如若转载，请注明出处：<a href="http://36kr.com/p/5044093.html">http://36kr.com/p/5044093.html</a></section></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/demo" rel="tag" title="demo">#demo#</a>
+    
+    <a href="https://cppfans.org/tags/%e4%ba%a7%e5%93%81" rel="tag" title="产品">#产品#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%bb%8f%e9%aa%8c" rel="tag" title="经验">#经验#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/2105.html" rel="next" title="[转]钱没了，公司就死了，科技创业公司如何才能不把钱花光？">
+        <i class="fa fa-chevron-left"></i> [转]钱没了，公司就死了，科技创业公司如何才能不把钱花光？
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/2099.html" rel="prev" title="[转]为什么面试官很少向求职者解释原因">
+        [转]为什么面试官很少向求职者解释原因 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

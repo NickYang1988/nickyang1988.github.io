@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>猎豹 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%8C%8E%E8%B1%B9/</link>
+    <description>Recent content in 猎豹 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 18 Aug 2011 18:55:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%8C%8E%E8%B1%B9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件资讯]金山发布毒霸2012猎豹正式版 首创敢赔模式</title>
+      <link>https://cppfans.org/703.html</link>
+      <pubDate>Thu, 18 Aug 2011 18:55:23 +0000</pubDate>
+      
+      <guid>https://cppfans.org/703.html</guid>
+      <description>8月18日，金山网络今日发布金山毒霸2012猎豹正式版，并宣布将在9月份启动&amp;rdquo;网购安全月&amp;rdquo;活动，活动期间，承诺凡正式</description>
+    </item>
+    
+    <item>
+      <title>[软件资讯]金山毒霸2012(猎豹) 8-4更新 全新K&#43;（铠甲）防御技术</title>
+      <link>https://cppfans.org/674.html</link>
+      <pubDate>Sat, 06 Aug 2011 11:09:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/674.html</guid>
+      <description>全新K+（铠甲）防御技术，新一代主动防御技术 上线了！！ 突出对流行样本的广谱防御能力，包含最新启发规则及多点集成判定等改进。全面拦截目前流行的</description>
+    </item>
+    
+    <item>
+      <title>[转][软件资讯]金山毒霸2012(猎豹) beta【革命性杀毒体系 秒杀全新病毒 难以置信的轻巧快速】</title>
+      <link>https://cppfans.org/566.html</link>
+      <pubDate>Sat, 16 Jul 2011 09:48:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/566.html</guid>
+      <description>下载地址： http://download.duba.net/2011/duba/KAV2012_BETA.exe 功能介绍： ①30核云引擎 超越30倍的查杀能力，电脑却依然如飞 拥有30核查杀引擎意味着查杀能力数十倍于传统杀毒软件， 而配置在云端的</description>
+    </item>
+    
+  </channel>
+</rss>

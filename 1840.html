@@ -1,0 +1,639 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转载]理解云计算：SaaS、PaaS与IaaS - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转载]理解云计算：SaaS、PaaS与IaaS">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转载]理解云计算：SaaS、PaaS与IaaS - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1840.html" itemprop="url">
+        [转载]理解云计算：SaaS、PaaS与IaaS
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-02-28">
+    2015-02-28
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">6178 字 ~13分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>作为一个广义的术语，云计算描述了一种范围广泛的服务。许多IT厂商都抓住了“云”这个概念，并将其作为产品的一种通用技术。对于公司而言，为了真正了解并利用云计算的价值，首先要了解什么是云计算，及其不同的组成部分。由于云服务是一个广泛的服务集合，因此用户可以选择何时、何地以及如何使用云计算。在这份报告中，我们将解释不同类型的云计算服务，包括软件即服务（SaaS），平台即服务（PaaS）和基础架构即服务（IaaS）；并给出一些例子来说明他们如何工作。我们也将说明云计算在什么情况下，不是最好的选择。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>云计算层次（Stack）</strong></p>
+
+<p>云计算常被描述为一个层次堆栈（Stack），每个层次建立在另一个层次的顶部，并向上提供服务接口，因此被称为“云”。通常，对于云计算的的定义来自于美国国家标准与技术研究院（NIST）。NIST将云计算定义为一个模型，简易的管理即可方便地按需配置网络访问，并可以配置计算资源（如网络，服务器，存储，应用程序和服务）。</p>
+
+<p>&nbsp;</p>
+
+<p>这意味着最终用户可以方便快捷地利用大块资源。NIST还提供了几个特点，并且这些特点被认为是“云”服务中必不可少的。这些特征包括：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>按需自助式服务。用户通过注册获得服务，而传统的IT技术需要很长时间才能为最终用户提供服务。</li>
+<li>广泛的网络访问资源。可以通过标准平台（如台式机，笔记本电脑，手机等）来访问服务。</li>
+<li>资源池。资源可被多个客户享用。</li>
+<li>拥有快速的扩展性。可以随突发需求高峰来快速扩展。</li>
+<li>计费服务。按照使用协定来进行计费。</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>近几年，向市场推出的“云计算”概念，已经被传统软件厂商普遍接受。下图描绘了云计算堆栈的三个不同的类别：软件即服务（SaaS），平台即服务（PaaS）和基础设施即服务（IaaS）。</p>
+
+<p><img src="http://www.mxchip.com/d/file/2014-09-11/24c76b070ebe70ccb9dad59cd4997670.jpg" alt="mm.jpg" /></p>
+
+<p>在这份报告中，我们将对所有三个类别进行区分，而区分这三种方式有一个非常简单的方法：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>SaaS通过网络运行，为最终用户提供应用服务。</li>
+<li>PaaS是一套工具服务，可以为编码和部署应用程序提供快速、高效的服务。</li>
+<li>IaaS包括硬件和软件，例如服务器，存储，网络，操作系统。</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>有人曾将这3个组件相互关联，并写了一个比喻为了帮助理解：就其本身而言，单独的IaaS基础设施毫无作用，它只能为上一层的资源提供帮助来发挥其生产力，就好比道路的存在是为了汽车和卡车来运送乘客与货物。在这个比喻中，道路被比作为IaaS基础设施，而汽车和卡车是坐落在基础设施之上的工具（PaaS），运送的货物和人员则可被比作软件和信息（SaaS）。</p>
+
+<p>&nbsp;</p>
+
+<p>需要注意的是，虽然本文对SaaS，PaaS和IaaS的差异进行了区分，但是PaaS和IaaS的概念已日趋模糊。现在我们对这些组件的交互有了大致的了解，下面将会把注意力转向堆栈的顶层——SaaS。</p>
+
+<p><strong>SaaS：软件即服务</strong></p>
+
+<p>软件即服务（SaaS）被定义为部署在互联网上的软件。通过SaaS授权后，可以订阅按需服务，即“支付使用”的模式，或通过广告等方式提供免费服务。这种服务的快速增长使得SaaS迅速流行，因此用户必须了解，什么是SaaS，以及在哪些场合下SaaS是重要的。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>SaaS的特点</strong></p>
+
+<p>SaaS遵守广义云计算中的定义，并有如下特点：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>可通过Web访问的商业软件。</li>
+<li>软件集中式管理。</li>
+<li>软件通过“一对多”模式进行交付使用。</li>
+<li>最终用户无需处理软件升级和补丁。</li>
+<li>应用程序接口（API）可在不同软件之间集成。</li>
+</ul>
+
+<p><strong>SaaS的适用场合</strong></p>
+
+<p>SaaS为云计算的最终交付提供了一项技术方法。当使用云计算时，公司必须考虑所迁移的应用程序是否合适SaaS。在以下场合中将应用程序移植到SaaS是个不错选择：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>Vanilla提供的SaaS功能更为全面。一个很好的例子是Vanilla提供的众多服务中包含了电子邮件；而原先使用的是单一功能的软件，尽管也能满足商务需求，但并没有竞争优势。</li>
+<li>需要网络或可通过移动设备访问的应用。例如，移动销售管理软件</li>
+<li>用于短期需求的软件，例如一个特定项目的协作软件。</li>
+<li>在特定时间需求使用的软件，例如每月使用一次税收或收费软件。</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>SaaS在引入到商业界后，被Salesforce作为客户关系管理（CRM）产品广泛接受。CRM是最流行的SaaS应用之一，同样，电子邮件，财务管、客户服务和费用管理也通过SaaS取得了良好的吸收。</p>
+
+<p><strong>SaaS不适用的场合</strong></p>
+
+<p>SaaS是一种非常有价值的工具，但是在一些特定的情况下，SaaS并不是软件交付的最佳选择。例如，SaaS可能不适合于以下场景：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>在需要实时处理数据，以及高速的数据处理应用</li>
+<li>不允许数据被外部托管的情况</li>
+<li>已有现有的内部部署解决方案能够满足所有需求</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>SaaS，即“软件即服务”是云计算最广为人知的一种服务，世界各地都在利用云平台做为服务，但是它使得SaaS的易用性和IaaS变得更为混淆。</p>
+
+<p>&nbsp;</p>
+
+<p>案例分析：SaaS使得Groupon公司按需为客户提供服务</p>
+
+<p>&nbsp;</p>
+
+<p>Groupon网站于2008年11月推出，提供了横跨40多个国家，500多个市场的购物、消费交易平台。公司拥有的数千名员工分布在芝加哥以及帕洛阿尔托办事处，并且在欧洲、拉丁美洲、亚洲和非洲区域设立了办事处。Groupon公司为客户提供了优质的产品和出色的服务。</p>
+
+<p>&nbsp;</p>
+
+<p>Groupon公司的客户服务主任Harrow介绍道：在公司成立的几个月内，客户数量以指数级上升。起初，Groupon公司几乎花费了10％的时间来响应客户请求。这些事务甚至需要几个员工才得以应付。随后，Groupon公司意识到，在没有一个真正的解决方案前，无法继续运行下去。</p>
+
+<p>&nbsp;</p>
+
+<p>在确信了Groupon的快速增长将继续后，他对几个企业级的系统解决方案进行了研究。企业级解决方案非常复杂，并且很难建立，并且会阻碍客户体验。Harrow随后在网上搜索了在线支持软件，发现了Zendesk。通过对Zendesk进行评估后，Harrow得出了正确的解决方案。</p>
+
+<p>&nbsp;</p>
+
+<p>并且他认为Zendesk使用直观。和其他平台相比，Zendesk更强大，并且评价更高。此外，由于它是一个基于Web的解决方案，能够对其进行扩展，以支持更多用户。</p>
+
+<p>&nbsp;</p>
+
+<p>现在Groupon雇佣了150多个客户支持代理，能够每天处理近15,000个请求。在代理为客户提供公司服务的过程中，Groupon的宏帮助（即一些FAQ的模板）为公司建立起了一键式解决的客户形象。</p>
+
+<p>&nbsp;</p>
+
+<p>同时，Groupon认为Zendesk能够与其他解决方案更容易地集成，通过在Zendesk中加入GoodData，Groupon能够扩展和增强其报告，并且不受电子表格的限制。</p>
+
+<p><strong>PaaS：平台即服务</strong></p>
+
+<p>&nbsp;</p>
+
+<p>在软件开发时，平台即服务（PaaS）为SaaS提供了基础。PaaS被定义为一个计算平台，它使得用户能够快速、方便地创建web应用，并且无需担心维护下层软件。</p>
+
+<p>&nbsp;</p>
+
+<p>PaaS类似于SaaS，不同之处在于其通过网络建立一个软件平台，而不是通过Web软件提供服务。</p>
+
+<p><strong>PaaS的特点</strong></p>
+
+<p>PaaS由许多不同的特征构成，以下是一些基本的特征：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>在相同的集成开发环境中用来开发、测试、部署、托管和维护的应用。</li>
+<li>基于Web的用户界面来创建工具，可用于创建、修改、测试和部署不同的UI场景</li>
+<li>多客户架构，可使多个并发用户使用相同的开发应用</li>
+<li>内置部署软件的可扩展性，包括负载平衡和故障转移</li>
+<li>通过公共标准集成Web服务和数据库</li>
+<li>支持开发团队协作，包括一些PaaS解决方案以及项目规划、沟通工具</li>
+<li>用来处理帐单和订阅管理的工具</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>尽管PaaS在许多方面类似于第三部分的IaaS，但PaaS有附加的服务价值以及两个显著特征：</p>
+
+<p>1、它是软件开发的协作平台，可用于管理应用程序的数据源和工作流。一个例子是Heroku的PaaS的，其利用Ruby on Rails语言开发。</p>
+
+<p>2、它允许用户来利用应用程序的公共数据来创建软件，该类型的PaaS可以被看作是一种方法来创建具有一系列具有公共数据格式或类型的应用程序。Force.com的PaaS便是一个很好的例子。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>PaaS的重要性</strong></p>
+
+<p>当多个开发人员对同一个项目进行开发或者需要外部人员对开发进行交互时，PaaS特别有用。下面的案例表明，对于那些拥有客户关系管理工具（例如销售信息）并希望应用程序能充分利​​用这些数据的人而言，PaaS被证明是无价的。同时，对于那些希望自动化测试和部署服务的开发人员，PaaS是非常有用的。</p>
+
+<p>&nbsp;</p>
+
+<p>基于迭代和增量开发的方法使得软件开发加快并得以普及，它简化了PaaS的开发和软件迭代的困难度。</p>
+
+<p>PaaS的一些例子有：谷歌的App Engine，微软Azure服务，以及Force.com平台。</p>
+
+<p><strong>不适合使用PaaS的场合</strong></p>
+
+<p>我们认为，PaaS将成为软件开发的主流方法。实现流程自动化、并且使用预先定义的组件和构件，自动部署到生产的能力将提供足够的价值，并且非常有说服力的。虽然如此，但是在一定的情况下，PaaS可能并不太理想，例如：</p>
+
+<p>&nbsp;</p>
+
+<ul>
+<li>当应用在托管时需要较高的可移植性</li>
+<li>当专用开发语言会妨碍今后的另一提供商的上层服务</li>
+<li>当应用程序性能需要通过底层硬件和软件来进行定制</li>
+</ul>
+
+<p><strong>案例分析：Menumate公司部署使用PaaS</strong></p>
+
+<p>Menumate为澳大利亚的整个酒店行业销售硬件和软件。使用PaaS的优势使得Menumate在Force.com在迁移的过程中，能够使用相同的应用程序。</p>
+
+<p>为其负责软件开发的Trineo公司的执行董事Fowlie说，使用Force.com的PaaS平台允许Menumate得以集中控制。</p>
+
+<p>Trineo的执行董事Keswani觉得传统方式需要显著增加基础设施、连接以及安全性需求，而Force.com平台本身提供的这些非功能性需求，使得Menumate和Trineo能够纯粹专注于开发所需的功能。此外，利用PaaS的做法意味着Trineo可以采取现有的集成和自动化部署工具来简化整个软件的开发过程。</p>
+
+<p>&nbsp;</p>
+
+<p>通过使用PaaS，Trineo已经能够在不同业务中利用一系列现成的应用程序来开发新应用。以下是PaaS的一些应用：</p>
+
+<p>&nbsp;</p>
+
+<p>许可证密钥：Menumate软件通过使用许可证密钥来激活客户已支付的功能。PaaS编程语言的强大功能允许Menumate软件快速部署到Force.com（其许可证密钥通过Salesforce.com的CRM中链接），这使得销售和支持人员可以快速查看许可证的状态。</p>
+
+<p>&nbsp;</p>
+
+<p>案例管理增强：Menumate处理的很多案例与消耗品订单有关。为了解决这个问题，Menumate拥有一个单独的基于DOS的应用程序，允许用户创建订单和发票。Menumate能够在支持案例中添加产品，并用现有的集成软件自动将发票发送到会计软件上。</p>
+
+<p>标签印刷：另一项传统应用，能够为耗材和硬件创建货运标签，并将其发送给发送客户。使用PaaS技术，可以将这些标签直接打印到客户记录中。</p>
+
+<p>&nbsp;</p>
+
+<p><strong>IaaS：基础设施即服务</strong></p>
+
+<p>基础设施即服务（IaaS）提供了云计算基础架构，包括服务器、存储、网络和操作系统。它作为一种按需服务，使得客户无需购买服务器、软件、数据库空间或网络设备，而只要按需购买这些资源的外包服务。</p>
+
+<p>正如以往的白皮书介绍过，IaaS也有一些值得注意的地方。通常它可以分为公共和私有两种基础设施或是两者的组合。“公共云”被认为是包含了共享资源并在互联网上部署了自助式服务的基础设施。</p>
+
+<p>相比之下，“私有云”也集成了一些诸如虚拟化等的云计算功能，但它是运行在专用网络上的基础设施。此外，一些托管服务提供商已经开始在提供传统托管服务的同时，也提供公共或私有云的网络组合。这种组合方式通常被称为“混合云”。</p>
+
+<p><strong>IaaS的特点</strong></p>
+
+<p>与之前两个部分的SaaS和PaaS相比，IaaS的是一个迅速发展的领域。可以说，它普遍遵守以下几个核心特征：</p>
+
+<ul>
+<li>以资源分配作为服务</li>
+<li>允许动态调整</li>
+<li>成本可变，以效用定价</li>
+<li>通常在单一硬件上支持多用户</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>目前已有大量的IaaS供应商，其中既有诸如Amazon和Rackspace的超大型云供应商，也有区域型的佼佼者。</p>
+
+<p>&nbsp;</p>
+
+<p>正如之前所述，PaaS和IaaS的之间的界限正变得越来越模糊，因为供应商正将平台工具作为IaaS的一部分来帮助云的多种类型的部署。</p>
+
+<p><strong>IaaS的适用场合</strong></p>
+
+<p>IaaS在与云计算密切相关的场合下将会发挥效益，这些场合包括：</p>
+
+<ul>
+<li>要求基础设施能在任意时刻能适应变化多端的需求量</li>
+<li>当新公司没有预算投资于硬件</li>
+<li>当公司发展迅速，在扩展硬件时遇到问题</li>
+<li>当公司迫于预算限制，需要将资金转移到经营开支上</li>
+<li>一些特定的商务领域，也可用于测试或临时性的设施需求</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p><strong>不适合使用IaaS的场合</strong></p>
+
+<p>虽然IaaS有可扩展性强和大规模部署迅速的优势，但在某些情况下也有它的局限性。在以下场合中，建议慎用IaaS：</p>
+
+<ul>
+<li>限于法律的规定，要求数据存储和处理进行隔离</li>
+<li>对基础设施有非常高的性能要求，或原先的内部部署或专用托管基础设施已经满足需求</li>
+</ul>
+
+<p>案例分析：Live Smart通过采取基础设施来帮助减肥者</p>
+
+<p>&nbsp;</p>
+
+<p>Live Smart是推广该饮食解决方案的幕后公司，主要出版饮食类书籍和策划在线活动。Beyond Diet是该公司旗下的一个与减肥者互动的社区网站。</p>
+
+<p>从2008年起该公司的业绩增长迅猛，甚至在2010年有了50倍的收益增长。这相当于网站有30万日的均实访客量，峰值甚至高达100万人次。当在考虑基础设施的架构时，Beyond Diet需要的是可托管性和可扩展性。重要的是，Beyond Diet网站规模需要动态的扩大或缩小的能力，以来应对定期的大流量高峰。</p>
+
+<p>&nbsp;</p>
+
+<p>Live Smart首席技术官Rob·Volk说：“迁移到云基础设施后他省心了，而在此之前Live Smart在其网站上需要有一个兼职系统管理员，这是显然不是最好的选择；现在有了Managed Cloud（由云提供商Rackspace提供的IaaS服务），Rackspace基本上可以扮演我们的Linux和Windows系统管理员，全天24小时任何时刻如果发生当机，几分钟之内他们的工程师就会来解决这些问题，这个云改变了我们的工作，因此我们需要这种基础设施。”</p>
+
+<p>&nbsp;</p>
+
+<p>对于Volk来说，将其网站移动到云的主要动力是他可以更加专注核心业务，而让那些基础设施的专家来日常管理云的运维，因为云供应商提供多级冗余的硬件、快速的配置和高度的灵活性，这些都起了决定性因素。有趣的是，Volk甚至从未考虑过经营自己的物理服务器，而是考虑究竟选择托管服务器还是云中的一个。</p>
+
+<p>&nbsp;</p>
+
+<p>他选择了云还因为它降低了成本，相比那些专用服务器，云的选择有更高的灵活性。</p>
+
+<p>&nbsp;</p>
+
+<p>Volk正在使用多个云服务提供商：他有三个Web服务器，多个数据库服务器和一个Rackspace的负载平衡器，同时也使用Amazon的S3服务。</p>
+
+<p>&nbsp;</p>
+
+<p>Volk认为其中最大的好处是云基础设施的可扩展性。他解释说：“每当过年的时候很多人都去节食，我们的服务器的高峰时间正是在每年的1月到到3月之间，此时网站的流量是平时的三倍，而利用云服务器，我们只需在几分钟之内就能建立好新的Web前端。一旦流量下降，我们可以关闭这些前端。只有在云虚拟化环境中，我们才可能有这样的可扩展性。”</p>
+
+<p>&nbsp;</p>
+
+<p><strong>结论</strong></p>
+
+<p>云计算不是一个单一的术语，而是一个总称，它提出了IasS作为基础、PaaS作为开发工具、SaaS作为顶层应用，来取代以往的内部部署应用服务。</p>
+
+<p>对于那些打算迁移到云计算的公司而言，非常重要的一点，是需要了解云计算的每个层面，并结合自己的情况来决定哪些是适合他们需求的解决方案。</p>
+
+<p>随着IT的发展，云计算将加速变革，并将成为未来IT默认的交付方式，所以公司应该尽早考虑将其业务迁移到云计算上。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/cloud" rel="tag" title="cloud">#cloud#</a>
+    
+    <a href="https://cppfans.org/tags/%e4%ba%91%e8%ae%a1%e7%ae%97" rel="tag" title="云计算">#云计算#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1847.html" rel="next" title="[转]怎样尊重一个程序员">
+        <i class="fa fa-chevron-left"></i> [转]怎样尊重一个程序员
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1778.html" rel="prev" title="*.pvr.ccz与png格式的互转">
+        *.pvr.ccz与png格式的互转 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

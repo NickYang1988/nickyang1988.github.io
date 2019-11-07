@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diy on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/diy/</link>
+    <description>Recent content in Diy on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 20 Jun 2011 11:32:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/diy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress DIY (2)——WP如何实现伪静态？</title>
+      <link>https://cppfans.org/472.html</link>
+      <pubDate>Mon, 20 Jun 2011 11:32:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/472.html</guid>
+      <description>什么是伪静态？ 伪静态是相对真实静态来讲的.通常我们为了更好的缓解服务器压力,和增强搜索引擎的友好面.都将文章内容生成静态页面.但是有的朋友为</description>
+    </item>
+    
+  </channel>
+</rss>

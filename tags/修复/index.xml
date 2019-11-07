@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>修复 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BF%AE%E5%A4%8D/</link>
+    <description>Recent content in 修复 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 29 Jan 2015 11:54:51 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BF%AE%E5%A4%8D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CVE-2015-0235：Linux glibc高危漏洞修复方法</title>
+      <link>https://cppfans.org/1784.html</link>
+      <pubDate>Thu, 29 Jan 2015 11:54:51 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1784.html</guid>
+      <description>2015/01/28【CVE 2015-0235: GNU glibc gethostbyname 缓冲区溢出漏洞 】全面爆发，该漏洞的产生是Qualys公司在进行内部代码审核时，发现了一个在GNU C库(g</description>
+    </item>
+    
+    <item>
+      <title>[软件]强大的国外压缩修复软件DiskInternals ZipRepair</title>
+      <link>https://cppfans.org/1164.html</link>
+      <pubDate>Sat, 17 Mar 2012 14:11:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1164.html</guid>
+      <description>大家有没有遇到过，从正规途径下载来的压缩软件解压时提示文件与损坏无法解压的问题，或者是解压到中途出现的，这些问题让我们不得不重复下载这些文件</description>
+    </item>
+    
+  </channel>
+</rss>

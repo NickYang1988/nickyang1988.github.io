@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件卸载 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD/</link>
+    <description>Recent content in 软件卸载 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 08 Sep 2012 16:14:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu12.04LTS下如何安装和彻底卸载xfce4？</title>
+      <link>https://cppfans.org/1356.html</link>
+      <pubDate>Sat, 08 Sep 2012 16:14:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1356.html</guid>
+      <description>今天将Ubuntu12.04更新完了，用的网易的源，更新速度还是很给力的，平均500多K的下载速度。发现虚拟机上unity界面还是比较卡的，</description>
+    </item>
+    
+  </channel>
+</rss>

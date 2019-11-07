@@ -1,0 +1,400 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>谈谈程序员行业的“文人相轻”以及沟通问题 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="谈谈程序员行业的“文人相轻”以及沟通问题">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="谈谈程序员行业的“文人相轻”以及沟通问题 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1472.html" itemprop="url">
+        谈谈程序员行业的“文人相轻”以及沟通问题
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-05-27">
+    2013-05-27
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1829 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>很早以前就想写这篇文章了，不过却因自己经验甚浅，不敢妄言，虽然现在写也可能引起一些争论，还是请大家平和的去看这篇文章。</p>
+
+<p>自古以来便有文人相轻，这句话来自三国·魏·曹丕《典论·论文》,原文与译文如下：</p>
+
+<blockquote>
+<h3 class="headline-2" style="margin:15px 0px 5px;padding:0px;font-size:16px;font-family:arial;line-height:22px;clear:both;background-color:#ffffff;">
+  <span class="headline-content">原 文</span>
+</h3>
+
+<div class="para" style="text-indent:30px;font-family:arial, 宋体, sans-serif;font-size:14px;line-height:24px;background-color:#ffffff;margin-bottom:14px;">
+  文人相轻，自古而然。傅毅之于班固，伯仲之间耳，而固小之，与弟超书曰：“武仲以能属文，为兰台令史，下笔不能自休。”夫人善于自见，而文非一体，鲜能备善，是以各以所长，相轻所短。里话曰：“家有弊帚，享之千金。”斯不自见之患也。
+</div>
+
+<h3 class="headline-2" style="margin:15px 0px 5px;padding:0px;font-size:16px;font-family:arial;line-height:22px;clear:both;background-color:#ffffff;">
+  <span class="headline-content">译文</span>
+</h3>
+
+<div class="para" style="text-indent:30px;font-family:arial, 宋体, sans-serif;font-size:14px;line-height:24px;background-color:#ffffff;margin-bottom:14px;">
+  文人互相轻视，自古以来就是如此。傅毅和班固两人文才相当，不分高下，然而班固轻视傅毅，他在写给弟弟班超的信中说：“傅武仲（傅毅）因为能写文章当了兰台令史的官职，（但是却）下笔千言，不知所指。” 但凡人总是善于看到自己的优点，然而文章不是只有一种体裁，很少有人各种体裁都擅长的，因此各人总是以自己所擅长的轻视别人所不擅长的，乡里俗话说："家中有一把破扫帚，也会看它价值千金。"这是看不清自己的毛病啊。
+</div>
+</blockquote>
+
+<p>而如今这句话如今不单单指的是写文章的人了，今天想说说程序员行业中的“文人相轻”。</p>
+
+<p>周鸿祎曾经说过“最不好的作法是，每换一拨人换一套技术，文人相轻，总认为自己的技术最好，这也是为何有些搜索公司做不大”，且不谈论他说的后半句，前半句中提到的“文人相轻，总认为自己的技术是最好的”很值得思考。</p>
+
+<p>程序员修改别人代码_<span style="color:#3f3f3f;">(除过比较NB的开源代码)</span>_最常见的做法就是先将别人的代码风格改为自己的，然后才开始研究，其实别人代码的风格可能是另一种常见的风格，只因与自己风格不一致，于是乎改之。可能您并不是这样，至少我有这样的毛病，算是强迫症吧。</p>
+
+<p>另一种常见的是刚进入项目的程序员会抱怨底层的一些东西难用，为什么不用xxx库，xxx技术等等。其实很明显可以看出该猿对这个项目和这套底层不熟悉，生硬的使用，导致其心中有怨气。所以大多数人刚进某一个项目都不会直接写底层的。</p>
+
+<p>文人为何会相轻？难道跟自古以来说的文人酸腐有关系？我认为归根结底是国人的心态在作祟。国人不论是做什么的，都有“好为人师”的心理。</p>
+
+<p>郭德纲在《以德服人》中说过“中国人都有好为人师的心理，比如你开了一家餐馆，叫五环餐馆，但门口的标志上画六个环，有好事人来了就会说你们怎么回事啊，叫五环餐馆，怎么画了六个环呐，跑堂的会说先生您真有眼力，当初是工人弄错了，您坐着喝点水吧。结果这主儿喝水无聊翻菜单，点了一千块钱的菜吃了”。<em><span style="color:#3f3f3f;">(可能与原话有出入，意思大致如此)</span></em></p>
+
+<p>可以得见的是病态的心理导致了文人相轻，程序员也不见外，虽然大多数表面上与世无争，努力写自己的NB代码，但是心中总是对一些人代码和技术不服气，进而产生了一些矛盾，这当然不是公司高层喜闻乐见的事情了，于是刺头们都被分开做项目了，这也是国内的团队管理和团队建设。</p>
+
+<p>说完文人相轻，再来说说其并发症——沟通的问题。</p>
+
+<p>团队合作必然会有沟通，因为合作必然会带来交流，否则这不叫团队了。而在沟通的过程中，会产生各样的问题，比如提问不当啊，问题不清楚啊，答非所问等问题。不过最常见的问题是提问不当，我有一个程序交流的QQ群，里面经常会有人提出开发上的问题，不过大多都不知道在问什么，提问不清楚是如今沟通上的一大问题。</p>
+
+<p>举个例子吧，在oschina上有人问了这样一个问题：“nginx有网站在用吗？”<em><span style="color:#7f7f7f;">(关于nginx可以去oschina上查，不想引用百度百度百科了。)</span></em><span style="color:#000000;">，结果引来了一大堆人的跟帖和指责，好一点的是告诉他哪些哪些网站在用，不好的就是侮辱了，骂小白的，骂没见识的都有，有一位朋友的说法挺有意思，引用在下面。</span></p>
+
+<blockquote>
+<p><span style="color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;background-color:#fffec8;">哈哈..这句话很容易引发矛盾.</span><br style="margin:0px;padding:0px;color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;" /><span style="color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;background-color:#fffec8;">如果是小白求问&hellip;别人会认为你孤陋寡闻</span><br style="margin:0px;padding:0px;color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;" /><span style="color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;background-color:#fffec8;">如果是表示不屑&hellip;别人会认为你土鳖</span><br style="margin:0px;padding:0px;color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;" /><span style="color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;background-color:#fffec8;">正确的 问法应该是： 现在有哪些网站在用这个web服务</span><br style="margin:0px;padding:0px;color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;" /><br style="margin:0px;padding:0px;color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;" /><span style="color:#0000aa;font-family:微软雅黑, verdana, sans-serif, 宋体;font-size:12px;line-height:19px;background-color:#fffec8;">&mdash;-摘自 《如果避免引发网络掐架以及避免网络喷子之淘气3000问》</span></p>
+</blockquote>
+
+<p>所以，好的提问方式是沟通的前提，问清楚了，别人才能回答清楚。</p>
+
+<p>当然了，还有些是因为有个人情绪在其中，我公司另外一个项目组，是服务器-客户端-策划，三足鼎立，三方谁见谁都要吵吵两句，无它，只是看着不爽，于是乎，这个项目快做完的时候，他们相继离开，可能也是因为项目存在问题的压力吧。现在项目转到我们这边，可害苦了我们啊。</p>
+
+<p>我也不是管理层，对团队建设没任何经验，我认为沟通的目的是为了解决问题，把问题解决了，剩下什么都好说。</p>
+
+<p>对于这两个问题，我只能浅尝辄止的说一说，也没经验，也说不了多少，说多了怕被喷，所以就到这里吧。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%9b%a2%e9%98%9f" rel="tag" title="团队">#团队#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%96%87%e4%ba%ba%e7%9b%b8%e8%bd%bb" rel="tag" title="文人相轻">#文人相轻#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%b2%9f%e9%80%9a" rel="tag" title="沟通">#沟通#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%a8%8b%e5%ba%8f%e5%91%98" rel="tag" title="程序员">#程序员#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1485.html" rel="next" title="[转载]10 个你必须掌握的超酷 VI 命令技巧">
+        <i class="fa fa-chevron-left"></i> [转载]10 个你必须掌握的超酷 VI 命令技巧
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1478.html" rel="prev" title="恢复网站色彩并试用Windows live">
+        恢复网站色彩并试用Windows live <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

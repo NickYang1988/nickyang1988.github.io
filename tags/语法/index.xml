@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>语法 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%AF%AD%E6%B3%95/</link>
+    <description>Recent content in 语法 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 04 Jan 2011 16:26:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%AF%AD%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lua基础语法</title>
+      <link>https://cppfans.org/113.html</link>
+      <pubDate>Tue, 04 Jan 2011 16:26:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/113.html</guid>
+      <description>注释 像我们这样的码农，接触新语言第一个想的肯定是如何打注释，代码写不出来，伪代码总能写的出来一些。Lua中的注释使用两个短线来表示本行以后是</description>
+    </item>
+    
+  </channel>
+</rss>

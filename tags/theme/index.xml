@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Theme on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/theme/</link>
+    <description>Recent content in Theme on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 10 Mar 2012 16:43:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[WP主题]另类风格的国人优秀WP主题</title>
+      <link>https://cppfans.org/1145.html</link>
+      <pubDate>Sat, 10 Mar 2012 16:43:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1145.html</guid>
+      <description>前几日写了一篇blogolife主题的文章，有朋友说国外的主题一般对中文支持都不怎么好，所以应他要求，分享两款国人优秀的主题。 1.大前端D4</description>
+    </item>
+    
+    <item>
+      <title>[WP主题]简洁大方多色彩的主题——blogolife</title>
+      <link>https://cppfans.org/1129.html</link>
+      <pubDate>Thu, 08 Mar 2012 14:52:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1129.html</guid>
+      <description>今天来介绍一款简洁大气的html5主题，blogolife，主要特性如下： 1.主题自定义设置，基本每个主题都会有的，所以无需惊讶 2.六种可选</description>
+    </item>
+    
+    <item>
+      <title>[WP主题]主机主题分享——HostMe</title>
+      <link>https://cppfans.org/892.html</link>
+      <pubDate>Mon, 17 Oct 2011 15:43:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/892.html</guid>
+      <description>看到一个非常漂亮的WP主机主题，很大气，而且很有动感，前页可放置三款主要产品，效果非常不错，有了这款主题，想做主机的朋友可以试试看，剩下了系</description>
+    </item>
+    
+  </channel>
+</rss>

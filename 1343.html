@@ -1,0 +1,422 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[开源项目]科幻背景的MMO网游Ryzom介绍 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[开源项目]科幻背景的MMO网游Ryzom介绍">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[开源项目]科幻背景的MMO网游Ryzom介绍 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1343.html" itemprop="url">
+        [开源项目]科幻背景的MMO网游Ryzom介绍
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-08-05">
+    2012-08-05
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2517 字 ~6分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>Ryzom是法国Nevrax公司从2000年左右开始开发的一个MMORPG游戏，大概在2年前开始投入市场运营，这款网络游戏在市场上也获得了巨大的 成功。近期，由于多种原因，Nevrax公司濒临破产，所以正在市场上运营的Ryzom游戏和广大玩家都面临着断炊的危险。不过这也为自由软件运动提供了 一个非常好的机会，让我们有可能拥有一个自由的大型多人在线角色扮演游戏。就在最近，一些自由软件爱好者、前Nevrax员工还有游戏玩家们共同发起了一 项解放Ryzom游戏的运动。他们正在筹集一笔资金，准备从Nevrax公司购买Ryzom游戏的源代码、游戏数据、艺术作品等等，然后通过GNU GPL授权发布Ryzom游戏。这样，我们就拥有了一个完整的、自由的MMORPG游戏引擎、一个完整的C/S游戏架构等，用户就可以基于自由的 Ryzom游戏开发出自己的网络游戏。他们也计划创立一个非盈利性组织来运营现有的游戏服务器和后续的开发，让现有的Ryzom在线游戏继续发展下去。</p>
+
+<p>现在流行的大型网络游戏都是由专有软件公司开发，所以网络游戏的发展也都是由专有软件公司控制，而不是用户。不过我们认为，既然用户能够参与现实社 会的发展，那么也同样有权力参与网上虚拟社会的建设。玩家是游戏虚拟社会里的公民，网络游戏应该属于全体玩家，所以他们有权力和机会实现自己在虚拟社会里 的梦想，这就需要有自由的网络游戏。自由软件基金会认为收购Ryzom游戏是一个高优先级的自由软件项目，所以决定资助此项目6万美金，并最终帮助筹集到 20万欧元左右，能够买下Ryzom游戏，将其变成一个自由软件。</p>
+
+<p>项目截图：</p>
+
+<p><img class="aligncenter" title="Ryzom截图" src="http://www.yesky.com/imagesnew/game/zrf04/zrf2004090302_22.jpg" alt="" width="550" height="412" /></p>
+
+<p><img class="aligncenter" title="Ryzom截图" src="http://www.yesky.com/imagesnew/game/zrf04/zrf2004090302_29.jpg" alt="" width="550" height="412" /></p>
+
+<p>&nbsp;</p>
+
+<p>科幻背景的角色扮演网络游戏Ryzom的开发商Winch Gate Properties正式宣布开源。</p>
+
+<p>开发者现在能获取客户端、内容创建工具和服务器端的源代码，可以修改、增强或者创造一个新的虚拟世界。这是Ryzom漫长历史的一个 重要转折点。源 代码采用AGPLv3许可证授权，艺术资产包括3D对象、动画跟踪、粒子效果和纹理等采用创作共用-署名-相同方式共享授权。Winch Gate捐赠的源代码超过二百万行，捐赠的高质量纹理素材超过2万，3D对象多达数千。</p>
+
+<p>Ryzom源代码获取网址：<a href="http://dev.ryzom.com/projects/ryzom/wiki" target="_blank" rel="nofollow" ><a href="http://dev.ryzom.com/projects/ryzom/wiki">http://dev.ryzom.com/projects/ryzom/wiki</a></a></p>
+
+<p><span style="color: #808080;"><em>以下摘自互联网</em></span></p>
+
+<p><span style="color: #ff0000;"><strong>Ryzom服务架构（Aervice Architecture）介绍</strong></span></p>
+
+<p>服务器（Server）：指物理服务器</p>
+
+<p>服务片区（Shard）：指Ryzom世界的一个实例。当前，Ryzom有三个服务片区，一个面向法语社区，一个面向德语社区，最后一个是面向说英语的人。所有的服务片区都是独立的，他们之间几乎没有任何网络连接。</p>
+
+<p>服务（Service）：一个服务指的是一个可执行程序，它在服务器上运行。例如，我们有一个用于管理AI的服务。我们也可以在Windows服务器和Linux服务器上创建不均匀分布的服务片区，因此一些服务在Windows上运行而另外一些则跑在Linux上。</p>
+
+<p>Ryzom的架构是完全模块化的。在2004年，一个Ryzom服务片区需要8台服务器来运行，而现在由于计算机性能的飞升，一个这样的服务区在一台单独的服务器上就能够跑起来了。</p>
+
+<p>Ryzom服务</p>
+
+<p>以下是Ryzom的服务和简要介绍：</p>
+
+<p>AES（启动管理服务）：一台物理服务器只能有一个AES。它通过启动、停止、查询这台服务器上的的各种服务来管理服务区</p>
+
+<p>AS（管理服务）：一个AS服务用于定位所有的AES，它是接收和发送AES指令的中心点。</p>
+
+<p>AIS（AI服务）：一个服务区可以配置一个或这个多个AIS，这个服务的目的在于处理Ryzom世界中的人工智能（AI）。一个AIS负责一个地理区域，例如，在Ryzom中我们有6个AIS，一个大陆配置一个。</p>
+
+<p>BMS（备份管理服务）：所有服务区配置有两个BMS（一个主服务和一个副服务）。他们管理诸如玩家角色、工会等数据的保存和加载，数据保存在特殊的文件格式之中。</p>
+
+<p>EGS（实体游戏服务）：一个服务区配置一个EGS，它管理所有玩家的状态、运行游戏逻辑规则、任务、物品、工会等等，可以说它是一个中心服务！</p>
+
+<p>GPMS（全局定位管理服务）：一个服务区配置一个，通过它能查询所有实体（包括玩家、NPC等等）的位置，它也负责碰撞检测。</p>
+
+<p>IOS（输入输出服务）：一个服务区一个，管理所有的聊天、文本、本地化等操作。</p>
+
+<p>NS（名称服务）：一个服务区一个，这是一个用于定位其他服务的底层服务。通过它可以查询那些服务启动了，各种服务的端口，就像黄页一样。</p>
+
+<p>WS（欢迎服务）：一个服务区一个，用于登录过程，该服务检查玩家数据并路由玩家连接到空闲的FES。</p>
+
+<p>TS（时钟服务）：一个服务区一个，这是一个用于管理游戏时间和同步其他服务的简单服务。</p>
+
+<p>MS（镜像服务）：一台服务器配置一个。这个服务使用共享内存和网络通信来跨服务器同步数据，因此所有的服务都能够高效地访问所有需要数据。</p>
+
+<p>SU（区域统一服务）：全局一个，用于管理牵涉多于一个区域的事务。例如，从一个区域传送玩家到另一个区域。这个服务也用于处理玩家登录。</p>
+
+<p>FES（前端服务）：一个服务区可以配置一个或者多个前端服务。它是Ryzom客户端的接口，处理客户端的信息并且路由他们到合适的服务上。假如一个服务区配置了两个FES，那么客户端连接的量在两个FES上均分。</p>
+
+<p>SBS（会话浏览服务）：和FES数量相同，用于管理各种会话（Session）事务（主要用于Ring系统）。</p>
+
+<p>PDSS（持久数据服务）：该服务用于定期备份角色数据到磁盘文件，也用于提取某些统计和测试信息。</p>
+
+<p>//////////////////////////////////////////////////////////////////////</p>
+
+<p>Ryzom的代码我自己下载看了一下，包含完整的客户端引擎和服务器引擎(Netnel)，甚至有一套完整的脚本引擎代码，不过很抱歉，其中没有</p>
+
+<p>vs工程文件，需要用CMake自己够建，里面包含了挺多的第三方库文件，所以自己暂时就没有生成文件，有兴趣的朋友可以整套弄好了贡献出来。自己打算研究下CryEngine的代码，简单看了下，代码风格稍微有点晦涩，不过商业代码都这样，先从CE3的网络库开始研究吧。它里面包含了PS，Xbox360，PC三种平台的代码，而我只打算研究PC的，其他两种暂时没什么兴趣。</p>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/ryzom" rel="tag" title="Ryzom">#Ryzom#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bc%80%e6%ba%90" rel="tag" title="开源">#开源#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%b3%95%e5%9b%bd" rel="tag" title="法国">#法国#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%bd%91%e6%b8%b8" rel="tag" title="网游">#网游#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1345.html" rel="next" title="[游戏引擎]ForstBite2(寒霜)游戏引擎SDK下载">
+        <i class="fa fa-chevron-left"></i> [游戏引擎]ForstBite2(寒霜)游戏引擎SDK下载
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1342.html" rel="prev" title="浅谈国产游戏业的问题——到底是谁玩了谁？">
+        浅谈国产游戏业的问题——到底是谁玩了谁？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

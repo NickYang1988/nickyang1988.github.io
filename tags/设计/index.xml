@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设计 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 设计 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 May 2018 04:41:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>接口设计六大原则</title>
+      <link>https://cppfans.org/2245.html</link>
+      <pubDate>Fri, 25 May 2018 04:41:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2245.html</guid>
+      <description>一. 单一职责原则 Single Responsibility Principle, 简称SRP。 定义 There should never be more than one reason for a class to change 应该有且仅有一个原因引起类的变 准则 职责的划分？单一的定义和级别？ 应该根据实际</description>
+    </item>
+    
+    <item>
+      <title>[转]我在系统设计上犯过的14个错</title>
+      <link>https://cppfans.org/2111.html</link>
+      <pubDate>Thu, 28 Apr 2016 10:12:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2111.html</guid>
+      <description>转自:http://hellojava.info/?p=458 在上篇《架构师画像》的文章中提到了自己在系统设计上犯过的一些错，觉得还挺有意义</description>
+    </item>
+    
+    <item>
+      <title>字库识别网站——求字体网</title>
+      <link>https://cppfans.org/1537.html</link>
+      <pubDate>Wed, 11 Dec 2013 05:43:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1537.html</guid>
+      <description>看到别人网站上的一些字体比较好看，却苦于不知道是什么字体，搜索来到了求字体网站，网站的功能很简单，上传图片分析字体，并且提供输入字体名预览的</description>
+    </item>
+    
+    <item>
+      <title>我也来说说扁平化设计</title>
+      <link>https://cppfans.org/1488.html</link>
+      <pubDate>Mon, 01 Jul 2013 14:23:42 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1488.html</guid>
+      <description>最近由于iOS7 beta版本的推出，导致了扁平化设计又被推上了一个热潮，所以我也凑个热闹，随便说一说。 到底什么是扁平化设计呢？ 扁平化完全属于</description>
+    </item>
+    
+  </channel>
+</rss>

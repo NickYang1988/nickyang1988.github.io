@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webkit on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/webkit/</link>
+    <description>Recent content in webkit on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 05 Apr 2012 05:08:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[wp技巧]如何在自己的网站增加语音搜索？</title>
+      <link>https://cppfans.org/1230.html</link>
+      <pubDate>Thu, 05 Apr 2012 05:08:18 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1230.html</guid>
+      <description>看了讯飞的语音SDK之后，觉得语音技术挺好玩的，后来决定用它的SDK开发出一个小软件出来，不过到现在小软件没开发出来，倒是看到了很多人在自己</description>
+    </item>
+    
+  </channel>
+</rss>

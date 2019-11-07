@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>高效 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%AB%98%E6%95%88/</link>
+    <description>Recent content in 高效 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 26 Nov 2012 13:24:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%AB%98%E6%95%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>对象序列化类库MsgPack介绍</title>
+      <link>https://cppfans.org/1410.html</link>
+      <pubDate>Mon, 26 Nov 2012 13:24:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1410.html</guid>
+      <description>MessagePack(以下简称MsgPack)一个基于二进制高效的对象序列化类库，可用于跨语言通信。它可以像JSON那样，在许多种语言之间</description>
+    </item>
+    
+  </channel>
+</rss>

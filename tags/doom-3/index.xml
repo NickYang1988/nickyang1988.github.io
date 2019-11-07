@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Doom 3 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/doom-3/</link>
+    <description>Recent content in Doom 3 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 23 Nov 2011 15:47:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/doom-3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[游戏源码]Doom3公布源代码下载</title>
+      <link>https://cppfans.org/1013.html</link>
+      <pubDate>Wed, 23 Nov 2011 15:47:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1013.html</guid>
+      <description>什么是doom3？ doom3是一款高质量的FPS游戏，见百度百科 《毁灭战士3》（Doom 3）由id Software开发，计算机版于2004年</description>
+    </item>
+    
+  </channel>
+</rss>

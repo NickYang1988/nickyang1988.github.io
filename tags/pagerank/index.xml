@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PageRank on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/pagerank/</link>
+    <description>Recent content in PageRank on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 03 Jul 2011 08:59:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/pagerank/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>从Google Pr值更新浅谈网站如何获得更高的Pr值</title>
+      <link>https://cppfans.org/506.html</link>
+      <pubDate>Sun, 03 Jul 2011 08:59:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/506.html</guid>
+      <description>最近两大搜索引擎都或多或少的发生了一些事情，首先google的pr如约一个季度更新了一次，其次是百度收录剧减，不知道什么问题，可能是内部调整</description>
+    </item>
+    
+    <item>
+      <title>Google恢复使用网站页面排名Pr值？</title>
+      <link>https://cppfans.org/165.html</link>
+      <pubDate>Fri, 21 Jan 2011 16:40:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/165.html</guid>
+      <description>google的pr值简介： PageRank，网页排名，又称网页级别、Google左侧排名或佩奇排名，是一种由搜索引擎根据网页之间相互的超链接</description>
+    </item>
+    
+  </channel>
+</rss>

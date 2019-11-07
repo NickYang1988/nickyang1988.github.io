@@ -1,0 +1,378 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>谈谈当今的游戏行业(1)——是否端游已死，页游将死？ - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="谈谈当今的游戏行业(1)——是否端游已死，页游将死？">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="谈谈当今的游戏行业(1)——是否端游已死，页游将死？ - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1471.html" itemprop="url">
+        谈谈当今的游戏行业(1)——是否端游已死，页游将死？
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-07-10">
+    2013-07-10
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1559 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>本系列文章可能有好几篇，现在暂时不能确定具体数量。这种发表观点类型的文章本来应该应该用微信来发布的，不过微信我还在申请公众平台审核，而且那公众平台我才刚开始看了下，还没深入了解，所以就先写在博客上了。</p>
+
+<p>&nbsp;</p>
+
+<p>本文中心：是否端游已死，页游将死？</p>
+
+<p>&nbsp;</p>
+
+<p>过完年回来，听到最多的就是端游市场已经不行了，没有钱分，高资金投入，都是靠着钱支撑着，一旦停止推广砸钱，人数收入马上急剧下降，根本没法养活公司。</p>
+
+<p>再加上年前的几款手游项目爆发，还有蓝港转型做手游王者之剑，直接成为爆款，月入2000W，蓝港宣布全面转入手游。等等的消息的确让各大厂商都看到了手游的市场以及用户的消费能力，因而诸多公司抱着尝试的态度，分出团队来做手游，甚至直接放弃端游页游，全面转向手游。</p>
+
+<p>的确，端游是高投入，砸的钱决定你的营收，一旦停止砸钱，收入掉的很快，而页游基本都是走渠道商，流水虽然几千万，8:2分成的比例，算下来也没赚多少钱(前几天跟朋友吃饭，说某些平台已经到了9:1分成了)。而这个时候手游作为一个新的游戏平台和方向，分成比例还是5:5，研发厂商还是比较有赚头的。</p>
+
+<p>结合去年的几个爆款项目，MT、王者之剑等，用户随随便便就几十万，流水几千万，风光无限，这也是开发人员的一个大光环，毕竟是过千万的成功项目。MT的成功在于有大批的魔兽世界的玩家以及我叫MT动漫的普及程度，还有卡牌战斗比较新颖；王者之剑在于类似于传统端游，操作和画面都更为舒服，动作类游戏，快速副本等。所以MT成功不在于游戏，而是在于用户对魔兽的爱，王者之剑更体现出来玩家对传统端游的喜爱。</p>
+
+<p>端游是否已死，页游是否将死？我们来看看最近两个比较有代表性的PC上的爆款，《秦美人》和《笑傲江湖》的数据。</p>
+
+<p>《秦美人》我自己没有玩过，不过看到gamelook上一些文章的介绍，再加上一些策划同事的提及，还是关注了下。《秦美人》是程度墨龙科技制作的一款页游，去年(2012年)8月15日完成封测，9月25日开始营收。首月，月营收破400万元，随后，月营收就开始呈现几何级数增长。次月1400万元，第三个月2800万元……到今年春节期间，达到最高月营收4000万元，而目前，最高月营收已突破5300万元。同时，游戏已跨出国门，登陆越南、韩国、马来西亚等市场；5月底，《秦美人》在越南市场也将开始运营收费。</p>
+
+<p>再来看看《笑傲》，《笑傲》是完美花费4年时间研发的大型3D MMO武侠类网游，据说成本在8000W左右，公测第一天，开服30组，据北京的策划朋友反映说当天下午5点之前已经过了30W在线了，而晚上更是加开了6组服务器，第二天已经超过45组了，大约在线在40W以下。某产品朋友说大致算下来，《笑傲》一天的营收大约在300W-400W，一个月差不多1亿左右，研发成本就回来了。</p>
+
+<p>且不说上面两款游戏的宣传力度，就这些数据和收入，也值得我们思考，端游页游真的将死了吗？看这些数据并不像，这些数据也打了那些“将死论专家”的脸。</p>
+
+<p>在说说，巨人双子星计划，征途和仙侠世界，征途为巨人赚了无数钱呐，仙侠世界更是号称史玉柱收山大作，虽然现在动静不是很大，但是却说明并没有放弃端游，而是正常比例的投资。还有腾讯即将推出的天涯明月刀，枪神纪等等项目，也透露着端游并没有那么不堪。而页游现在依然是大量的项目在线上运营。</p>
+
+<p>所以，上海这边大多数公司都是持中立态度，保证端游页游项目的运营或者研发中，尝试手游项目，毕竟，手游项目想成为爆款并没有那么容易，不确定因素太多了。</p>
+
+<p>而我作为一个端游的程序，也认为端游和页游还是中流砥柱。我们项目虽然现在没几个人了，但是收入看起来还是挺不错的，养活公司还是靠端游页游，爆发需要手游。并且手游的爆发时间可能比较短，综合下来，手游还不是特别靠谱，只是可以作为另一块市场来做。</p>
+
+<p>先说到这里吧，欢迎有不同意见的朋友留言来辩！</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e6%89%8b%e6%b8%b8" rel="tag" title="手游">#手游#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%b8%b8%e6%88%8f" rel="tag" title="游戏">#游戏#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%ab%af%e6%b8%b8" rel="tag" title="端游">#端游#</a>
+    
+    <a href="https://cppfans.org/tags/%e9%a1%b5%e6%b8%b8" rel="tag" title="页游">#页游#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1497.html" rel="next" title="答某位朋友邮件中关于编程风格的问题">
+        <i class="fa fa-chevron-left"></i> 答某位朋友邮件中关于编程风格的问题
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1488.html" rel="prev" title="我也来说说扁平化设计">
+        我也来说说扁平化设计 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

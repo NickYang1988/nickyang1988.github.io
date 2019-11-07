@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>代码高亮 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/</link>
+    <description>Recent content in 代码高亮 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 04 Apr 2012 08:47:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[WP插件]wordpress代码高亮插件Crayon Syntax Highlighter使用教程</title>
+      <link>https://cppfans.org/1224.html</link>
+      <pubDate>Wed, 04 Apr 2012 08:47:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1224.html</guid>
+      <description>很久以前，介绍过 SyntaxHighlighter ，这也是一款很不错的wp代码高亮插件，介绍可以根据前面的链接看看，今天主要是想跟大家分享另外一款代码高亮插件Crayon Syntax</description>
+    </item>
+    
+    <item>
+      <title>【WordPress插件】WordPress最好用的代码高亮插件——SyntaxHighlighter</title>
+      <link>https://cppfans.org/269.html</link>
+      <pubDate>Sat, 05 Mar 2011 08:11:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/269.html</guid>
+      <description>本博是一个偏向于技术的博客，主要是互联网和程序开发相关内容，所以经常会分享一些代码给大家看，由于习惯了VS中VA插件的代码高亮显示，博客中的</description>
+    </item>
+    
+  </channel>
+</rss>

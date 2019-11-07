@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>快速 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%BF%AB%E9%80%9F/</link>
+    <description>Recent content in 快速 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 Nov 2013 15:14:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%BF%AB%E9%80%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]告诉你How To一眼认出英语单词的意思</title>
+      <link>https://cppfans.org/1515.html</link>
+      <pubDate>Sat, 16 Nov 2013 15:14:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1515.html</guid>
+      <description>via:http://blog.30c.org/2800.html 请大家想一想，英语是谁发明的？英国人呗！英国人认不认识汉语？不认识！那么英国人在学英语单词的时候需不需要记住单词的汉语意思？不需要，英国人</description>
+    </item>
+    
+  </channel>
+</rss>

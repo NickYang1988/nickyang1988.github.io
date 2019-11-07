@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内核 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%86%85%E6%A0%B8/</link>
+    <description>Recent content in 内核 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 28 Jul 2011 10:10:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%86%85%E6%A0%B8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[操作系统]Linux 内核 3.1 将引入开源 CPU 架构</title>
+      <link>https://cppfans.org/609.html</link>
+      <pubDate>Thu, 28 Jul 2011 10:10:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/609.html</guid>
+      <description>来自 phoronix 的消息：下一个 Linux 内核版本 3.1 将引入对 OpenRISC 的支持，OpenRisc是OpenCores组织提供的基于GPL协议的开放源代码的RISC（精简指</description>
+    </item>
+    
+  </channel>
+</rss>

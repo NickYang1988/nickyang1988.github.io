@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>我也来说说扁平化设计 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="我也来说说扁平化设计">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="我也来说说扁平化设计 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1488.html" itemprop="url">
+        我也来说说扁平化设计
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-07-01">
+    2013-07-01
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2230 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>最近由于iOS7 beta版本的推出，导致了扁平化设计又被推上了一个热潮，所以我也凑个热闹，随便说一说。</p>
+
+<p>到底什么是扁平化设计呢？</p>
+
+<blockquote>
+<p>扁平化完全属于二次元，这个概念最核心的地方就是放弃一切装饰效果，诸如阴影，透视，纹理，渐变等等能做出3D效果的元素一概不用。所有的元素的边界都干净利落，没有任何羽化，渐变，或者阴影。尤其在手机上，更少的按钮和选项使得界面干净整齐，使用起来格外简洁。可以更加简单直接的将信息和事物的工作方式展示出来，减少认知障碍的产生。</p>
+</blockquote>
+
+<p>像以前我们看到的苹果的一些设计，包括iOS6.x之前的，Mac OS等上面的特效，阴影，镜面效果等，都觉得非常炫，以前iOS的设计叫气泡设计，都带着一个高光的上方气泡，看着的确是很有质感，而且很多UI设计都在模仿它。不过天天吃肉也会腻的，自从iOS从2007年推出之后，iOS老的的风格用的太久了，从而使用户产生了一种厌恶感。</p>
+
+<p>扁平化的优点在于它可以更加简单直接的将信息和事物的工作方式展示出来，减少认知障碍的产生。随着网站和应用程序在许多平台涵盖了越来越多不同的屏幕尺寸，创建多个屏幕尺寸和分辨率的skeuomorphic设计既繁琐又费时。设计正朝着更加扁平化的设计，你可以一次保证在所有的屏幕尺寸上它会很好看。扁平化设计更简约，条理清晰，最重要的一点是，更好的适应性。</p>
+
+<p>微软当初设计Win8的时候，MetroUI(后改名为Win8 UI)刚进入大家视野的时候，不知道多少人批评MS的UI风格，“大色块的设计简直糟糕透了，让我感觉像个孩子在涂鸦，而我是专业人士”，而MS大胆的用户体验现在却得到了大部分用户以及设计师的认可。</p>
+
+<p>再看看当年google还是多色纹理logo的时候，也是显得很突兀，不过现在也改成平面的了，看起来更像一家高科技互联网公司了。现在的chrome和google plus等也是用了扁平化设计。</p>
+
+<p>firefox22版本的Logo也从原来的立体狐狸改为了更平面化，也就意味着火狐也在逐渐调整自己的UI，让用户慢慢接受。</p>
+
+<p>苹果现在的iOS7也采用了扁平化的设计，图标更加平面，色彩更加简单，纹理、倒影也去掉了，当然了，这种设计肯定是参誉过半，用户都有一个适应过程，就像win8一样的。</p>
+
+<p>从我个人角度来说，我是非常喜欢这种简约化的设计，因为UI越复杂证明操作难度或者对性能影响越大，但是据说iOS7的UI虽然看起来简单，但是却蕴含了很多实时计算的东西，这个等以后我了解过了再说吧。</p>
+
+<p>而如今google在android的UI设计上也慢慢做出了要求，待以后慢慢看过再说。</p>
+
+<p>扁平化设计在手机设计上现在见着的还不是很多，不过在网站UI上确实用到很多，确实美观大方了不少。</p>
+
+<p>同样扁平化设计也是一个双刃剑，文字、图标、底图的位置、色彩等搭配不好，还是显得比较难看的，今天看到同事买了台lumia920，实话说，里面的UI风格不能细看，文字和图标什么位置都有，乱七八糟的。</p>
+
+<p>&nbsp;</p>
+
+<p>引用一段设计原则来结束本文吧。</p>
+
+<blockquote>
+<p align="left">
+  无论采用怎样的风格，优秀的界面设计都需要遵从一些共通的设计原则：
+</p>
+
+<p align="left">
+  <p align="left">
+    <strong>一致性</strong>
+  </p>
+  
+
+<p><p align="left">
+    通过具有一致性的设计模式及视觉风格，为用户建立起完整一致的心智模型，使产品更加易用，提升整体体验。
+  </p></p>
+
+<p><p align="left">
+    <p align="left">
+      <strong>对比</strong>
+    </p></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;p align=&#34;left&#34;&gt;
+  通过对配色、尺寸和布局的调整，使可点击的界面元素在视觉上与其他元素形成鲜明的对比。
+&lt;/p&gt;
+
+&lt;p align=&#34;left&#34;&gt;
+  &lt;p align=&#34;left&#34;&gt;
+    &lt;strong&gt;布局&lt;/strong&gt;
+  &lt;/p&gt;
+
+  &lt;p align=&#34;left&#34;&gt;
+    可以尝试使用960gs一类的网格布局为界面设定视觉规范，使用户的视线可以跟随内容本身所界定出的路径自然的移动，增强界面的视觉平衡。
+  &lt;/p&gt;
+
+  &lt;p align=&#34;left&#34;&gt;
+    &lt;p align=&#34;left&#34;&gt;
+      &lt;strong&gt;层级化&lt;/strong&gt;
+    &lt;/p&gt;
+
+    &lt;p align=&#34;left&#34;&gt;
+      最重要的东西要比相对次要的东西更容易被看到。关于这个话题我可以写一整篇文章出来，简单的说，就是在界面设计中着重突出那些与核心功能与常见用例相关的交互元素，而将其他操作元素置于次要位置，这可以使界面得到最有针对性的优化和简化。
+    &lt;/p&gt;
+
+    &lt;p align=&#34;left&#34;&gt;
+      &lt;p align=&#34;left&#34;&gt;
+        &lt;strong&gt;目标用户&lt;/strong&gt;
+      &lt;/p&gt;
+
+      &lt;p align=&#34;left&#34;&gt;
+        不同类型的用户所青睐的界面风格也有所不同。建筑、设计、时尚等领域的用户可以更好的拥抱扁平化风格，而其他更加“普通”的用户则更容易接受相对传统的拟物化界面。
+      &lt;/p&gt;
+
+      &lt;p align=&#34;left&#34;&gt;
+        &lt;p align=&#34;left&#34;&gt;
+          &lt;strong&gt;反馈&lt;/strong&gt;
+        &lt;/p&gt;
+
+        &lt;p align=&#34;left&#34;&gt;
+          当点击行为发生时，要立刻向用户提供清晰明确的视觉反馈。动画过渡效果就是一种比较常见的反馈方式，例如在用户执行操作后，使用旋转图标提示用户系统正在进行响应。
+        &lt;/p&gt;
+
+        &lt;p align=&#34;left&#34;&gt;
+          &lt;p align=&#34;left&#34;&gt;
+            &lt;strong&gt;降低“摩擦力”&lt;/strong&gt;
+          &lt;/p&gt;
+
+          &lt;p align=&#34;left&#34;&gt;
+            无论采用怎样的视觉风格，都要使界面尽量简化，减少用户完成目标所需执行的操作，打造更加流畅的交互体验。任何一点障碍或额外的步骤都会提高操作成本，增加功能的复杂度，进而降低转化率。
+          &lt;/p&gt;
+
+          &lt;p align=&#34;left&#34;&gt;
+            &lt;p align=&#34;left&#34;&gt;
+              &lt;strong&gt;鼓励探索&lt;/strong&gt;
+            &lt;/p&gt;
+
+            &lt;p align=&#34;left&#34;&gt;
+              了解目标用户有可能对产品进行哪些方面的探索。一旦他们习惯了产品的界面与基础功能，并开始向“高级用户”的阶段进发时，要为他们的探索和学习行为进行必要的指引与“奖励”回馈。
+            &lt;/p&gt;
+
+            &lt;p align=&#34;left&#34;&gt;
+              &lt;p align=&#34;left&#34;&gt;
+                &lt;strong&gt;原型&lt;/strong&gt;
+              &lt;/p&gt;
+
+              &lt;p align=&#34;left&#34;&gt;
+                无论风格如何，界面形式都取决于实际的功能。好的设计方案离不开产品前期的规划工作，特别是通过草图或线框原型进行的探索。识别出最核心的用例需求，使用原型不断尝试和验证，为接下来的界面设计工作打下坚实的基础。
+              &lt;/p&gt;&lt;/blockquote&gt;</pre></div></blockquote>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/ios7" rel="tag" title="iOS7">#iOS7#</a>
+    
+    <a href="https://cppfans.org/tags/ui" rel="tag" title="UI">#UI#</a>
+    
+    <a href="https://cppfans.org/tags/win8" rel="tag" title="Win8">#Win8#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%89%81%e5%b9%b3%e5%8c%96" rel="tag" title="扁平化">#扁平化#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%ae%be%e8%ae%a1" rel="tag" title="设计">#设计#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1471.html" rel="next" title="谈谈当今的游戏行业(1)——是否端游已死，页游将死？">
+        <i class="fa fa-chevron-left"></i> 谈谈当今的游戏行业(1)——是否端游已死，页游将死？
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1485.html" rel="prev" title="[转载]10 个你必须掌握的超酷 VI 命令技巧">
+        [转载]10 个你必须掌握的超酷 VI 命令技巧 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

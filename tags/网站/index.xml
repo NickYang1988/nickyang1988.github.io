@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网站 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BD%91%E7%AB%99/</link>
+    <description>Recent content in 网站 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 11 Oct 2012 06:00:50 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BD%91%E7%AB%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>做站如逆水行舟，不进则退</title>
+      <link>https://cppfans.org/1378.html</link>
+      <pubDate>Thu, 11 Oct 2012 06:00:50 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1378.html</guid>
+      <description>放了个假回来，网站数据狂降，原因肯定是国庆7天内没有任何新文章，不过好的是最近很多人的pr和百度索引都在降，而我的没变化，还是老样子。 站长是</description>
+    </item>
+    
+    <item>
+      <title>[资讯]CodeProject更换浅Metro风格</title>
+      <link>https://cppfans.org/1377.html</link>
+      <pubDate>Wed, 10 Oct 2012 14:23:47 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1377.html</guid>
+      <description>相信很多人经常都会去CodeProject下载一些代码，或者看看新的技术使用，codeproject是一个类似于codeplex的网站，里面</description>
+    </item>
+    
+    <item>
+      <title>2011年七夕情人节各大搜索引擎logo一览</title>
+      <link>https://cppfans.org/670.html</link>
+      <pubDate>Sat, 06 Aug 2011 11:01:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/670.html</guid>
+      <description>今天是农历七月初七（08月06日），七夕节。七夕，中国人自己的情人节，始终连着牛郎织女的美丽的传说，一个古老的、让每个人都为之心动的故事。不</description>
+    </item>
+    
+    <item>
+      <title>使用谷歌翻译让你的网站也实现多国语言版</title>
+      <link>https://cppfans.org/390.html</link>
+      <pubDate>Thu, 05 May 2011 13:49:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/390.html</guid>
+      <description>我们经常会看到访问一些外国网站的时候，会在网站底部或者顶部出现您当前网页的网页需要翻译的工具条，让你很轻松的翻译成自己熟悉的语言，这样的网站</description>
+    </item>
+    
+    <item>
+      <title>Google恢复使用网站页面排名Pr值？</title>
+      <link>https://cppfans.org/165.html</link>
+      <pubDate>Fri, 21 Jan 2011 16:40:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/165.html</guid>
+      <description>google的pr值简介： PageRank，网页排名，又称网页级别、Google左侧排名或佩奇排名，是一种由搜索引擎根据网页之间相互的超链接</description>
+    </item>
+    
+  </channel>
+</rss>

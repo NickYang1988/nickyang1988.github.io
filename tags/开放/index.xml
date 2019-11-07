@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开放 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%BC%80%E6%94%BE/</link>
+    <description>Recent content in 开放 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 16 Sep 2011 19:26:34 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%BC%80%E6%94%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[开源资讯]开放式徽章计划 - Mozilla 发布 Open Badges 项目</title>
+      <link>https://cppfans.org/779.html</link>
+      <pubDate>Fri, 16 Sep 2011 19:26:34 +0000</pubDate>
+      
+      <guid>https://cppfans.org/779.html</guid>
+      <description>Mozilla今天宣布了Open Badges项目，这是一个开放式的网络基础设施，它提供了开放和规范的API，为任何组织提供一个具有互操作性的</description>
+    </item>
+    
+    <item>
+      <title>《Doom 3》源代码将在《Rage》上市后免费发布</title>
+      <link>https://cppfans.org/672.html</link>
+      <pubDate>Sat, 06 Aug 2011 11:06:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/672.html</guid>
+      <description>id Software将免费发布《Doom 3》源代码的计划最早在2009年的QuakeCon上由id老大John Carmack透露。而在最新的Q</description>
+    </item>
+    
+  </channel>
+</rss>

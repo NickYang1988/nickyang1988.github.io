@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蒙牛 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%92%99%E7%89%9B/</link>
+    <description>Recent content in 蒙牛 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 28 Dec 2011 16:04:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%92%99%E7%89%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>蒙牛官网遭某留名黑客攻击</title>
+      <link>https://cppfans.org/1045.html</link>
+      <pubDate>Wed, 28 Dec 2011 16:04:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1045.html</guid>
+      <description>近日里，闹得沸沸扬扬的蒙牛毒牛奶事件让大家再次对国内的乳业产生了很大的怀疑，超过标准的140%，看来牛奶真的不能乱喝。 今天访问蒙牛官网的时候</description>
+    </item>
+    
+  </channel>
+</rss>

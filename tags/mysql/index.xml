@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MySQL on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/mysql/</link>
+    <description>Recent content in MySQL on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 15 Apr 2014 08:52:29 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mysqlpp中一些特殊功能总结</title>
+      <link>https://cppfans.org/1634.html</link>
+      <pubDate>Tue, 15 Apr 2014 08:52:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1634.html</guid>
+      <description>之前有写过一篇mysql++的文章 《C++使用MySql++操作数据库实例》,里面讲了C++如何用mysql++的库来操作mysql数据库，</description>
+    </item>
+    
+    <item>
+      <title>linux常见问题汇总(长期顶置更新)</title>
+      <link>https://cppfans.org/1544.html</link>
+      <pubDate>Thu, 27 Feb 2014 03:09:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1544.html</guid>
+      <description>&lt;h3 id=&#34;2014-12-23更新&#34;&gt;2014/12/23更新：&lt;/h3&gt;
+
+&lt;p&gt;7.glibc版本查看&lt;/p&gt;
+
+&lt;p&gt;把libc.so.6当成执行文件运行下就可以看到版本号&lt;/p&gt;
+
+&lt;p&gt;6.GLIBCXX版本查看&lt;/p&gt;
+
+&lt;p&gt;strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;5.mysql++静态编译方法&lt;/p&gt;
+
+&lt;p&gt;mysql++下载来后无法静态编译，加了 &amp;ndash;enable-static=yes也不行，不过我们可以直接使用ar命令编译.o文件，命令如下&lt;/p&gt;
+
+&lt;pre&gt;ar rcu libmysqlpp.a mysqlpp_beemutex.o mysqlpp_cmdline.o mysqlpp_connection.o mysqlpp_cpool.o mysqlpp_datetime.o mysqlpp_dbdriver.o mysqlpp_field_names.o mysqlpp_field_types.o mysqlpp_manip.o mysqlpp_myset.o mysqlpp_mysql++.o mysqlpp_mystring.o mysqlpp_null.o mysqlpp_options.o mysqlpp_qparms.o mysqlpp_query.o mysqlpp_result.o mysqlpp_row.o mysqlpp_scopedconnection.o mysqlpp_sql_buffer.o mysqlpp_sqlstream.o mysqlpp_ssqls2.o mysqlpp_stadapter.o mysqlpp_tcp_connection.o mysqlpp_transaction.o mysqlpp_type_info.o mysqlpp_uds_connection.o mysqlpp_utility.o mysqlpp_vallist.o mysqlpp_wnp_connection.o ssqls2parse_parsev2.o&lt;/pre&gt;
+
+&lt;p&gt;然后直接使用libmysqlpp.a就好了&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;4.linux下服务自启动几种方法&lt;/p&gt;
+
+&lt;p&gt;(1)chkconfig&lt;/p&gt;
+
+&lt;p&gt;例如将httpd自启动，首先查看httpd服务是否已经自启动了&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --list | grep httpd&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:off   3:off   4:off   5:off   6:off&lt;/pre&gt;
+
+&lt;p&gt;如果结果是上述，则使用下面命令打开自启动&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig httpd on&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:on    3:on    4:on    5:on    6:off&lt;/pre&gt;
+
+&lt;p&gt;如果httpd没有加入自启动列表，先增加进列表中&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --add httpd&lt;/pre&gt;
+
+&lt;p&gt;(2)修改rc.local文件&lt;/p&gt;
+
+&lt;p&gt;例如我们想自启动mysqld_safe，在rc.local中增加如下命令&lt;/p&gt;
+
+&lt;pre&gt;#mysql&lt;/pre&gt;
+
+&lt;pre&gt;/usr/local/mysql/bin/mysqld_safe &amp;&lt;/pre&gt;
+
+&lt;p&gt;保存后就可以了&lt;/p&gt;
+
+&lt;p&gt;(3)ln软链接的方法就不做介绍了，感觉太麻烦了，大家请自行查阅&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;使用MySql&#43;&#43;操作数据库实例</title>
+      <link>https://cppfans.org/1117.html</link>
+      <pubDate>Sun, 04 Mar 2012 14:30:34 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1117.html</guid>
+      <description>有朋友让帮忙写个C++修改数据库中用户名密码的工具，因为他是做VPN的，要给很多客户端展示访问速度等，有一个固定的用户名来展示，但是每次给用</description>
+    </item>
+    
+    <item>
+      <title>本次开放测试卡建号问题分析——MySQL配置优化方法</title>
+      <link>https://cppfans.org/712.html</link>
+      <pubDate>Sun, 21 Aug 2011 09:51:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/712.html</guid>
+      <description>&lt;p&gt;本次的开放测试依然在进行中，昨天关于卡建号的问题大家讨论了一下解决办法，对逻辑方面也检查了一下，不过逻辑方面很久都没人改过了，如果出问题应该两个项目都出问题，结果另外一个从来不卡的，所以应该不是逻辑上的问题，结果去检查MySQL的配置，才发现了原因。&lt;/p&gt;
+
+&lt;p&gt;是MySQL中打Log过于频繁导致的原因，原来的配置是 innodb_flush_log_at_trx_commit = 1，有一条处理就等待写LLog到磁盘，写入磁盘想对耗时比价多，所以非常卡，本次测试参数是1的测试结果是60-90毫秒，修改成2之后，使用客户端创建一个角色的时间是0 ms，用机器人创建1000个角色压力测试的结果是13ms，这个结果还可以接受，1分钟3000多账号，完全可以理解。前面运维测试的时间是200ms一个，所以呢，又被玩家骂了一顿啊，悲惨的命运。&lt;/p&gt;
+
+&lt;p&gt;简单搜了一下MySQL优化的配置给大家分享下：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;my.ini配置建议：&lt;/p&gt;
+
+&lt;p&gt;table_cache=1024&lt;/p&gt;
+
+&lt;p&gt;物理内存越大,设置就越大.默认为2402,调到512-1024最佳&lt;/p&gt;
+
+&lt;p&gt;innodb_additional_mem_pool_size=4M&lt;/p&gt;
+
+&lt;p&gt;默认为2M&lt;/p&gt;
+
+&lt;p&gt;innodb_flush_log_at_trx_commit=1&lt;/p&gt;
+
+&lt;p&gt;(设置为0就是等到innodb_log_buffer_size列队满后再统一储存,默认为1)&lt;/p&gt;
+
+&lt;p&gt;innodb_log_buffer_size=2M&lt;/p&gt;
+
+&lt;p&gt;默认为1M&lt;/p&gt;
+
+&lt;p&gt;innodb_thread_concurrency=8&lt;/p&gt;
+
+&lt;p&gt;你的服务器CPU有几个就设置为几,建议用默认一般为8&lt;/p&gt;
+
+&lt;p&gt;key_buffer_size=256M&lt;/p&gt;
+
+&lt;p&gt;默认为218         调到128最佳&lt;/p&gt;
+
+&lt;p&gt;tmp_table_size=64M&lt;/p&gt;
+
+&lt;p&gt;默认为16M        调到64-256最挂&lt;/p&gt;
+
+&lt;p&gt;read_buffer_size=4M&lt;/p&gt;
+
+&lt;p&gt;默认为64K&lt;/p&gt;
+
+&lt;p&gt;read_rnd_buffer_size=16M&lt;/p&gt;
+
+&lt;p&gt;默认为256K&lt;/p&gt;
+
+&lt;p&gt;sort_buffer_size=32M&lt;/p&gt;
+
+&lt;p&gt;默认为256K&lt;/p&gt;
+
+&lt;p&gt;max_connections=1024&lt;/p&gt;
+
+&lt;p&gt;默认为1210&lt;/p&gt;
+
+&lt;p&gt;thread_cache_size=120&lt;/p&gt;
+
+&lt;p&gt;默认为60&lt;/p&gt;
+
+&lt;p&gt;query_cache_size=32M&lt;/p&gt;
+&lt;/blockquote&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

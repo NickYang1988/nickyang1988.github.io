@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Internet Explorer on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/internet-explorer/</link>
+    <description>Recent content in Internet Explorer on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 11 Mar 2011 12:47:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/internet-explorer/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【网络资讯】IE9正式版3.14即将正式发布</title>
+      <link>https://cppfans.org/289.html</link>
+      <pubDate>Fri, 11 Mar 2011 12:47:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/289.html</guid>
+      <description>近日，微软IE总监Ryan Gavin本周通过官方博客宣布宣布将在3月14日举行的South by Southwest（SXSW）会议上发布IE9的</description>
+    </item>
+    
+  </channel>
+</rss>

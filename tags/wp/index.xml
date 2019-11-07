@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WP on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/wp/</link>
+    <description>Recent content in WP on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 27 Aug 2011 12:40:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/wp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件分享]百度WP7浏览器上线</title>
+      <link>https://cppfans.org/741.html</link>
+      <pubDate>Sat, 27 Aug 2011 12:40:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/741.html</guid>
+      <description>百度发布了Windows Phone 7平台上的预览版百度浏览器，并且登陆了Windows Phone Marketplace。此前腾讯亦发布了WP7平台上的预览版</description>
+    </item>
+    
+  </channel>
+</rss>

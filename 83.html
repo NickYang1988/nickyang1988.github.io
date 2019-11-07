@@ -1,0 +1,386 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>游戏开发基础知识2——函数指针 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="游戏开发基础知识2——函数指针">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="游戏开发基础知识2——函数指针 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/83.html" itemprop="url">
+        游戏开发基础知识2——函数指针
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2010-12-29">
+    2010-12-29
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1164 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>前面介绍了如何进行模块化以及<span style="font-family: Times New Roman;">Lib</span><span style="font-family: 宋体;">库的制作，关于库的制作，后面会再次深入讲解的，不过可能会在锋酷开发社区</span><span style="font-family: Times New Roman;">(<a href="http://www.flycode.org/" target="_blank" rel="nofollow" >www.flycode.org</a>)</span><span style="font-family: 宋体;">上做一个专题来讲解的，到时候希望大家关注下。</span></p>
+
+<p>前面我们已经说过了，再多人合作开发过程中，模块化显得非常重要。在模块化开发过程中呢，比较重要的就是函数指针了，大家都知道<span style="font-family: Times New Roman;">C++</span><span style="font-family: 宋体;">的一个很重要的特征就是多态，函数指针可以让你更轻松的使用这个特征。函数指针可以指向你自己写的函数地址，就像</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">编程中的事件和消息一样，包括菜单等的一些操作都是使用函数指针的，</span><span style="font-family: Times New Roman;">API</span><span style="font-family: 宋体;">编程中的</span><span style="font-family: Times New Roman;">callback</span><span style="font-family: 宋体;">函数就是一个典型的例子。</span></p>
+
+<p>[c]/*</p>
+
+<p>** Copyright &copy; www.cppfans.org All rights reserved.</p>
+
+<p>**Author:eliteYang</p>
+
+<p>*/</p>
+
+<p>void PtrFunction( void (*fp)(int, int), int Data)</p>
+
+<p>{</p>
+
+<p>cout&lt;&lt;”I’m using ptrFunction”&lt;&lt;”Result1:”&lt;&lt;Result1&lt;&lt;”    ”&lt;&lt;”Result2:″&lt;&lt;Result2&lt;&lt;endl;</p>
+
+<p>}</p>
+
+<p>[/c]</p>
+
+<p>通过上面的例子，我们可以看到，这个有点类似于重载函数，不过重载函数是三同（返回类型相同，函数名称相同，参数列表参数个数相同），而函数指针可以看到是两同（返回值相同，参数列表类型和个数相同，调用的函数名不同）。</p>
+
+<p>==============================================================================</p>
+
+<p>Windows<span style="font-family: 宋体;">函数与数据类型的使用</span></p>
+
+<p>关于<span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">中的函数我觉得在</span><span style="font-family: Times New Roman;">MFC</span><span style="font-family: 宋体;">和</span><span style="font-family: Times New Roman;">API</span><span style="font-family: 宋体;">中用的非常多，到处可见，这些都要大家在平时编程中经常使用就会比较熟悉了，不懂得可以多查查</span><span style="font-family: Times New Roman;">MSDN</span><span style="font-family: 宋体;">，相信如果你从事</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">开发的，相信你会经常看</span><span style="font-family: Times New Roman;">MSDN</span><span style="font-family: 宋体;">的。</span></p>
+
+<p>数据类型，比如<span style="font-family: Times New Roman;">BOOL</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">size_t</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">BYTE</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">DWORD</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">DWORD PTR</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">LPCSTR</span><span style="font-family: 宋体;">，</span><span style="font-family: Times New Roman;">LPCTSTR</span><span style="font-family: 宋体;">等，如果你真的感兴趣的话，可以通过转到定义看看他们的定义，一般都是如下格式的：</span></p>
+
+<p>#define XXX YYY  //<span style="font-family: 宋体;">其实就是个宏定义，改名而已，大家不要觉得奇怪</span></p>
+
+<p><span style="color: darkorange;"><strong>常用的数据类型请查看原文章中的表格或者MSDN</strong></span></p>
+
+<p>还有一些Windows<span style="font-family: 宋体;">中的函数，我觉得大家可以自己去查查，我在此就不多赘述了。</span></p>
+
+<p>为什么要使用<span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">中的数据结构和函数？</span></p>
+
+<p>因为目前大部分的网络游戏都是在<span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">系统上运行的，而且像</span><span style="font-family: Times New Roman;">DX</span><span style="font-family: 宋体;">和</span><span style="font-family: Times New Roman;">MFC</span><span style="font-family: 宋体;">都是基于</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">系统的，为了更好的切合</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">系统，只好使用</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">中函数了，而且由于现在的系统平台分为很多，</span><span style="font-family: Times New Roman;">32</span><span style="font-family: 宋体;">位，</span><span style="font-family: Times New Roman;">64</span><span style="font-family: 宋体;">位等，</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">系统中提供的数据类型在不同的系统中长度一般来说是不相同的，但是由于这些数据类型时</span><span style="font-family: Times New Roman;">Unicode</span><span style="font-family: 宋体;">类型的，所以尽管在不同的系统平台上，他们的大小变化还是一致的，不会出现越界等内存泄露情况，所以这就注定了游戏开发中基本都是使用</span><span style="font-family: Times New Roman;">Windows</span><span style="font-family: 宋体;">上的一套东西。</span></p>
+
+<p>好了，今天暂时先说这么多了，基础的内容爱语很多，不过相信大家都有一些基础储备的，不懂得东西多查查多看看，后面会开始进入服务器开发的一些基础内容，希望大家继续关注。</p>
+
+<pre></pre>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%87%bd%e6%95%b0%e6%8c%87%e9%92%88" rel="tag" title="函数指针">#函数指针#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/85.html" rel="next" title="游戏服务器程序基础1-内存/类型转换/编程习惯">
+        <i class="fa fa-chevron-left"></i> 游戏服务器程序基础1-内存/类型转换/编程习惯
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/about/" rel="prev" title="关于">
+        关于 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

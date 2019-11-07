@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>跨平台 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/</link>
+    <description>Recent content in 跨平台 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Feb 2014 05:49:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>glog使用与功能修改</title>
+      <link>https://cppfans.org/1566.html</link>
+      <pubDate>Wed, 19 Feb 2014 05:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1566.html</guid>
+      <description>在写代码的过程中，打log肯定是少不了的，毕竟不能总靠调试来发现问题。log库的选用就很纠结了，成熟的log库非常多，log4cpp、log</description>
+    </item>
+    
+    <item>
+      <title>静态编译libevent</title>
+      <link>https://cppfans.org/1564.html</link>
+      <pubDate>Thu, 30 Jan 2014 15:38:26 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1564.html</guid>
+      <description>libevent简介 libevent是一个事件触发的网络库，适用于windows、linux、bsd等多种平台，内部使用select、epo</description>
+    </item>
+    
+    <item>
+      <title>[转]C&#43;&#43;强大背后</title>
+      <link>https://cppfans.org/1557.html</link>
+      <pubDate>Wed, 22 Jan 2014 05:00:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1557.html</guid>
+      <description>在31年前(1979年)，一名刚获得博士学位的研究员，为了开发一个软件项目发明了一门新编程语言，该研究员名为Bjarne Stroustrup</description>
+    </item>
+    
+    <item>
+      <title>对象序列化类库MsgPack介绍</title>
+      <link>https://cppfans.org/1410.html</link>
+      <pubDate>Mon, 26 Nov 2012 13:24:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1410.html</guid>
+      <description>MessagePack(以下简称MsgPack)一个基于二进制高效的对象序列化类库，可用于跨语言通信。它可以像JSON那样，在许多种语言之间</description>
+    </item>
+    
+  </channel>
+</rss>

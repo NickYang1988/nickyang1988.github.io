@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wordpress on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/wordpress/</link>
+    <description>Recent content in wordpress on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 01 Jul 2014 05:53:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用redis五倍加速WP博客</title>
+      <link>https://cppfans.org/1665.html</link>
+      <pubDate>Tue, 01 Jul 2014 05:53:24 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1665.html</guid>
+      <description>已经换了linode-vps有一段时间了，但是博客的访问速度一直不理想，使用了xcache和eAccelerator，但是速度还是不给力，于</description>
+    </item>
+    
+    <item>
+      <title>wordpress百度分享工具条最新版本1.0发布</title>
+      <link>https://cppfans.org/1449.html</link>
+      <pubDate>Tue, 29 Jan 2013 01:10:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1449.html</guid>
+      <description>好长一段时间都没理会百度分享工具条了，最近看到倡萌将这个工具条进行了一些优化和精简(《WordPress添加仿异次元百度分享工具条》)，决定</description>
+    </item>
+    
+    <item>
+      <title>wordpress中加载JQuery库的几种方法</title>
+      <link>https://cppfans.org/1425.html</link>
+      <pubDate>Sun, 23 Dec 2012 06:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1425.html</guid>
+      <description>Jquery是继prototype之后又一个优秀的Javascrīpt框架。它是轻量级的js库(压缩后只有21k) ，它兼容CSS3，还兼容各</description>
+    </item>
+    
+    <item>
+      <title>WordPress修改主题后无法正常显示页面解决方法</title>
+      <link>https://cppfans.org/1066.html</link>
+      <pubDate>Sun, 05 Feb 2012 08:31:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1066.html</guid>
+      <description>下午看到一个挺漂亮的主题，下载来想试用下看看效果，结果却导致我的前台页面无法正常显示，成白板儿了，这下郁闷了，难道又要折腾了，悲剧，不过想起</description>
+    </item>
+    
+  </channel>
+</rss>

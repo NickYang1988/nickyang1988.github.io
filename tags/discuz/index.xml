@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discuz on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/discuz/</link>
+    <description>Recent content in Discuz on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 10 Jun 2011 17:56:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/discuz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[Discuz]Discuz X2.0 IIS伪静态设置</title>
+      <link>https://cppfans.org/447.html</link>
+      <pubDate>Fri, 10 Jun 2011 17:56:47 +0000</pubDate>
+      
+      <guid>https://cppfans.org/447.html</guid>
+      <description>我的朋友最近做了一个论坛，第二安全网络社区(www.dearsafe.net)，使用的discuz x2.0建站系统，DX2确实有很多亮点，其</description>
+    </item>
+    
+    <item>
+      <title>Discuz X1.5正式开启QQ帐号绑定登陆功能</title>
+      <link>https://cppfans.org/51.html</link>
+      <pubDate>Sun, 05 Dec 2010 08:23:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/51.html</guid>
+      <description>今天，登录Discuz官方论坛网站下载一个主题给锋酷开发社区(www.flycode.org)使用，看到了腾讯和Discuz共同推出的QQ 账</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,442 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转]被诅咒的程序员的七宗罪 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转]被诅咒的程序员的七宗罪">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转]被诅咒的程序员的七宗罪 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1546.html" itemprop="url">
+        [转]被诅咒的程序员的七宗罪
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-12-24">
+    2013-12-24
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1612 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<p><strong><em>七宗罪（Seven deadly sins），13世纪道明会神父圣多玛斯·阿奎纳列举出各种恶行的表现。这些恶行最初是由希腊神学修道士庞义伐草撰出8种损害个人灵性的恶行，分别是贪食、色欲、贪婪、暴怒、懒惰、伤悲、自负及傲慢。</em></strong></p>
+
+<p>程序员生来不平等。有的伟大。有的渴望伟大。有的就是废物。</p>
+
+<p>下面是一些程序员经常会走入的歧途。听起来很恐怖，但享用吧。上帝就在你身边，警惕这些危险的信号，跟随主救赎的指引。</p>
+
+<h3 id="1-色慾-lust">1. 色慾（Lust）</h3>
+
+<p><img alt="凡犯色欲者：在硫磺和火焰中熏闷 　　　" src="http://static.oschina.net/uploads/img/201312/04202758_4DXm.jpg" width="560" height="434" /></p>
+
+<p>凡犯色欲者：在硫磺和火焰中熏闷</p>
+
+<p>作为程序员，这种罪恶的表现是不断的受绚丽的新事物的诱惑。下一代编程语言，最新的框架，最新的平台。</p>
+
+<p>我们程序员天生好奇。我们受惑于追求高效，坚信所有的东西都要经过优化。只有用了那种最新的语言，我们才能工作。</p>
+
+<p>虽然不断的追求改进是非常值得赞赏，但采用新事物也是有代价的。有避免不了的学习曲线。有适应问题。有未知的依赖问题。有未知的未知问题。</p>
+
+<p>清除这些杂念。专心解决你手头上的问题。充分利用你知道的，停止贪恋那些光鲜新事物。</p>
+
+<h3 id="2-贪食-gluttony">2. 贪食（Gluttony）</h3>
+
+<p><img alt="凡犯贪食者：强迫进食老鼠，蟾蜍和蛇 " src="http://static.oschina.net/uploads/img/201312/04202758_P9tA.jpg" width="560" height="429" /></p>
+
+<p>凡犯贪食者：强迫进食老鼠，蟾蜍和蛇</p>
+
+<p>这是过度之罪。过度的企图多做，过度的扩展深度和广度。</p>
+
+<p>不必要的功能特征溜进了产品里。大量无用的代码被生产出来。宝贵的编程时间被消耗，被浪费。</p>
+
+<p>这些行为增加了不必要的复杂度，带来的高昂的维护代价。通常导致的结果是，预期不能完工。bug层出不穷。</p>
+
+<p>警惕那些不该有的功能、警惕那些对不必要的复杂架构的伪辩护、警惕过早优化的迹象。让产品简洁。</p>
+
+<h3 id="3-贪婪-greed">3. 贪婪（Greed）</h3>
+
+<p><img alt="凡犯贪婪者：在油中煎熬 　" src="http://static.oschina.net/uploads/img/201312/04202758_GKmh.jpg" width="560" height="428" /></p>
+
+<p>凡犯贪婪者：在油中煎熬</p>
+
+<p>过度专业化和功能化会导致形成个人的领地。固步自封。我的代码。我的模块。我相干的区域。没有分享。没有合作。</p>
+
+<p>一种不健康的对这些人的依赖会逐渐形成。所谓的“编程教父”，“编程巨星”和“编程领袖”就代表了这些趋势。</p>
+
+<p>相反，应该建立一个崇尚代码集体所有和充分合作(比如结对编程或相互代码审查)的文化。</p>
+
+<h3 id="4-怠惰-sloth">4. 怠惰（Sloth）</h3>
+
+<p><img alt="凡犯懒惰者：丢入蛇坑 　　" src="http://static.oschina.net/uploads/img/201312/04202759_vJEY.jpg" width="560" height="431" /></p>
+
+<p>凡犯懒惰者：丢入蛇坑</p>
+
+<p>根据Perl语言的创造者Larry Wall的话，懒惰是程序员的三个伟大美德之一。</p>
+
+<p>但懒惰不能和冷漠混为一谈。长时间不理出现的问题。允许代码腐烂异味。不重构拷贝/粘贴过来的重复代码。</p>
+
+<p>对软件开发中这些需要修改的东西要有一种紧迫感。事无巨细。这是保持软件健康的必要态度。</p>
+
+<h3 id="5-暴怒-wrath">5. 暴怒（Wrath）</h3>
+
+<p><img alt="凡犯暴怒者：活体肢解 　" src="http://static.oschina.net/uploads/img/201312/04202759_mb98.jpg" width="560" height="432" /></p>
+
+<p>凡犯暴怒者：活体肢解</p>
+
+<p>在有些地方，有些程序员是每个人都尊敬，也是每个人都害怕。你也许遇到过这样的火星极客。他们恃才放旷，为所欲为，其他人在他身边都惦着脚走。避免和他冲突。</p>
+
+<p>他们喜怒无常，他们的怒气经常撒错方向。他们贬低他人，破坏团队和谐。</p>
+
+<p>警惕这种不受约束的对峙气氛的滋生。拒绝忍受这样的撒野。立即辞掉他们。</p>
+
+<h3 id="6-妒忌-envy">6. 妒忌（Envy）</h3>
+
+<p><img alt="凡犯妒忌者：投入冰水之中 　" src="http://static.oschina.net/uploads/img/201312/04202759_iWEW.jpg" width="560" height="431" /></p>
+
+<p>凡犯妒忌者：投入冰水之中</p>
+
+<p>不满足于现有的工具和系统，有些程序员眼睛总是盯着别人的。</p>
+
+<p>我曾经遇到过这样的经历，一个wiki系统正在使用中，另外一个却同时被引进，因为它的标记语法感觉更好一些。两个问题跟踪系统，多种聊天系统，不兼容的博客平台，等等。</p>
+
+<p>如果你不喜欢某个工具，相信有比它更好的，那好，去找到它，使用它。但是，请完全放弃你现有的。吃着碗里又想占这锅里，只会得不偿失，给自己制造麻烦。</p>
+
+<h3 id="7-傲慢-pride">7. 傲慢（Pride）</h3>
+
+<p><img alt="凡犯傲慢者：轮裂 　　" src="http://static.oschina.net/uploads/img/201312/04202759_qHcx.jpg" width="560" height="428" /></p>
+
+<p>凡犯傲慢者：轮裂</p>
+
+<p>有些程序员喜欢孤芳自赏。对自己的能力过度自信。从不寻求帮助。</p>
+
+<p>更 糟糕的，他认为所有的事情都应该由自己来完成。虽然他有能力完成任何的任务，但他却没能完成，因为他承担的太多了，无法集中精力。他分不清什么是核心什么 是次要的。在可以使用云服务时他建造自己的服务器，在能使用成熟的部署系统时他重新发明自己的，他开发出跟现有框架功能相同的框架，等等。</p>
+
+<p>诚然，做研究是有趣的。这些研究经常被辩称为“基础”或“革新”，但却因没有更快捷的创造商业价值而使产品丧失市场先机。</p>
+
+<p>小心“非我发明(Not Invented Here)”综合征。准确的定义你的核心目标，你的首要工作。其它的都是次要的，可以借用别人的。这没有什么好羞愧的。</p>
+
+<p>[英文原文：<a href="http://thehumanfactor.co/7-sins-of-doomed-teams/" target="_blank"  rel="nofollow" >7 Sins of Doomed Teams</a> ]</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e4%b8%83%e5%ae%97%e7%bd%aa" rel="tag" title="七宗罪">#七宗罪#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%a8%8b%e5%ba%8f%e5%91%98" rel="tag" title="程序员">#程序员#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1556.html" rel="next" title="被高估人士的七个习惯">
+        <i class="fa fa-chevron-left"></i> 被高估人士的七个习惯
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1537.html" rel="prev" title="字库识别网站——求字体网">
+        字库识别网站——求字体网 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>博客 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%8D%9A%E5%AE%A2/</link>
+    <description>Recent content in 博客 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 Oct 2012 14:01:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%8D%9A%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>坚持写博客，即使你不擅长</title>
+      <link>https://cppfans.org/1387.html</link>
+      <pubDate>Tue, 23 Oct 2012 14:01:06 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1387.html</guid>
+      <description>前几天看到了伯乐在线翻译的《开发者拒绝写技术博客的常见理由》，里面列举了一些开发者不愿意写博客的原因。 1.我不是这方面的专家，我写的东西不权</description>
+    </item>
+    
+    <item>
+      <title>博客再次更新主题，希望大家不会烦</title>
+      <link>https://cppfans.org/1077.html</link>
+      <pubDate>Tue, 14 Feb 2012 13:21:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1077.html</guid>
+      <description>上个星期折腾博客到wp3.3.1版本，结果发现喜欢的主题不能用，所以昨天晚上思前想后，决定将博客的版本降下去，幸好数据库没有改动，否则还真是</description>
+    </item>
+    
+    <item>
+      <title>博客更新主题通知！</title>
+      <link>https://cppfans.org/962.html</link>
+      <pubDate>Sat, 05 Nov 2011 15:30:57 +0000</pubDate>
+      
+      <guid>https://cppfans.org/962.html</guid>
+      <description>今天本博客更换了一套很素的主题，原先的热点新闻apple主题，也非常好看，但是看着太眼花缭乱了，觉得有点乱，所以换上了现在这套主题。 SimplePro-TT 作者为</description>
+    </item>
+    
+  </channel>
+</rss>

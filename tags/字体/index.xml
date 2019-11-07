@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字体 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%AD%97%E4%BD%93/</link>
+    <description>Recent content in 字体 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 11 Dec 2013 05:43:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%AD%97%E4%BD%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>字库识别网站——求字体网</title>
+      <link>https://cppfans.org/1537.html</link>
+      <pubDate>Wed, 11 Dec 2013 05:43:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1537.html</guid>
+      <description>看到别人网站上的一些字体比较好看，却苦于不知道是什么字体，搜索来到了求字体网站，网站的功能很简单，上传图片分析字体，并且提供输入字体名预览的</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JQuery on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/jquery/</link>
+    <description>Recent content in JQuery on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Dec 2012 06:12:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/jquery/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>wordpress中加载JQuery库的几种方法</title>
+      <link>https://cppfans.org/1425.html</link>
+      <pubDate>Sun, 23 Dec 2012 06:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1425.html</guid>
+      <description>Jquery是继prototype之后又一个优秀的Javascrīpt框架。它是轻量级的js库(压缩后只有21k) ，它兼容CSS3，还兼容各</description>
+    </item>
+    
+  </channel>
+</rss>

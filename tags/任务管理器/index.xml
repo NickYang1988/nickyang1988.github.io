@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>任务管理器 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8/</link>
+    <description>Recent content in 任务管理器 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Feb 2011 14:02:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BB%BB%E5%8A%A1%E7%AE%A1%E7%90%86%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【软件介绍】AnVir Task Manager——可查毒的任务管理器</title>
+      <link>https://cppfans.org/195.html</link>
+      <pubDate>Sat, 19 Feb 2011 14:02:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/195.html</guid>
+      <description>使用Windows系统的朋友都知道Win系统有一个非常强大的软件叫任务管理器，可以做很多事情，最主要的用处就是来看内存和CPU使用率，当然了</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foobar on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/foobar/</link>
+    <description>Recent content in Foobar on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 Aug 2011 16:20:55 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/foobar/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件资讯]foobar2000 1.1.8 Beta 5</title>
+      <link>https://cppfans.org/729.html</link>
+      <pubDate>Tue, 23 Aug 2011 16:20:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/729.html</guid>
+      <description>Foobar2000 是一个非常非常值得推荐的多媒体播放器!程序体积非常小巧,运行时只占有1.9M内存,5%左右的CPU资源,资源消费很小,界面朴素,没有Ski</description>
+    </item>
+    
+  </channel>
+</rss>

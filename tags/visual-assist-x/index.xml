@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visual Assist X on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/visual-assist-x/</link>
+    <description>Recent content in Visual Assist X on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 07 Dec 2012 01:15:10 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/visual-assist-x/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Visual Assist X全版本通用补丁</title>
+      <link>https://cppfans.org/1416.html</link>
+      <pubDate>Fri, 07 Dec 2012 01:15:10 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1416.html</guid>
+      <description>这次带来的是Visual Assist X的全版本通用破解补丁，以前每次更新版本都需要找对应的破解补丁，你是不是已经蛋碎了无痕了，每次都奔波在找补丁的路上</description>
+    </item>
+    
+  </channel>
+</rss>

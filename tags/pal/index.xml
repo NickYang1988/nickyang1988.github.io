@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pal on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/pal/</link>
+    <description>Recent content in Pal on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 22 Apr 2011 13:01:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/pal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《仙剑5》将于4.28公布上市时间</title>
+      <link>https://cppfans.org/359.html</link>
+      <pubDate>Fri, 22 Apr 2011 13:01:11 +0000</pubDate>
+      
+      <guid>https://cppfans.org/359.html</guid>
+      <description>著名国产单机《仙剑奇侠传5》将于4.28正式在北京召开《仙5》签约发布会，届时将公布仙剑5准确上市时间。在此前，也有公布上市时间，不过并不准</description>
+    </item>
+    
+  </channel>
+</rss>

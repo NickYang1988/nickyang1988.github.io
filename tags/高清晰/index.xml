@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>高清晰 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%AB%98%E6%B8%85%E6%99%B0/</link>
+    <description>Recent content in 高清晰 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 07 Oct 2012 07:43:27 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%AB%98%E6%B8%85%E6%99%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[截图工具]WinSnap注册版——Win7/Vista圆角窗口高清晰截图工具</title>
+      <link>https://cppfans.org/1372.html</link>
+      <pubDate>Sun, 07 Oct 2012 07:43:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1372.html</guid>
+      <description>通常我们用到最多的截图软件就是QQ截图和PrintScreen按键了，一般的截图使用完全够用了，但是如果你需要经常截取窗口的图，那就有点不好</description>
+    </item>
+    
+  </channel>
+</rss>

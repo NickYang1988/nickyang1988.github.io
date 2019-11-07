@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>寒霜 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%AF%92%E9%9C%9C/</link>
+    <description>Recent content in 寒霜 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 09 Aug 2012 13:10:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%AF%92%E9%9C%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[游戏引擎]ForstBite2(寒霜)游戏引擎SDK下载</title>
+      <link>https://cppfans.org/1345.html</link>
+      <pubDate>Thu, 09 Aug 2012 13:10:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1345.html</guid>
+      <description>寒霜引擎介绍：(摘自维基百科) 版本 寒霜1.0 寒霜引擎首次使用是在2008年的战地：叛逆连队中，它包含了HDR Audio（允许调整不同种类音效</description>
+    </item>
+    
+  </channel>
+</rss>

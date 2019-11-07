@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>思路 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%80%9D%E8%B7%AF/</link>
+    <description>Recent content in 思路 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 19 May 2016 07:26:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%80%9D%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]学习新东西的唯一方法</title>
+      <link>https://cppfans.org/2114.html</link>
+      <pubDate>Thu, 19 May 2016 07:26:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2114.html</guid>
+      <description>转自：http://www.jianshu.com/p/3a515cc30df3 有人曾从我工作的一家公司盗取了9千万美元。我不太懂得如何观人</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件设计 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/</link>
+    <description>Recent content in 软件设计 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 25 May 2018 04:41:52 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>接口设计六大原则</title>
+      <link>https://cppfans.org/2245.html</link>
+      <pubDate>Fri, 25 May 2018 04:41:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2245.html</guid>
+      <description>一. 单一职责原则 Single Responsibility Principle, 简称SRP。 定义 There should never be more than one reason for a class to change 应该有且仅有一个原因引起类的变 准则 职责的划分？单一的定义和级别？ 应该根据实际</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>天涯4000W用户明文密码泄露——知名互联网网站再爆漏洞 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="天涯4000W用户明文密码泄露——知名互联网网站再爆漏洞">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="天涯4000W用户明文密码泄露——知名互联网网站再爆漏洞 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1042.html" itemprop="url">
+        天涯4000W用户明文密码泄露——知名互联网网站再爆漏洞
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-12-26">
+    2011-12-26
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1701 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><strong>DoNews 12月25日消息（记者 卢林嘉）</strong>继12月22日国内最大的开发者社区CSDN.NET的用户密码遭到黑客泄漏之后，25日下午国内知名的社区网站天涯网的用户隐私也遭到黑客泄漏，据了解此次被泄漏用户数量达到4000万。</p>
+
+<p>25日下午有网友向DoNews爆料称国内知名社区网站天涯网被黑客攻击，有4000万用户的密码遭到黑客泄漏，与之前CSDN被泄漏的信息一样，天涯被泄漏的用户密码全部以明文方式保存，但是数量之大的确令人乍舌。</p>
+
+<p>记者在第一时间与天涯网取得联系，据天涯网相关负责人介绍，由于历史原因，天涯社区早期使用过明文密码，2009年11月修改了密码保存方式，改成 了加密密码，但部分老的明文密码未被清理。此次遭到黑客泄漏的用户便是2009年11月升级密码保存方式之前所注册的用户，据悉，天涯网目前共有6000 万注册用户，而此次泄漏的用户数量达到总数的60%以上。</p>
+
+<p>天涯强调，2011年5月12日天涯网升级改造了天涯社区用户账号管理功能，使用了强加密算法，解决了天涯社区用户账号的各种安全性问题。</p>
+
+<p>据了解，在得知用户隐私遭黑客泄漏以后天涯网已经启动应急预案，通过站内短信、Email等一切有效联系手段通知用户尽快修改个人密码，同时也已经向公安机关进行了报案。（完）</p>
+
+<p><strong>附天涯社区致歉信：</strong></p>
+
+<p><strong>尊敬的天涯社区用户：</strong></p>
+
+<p>我们非常抱歉地通知您，近日由于遭受黑客攻击，有多家网站的部分用户数据库外泄，天涯也是受害网站之一。为确保您的隐私及帐户安全，在此，我们恳请 您尽快修改天涯社区相关帐户的密码。请点击以下链接重设密码：<a href="http://passport.tianya.cn/fp/fp.jsp">http://passport.tianya.cn/fp/fp.jsp</a></p>
+
+<p>如果您在其他网站也使用同一密码，请务必同时修改更新。</p>
+
+<p>目前天涯社区已向公安机关报案，公安机关也正在调查相关线索。</p>
+
+<p>再次向您致以深深的歉意！</p>
+
+<p><strong>关于天涯社区用户账号被泄露的声明：</strong></p>
+
+<p>由于历史原因，天涯社区早期使用过明文密码，此次被盗的数据为2009年之前的备份数据。2010年之后，我们升级改造了天涯社区用户账号管理功能，使用了强加密算法，解决了天涯社区用户账号的各种安全性问题。</p>
+
+<p><strong>如果我的天涯社区帐号已经被盗怎么办？</strong></p>
+
+<p>1、使用取回密码功能，通过注册邮箱、认证手机或申诉的方式取回密码。</p>
+
+<p>2、拨打我们的7*24小时客服电话0898-68582666，由客服人员进行验证之后取回密码。</p>
+
+<p>（<strong>以上转自DoNews：</strong><a href="http://www.donews.com/original/201112/1044644.shtm" target="_blank" rel="nofollow" >www.donews.com/original/201112/1044644.shtm</a>）</p>
+
+<p>据乌云漏洞报告平台给出来的漏洞报告，看出来，天涯网站的确是存在漏洞的。</p>
+
+<p><strong>缺陷编号：</strong> WooYun-2011-03772</p>
+
+<p><strong>漏洞标题：</strong> 天涯社区4000万用户资料</p>
+
+<p><strong>相关厂商：</strong> 天涯社区</p>
+
+<p><strong>漏洞作者：</strong> Snow <span style="color: #ff0000;">（注意：该作者是提交漏洞而并非利用漏洞）</span></p>
+
+<p><strong>提交时间：</strong> 2011-12-25</p>
+
+<p><strong>公开时间：</strong> 2011-12-25</p>
+
+<p><strong>漏洞类型：</strong> 用户资料大量泄漏</p>
+
+<p><strong>危害等级：</strong> 高</p>
+
+<p><strong>自评Rank：</strong> 10</p>
+
+<p><strong>漏洞状态：</strong> 未联系到厂商或者厂商积极忽略</p>
+
+<p><strong>漏洞来源：</strong> <a href="http://www.wooyun.org/bugs/wooyun-2010-03772" target="_blank" rel="nofollow" ><a href="http://www.wooyun.org">http://www.wooyun.org</a></a></p>
+
+<p><strong>Tags标签：</strong> 敏感信息未加密存储</p>
+
+<p><strong>漏洞详情</strong></p>
+
+<p><strong>简要描述：</strong></p>
+
+<p>天涯社区4000万用户资料泄露 账号密码邮箱明文保存，经验证为有效数据，从一些途径得知目前已经扩散，请广大用户和企业做好应急响应处理</p>
+
+<p><strong>详细说明：</strong></p>
+
+<p>天涯社区4000万用户资料泄露 账号密码邮箱明文保存</p>
+
+<p><strong>修复方案：</strong></p>
+
+<p>广大用户速度更改密码吧</p>
+
+<p><strong>版权声明：</strong>转载请注明来源 Snow@乌云</p>
+
+<p><strong>漏洞回应厂商回应：</strong></p>
+
+<p>未能联系到厂商或者厂商积极拒绝</p>
+
+<p><strong>漏洞Rank：</strong>20 (WooYun评价)</p>
+
+<p>下载地址和图片就不多贴了，大家应该已经看到了很多类似的图片。继前几天的CSDN密码泄露之后，知名互联网社交网站天涯再次出现同样的问题，难道是黑客都趁着过年捞一次，亦或者说黑客都有跟风情节，你泄露了400W，我狠一点泄露4000W，而且两家公司都称是备份数据库，具体是与否我不知道，但是有账号的用户劝你赶紧改密码。同期肯定会多出很多新闻来，比如CSDN的密码处处体现出coder都是诗人，那天涯的用户密码肯定更是精彩绝伦了。</p>
+
+<p>今天收到百度联盟的邮件，提醒修改密码，难道连度娘都虚了，看来有一句名言还是肯靠谱的，“必死更可怕的是等死”。</p>
+
+<p>最后提醒大家一句，请尽量使用复杂的密码，请尽量不要多个网站使用同一个密码，请不要再设计数据库时将密码存成明文的，至少要是MD5加密过的。</p>
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%a4%a9%e6%b6%af" rel="tag" title="天涯">#天涯#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%ae%89%e5%85%a8" rel="tag" title="安全">#安全#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%af%86%e7%a0%81%e6%b3%84%e9%9c%b2" rel="tag" title="密码泄露">#密码泄露#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%bc%8f%e6%b4%9e" rel="tag" title="漏洞">#漏洞#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1045.html" rel="next" title="蒙牛官网遭某留名黑客攻击">
+        <i class="fa fa-chevron-left"></i> 蒙牛官网遭某留名黑客攻击
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1038.html" rel="prev" title="[新闻资讯]CSDN数据库被爆，已经报案，大家尽早修改密码">
+        [新闻资讯]CSDN数据库被爆，已经报案，大家尽早修改密码 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

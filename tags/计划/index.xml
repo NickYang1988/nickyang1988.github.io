@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计划 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%AE%A1%E5%88%92/</link>
+    <description>Recent content in 计划 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 15 Feb 2013 11:32:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%AE%A1%E5%88%92/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>过完年了，谈谈最近的事儿和今年的暂定计划</title>
+      <link>https://cppfans.org/1453.html</link>
+      <pubDate>Fri, 15 Feb 2013 11:32:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1453.html</guid>
+      <description>15号回到上海，准备开始2013年的工作了，想想这年也过的挺快，并且没什么意思。刚看完《以德服人》最新一期，上面就探讨了很多人怵头过年回家，</description>
+    </item>
+    
+  </channel>
+</rss>

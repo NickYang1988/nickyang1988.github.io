@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2011，总结 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/2011%E6%80%BB%E7%BB%93/</link>
+    <description>Recent content in 2011，总结 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 08 Jan 2012 13:40:27 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/2011%E6%80%BB%E7%BB%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2011年小结</title>
+      <link>https://cppfans.org/1051.html</link>
+      <pubDate>Sun, 08 Jan 2012 13:40:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1051.html</guid>
+      <description>周五晚上公司开了年会，突然发现2011年已经结束了，年会上大家都很开心，很幸运的获得一个奖品——iPod shuffle，还是我们头抽中的，看</description>
+    </item>
+    
+  </channel>
+</rss>

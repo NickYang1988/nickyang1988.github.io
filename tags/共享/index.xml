@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>共享 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%85%B1%E4%BA%AB/</link>
+    <description>Recent content in 共享 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 20 Oct 2012 10:07:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%85%B1%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>分享仿异次元百度分享工具条</title>
+      <link>https://cppfans.org/1385.html</link>
+      <pubDate>Sat, 20 Oct 2012 10:07:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1385.html</guid>
+      <description>现在做网站一个社会化分享工具还是很有必要的，百度在不久前提供了百度分享功能，据说这个功能会让百度更加青睐你的网站。百度提供的分享工具条样式比</description>
+    </item>
+    
+  </channel>
+</rss>

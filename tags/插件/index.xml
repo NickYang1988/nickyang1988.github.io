@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>插件 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%8F%92%E4%BB%B6/</link>
+    <description>Recent content in 插件 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 21 Oct 2012 13:12:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%8F%92%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>WordPress多说评论插件严重问题</title>
+      <link>https://cppfans.org/1386.html</link>
+      <pubDate>Sun, 21 Oct 2012 13:12:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1386.html</guid>
+      <description>多说是一款社会化评论插件，自从安装了之后，评论一直都很正常，而且评论回复也方便多了。最近多说插件突然出现评论回复后一直提示未查看，最新评论显</description>
+    </item>
+    
+    <item>
+      <title>[WP插件]wordpress代码高亮插件Crayon Syntax Highlighter使用教程</title>
+      <link>https://cppfans.org/1224.html</link>
+      <pubDate>Wed, 04 Apr 2012 08:47:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1224.html</guid>
+      <description>很久以前，介绍过 SyntaxHighlighter ，这也是一款很不错的wp代码高亮插件，介绍可以根据前面的链接看看，今天主要是想跟大家分享另外一款代码高亮插件Crayon Syntax</description>
+    </item>
+    
+    <item>
+      <title>【WordPress插件】WordPress最好用的代码高亮插件——SyntaxHighlighter</title>
+      <link>https://cppfans.org/269.html</link>
+      <pubDate>Sat, 05 Mar 2011 08:11:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/269.html</guid>
+      <description>本博是一个偏向于技术的博客，主要是互联网和程序开发相关内容，所以经常会分享一些代码给大家看，由于习惯了VS中VA插件的代码高亮显示，博客中的</description>
+    </item>
+    
+  </channel>
+</rss>

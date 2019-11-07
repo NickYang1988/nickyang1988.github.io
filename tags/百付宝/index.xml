@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>百付宝 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%99%BE%E4%BB%98%E5%AE%9D/</link>
+    <description>Recent content in 百付宝 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 05 Dec 2012 01:20:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%99%BE%E4%BB%98%E5%AE%9D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>彻底被百付宝折服，果然不专业</title>
+      <link>https://cppfans.org/1414.html</link>
+      <pubDate>Wed, 05 Dec 2012 01:20:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1414.html</guid>
+      <description>跟家里打电话说道一半，突然挂掉了，原来是欠费了，上淘宝充话费，结果因为需要手机验证码，而手机已经停机，无法收到短信，于是作罢，改用百付宝充值</description>
+    </item>
+    
+  </channel>
+</rss>

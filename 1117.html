@@ -1,0 +1,613 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>C&#43;&#43;使用MySql&#43;&#43;操作数据库实例 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="C&#43;&#43;使用MySql&#43;&#43;操作数据库实例">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="C&#43;&#43;使用MySql&#43;&#43;操作数据库实例 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1117.html" itemprop="url">
+        C&#43;&#43;使用MySql&#43;&#43;操作数据库实例
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-03-04">
+    2012-03-04
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1689 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>有朋友让帮忙写个C++修改数据库中用户名密码的工具，因为他是做VPN的，要给很多客户端展示访问速度等，有一个固定的用户名来展示，但是每次给用户试用的是不同的密码，是随机生成的。</p>
+
+<p>所以就想到了用MySql++这个数据库操作类库，我们项目中也是用这个的，非常好用。</p>
+
+<blockquote>
+<p>MySql++简介：</p>
+
+<p>MySQL++ is a C++ wrapper for MySQL’s C API. It is built around the same principles as the Standard C++ Library, to make dealing with the database as easy as dealing with STL containers. In addition, MySQL++ provides facilities that let you avoid the most repetitive sorts of SQL within your own code, providing native C++ interfaces for these common tasks.</p>
+</blockquote>
+
+<p>MySql++下载地址：</p>
+
+<p><a href="http://tangentsoft.net/mysql++/" target="_blank"  rel="nofollow" ><a href="http://tangentsoft.net/mysql++/">http://tangentsoft.net/mysql++/</a></a>  （最新版本是3.1.0）</p>
+
+<p>安装MySql  Server在本机上，需要其中的库和头文件来编译，安装过程就不介绍了。</p>
+
+<p>解压Mysql++后，里面有VS的工程文件，2003、2005、2008，我使用的是VS2010，所以挑了一个最近的2008工程来update。</p>
+
+<p>单独编译mysqlpp工程，因为其他的工程都是例子和测试代码，可以看看，但是没必要编译。</p>
+
+<p><span style="color: #ff0000;">注意：可能会提示mysql_version.h文件无法找到，请打开项目属性配置，看看MySql的配置路径是否正确。</span></p>
+
+<p>使用其中的 install.hta 文件来拷贝一份 .h .lib .dll文件，都是我们的工程中需要的文件，这样一份完整的MySql++的静态动态库就准备好了。</p>
+
+<p>在我们的工程中加入头文件和静态库目录（这些大家应该都是轻车熟路的，我就不再赘述了）。</p>
+
+<p>下来就是编写我们的代码来操作数据库了，当然了，在这之前，你的mysql服务要安装好，并且建立一个要使用的数据库和表来操作。</p>
+
+<p>&nbsp;</p>
+
+<p>[cpp]</p>
+
+<p>#include <winsock2.h> // 因为要使用socket，所以需要包含socket2.1头文件</p>
+
+<p>#include &ldquo;mysql++.h&rdquo; // Mysql++头文件</p>
+
+<p>#include <string></p>
+
+<p>#include <iostream></p>
+
+<p>using namespace mysqlpp;</p>
+
+<p>using namespace std;</p>
+
+<p>const DWORD SpaceTime = 20 * 60 * 1000; // 20分钟</p>
+
+<p>const int LEN_NAME = 8;</p>
+
+<p>const char CCH[] = &ldquo;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&rdquo;; // 随机字串字典</p>
+
+<p>// 简单的随机字串生成函数</p>
+
+<p>char* rand_password( char* str, int len )</p>
+
+<p>{</p>
+
+<p>int i = 0, n = 0;</p>
+
+<p>int nLength = strlen( CCH );</p>
+
+<p>for ( i = 0, n = 0; i &lt; LEN_NAME &amp;&amp; n &lt; nLength; ++i, ++n )</p>
+
+<p>{</p>
+
+<p>int x = rand() % ( nLength - 1 );</p>
+
+<p>str[i] = CCH[x];</p>
+
+<p>}</p>
+
+<p>str[ i + 1 ] = &lsquo;&#92;&#48;&rsquo;;</p>
+
+<p>return str;</p>
+
+<p>}</p>
+
+<p>int _tmain(int argc, _TCHAR* argv[])</p>
+
+<p>{</p>
+
+<p>std::cout &lt;&lt; &ldquo;VPN_Modify_MySql_User_Password Tool&rdquo; &lt;&lt; std::endl;</p>
+
+<p>std::cout &lt;&lt; &ldquo;Copyright &copy; eliteYang&rdquo; &lt;&lt; std::endl;</p>
+
+<p>std::cout &lt;&lt; &ldquo;<a href="http://www.cppfans.org&quot;">http://www.cppfans.org&quot;</a> &lt;&lt; std::endl;</p>
+
+<p>mysqlpp::Connection _vpnConn;</p>
+
+<p>// 设置数据库编码</p>
+
+<p>_vpnConn.set_option( new mysqlpp::SetCharsetNameOption( &ldquo;utf8&rdquo; ) );</p>
+
+<p>string dbIp, dbUserName, dbPwd, dbName;</p>
+
+<p>cout &lt;&lt; &ldquo;\n\n\nMySql DataBase Info Input&rdquo; &lt;&lt; endl;</p>
+
+<p>cout &lt;&lt; &ldquo;请输入MySQL服务器IP地址 : &ldquo;;</p>
+
+<p>cin &gt;&gt; dbIp;</p>
+
+<p>cout &lt;&lt; &ldquo;请输入MySql管理员账号 : &ldquo;;</p>
+
+<p>cin &gt;&gt; dbUserName;</p>
+
+<p>cout &lt;&lt; &ldquo;请输入MySql管理员账号密码 : &ldquo;;</p>
+
+<p>cin &gt;&gt; dbPwd;</p>
+
+<p>cout &lt;&lt; &ldquo;请输入MySql数据库名 : &ldquo;;</p>
+
+<p>cin &gt;&gt; dbName;</p>
+
+<p>cout &lt;&lt; &ldquo; 默认端口号为 3306 &rdquo; &lt;&lt; endl;</p>
+
+<p>bool bConnect = _vpnConn.connect( dbName.c_str(), dbIp.c_str(), dbUserName.c_str(), dbPwd.c_str(), 3306 );</p>
+
+<p>if ( !bConnect )</p>
+
+<p>{</p>
+
+<p>cout &lt;&lt; &ldquo;VPN Connect mysql failed! Error: &ldquo; &lt;&lt; _vpnConn.error() &lt;&lt; endl;</p>
+
+<p>system( &ldquo;Pause&rdquo; );</p>
+
+<p>return -1;</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>cout &lt;&lt; &ldquo;VPN Connect mysql success!&rdquo; &lt;&lt; endl;</p>
+
+<p>}</p>
+
+<p>DWORD timeSlot = timeGetTime();</p>
+
+<p>char szChar[ 256 ] = { 0 };</p>
+
+<p>string strName = &ldquo;123&rdquo;;</p>
+
+<p>cout &lt;&lt; &ldquo;请输入需要定时修改密码的用户名 :&ldquo;;</p>
+
+<p>cin &gt;&gt; strName;</p>
+
+<p>sprintf_s( szChar, &ldquo;select * from vpn_user_info where UserName=%s&rdquo;, strName.c_str() );</p>
+
+<p>while ( true )</p>
+
+<p>{</p>
+
+<p>if ( timeGetTime() - timeSlot &lt; SpaceTime )</p>
+
+<p>{ continue; }</p>
+
+<p>try</p>
+
+<p>{</p>
+
+<p>mysqlpp::Query _query = _vpnConn.query( szChar );</p>
+
+<p>mysqlpp::StoreQueryResult _result = _query.store();</p>
+
+<p>if ( _result.num_rows() != 1 )</p>
+
+<p>{</p>
+
+<p>cout &lt;&lt; &ldquo;UserName[123] repeat, please check&rdquo; &lt;&lt; endl;</p>
+
+<p>timeSlot = timeGetTime();</p>
+
+<p>continue;</p>
+
+<p>}</p>
+
+<p>string strUserName = _result[0][0].c_str();</p>
+
+<p>string strUserPassword = _result[0][1].c_str();</p>
+
+<p>cout &lt;&lt; &ldquo;CurentInfo UserName[ &ldquo; &lt;&lt; strUserName.c_str() &lt;&lt; &ldquo; ] Password[ &ldquo; &lt;&lt; strUserPassword.c_str() &lt;&lt; &ldquo; ]&rdquo; &lt;&lt; endl;</p>
+
+<p>char strTemp[ LEN_NAME + 1 ] = { 0 };</p>
+
+<p>strUserPassword = rand_password( strTemp, LEN_NAME );</p>
+
+<p>char szTemp[ 256 ] = { 0 };</p>
+
+<p>sprintf_s( szTemp, &ldquo;UPDATE vpn_user_info SET Password = &lsquo;%s&rsquo; WHERE UserName = &lsquo;%s&rsquo;;&ldquo;, strUserPassword.c_str(), strUserName.c_str() );</p>
+
+<p>_query &lt;&lt; szTemp &lt;&lt; endl;</p>
+
+<p>_query.execute();</p>
+
+<p>cout &lt;&lt; &ldquo;ModifyUserInfo UserName[ &ldquo; &lt;&lt; strUserName.c_str() &lt;&lt; &ldquo; ] Password[ &ldquo; &lt;&lt; strUserPassword.c_str() &lt;&lt; &ldquo; ]&rdquo; &lt;&lt; endl;</p>
+
+<p>}</p>
+
+<p>catch (const mysqlpp::BadQuery&amp; er)</p>
+
+<p>{</p>
+
+<p>// Handle any query errors</p>
+
+<p>cerr &lt;&lt; &ldquo;Query error: &ldquo; &lt;&lt; er.what() &lt;&lt; endl;</p>
+
+<p>return -1;</p>
+
+<p>}</p>
+
+<p>catch (const mysqlpp::BadConversion&amp; er)</p>
+
+<p>{</p>
+
+<p>// Handle bad conversions</p>
+
+<p>cerr &lt;&lt; &ldquo;Conversion error: &ldquo; &lt;&lt; er.what() &lt;&lt; endl &lt;&lt;</p>
+
+<p>&ldquo;\tretrieved data size: &ldquo; &lt;&lt; er.retrieved &lt;&lt;</p>
+
+<p>&rdquo;, actual size: &ldquo; &lt;&lt; er.actual_size &lt;&lt; endl;</p>
+
+<p>return -1;</p>
+
+<p>}</p>
+
+<p>catch (const mysqlpp::Exception&amp; er)</p>
+
+<p>{</p>
+
+<p>// Catch-all for any other MySQL++ exceptions</p>
+
+<p>cerr &lt;&lt; &ldquo;Error: &ldquo; &lt;&lt; er.what() &lt;&lt; endl;</p>
+
+<p>return -1;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>_vpnConn.disconnect();</p>
+
+<p>system( &ldquo;Pause&rdquo; );</p>
+
+<p>return 0;</p>
+
+<p>}</p>
+
+<p>[/cpp]</p>
+
+<p>里面的异常catch是比较多的，不过有异常捕获总比没有好，出了问题还可以看异常。</p>
+
+<p>以上就是一个完整的使用MySql++操作数据库的例子，其实可以使用config或者ini配置整个数据库的信息，使用Log4cxx来打印Log，想想还是算了，看来是被项目中整套的库给惯懒了。</p>
+
+<p>Mysql++中很多值得去看的地方，很好用，封转的很好，当然了，你也可以直接使用MySql的库，也是可以的，不过就没有这么舒服了，主要是MySql++封装了输入输出流，让整个操作看起来容易了。</p>
+
+<p>以上代码可以编译过，并可以使用，均为本人亲测，如有问题，欢迎交流。</p>
+
+<p>PS：oracle还有一个工具叫MySql Connecter for C++，这个工具也是很简洁的，但是毕竟太新了，大家还没接受，这个库的优点是非常干净，没有libmysql.lib的C-Lib，不过它里面有一个MySQL C++ Driver是基于JDBC4.0规范事先的，所以不太喜欢，下一篇会用这个库写一个例子给大家看。</pre></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c&#43;&#43;" rel="tag" title="C&#43;&#43;">#C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/mysql" rel="tag" title="MySQL">#MySQL#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%95%b0%e6%8d%ae%e5%ba%93" rel="tag" title="数据库">#数据库#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%bf%9e%e6%8e%a5" rel="tag" title="连接">#连接#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1198.html" rel="next" title="[软件]如何使用分布式版本控制工具Git？">
+        <i class="fa fa-chevron-left"></i> [软件]如何使用分布式版本控制工具Git？
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1101.html" rel="prev" title="[编程工具]CppCheck代码检测工具">
+        [编程工具]CppCheck代码检测工具 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

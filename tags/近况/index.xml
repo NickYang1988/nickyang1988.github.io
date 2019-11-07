@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>近况 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%BF%91%E5%86%B5/</link>
+    <description>Recent content in 近况 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 22 Oct 2015 12:29:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%BF%91%E5%86%B5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最近我在做什么？</title>
+      <link>https://cppfans.org/1997.html</link>
+      <pubDate>Thu, 22 Oct 2015 12:29:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1997.html</guid>
+      <description>已经很久没有更新过博客了，主要原因还是因为老样子——事情太多了，每天都在瞎忙活。之前几个月一直都在忙结婚的事情，拍婚纱照什么的事情还是比较多</description>
+    </item>
+    
+  </channel>
+</rss>

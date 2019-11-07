@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>斗战神 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%96%97%E6%88%98%E7%A5%9E/</link>
+    <description>Recent content in 斗战神 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 12 Mar 2012 14:59:48 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%96%97%E6%88%98%E7%A5%9E/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[视频]斗战神觉醒测试开始了，你还在等什么？</title>
+      <link>https://cppfans.org/1150.html</link>
+      <pubDate>Mon, 12 Mar 2012 14:59:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1150.html</guid>
+      <description>反传统战斗网游《斗战神》是由腾讯游戏旗下老牌团队量子工作室潜心打造的3DMMORPG精品之作。游戏以其&amp;rdquo;世界架构师&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>[游戏资讯]腾讯新作《斗战神》首测预报名</title>
+      <link>https://cppfans.org/1058.html</link>
+      <pubDate>Tue, 17 Jan 2012 13:36:40 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1058.html</guid>
+      <description>腾讯新作《斗战神》定于3月份首次测试，现在进入预报名阶段。 本次测试的招募流程为：报名开启后，下载报名器，填写相应的信息，并进行硬件及网络检测</description>
+    </item>
+    
+  </channel>
+</rss>

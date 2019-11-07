@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>性能 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%80%A7%E8%83%BD/</link>
+    <description>Recent content in 性能 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 31 Aug 2016 02:41:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%80%A7%E8%83%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]高并发性能调试经验分享</title>
+      <link>https://cppfans.org/2167.html</link>
+      <pubDate>Wed, 31 Aug 2016 02:41:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2167.html</guid>
+      <description>作者：helloworlds 链接：https://zhuanlan.zhihu.com/p/21348220 来源：知乎 著作权归作者所有。商业</description>
+    </item>
+    
+    <item>
+      <title>记录《QMWS》服务器性能优化过程</title>
+      <link>https://cppfans.org/2018.html</link>
+      <pubDate>Fri, 13 Nov 2015 08:26:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2018.html</guid>
+      <description>性能优化(图片来自网络) 本文是为了记录下《QMWS》项目服务器在对外测试期间，性能表现和技术审核时的性能表现差距很大，从而做出的一些优化过程</description>
+    </item>
+    
+    <item>
+      <title>boost::flat_map性能测试</title>
+      <link>https://cppfans.org/1948.html</link>
+      <pubDate>Tue, 30 Jun 2015 02:11:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1948.html</guid>
+      <description>文章转自：boost::flat_map and its performance compared to map and unordered_map have run a benchmark on different data structures very recently at my company so I feel I need to drop a word. It is very complicated to benchmark something correctly. Benchmarking On the web we rarely find (if ever) a well engineered</description>
+    </item>
+    
+  </channel>
+</rss>

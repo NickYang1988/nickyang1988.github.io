@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adobe on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/adobe/</link>
+    <description>Recent content in Adobe on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 05 Dec 2010 09:27:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/adobe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Adobe CS5系列破解补丁</title>
+      <link>https://cppfans.org/62.html</link>
+      <pubDate>Sun, 05 Dec 2010 09:27:15 +0000</pubDate>
+      
+      <guid>https://cppfans.org/62.html</guid>
+      <description>Adobe CS5系列已于今年4月12号正式发布了，具体的更新和特点不想多说了，大家可以去Adobe的官网去了解，www.adobe.com。 功能特色</description>
+    </item>
+    
+  </channel>
+</rss>

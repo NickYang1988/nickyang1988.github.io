@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>分享仿异次元百度分享工具条 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="分享仿异次元百度分享工具条">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="分享仿异次元百度分享工具条 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1385.html" itemprop="url">
+        分享仿异次元百度分享工具条
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-10-20">
+    2012-10-20
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/wordpress" itemprop="url" rel="index">
+        <span itemprop="name">Wordpress</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2236 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><img class="aligncenter" title="仿异次元百度分享工具条" alt="仿异次元百度分享工具条" src="https://kzj5va.blu.livefilestore.com/y1pjT8-9Q1l4O37lE5W2VtNvHaQothb5FgtBFCrolRZaqEFU21ulUlEQJOUIhyPjRZlgmXZRWHAIaPetr6Zfu3Mg1nLFNm0RMLQ/baidu_share_tool_bar.png?psid=1" width="564" height="115" /></p>
+
+<p>现在做网站一个社会化分享工具还是很有必要的，百度在不久前提供了百度分享功能，据说这个功能会让百度更加青睐你的网站。百度提供的分享工具条样式比较单一而且不是太好看，看到异次元的百度分享工具条非常好看，于是仿了一个近似的，先分享出来给大家用。</p>
+
+<blockquote>
+<p>作者:eliteYang</p>
+
+<p>博客地址:<a href="http://www.cppfans.org  ">http://www.cppfans.org  </a>  C++爱好者博客是一个以程序开发、IT资讯为主的个人博客，旨在与各位网友交流开发经验，分享知识。</p>
+
+<p>发布时间:2012/10/20</p>
+
+<p>使用声明:请尊重原创者,允许转载和修改,但需要保留链接,谢谢合作,祝大家使用愉快,如有疑问,请至 C++爱好者博客(www.cppfans.org) 交流讨论。本工具条旨在学习CSS和JS开发，并无意抄袭或剽窃异次元博客风格，如过异次元发出禁止使用声明，请大家不要再使用了。</p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<p>使用说明：</p>
+
+<p><strong><span style="color: #ff0000;">1.将baidu_share_tool_bar文件夹里的所有文件上传到你的wordpress当前主题的目录下</span></strong></p>
+
+<p>** <span style="color: #ff0000;">2.在文章页面single.php适当的地方引用share.php即可，代码&lt;?php include(&ldquo;share.php&rdquo;); ?&gt;</span>**</p>
+
+<p>** <span style="color: #ff0000;">3.从百度分享<a href="http://share.baidu.com获取分享和喜欢按钮的代码，代码里有你自己的id，修改share.php中注释处的uid为你自己的">http://share.baidu.com获取分享和喜欢按钮的代码，代码里有你自己的id，修改share.php中注释处的uid为你自己的</a></span>**</p>
+
+<p>** <span style="color: #ff0000;">4.需安装WP-PostViews插件，用来显示访问次数，一般都会安装的</span>**</p>
+
+<p>-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;华丽的分割线-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;</p>
+
+<p>版本记录：</p>
+
+<blockquote>
+<p>2012/10/24 Version 0.5</p>
+
+<p>1.修改围观次数错误的问题(感谢icedream同学的提醒)</p>
+
+<p>0.5版本下载地址：<a href="http://filemarkets.com/file/eliteYang/f3b763a7/" target="_blank" rel="nofollow" >yunfile网盘</a> | <a href="http://pan.baidu.com/share/link?shareid=91740&uk=2098050200" target="_blank" rel="nofollow" >百度网盘</a> | <a href="http://w.qjwm.com/download.aspx?down=ok&filepath=eliteYang%2f%5bC%2b%2b%b0%ae%ba%c3%d5%df%b2%a9%bf%cd%5dbaidu_share_tool_bar_V0.5.zip" target="_blank" rel="nofollow" >千军万马网盘</a> | <a href="https://www.box.com/s/u9je4hwwvw23p322n7dm" target="_blank" rel="nofollow" >Box网盘</a></p>
+</blockquote>
+
+<p>&nbsp;</p>
+
+<p>2012/10/20 Version 0.4</p>
+
+<p>1.修改上一篇和下一篇逻辑反了的问题</p>
+
+<p>0.4版本下载地址：<a href="http://filemarkets.com/file/eliteYang/5afb9784/" target="_blank" rel="nofollow" >yunfile网盘</a> | <a href="http://pan.baidu.com/share/link?shareid=88294&uk=2098050200" target="_blank" rel="nofollow" >百度网盘</a> | <a href="http://w.qjwm.com/download.aspx?down=ok&filepath=eliteYang%2f%5bC%2b%2b%b0%ae%ba%c3%d5%df%b2%a9%bf%cd%5dbaidu_share_tool_bar_v0.4.zip" target="_blank" rel="nofollow" >千军万马网盘</a> | <a href="https://www.box.com/s/c9h37eil1vueg6or4k9p" target="_blank" rel="nofollow" >Box网盘</a></p>
+
+<p>&nbsp;</p>
+
+<p>2012/10/20 Version 0.3</p>
+
+<p>1.修改前一页后一页导航条代码，使之功能正确(非常感谢icedream的帮忙，其博客地址为:<a href="http://tesfans.org/">http://tesfans.org/</a>)</p>
+
+<p>2.修改百度喜欢样式表like.css的like按钮图标使用JS获取，并分为使用JS获取版本和不使用JS获取版本(like.css和like_donot_use_js.css，如果你嫌JS加载慢的话，可以修改like_donot_use_js.css为like.css)</p>
+
+<p>3.整理滚动后自动置顶代码为一个单独的JS(share_roll.js)</p>
+
+<p>4.修改share.css和like.css为按需加载，在share.php顶部加载</p>
+
+<p>0.3版本下载地址：<a href="http://filemarkets.com/file/eliteYang/efcb7199/" target="_blank" rel="nofollow" >yunfile网盘</a> | <a href="http://pan.baidu.com/share/link?shareid=88144&uk=2098050200" target="_blank" rel="nofollow" >百度网盘</a> | <a href="http://w.qjwm.com/download.aspx?down=ok&filepath=eliteYang%2f%a1%beC%2b%2b%b0%ae%ba%c3%d5%df%b2%a9%bf%cd%a1%bfbaidu_share_tool_bar.zip" target="_blank" rel="nofollow" >千军万马网盘</a> | <a href="https://www.box.com/s/ng4jxvs6sf67pgcu8kzx" target="_blank" rel="nofollow" >Box网盘</a></p>
+
+<p>&nbsp;</p>
+
+<p>2012/10/14 Version 0.2</p>
+
+<p>1.修改前一页后一页导航代码(还有错误)，title标签没有做</p>
+
+<p>&nbsp;</p>
+
+<p>2012/10/13 Version 0.1</p>
+
+<p>1.增加share.php代码</p>
+
+<p>2.增加百度分享样式表share.css代码</p>
+
+<p>3.增加百度喜欢样式表like.css代码</p>
+
+<p>&nbsp;</p>
+
+<blockquote>
+<p>FAQ：</p>
+
+<p>1.我的博客文章页面较宽，如果修改百度分享工具条的宽度？</p>
+
+<p>答：修改share.css中share_toolbar的widch属性为与你博客文章页面宽度符合的值</p>
+
+<p>2.我的博客主题下没有js文件夹怎么办？</p>
+
+<p>答：修改share.php最后一行代码中js文件的路径</p>
+
+<p>3.为什么我博客里百度分享和喜欢的数量和我在百度分享后台看到的数据不一致？</p>
+
+<p>答：请检查share.php中的uid是不是自己的id，如果不是请修改了。如果还不一致，请联系百度分享的工作人员解决</p>
+
+<p>4.为什么我的工具条没有图片显示出来呢？</p>
+
+<p>答：请查看您的博客当前主题image文件下share.gif图片是否正确</p>
+
+<p>5.请问是否支持wordpress之外的其他建站系统？</p>
+
+<p>答：需要修改里面WP提供的函数为你的建站系统的函数，其他不需要改动。</p>
+</blockquote>
+
+<p>更多使用问题和交流请留言说明。</p>
+
+<p>效果可以参考本博客任意文章上的分享条</p>
+
+<p>-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;华丽的分割线-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;</p>
+
+<p><span style="color: #ff0000;"><strong>统一解压密码：www.cppfans.org</strong></span></p>
+
+<p>-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;华丽的分割线-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;</p>
+
+<p><span style="color: #008080;">最新说明：</span></p>
+
+<p><span style="color: #008080;">刚去看了异次元的工具条，又增加了g+分享，不过我的博客宽度不够，所以就不增加了，如有需要增加的，可以找我修改代码。</span></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%85%b1%e4%ba%ab" rel="tag" title="共享">#共享#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%b7%a5%e5%85%b7%e6%9d%a1" rel="tag" title="工具条">#工具条#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bc%80%e6%ba%90" rel="tag" title="开源">#开源#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%99%be%e5%ba%a6%e5%88%86%e4%ba%ab" rel="tag" title="百度分享">#百度分享#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%99%be%e5%ba%a6%e5%96%9c%e6%ac%a2" rel="tag" title="百度喜欢">#百度喜欢#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1387.html" rel="next" title="坚持写博客，即使你不擅长">
+        <i class="fa fa-chevron-left"></i> 坚持写博客，即使你不擅长
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1381.html" rel="prev" title="Windows平台下如何检测C/C&#43;&#43;内存泄露？">
+        Windows平台下如何检测C/C&#43;&#43;内存泄露？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

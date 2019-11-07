@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>蓝屏 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%93%9D%E5%B1%8F/</link>
+    <description>Recent content in 蓝屏 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 29 Sep 2012 01:35:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%93%9D%E5%B1%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[PC技术]硬盘从IDE修改为AHCI模式后蓝屏如何处理？</title>
+      <link>https://cppfans.org/1369.html</link>
+      <pubDate>Sat, 29 Sep 2012 01:35:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1369.html</guid>
+      <description>这几天将win7换到了64位下，本来想虚拟机装Mac，结果CPU因为不支持VT，所以就作罢了，不想折腾VMware了，太麻烦了。当时磁盘换到</description>
+    </item>
+    
+  </channel>
+</rss>

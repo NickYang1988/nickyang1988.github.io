@@ -1,0 +1,1371 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[加密解密]使用CryptoAPI进行文件加密解密——源码 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[加密解密]使用CryptoAPI进行文件加密解密——源码">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[加密解密]使用CryptoAPI进行文件加密解密——源码 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/985.html" itemprop="url">
+        [加密解密]使用CryptoAPI进行文件加密解密——源码
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-11-07">
+    2011-11-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">3348 字 ~7分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>前一篇简单介绍了下CryptoAPI的东西，这篇就将那点代码放出来给大家看看，以作交流参考目的。</p>
+
+<p>[cpp]</p>
+
+<p>/*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong></p>
+
+<p>FileName:CryptoDefine.h</p>
+
+<p>Author :eliteYang</p>
+
+<p>Mail :elite_yang@163.com</p>
+
+<p>Desc :加密需要的常量定义</p>
+
+<p>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>/</p>
+
+<p>#ifndef __CRYPTO_DEFINE_H_</p>
+
+<p>#define __CRYPTO_DEFINE_H_</p>
+
+<p>#include <WinCrypt.h></p>
+
+<p>#define MY_ENCODING_TYPE ( PKCS_7_ASN_ENCODING | X509_ASN_ENCODING )</p>
+
+<p>#define KEY_LENGTH 0x00800000</p>
+
+<p>#define ENCRYPT_ALGORITHM CALG_RC4</p>
+
+<p>#define ENCRYPT_BLOCK_SIZE 8</p>
+
+<p>#endif</p>
+
+<p>[/cpp]</p>
+
+<p>[cpp]</p>
+
+<p>/*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong></p>
+
+<p>FileName:LogDefine.h</p>
+
+<p>Author :eliteYang</p>
+
+<p>Mail :elite_yang@163.com</p>
+
+<p>Desc :提示信息</p>
+
+<p>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>/</p>
+
+<p>#ifndef __LOG_DEFINE_H__</p>
+
+<p>#define __LOG_DEFINE_H__</p>
+
+<p>#define MAX_INFO 1024</p>
+
+<p>#include <stdio.h></p>
+
+<p>void (*g_fnPrintInfoCallBack)( char* format ) = NULL;</p>
+
+<p>void OutputInfoMessage( char* format )</p>
+
+<p>{</p>
+
+<p>if ( g_fnPrintInfoCallBack != NULL )</p>
+
+<p>{</p>
+
+<p>char temp[ MAX_INFO ] = { 0 };</p>
+
+<p>memset( temp, 0, sizeof( temp ) );</p>
+
+<p>va_list list;</p>
+
+<p>va_start( list, format );</p>
+
+<p>vsprintf_s( temp, sizeof( temp ) - 1, format, list );</p>
+
+<p>va_end( list );</p>
+
+<p>g_fnPrintInfoCallBack( temp );</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>#endif</p>
+
+<p>[/cpp]</p>
+
+<p>[cpp]</p>
+
+<p>/*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong></p>
+
+<p>FileName:Crypto.h</p>
+
+<p>Author :eliteYang</p>
+
+<p>Mail :elite_yang@163.com</p>
+
+<p>Desc :Crypto加解密算法实现函数</p>
+
+<p>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>*<strong>*</strong>/</p>
+
+<p>#ifndef __CRYPTO_H\__</p>
+
+<p>#define __CRYPTO_H\__</p>
+
+<p>#pragma once</p>
+
+<p>#define MAX_INFO_LENGTH 1024</p>
+
+<p>#include &ldquo;CryptoDefine.h&rdquo;</p>
+
+<p>#include <windows.h></p>
+
+<p>#include <string></p>
+
+<p>#include <stdio.h></p>
+
+<p>#include &ldquo;LogDefine.h&rdquo;</p>
+
+<p>extern void MyOutputInfoMessage( char* format );</p>
+
+<p>void HandleError( char* s )</p>
+
+<p>{</p>
+
+<p>char cErrorInfo[ MAX_INFO_LENGTH ];</p>
+
+<p>memset( cErrorInfo, 0, sizeof( cErrorInfo ) );</p>
+
+<p>sprintf_s( cErrorInfo, sizeof( cErrorInfo ) - 1, &ldquo;%s 错误代码:%x 程序终止执行！&rdquo;, s, GetLastError() );</p>
+
+<p>MyOutputInfoMessage( cErrorInfo );</p>
+
+<p>exit(1);</p>
+
+<p>}</p>
+
+<p>HCRYPTPROV GetCryptProv()</p>
+
+<p>{</p>
+
+<p>HCRYPTPROV hCryptProv;</p>
+
+<p>if ( CryptAcquireContext( &amp;hCryptProv, NULL, MS_ENHANCED_PROV, PROV_RSA_FULL, 0 ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;加密服务提供者(CSP)句柄获取成功&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>if ( !CryptAcquireContext( &amp;hCryptProv, NULL, MS_ENHANCED_PROV, PROV_RSA_FULL, CRYPT_NEWKEYSET ) )</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;重新建立一个新的密钥集出错!&rdquo; );</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>return hCryptProv;</p>
+
+<p>}</p>
+
+<p>HCRYPTKEY GetKeyByPassword( HCRYPTPROV hCryptProv,PCHAR szPassword )</p>
+
+<p>{</p>
+
+<p>HCRYPTKEY hKey;</p>
+
+<p>HCRYPTHASH hHash;</p>
+
+<p>if ( CryptCreateHash( hCryptProv, CALG_MD5, 0, 0, &amp;hHash ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;一个Hash句柄已经被创建&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;CryptCreateHash 创建Hash句柄失败&rdquo; );</p>
+
+<p>}</p>
+
+<p>if ( CryptHashData( hHash, (BYTE*)szPassword, strlen( szPassword ), 0 ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;密码已经被添加到了Hash表中&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;CryptHashData 计算密码的Hash值失败&rdquo; );</p>
+
+<p>}</p>
+
+<p>// 通过Hash创建值创建会话密钥</p>
+
+<p>if ( CryptDeriveKey( hCryptProv, ENCRYPT_ALGORITHM, hHash, KEY_LENGTH, &amp;hKey ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;通过密码的Hash值获得了加密密钥&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;CryptDeriveKey 通过Hash值创建会话密钥失败&rdquo; );</p>
+
+<p>}</p>
+
+<p>if ( hHash )</p>
+
+<p>{</p>
+
+<p>if ( !CryptDestroyHash( hHash ) )</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;CryptDestroyHash 销毁Hash句柄失败&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;释放Hash句柄成功&rdquo; );</p>
+
+<p>hHash = 0;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>return hKey;</p>
+
+<p>}</p>
+
+<p>HCRYPTKEY GenKeyByRandom( HCRYPTPROV hCryptProv,FILE* hDestination )</p>
+
+<p>{</p>
+
+<p>HCRYPTKEY hKey;</p>
+
+<p>HCRYPTKEY hXchgKey;</p>
+
+<p>PBYTE pbKeyBlob;</p>
+
+<p>DWORD dwKeyBlobLen;</p>
+
+<p>if( CryptGenKey( hCryptProv, ENCRYPT_ALGORITHM, KEY_LENGTH | CRYPT_EXPORTABLE, &amp;hKey) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;一个会话密钥已经被创建&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptGenKey 创建会话密钥失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 创建交换密钥</p>
+
+<p>if( CryptGenKey( hCryptProv, AT_KEYEXCHANGE, 0, &amp;hXchgKey ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;交换密钥对已经创建&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;在试图创建交换密钥时出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 确定密钥数据块长度，并分配空间.</p>
+
+<p>if( CryptExportKey( hKey, hXchgKey, SIMPLEBLOB, 0, NULL, &amp;dwKeyBlobLen ) )</p>
+
+<p>{</p>
+
+<p>char cInfo[ MAX_INFO_LENGTH ];</p>
+
+<p>memset( cInfo, 0, sizeof( cInfo ) );</p>
+
+<p>sprintf_s( cInfo, sizeof( cInfo ) - 1, &ldquo;此密钥块的长度是 %d 字节&rdquo;, dwKeyBlobLen );</p>
+
+<p>MyOutputInfoMessage( cInfo );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;计算密钥数据块长度出错&rdquo; );</p>
+
+<p>}</p>
+
+<p>if (pbKeyBlob =(BYTE *)malloc( dwKeyBlobLen ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;已经问此密钥块分配了内存&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;所需内存不够&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 导出会话密钥到简单密钥数据块中.</p>
+
+<p>if( CryptExportKey( hKey, hXchgKey, SIMPLEBLOB, 0, pbKeyBlob, &amp;dwKeyBlobLen ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;此会话密钥已经被导出&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptExportKey 导出会话密钥到简单密钥数据块中失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>//释放交换密钥句柄.</p>
+
+<p>if( hXchgKey )</p>
+
+<p>{</p>
+
+<p>if(!(CryptDestroyKey(hXchgKey)))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptDestroyKey 释放交换密钥句柄失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>MyOutputInfoMessage( &ldquo;释放交换密钥句柄成功&rdquo; );</p>
+
+<p>hXchgKey = 0;</p>
+
+<p>}</p>
+
+<p>// 写密钥块长度到目标文件.</p>
+
+<p>fwrite( &amp;dwKeyBlobLen, sizeof(DWORD), 1, hDestination );</p>
+
+<p>if( ferror( hDestination ) )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;写密钥块长度出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;密钥块长度已经被写入&rdquo; );</p>
+
+<p>}</p>
+
+<p>//写密钥块数据到目标文件.</p>
+
+<p>fwrite( pbKeyBlob, 1, dwKeyBlobLen, hDestination );</p>
+
+<p>if( ferror( hDestination ) )</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;写密钥数据出错&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;此密钥块数据已经被写入目标文件&rdquo; );</p>
+
+<p>}</p>
+
+<p>// 释放内存空间.</p>
+
+<p>free(pbKeyBlob);</p>
+
+<p>//返回创建的会话密钥</p>
+
+<p>return hKey;</p>
+
+<p>}</p>
+
+<p>BOOL MyEncryptFile( char* szSource, char* szDestination, char* szPassword )</p>
+
+<p>{</p>
+
+<p>FILE *hSource;</p>
+
+<p>FILE *hDestination;</p>
+
+<p>HCRYPTPROV hCryptProv;</p>
+
+<p>HCRYPTKEY hKey;</p>
+
+<p>PBYTE pbBuffer;</p>
+
+<p>DWORD dwBlockLen;</p>
+
+<p>DWORD dwBufferLen;</p>
+
+<p>DWORD dwCount;</p>
+
+<p>char cInfo[ MAX_INFO_LENGTH ] = { 0 };</p>
+
+<p>// 打开原文文件.</p>
+
+<p>hSource = fopen( szSource,&ldquo;rb&rdquo; );</p>
+
+<p>if ( hSource )</p>
+
+<p>{</p>
+
+<p>memset( cInfo, 0, sizeof( cInfo ) );</p>
+
+<p>sprintf_s( cInfo, sizeof( cInfo ) - 1, &ldquo;原文文件 %s 已经打开&rdquo;, szSource );</p>
+
+<p>MyOutputInfoMessage( cInfo );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;打开原文文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 打开目标文件.</p>
+
+<p>hDestination = fopen(szDestination,&ldquo;w+&rdquo;);</p>
+
+<p>if( hDestination )</p>
+
+<p>{</p>
+
+<p>memset( cInfo, 0, sizeof( cInfo ) );</p>
+
+<p>sprintf_s( cInfo, sizeof( cInfo ) - 1, &ldquo;目标文件 %s 已经打开&rdquo;, szDestination );</p>
+
+<p>MyOutputInfoMessage( cInfo );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;文件不存在，创建文件&rdquo; );</p>
+
+<p>}</p>
+
+<p>//获取加密服务者句柄</p>
+
+<p>hCryptProv = GetCryptProv();</p>
+
+<p>// 创建会话密钥.</p>
+
+<p>if( !szPassword || strcmp(szPassword,&ldquo;&rdquo;)==0 )</p>
+
+<p>{</p>
+
+<p>// 当输入密码为空时，则创建随机的加密密钥，并导出创建的密钥保存到文件中.</p>
+
+<p>hKey = GenKeyByRandom( hCryptProv, hDestination);</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>hKey = GetKeyByPassword( hCryptProv, szPassword);</p>
+
+<p>}</p>
+
+<p>// 因为加密算法按ENCRYPT_BLOCK_SIZE 大小块加密，所以被加密的</p>
+
+<p>// 数据长度必须是ENCRYPT_BLOCK_SIZE 的整数倍。下面计算一次加密的</p>
+
+<p>// 数据长度。</p>
+
+<p>dwBlockLen = 1000 - 1000 % ENCRYPT_BLOCK_SIZE;</p>
+
+<p>// 确定加密后密文数据块大小. 若是分组密码模式，则必须有容纳额外块的空间</p>
+
+<p>if( ENCRYPT_BLOCK_SIZE &gt; 1 )</p>
+
+<p>dwBufferLen = dwBlockLen + ENCRYPT_BLOCK_SIZE;</p>
+
+<p>else</p>
+
+<p>dwBufferLen = dwBlockLen;</p>
+
+<p>// 分配内存空间.</p>
+
+<p>if( pbBuffer = (BYTE*)malloc( dwBufferLen ) )</p>
+
+<p>{</p>
+
+<p>MyOutputInfoMessage( &ldquo;已经为缓冲区分配了内存&rdquo; );</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>HandleError( &ldquo;所需内存不够&rdquo; );</p>
+
+<p>}</p>
+
+<p>// 循环加密 原文件</p>
+
+<p>while( !feof(hSource) )</p>
+
+<p>{</p>
+
+<p>// 每次从原文件中读取dwBlockLen字节数据.</p>
+
+<p>dwCount = fread(pbBuffer, 1, dwBlockLen, hSource);</p>
+
+<p>if( ferror(hSource) )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;读取明文文件出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 加密数据.</p>
+
+<p>if( !CryptEncrypt(</p>
+
+<p>hKey, //密钥</p>
+
+<p>0, //如果数据同时进行散列和加密，这里传入一个散列对象</p>
+
+<p>feof(hSource), //如果是最后一个被加密的块，输入TRUE.如果不是输入FALSE.</p>
+
+<p>//这里通过判断是否到文件尾来决定是否为最后一块。</p>
+
+<p>0, //保留</p>
+
+<p>pbBuffer, //输入被加密数据，输出加密后的数据</p>
+
+<p>&amp;dwCount, //输入被加密数据实际长度，输出加密后数据长度</p>
+
+<p>dwBufferLen)) //pbBuffer的大小。</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptEncrypt 加密失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>// 把加密后数据写到密文文件中</p>
+
+<p>fwrite(pbBuffer, 1, dwCount, hDestination);</p>
+
+<p>if( ferror(hDestination) )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;写入密文时出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>// 关闭文件</p>
+
+<p>if( hSource )</p>
+
+<p>{</p>
+
+<p>if(fclose(hSource))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;关闭源文文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>if( hDestination )</p>
+
+<p>{</p>
+
+<p>if(fclose(hDestination))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;关闭目标文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>// 释放内存空间.</p>
+
+<p>if(pbBuffer)</p>
+
+<p>free(pbBuffer);</p>
+
+<p>// 销毁会话密钥</p>
+
+<p>if ( hKey )</p>
+
+<p>{</p>
+
+<p>if( !CryptDestroyKey( hKey ) )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptDestroyKey 会话密钥失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>// 释放CSP句柄</p>
+
+<p>if ( hCryptProv )</p>
+
+<p>{</p>
+
+<p>if( !CryptReleaseContext(hCryptProv, 0) )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;CryptReleaseContext 释放CSP句柄失败&rdquo;);</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>return(TRUE);</p>
+
+<p>}</p>
+
+<p>HCRYPTKEY GenKeyFromFile(HCRYPTPROV hCryptProv,FILE* hSource)</p>
+
+<p>{</p>
+
+<p>HCRYPTKEY hKey;</p>
+
+<p>PBYTE pbKeyBlob;</p>
+
+<p>DWORD dwKeyBlobLen;</p>
+
+<p>//从密文文件中获取密钥数据块长度，并分配内存空间.</p>
+
+<p>fread(&amp;dwKeyBlobLen, sizeof(DWORD), 1, hSource);</p>
+
+<p>if(ferror(hSource) || feof(hSource))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;读取密文文件中密钥数据块长度出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>if(!(pbKeyBlob = (BYTE *)malloc(dwKeyBlobLen)))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;内存分配出错.&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 从密文文件中获取密钥数据块</p>
+
+<p>fread(pbKeyBlob, 1, dwKeyBlobLen, hSource);</p>
+
+<p>if(ferror(hSource) || feof(hSource))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;读取密文文件中密钥数据块出错!\n&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 导入会话密钥到 CSP.</p>
+
+<p>if(!CryptImportKey(</p>
+
+<p>hCryptProv,</p>
+
+<p>pbKeyBlob,</p>
+
+<p>dwKeyBlobLen,</p>
+
+<p>0,</p>
+
+<p>0,</p>
+
+<p>&amp;hKey))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;Error during CryptImportKey!&rdquo;);</p>
+
+<p>}</p>
+
+<p>if(pbKeyBlob)</p>
+
+<p>free(pbKeyBlob);</p>
+
+<p>//返回导出的会话密钥</p>
+
+<p>return hKey;</p>
+
+<p>}</p>
+
+<p>BOOL MyDecryptFile( char* szSource, char* szDestination, char* szPassword)</p>
+
+<p>{</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 局部变量申明与初始化.</p>
+
+<p>FILE *hSource;</p>
+
+<p>FILE *hDestination;</p>
+
+<p>HCRYPTPROV hCryptProv;</p>
+
+<p>HCRYPTKEY hKey;</p>
+
+<p>PBYTE pbBuffer;</p>
+
+<p>DWORD dwBlockLen;</p>
+
+<p>DWORD dwBufferLen;</p>
+
+<p>DWORD dwCount;</p>
+
+<p>BOOL status = FALSE;</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 打开密文文件.</p>
+
+<p>if(!(hSource = fopen(szSource,&ldquo;rb&rdquo;)))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;打开密文文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 打开目标文件，用于存储解密后的数据.</p>
+
+<p>hDestination = fopen( szDestination,&ldquo;wb&rdquo; );</p>
+
+<p>if( !hDestination )</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;打开明文文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>//获取加密服务者句柄</p>
+
+<p>hCryptProv = GetCryptProv();</p>
+
+<p>//获取或创建会话密钥</p>
+
+<p>if(!szPassword|| strcmp(szPassword,&ldquo;&rdquo;)==0 )</p>
+
+<p>{</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>//从密文文件导入保存的会话密钥</p>
+
+<p>hKey = GenKeyFromFile( hCryptProv,hSource);</p>
+
+<p>}</p>
+
+<p>else</p>
+
+<p>{</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 通过输入密码重新创建会话密钥.</p>
+
+<p>hKey = GetKeyByPassword( hCryptProv, szPassword);</p>
+
+<p>}</p>
+
+<p>// 计算一次解密的数据长度，它是ENCRYPT_BLOCK_SIZE 的整数倍</p>
+
+<p>dwBlockLen = 1000 - 1000 % ENCRYPT_BLOCK_SIZE;</p>
+
+<p>dwBufferLen = dwBlockLen;</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 分配内存空间.</p>
+
+<p>if(!(pbBuffer = (BYTE *)malloc(dwBufferLen)))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;所需内存不够!\n&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 解密密文文件，解密后数据保存在目标文件</p>
+
+<p>do {</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 每次从密文文件中读取dwBlockLen字节数据.</p>
+
+<p>dwCount = fread(</p>
+
+<p>pbBuffer,</p>
+
+<p>1,</p>
+
+<p>dwBlockLen,</p>
+
+<p>hSource);</p>
+
+<p>if(ferror(hSource))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;读取密文文件出错!&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 解密 数据</p>
+
+<p>if(!CryptDecrypt(</p>
+
+<p>hKey,</p>
+
+<p>0,</p>
+
+<p>feof(hSource),</p>
+
+<p>0,</p>
+
+<p>pbBuffer,</p>
+
+<p>&amp;dwCount))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;Error during CryptDecrypt!&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 把解密后的数据写入目标文件中.</p>
+
+<p>fwrite(</p>
+
+<p>pbBuffer,</p>
+
+<p>1,</p>
+
+<p>dwCount,</p>
+
+<p>hDestination);</p>
+
+<p>if(ferror(hDestination))</p>
+
+<p>{</p>
+
+<p>HandleError(&ldquo;Error writing plaintext!&rdquo;);</p>
+
+<p>}</p>
+
+<p>} while(!feof(hSource));</p>
+
+<p>status = TRUE;</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 关闭文件</p>
+
+<p>if(hSource)</p>
+
+<p>{</p>
+
+<p>if(fclose(hSource))</p>
+
+<p>HandleError(&ldquo;关闭原文件出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>if(hDestination)</p>
+
+<p>{</p>
+
+<p>if(fclose(hDestination))</p>
+
+<p>HandleError(&ldquo;关闭目标文件出错&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 释放内存空间</p>
+
+<p>if(pbBuffer)</p>
+
+<p>free(pbBuffer);</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 销毁会话密钥</p>
+
+<p>if(hKey)</p>
+
+<p>{</p>
+
+<p>if(!(CryptDestroyKey(hKey)))</p>
+
+<p>HandleError(&ldquo;Error during CryptDestroyKey&rdquo;);</p>
+
+<p>}</p>
+
+<p>//-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&ndash;-&mdash;-</p>
+
+<p>// 释放CSP句柄</p>
+
+<p>if(hCryptProv)</p>
+
+<p>{</p>
+
+<p>if(!(CryptReleaseContext(hCryptProv, 0)))</p>
+
+<p>HandleError(&ldquo;Error during CryptReleaseContext&rdquo;);</p>
+
+<p>}</p>
+
+<p>return status;</p>
+
+<p>} // end Decryptfile</p>
+
+<p>#endif</p>
+
+<p>[/cpp]</p>
+
+<p>其中MyOutputInfoMessage函数为我自己定义的一个打印Log的函数，在一个ListBox上输出所有的提示信息，不然用MessageBox太恶心了，这点大家可以用别的方式实现，就不贴MFC部分的代码了。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/cryptoapi" rel="tag" title="CryptoAPI">#CryptoAPI#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%8a%a0%e5%af%86" rel="tag" title="加密">#加密#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%96%87%e4%bb%b6" rel="tag" title="文件">#文件#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%a7%a3%e5%af%86" rel="tag" title="解密">#解密#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1003.html" rel="next" title="[转]现代C&#43;&#43;风格的新元素">
+        <i class="fa fa-chevron-left"></i> [转]现代C&#43;&#43;风格的新元素
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/911.html" rel="prev" title="[加密解密]CryptoAPI简介">
+        [加密解密]CryptoAPI简介 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

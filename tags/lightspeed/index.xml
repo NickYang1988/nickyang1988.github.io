@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LightSpeed on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/lightspeed/</link>
+    <description>Recent content in LightSpeed on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 13 Jun 2012 16:07:15 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/lightspeed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源码分享]游戏引擎Gamebryo_LightSpeed_src_3.0</title>
+      <link>https://cppfans.org/1338.html</link>
+      <pubDate>Wed, 13 Jun 2012 16:07:15 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1338.html</guid>
+      <description>Gamebryo引擎是NetImmerse引擎的后继版本，是由Numerical Design Limited最初开发的游戏中间层，在与Emergent Game</description>
+    </item>
+    
+  </channel>
+</rss>

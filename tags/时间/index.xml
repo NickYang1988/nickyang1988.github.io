@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%97%B6%E9%97%B4/</link>
+    <description>Recent content in 时间 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 28 Oct 2014 02:00:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%97%B6%E9%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]22条日常技巧助程序员提高工作效率、节约时间</title>
+      <link>https://cppfans.org/1737.html</link>
+      <pubDate>Tue, 28 Oct 2014 02:00:21 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1737.html</guid>
+      <description>我一直在测试和调整各种生产效率的技术，在过去的五年中，阅读了大量的书籍（其中大多数是重复的） ，这里是我的一些结论： 这不是一个关于时间的问题，</description>
+    </item>
+    
+  </channel>
+</rss>

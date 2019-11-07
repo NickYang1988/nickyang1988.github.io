@@ -1,0 +1,578 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转]MongoDB 3.0新增特性一览 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转]MongoDB 3.0新增特性一览">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转]MongoDB 3.0新增特性一览 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1866.html" itemprop="url">
+        [转]MongoDB 3.0新增特性一览
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-03-27">
+    2015-03-27
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">4903 字 ~10分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<h3 id="引言">引言</h3>
+
+<h3 id="在历经版本号修改-2-8版本直接跳到3-0版本-和11个rc版本之后-mongodb3-0于2015年3月3日正式发布-可以毫不夸张的说-该版本的新增特性标志着mongodb这款典型的nosql数据库已经进入了一个全新的发展阶段-本文以下内容会逐个盘点3-0版本的新增特性">在历经版本号修改（2.8版本直接跳到3.0版本）和11个rc版本之后，MongoDB3.0于2015年3月3日正式发布。可以毫不夸张的说，该版本的新增特性标志着MongoDB这款典型的NoSQL数据库已经进入了一个全新的发展阶段。本文以下内容会逐个盘点3.0版本的新增特性。</h3>
+
+<h3 id="插件式存储引擎api">插件式存储引擎API</h3>
+
+<p>MongoDB3.0引入了插件式存储引擎API，为第三方的存储引擎厂商加入MongoDB提供了方便，这一变化无疑参考了MySQL的设计理念。目前除了早期的MMAP存储引擎外，WiredTiger和RocksDB均已完成了对MongoDB的支持，前者更是在被MongoDB公司收购后更是直接引入到了MongoDB3.0版本中。插件式存储引擎API的引入为MongoDB丰富自己武器库以处理更多不同类型的业务提供了无限可能，内存存储引擎、事务存储引擎甚至Hadoop在未来都有可能接入进来。</p>
+
+<p><img class="alignnone wp-image-1868 size-full" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb1.jpg" alt="mongodb1" width="950" height="281" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb1.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb1-300x89.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb1-220x65.jpg 220w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<p><img class="aligncenter size-full wp-image-1869" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb2.jpg" alt="mongodb2" width="950" height="379" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb2.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb2-300x120.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb2-220x88.jpg 220w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<h3 id="wiredtiger存储引擎">WiredTiger存储引擎</h3>
+
+<p>如果说插件式存储引擎API为MongoDB3.0打造了一个武器库，那么WiredTiger绝对是武器库中第一枚也是最重要的一枚重磅炸弹。因为MMAP存储引擎自身的天然缺陷（耗费磁盘空间和内存空间且难以清理，库级别锁），MongoDB为数据库运维人员带来了极大痛苦，甚至一部分人已经开始转向TokuMX，尽管后者目前也不甚稳定。意识到这一问题的MongoDB，做出了有钱任性的决定，直接收购存储引擎厂商WiredTiger，将WiredTiger存储引擎集成进3.0版本（仅在64位版本中提供）。那么这款走到聚光灯下的存储引擎究竟具备哪些值得期待的特性呢？</p>
+
+<p>1、文档级别并发控制</p>
+
+<p>WiredTiger通过MVCC实现文档级别的并发控制，即文档级别锁。这就允许多个客户端请求同时更新一个集合内存的多个文档，再也不需要在排队等待库级别的写锁。这在提升数据库读写性能的同时，大大提高了系统的并发处理能力。关于这一点的效果从监控工具mongostat就可以直接体现出来，旧版本的监控指标会有lockeddb这一项（该项指标过高是mongo使用人员的一大痛点啊），而新版的mongostat已经看不到了。</p>
+
+<p><img class="aligncenter size-full wp-image-1870" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb3.jpg" alt="mongodb3" width="950" height="685" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb3.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb3-300x216.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb3-208x150.jpg 208w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<p>MongoDB 2.4.12版本</p>
+
+<blockquote>
+<p>$/home/mongodb/mongodb-linux-x86_64-2.4.12/bin/mongostat –port55060</p>
+
+<p>insert query update delete getmore command flushes mapped vsize resfaults locked db idxmiss % qr|qw ar|aw netIn netOut conntime</p>
+
+<p>*0 *0 *0 *0 0 1|0 0 18g 18.3g 16.1g 0 ycsb:0.0% 0 0|00|0 62b 2k 1 13:04:01</p>
+
+<p>*0 *0 *0 *0 0 1|0 0 18g 18.3g 16.1g 0 ycsb:0.0% 0 0|00|0 62b 2k 1 13:04:02</p>
+
+<p>*0 *0 *0 *0 0 1|0 0 18g 18.3g 16.1g 0 ycsb:0.0% 0 0|00|0 62b 2k 1 13:04:03</p>
+</blockquote>
+
+<p>MongoDB 3.0 rc8版本</p>
+
+<blockquote>
+<p>$/home/mongodb/mongodb-linux-x86_64-3.0.0-rc8/bin/mongostat –port55050</p>
+
+<p>insert query update delete getmore command % dirty % used flushesvsize res qr|qw ar|aw netIn netOut conntime</p>
+
+<p>*0 *0 *0 *0 0 1|0 0.0 42.2 0 30.6G 30.4G 0|0 0|0 79b 16k 113:02:38</p>
+
+<p>*0 *0 *0 *0 0 1|0 0.0 42.2 0 30.6G 30.4G 0|0 0|0 79b 16k 113:02:39</p>
+
+<p>*0 *0 *0 *0 0 1|0 0.0 42.2 0 30.6G 30.4G 0|0 0|0 79b 16k 113:02:40</p>
+</blockquote>
+
+<p>2、磁盘数据压缩</p>
+
+<p>WiredTiger支持对所有集合和索引进行Block压缩和前缀压缩（如果数据库启用了journal，journal文件一样会压缩），已支持的压缩选项包括：不压缩、Snappy压缩和Zlib压缩。这为广大Mongo使用者们带来了又一福音，因为很多Mongo数据库都是因为MMAP存储引擎消耗了过多的磁盘空间而不得已进行扩容。其中Snappy压缩为数据库的默认压缩方式，用户可以根据业务需求选择适合的压缩方式。理论上来说，Snappy压缩速度快，压缩率OK，而Zlib压缩率高，CPU消耗多且速度稍慢。当然，只要选择使用压缩，Mongo肯定会占用更多的CPU使用率，但是考虑到Mongo本身并不是十分耗CPU，所以启用压缩完全是值得的。</p>
+
+<p><img class="aligncenter size-full wp-image-1871" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb4.jpg" alt="mongodb4" width="950" height="433" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb4.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb4-300x137.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb4-220x100.jpg 220w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<p><img class="aligncenter size-full wp-image-1872" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb5.jpg" alt="mongodb5" width="950" height="443" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb5.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb5-300x140.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb5-220x103.jpg 220w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<p>此外，WiredTiger存储方式上也有很大改进。旧版本Mongo在数据库级别分配文件，数据库中的所有集合和索引都混合存储在数据库文件中，所以即使删掉了某个集合或者索引，占用的磁盘空间也很难及时自动回收。WiredTiger在集合和索引级别分配文件，数据库中的所有集合和索引均存储在单独的文件中，集合或者索引删除后，对应的存储文件随即删除。当然，因为存储方式不同，低版本的数据库无法直接升级到WiredTiger存储引擎，只能通过导出导入数据的方式来实现。</p>
+
+<p>MongoDB 2.4.12版本</p>
+
+<blockquote>
+<p>[mongodb<a href="http://weibo.com/n/mongo-data-emergency-001" target="_blank"  rel="nofollow" >@mongo-data-emergency-001</a>.m6.momo.com mongodb_2_4_12]$ll</p>
+
+<p>drwxrwxr-x 3 mongodb mongodb 4096 2月 25 19:03local</p>
+
+<p>-rwxrwxr-x 1 mongodb mongodb 6 2月 25 19:04mongod.lock</p>
+
+<p>drwxrwxr-x 2 mongodb mongodb 4096 2月 27 18:30_tmp</p>
+
+<p>drwxrwxr-x 3 mongodb mongodb 4096 2月 27 18:39ycsb</p>
+
+<p>[mongodb<a href="http://weibo.com/n/mongo-data-emergency-001" target="_blank"  rel="nofollow" >@mongo-data-emergency-001</a>.m6.momo.com mongodb_2_4_12]$ llycsb/</p>
+
+<p>drwxrwxr-x 2 mongodb mongodb 4096 2月 27 18:39_tmp</p>
+
+<p>-rw——- 1 mongodb mongodb 67108864 2月 27 18:57ycsb.0</p>
+
+<p>-rw——- 1 mongodb mongodb 134217728 2月 27 18:57ycsb.1</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.10</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.11</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.12</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:39ycsb.13</p>
+
+<p>-rw——- 1 mongodb mongodb 268435456 2月 27 18:57ycsb.2</p>
+
+<p>-rw——- 1 mongodb mongodb 536870912 2月 27 18:57ycsb.3</p>
+
+<p>-rw——- 1 mongodb mongodb 1073741824 2月 27 18:57ycsb.4</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.5</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.6</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.7</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.8</p>
+
+<p>-rw——- 1 mongodb mongodb 2146435072 2月 27 18:57ycsb.9</p>
+
+<p>-rw——- 1 mongodb mongodb 16777216 2月 27 18:40ycsb.ns</p>
+</blockquote>
+
+<p>Mongo 3.0 rc8版本</p>
+
+<blockquote>
+<p>[mongodb<a href="http://weibo.com/n/mongo-data-emergency-001" target="_blank"  rel="nofollow" >@mongo-data-emergency-001</a>.m6.momo.com mongodb_3_0_0]$ll</p>
+
+<p>drwxrwxr-x 2 mongodb mongodb 4096 2月 28 18:32local</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 36864 3月 21 13:41_mdb_catalog.wt</p>
+
+<p>-rwxrwxr-x 1 mongodb mongodb 6 2月 28 18:32mongod.lock</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 36864 3月 21 13:42sizeStorer.wt</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 95 2月 28 18:32storage.bson</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 49 2月 28 18:32WiredTiger</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 433 2月 28 18:32WiredTiger.basecfg</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 21 2月 28 18:32WiredTiger.lock</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 921 3月 21 13:41WiredTiger.turtle</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 53248 3月 21 13:41WiredTiger.wt</p>
+
+<p>drwxrwxr-x 2 mongodb mongodb 4096 3月 21 13:41ycsb</p>
+
+<p>[mongodb<a href="http://weibo.com/n/mongo-data-emergency-001" target="_blank"  rel="nofollow" >@mongo-data-emergency-001</a>.m6.momo.com mongodb_3_0_0]$ llycsb/</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 19314257920 2月 2819:16 collection-4–1318477584648278106.wt</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 602112 3月 2113:40 collection-6–1318477584648278106.wt</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 262598656 2月 2818:53 index-5–1318477584648278106.wt</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 827392 3月 2113:40 index-7–1318477584648278106.wt</p>
+
+<p>-rw-rw-r– 1 mongodb mongodb 1085440 3月 2113:41 index-8–1318477584648278106.wt</p>
+</blockquote>
+
+<p>3、可配置内存使用上限</p>
+
+<p>WiredTiger支持内存使用容量配置，用户通过storage.wiredTiger.engineConfig.cacheSizeGB参数即可控制MongoDB所能使用的最大内存，该参数默认值为物理内存大小的一半。这也为广大Mongo使用者们带来了又一福音，MMAP存储引擎消耗内存是出了名的，只要数据量够大，简直就是有多少用多少。</p>
+
+<h3 id="mmapv1存储引擎提升">MMAPv1存储引擎提升</h3>
+
+<p>MongoDB3.0出了引入WiredTiger外，对于原有的存储引擎MMAP也进行了一定的完善，该存储引擎依然是3.0版的默认存储引擎。遗憾的是改进后的MMAP存储引擎依旧在数据库级别分配文件，数据库中的所有集合和索引都混合存储在数据库文件中，所以磁盘空间无法及时自动回收的问题如故。</p>
+
+<p>1、锁粒度由库级别锁提升为集合级别锁</p>
+
+<p>这在一定程度上也能够提升数据库的并发处理能力。</p>
+
+<p>2、文档空间分配方式改变</p>
+
+<p>在MMAP存储引擎中，文档按照写入顺序排列存储。如果文档更新后长度变长且原有存储位置后面没有足够的空间放下增长部分的数据，那么文档就要移动到文件中的其他位置。这种因更新导致的文档位置移动会严重降低写性能，因为一旦文档发生移动，集合中的所有索引都要同步修改文档新的存储位置。</p>
+
+<p>MMAP存储引擎为了减少这种情况的发生提供了两种文档空间分配方式：基于paddingFactor（填充因子）的自适应分配方式和基于usePowerOf2Sizes的预分配方式，其中前者为默认方式。第一种方式会基于每个集合中文档更新历史计算文档更新的平均增长长度，然后在新文档插入或旧文档移动时填充一部分空间，如当前集合paddingFactor的值为1.5，那么一个大小为200字节的文档插入时就会自动在文档后填充100个字节的空间。第二种方式则不考虑更新历史，直接为文档分配2的N次方大小的存储空间，如一个大小同样为200字节的文档插入时直接分配256个字节的空间。</p>
+
+<p>MongoDB3.0版本中的MMAPv1抛弃了基于paddingFactor的自适应分配方式，因为这种方式看起来很智能，但是因为一个集合中的文档的大小不一，所以经过填充后的空间大小也不一样。如果集合上的更新操作很多，那么因为记录移动后导致的空闲空间会因为大小不一而难以重用。目前基于usePowerOf2Sizes的预分配方式成为默认的文档空间分配方式，这种分配方式因为分配和回收的空间大小都是2的N次方（当大小超过2MB时则变为2MB的倍数增长），因此更容易维护和利用。如果某个集合上只有insert或者in-placeupdate，那么用户可以通过为该集合设置noPadding标志位，关闭空间预分配。</p>
+
+<p><img class="aligncenter size-full wp-image-1873" src="http://www.cppfans.org/wp-content/uploads/2015/03/mongodb6.jpg" alt="mongodb6" width="950" height="533" srcset="https://www.cppfans.org/wp-content/uploads/2015/03/mongodb6.jpg 950w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb6-300x168.jpg 300w, https://www.cppfans.org/wp-content/uploads/2015/03/mongodb6-220x123.jpg 220w" sizes="(max-width: 950px) 100vw, 950px" /></p>
+
+<h3 id="复制集改进">复制集改进</h3>
+
+<p>1、复制集成员增长</p>
+
+<p>MongoDB3.0的复制集成员的最大个数由之前的12个增长为50个，但能够投票的最大成员个数依然为7个，而相应的getLastError中的 w:“majority” 项也仅代表投票节点的大多数。</p>
+
+<p>2、Primary节点StepDown处理方式变化</p>
+
+<p>在复制集中通过replSetStepDown命令可以使得当前的Primary节点退位，重新选举新的Primay节点。MongoDB3.0在StepDown的处理方式上做了如下修改：1）在Primary退位之前，会首先中断某些耗时较长的用户操作如创建索引、写操作、Mapreduce任务等；2）为了防止数据回滚，Primary节点在退位之前会等待一个可被选举的Secondary节点同步到最新数据，而旧版本中Primary节点只要有Secondary节点的数据同步到10秒以内就退位；3）同时replSetStepDown命令新增了一个secondaryCatchUpPeriodSecs参数，用户可以指定Primary节点等待有Secondary节点的数据同步到该参数指定的秒数内就退位。</p>
+
+<h3 id="分片集群改进">分片集群改进</h3>
+
+<p>1、新增工具函数 sh.removeTagRange()</p>
+
+<p>旧版本中只有sh.addTagRange()，如果要删除tagRange只能手工到config.tags集合中删除。</p>
+
+<p>2、提供更可预测的Read Preference处理</p>
+
+<p>新版本中mongos实例在执行读操作时不再将连接固定在复制集成员上，而是对每个读操作都会重新评估ReadPreference。这样当Read Preference修改时，其行为更容易预测。</p>
+
+<p>3、为chunk迁移提供writeConcern设置</p>
+
+<p>新版本针对均衡器为moveChunk和cleanupOrphaned这两个涉及到chunk迁移的命令提供了writeConcern参数。</p>
+
+<p>4、增加均衡器状态显示</p>
+
+<p>新版本中通过sh.status()可以看到均衡器的状态信息。</p>
+
+<h3 id="其他改动">其他改动</h3>
+
+<p>1、优化explan函数</p>
+
+<p>新版本explain函数可以支持count，find，group，aggregate，update，remove等操作的查询计划显示，结果更全面更精细。</p>
+
+<p>2、重写mongodb工具</p>
+
+<p>新版本所有mongodb自带工具均使用Go语言重写，特别是在mongodump和mongorestore添加了并行机制，这样可以大大加快数据的导出和导入。</p>
+
+<p>3、日志输出控制</p>
+
+<p>新版本中将日志分为不同的模块，其中包括ACCESS、COMMAND、CONTROL、GEO、INDEX、NETWORK、QUERY、REPL、SHARDING、STORAGE、JOURNAL和WRITE等。用户可以动态调整每个模块的日志级别，这无疑更有利于系统问题诊断。</p>
+
+<p>4、 索引构建优化</p>
+
+<p>后台索引建立过程中，不能进行删库删表删索引操作，且后台索引建立过程不会因此自动中断。另外，使用createIndexes命令可以同时建立多个索引，并且只扫描一遍数据，提升了建索引的效率。</p>
+
+<h3 id="总结">总结</h3>
+
+<p>以上仅列出了MongoDB 3.0的一些主要特性和修改，如果希望了解更多可以查看MongoDB 3.0的Release-Notes。总体来看，MongoDB3.0提供了较多令人惊喜的新特性，也使人们更加看好其未来的发展。</p>
+
+<h3 id="参考资料链接">参考资料链接</h3>
+
+<div>
+  MongoDB3.0官方Release-Notes：http://docs.mongodb.org/manual/release-notes/3.0/
+</div>
+
+<div>
+  北京Mongo用户组第二次线下活动PPT：http://www.mongoing.com/archives/543
+</div>
+
+<div>
+  http://blog.chinaunix.net/xmlrpc.php?r=blog/article&id=4865696&uid=15795819
+</div>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/mongodb" rel="tag" title="MongoDB">#MongoDB#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%89%b9%e6%80%a7" rel="tag" title="特性">#特性#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1878.html" rel="next" title="修复主题在移动端访问错位问题">
+        <i class="fa fa-chevron-left"></i> 修复主题在移动端访问错位问题
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1847.html" rel="prev" title="[转]怎样尊重一个程序员">
+        [转]怎样尊重一个程序员 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

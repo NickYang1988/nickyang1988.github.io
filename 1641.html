@@ -1,0 +1,549 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>share_ptr的几个注意点 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="share_ptr的几个注意点">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="share_ptr的几个注意点 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1641.html" itemprop="url">
+        share_ptr的几个注意点
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2014-05-14">
+    2014-05-14
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1015 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>智能指针在boost中很早就有了，在tr1上也很早，但是没怎么用，后来0x标准出来之后，智能指针变成了标准库，所以现在用起来就不区分boost和std了。</p>
+
+<p>主要说下share_ptr的几个注意点，待补全。</p>
+
+<p>1.环状的链式结构可能会形成内存泄露</p>
+
+<p>例如：</p>
+
+<pre>class BaseClass;
+class ChildClass;
+
+typedef std::shared_ptr&lt;BaseClass&gt; BaseClassPtr;
+typedef std::shared_ptr&lt;ChildClass&gt; ChildClassPtr;
+
+class BaseClass
+{
+public:
+    ChildClassPtr childClass;
+protected:
+private:
+};
+
+class ChildClass
+{
+public:
+    BaseClassPtr baseClass;
+protected:
+private:
+};
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    BaseClassPtr base(new BaseClass());
+    ChildClassPtr child(new ChildClass());
+
+    base-&gt;childClass = child;
+    child-&gt;baseClass = base;
+
+
+    system("pause");
+    return 0;
+}
+</pre>
+
+<p>2.多线程环境下使用代价更大。</p>
+
+<p>因为share_ptr内部有两个数据成员，一个是指向对象的指针 ptr，另一个是 ref_count 指针，指向堆上的 ref_count 对象，读写操作不能原子化，（具体的结构图可以查看 <a href="http://blog.csdn.net/solstice/article/details/8547547" target="_blank" rel="nofollow" >陈硕的文章《为什么多线程读写 shared_ptr 要加锁？》</a>）所以多线程下要么加锁，要么小心翼翼使用share_ptr。</p>
+
+<p>例如：</p>
+
+<pre>class Test
+{
+public:
+    Test() {}
+
+    ~Test() {}
+
+    // ...
+protected:
+private:
+};
+
+void func(std::shared_ptr test_ptr)
+{
+    // 大量使用test_ptr
+
+    std::shared_ptr temp_ptr = test_ptr;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    std::shared_ptr sp(new Test());
+    boost::thread th1(std::bind(&func, sp));
+    boost::thread th2(std::bind(&func, sp));
+
+    th1.join();
+    th2.join();
+
+    return 0;
+}
+</pre>
+
+<p>上面的代码不知道什么时候可能就宕了，而且不容易找到问题，这个时候你就得硬看代码了。</p>
+
+<p>你也可以通过使用weak_ptr来解决这个问题，例如上述例子可以修改为：</p>
+
+<pre>class Test
+{
+public:
+    Test() {}
+
+    ~Test() {}
+
+    // ...
+protected:
+private:
+};
+
+void func(std::weak_ptr test_ptr)
+{
+    // 大量使用test_ptr
+
+    std::weak_ptr temp_ptr = test_ptr;
+}
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    std::shared_ptr sp(new Test());
+    std::weak_ptr wp(sp);
+
+    boost::thread th1(std::bind(&func, wp));
+    boost::thread th2(std::bind(&func, wp));
+
+    th1.join();
+    th2.join();
+
+    return 0;
+}
+</pre>
+
+<p>weak_ptr是一种可构造可赋值的不增加引用计数来管理share_ptr的智能指针，它可以非常方便的通过weak_ptr.lock()转为share_ptr，通过weak_ptr.expired()来判断智能指针是否被释放，还是非常方便的。条目1中的例子使用weak_ptr就可以解决问题</p>
+
+<p>3.share_ptr包装this的时候使用enable_shared_from_this</p>
+
+<pre>class Test
+{
+public:
+    Test() {}
+
+    ~Test() {}
+
+    std::shared_ptr get_ptr()
+    {
+        return std::shared_ptr(this);
+    }
+
+    // ...
+protected:
+private:
+};
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    Test t;
+    std::shared_ptr t_ptr(t.get_ptr());
+    return 0;
+}
+</pre>
+
+<p>这样就会发生析构两次的问题，可以使用enable_shared_from_this来做共享，上面例子修改为</p>
+
+<pre>class Test : public std::enable_shared_from_this&lt;Test&gt;
+{
+public:
+    Test() {}
+
+    ~Test() {}
+
+    std::shared_ptr get_ptr()
+    {
+        return shared_from_this();
+    }
+
+    // ...
+protected:
+private:
+};
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    std::shared_ptr t_ptr(new Test());
+    t_ptr-&gt;get_ptr();
+
+    return 0;
+}
+</pre>
+
+<p>4.share_ptr多次引用同一数据会导致内存多次释放</p>
+
+<pre>int _tmain(int argc, _TCHAR* argv[])
+{
+    int* int_ptr = new int[100];
+    std::shared_ptr s_int_ptr1(int_ptr);
+
+    // do something
+
+    std::shared_ptr s_int_ptr2(int_ptr);
+
+    return 0;
+}
+</pre>
+
+<p>而且C++之父对share_ptr的初衷是：“shared_ptr用于表示共享拥有权。然而共享拥有权并不是我的初衷。在我看来，一个更好的办法是为对象指明拥有者并且为对象定义一个可以预测的生存范围。”</p>
+
+<p>&nbsp;</p>
+
+<p>总结：智能指针虽然好，但是还需要谨慎的使用，C++的新特性很不错，但是写C++代码还是得非常注意，各位共勉吧</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c&#43;&#43;" rel="tag" title="C&#43;&#43;">#C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/share_ptr" rel="tag" title="share_ptr">#share_ptr#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%99%ba%e8%83%bd%e6%8c%87%e9%92%88" rel="tag" title="智能指针">#智能指针#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1645.html" rel="next" title="[转载]PM和程序员（RD）的相处之道－－写给那些血气方刚的产品经理（PM）">
+        <i class="fa fa-chevron-left"></i> [转载]PM和程序员（RD）的相处之道－－写给那些血气方刚的产品经理（PM）
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1644.html" rel="prev" title="[转载]想提升工作效率，就別再做这七件事">
+        [转载]想提升工作效率，就別再做这七件事 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

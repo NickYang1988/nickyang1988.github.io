@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游戏 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%B8%B8%E6%88%8F/</link>
+    <description>Recent content in 游戏 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 16 Nov 2017 06:39:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ArkGameFrame开源跨平台游戏服务器框架0.2.0版本发布</title>
+      <link>https://cppfans.org/2224.html</link>
+      <pubDate>Thu, 16 Nov 2017 06:39:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2224.html</guid>
+      <description>各位朋友好，ArkGameFrame 0.2.0 版本发布了，Ark 是一个游戏服务器框架，主要提供了抽象的数据组织结构和通用的服务器架构，主要特性包括：</description>
+    </item>
+    
+    <item>
+      <title>谈谈当今的游戏行业(1)——是否端游已死，页游将死？</title>
+      <link>https://cppfans.org/1471.html</link>
+      <pubDate>Wed, 10 Jul 2013 15:31:50 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1471.html</guid>
+      <description>本系列文章可能有好几篇，现在暂时不能确定具体数量。这种发表观点类型的文章本来应该应该用微信来发布的，不过微信我还在申请公众平台审核，而且那公</description>
+    </item>
+    
+    <item>
+      <title>RakNet简单介绍，最新版本分享</title>
+      <link>https://cppfans.org/877.html</link>
+      <pubDate>Tue, 11 Oct 2011 14:58:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/877.html</guid>
+      <description>前一阵简单的看了看RakNet的东西，觉得挺好用，想写一点东西给大家分享，还是从最基础的讲起吧，虽然有点俗套，不过真不知道怎么写这些东西，各</description>
+    </item>
+    
+    <item>
+      <title>第一个项目《水浒无双》3.25正式封测</title>
+      <link>https://cppfans.org/320.html</link>
+      <pubDate>Tue, 22 Mar 2011 16:27:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/320.html</guid>
+      <description>最近一直在忙公司的项目，不过都是瞎忙，没做出来多少东西，万幸这个项目在月底要封测了，封测顶几天，然后就可以休息一阵了。 简单的先说说这个项目，</description>
+    </item>
+    
+    <item>
+      <title>【资料分享】网游[天龙八部]源代码分享</title>
+      <link>https://cppfans.org/204.html</link>
+      <pubDate>Sun, 20 Feb 2011 07:47:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/204.html</guid>
+      <description>天龙八部这款游戏，从一到二，可谓是改进了很多东西，因为对网游玩的不是很多，所以对其中的特色也就不做介绍了，大家喜欢的话可以亲自去玩玩体验一下</description>
+    </item>
+    
+  </channel>
+</rss>

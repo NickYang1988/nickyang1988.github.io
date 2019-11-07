@@ -1,0 +1,683 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转]现代C&#43;&#43;风格的新元素 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转]现代C&#43;&#43;风格的新元素">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转]现代C&#43;&#43;风格的新元素 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1003.html" itemprop="url">
+        [转]现代C&#43;&#43;风格的新元素
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-11-16">
+    2011-11-16
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2973 字 ~6分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>****<strong>“C++11就像一门新的语言。” – Bjarne Stroustrup</strong></p>
+
+<p>C++11标准推出了很多有用的新特性。本文特别关注相比C++98更像是一门新语言的那部分特性，因为：</p>
+
+<p>这些特性改变了编写C++程序使用的代码风格和习语[TODO]，通常也包括你设计C++函数库的方式。例如，你会看到更多参数和返回值类型为智能指针_<strong>(smart pointer)</strong>_，同时也会看到函数通过值传递返回大型对象</p>
+
+<p>你将会发现在大多数的代码示例中充斥着新特性的身影。例如，几乎每5行现代C++代码示例都会使用到<strong>auto</strong></p>
+
+<p>C++11的其他特性也很棒。但是请先熟悉下面这些，正是因为这些特性的广泛使用使得C++11代码如同其他现代主流语言一样整洁、安全和高效，与此同时保持了C++传统的性能优势。</p>
+
+<p>提示：</p>
+
+<ul>
+<li>与Strunk &amp; White[TODO]一样，本文只做概要的总结性指导而不做详尽基本原理和优缺点分析。详细分析请参见其他文章</li>
+<li>本文会不断更新，主要变更及内容增加请参见文末变更记录</li>
+</ul>
+
+<p><strong>auto</strong></p>
+
+<p>基于以下两个原因，尽可能使用auto：首先，使用auto会避免重复声明编译器已经知道的类型。</p>
+
+<p>[cpp]</p>
+
+<p>// C++98</p>
+
+<p>map<int,string>::iterator i = m.begin ();</p>
+
+<p>// C++11</p>
+
+<p>auto i = begin (m);</p>
+
+<p>[/cpp]</p>
+
+<p>其次，当使用未知类型或者类型名称不易理解时使auto会更加便利，例如大多数的lambda函数［TODO］——你甚至不能简单的拼写出类型的名字。</p>
+
+<p>[cpp]</p>
+
+<p><pre>// C++98</p>
+
+<p>binder2nd&lt; greater<int> &gt; x = bind2nd ( greater<int>()， 42 );</p>
+
+<p>// C++11</p>
+
+<p>auto x = [](int i) { return i &gt; 42; };</p>
+
+<p>[/cpp]</p>
+
+<p>需要注意，使用auto并不改变代码的含义。代码仍然是静态类型［译注］，每个表达式的类型都是清晰和明确的；C++11只是不需要我们重复声明类 型的名字。一些人刚开始可能会害怕在这里使用auto，因为感觉好像没有（重复）声明我们需要的类型就意味着会碰巧得到一个不同的类型。如果你想要明确地 进行一次_强制类型转换_，没有问题，声明目标类型就好了。然而大多数情况下，只要使用auto就可以了；几乎不会出现错误地拿到一个不同类型的情况，即便出现错误，C++的强静态类型系统也会由编译器让你知道这个错误，因为你正试图访问一个变量没有的成员函数或是错误地调用了该函数。</p>
+
+<p>译注：动态类型语言（dynamic typing language）是指类型检查发生在运行期间（run-time）的语言。静态类型语言（static typing language）是类型检查发生在编译期间（compile-time）的语言。</p>
+
+<p>智能指针：无须delete</p>
+
+<p>请始终使用标准智能指针以及非占有原始指针(non-owning raw pointer)。绝不要使用占有原生指针(owning raw pointer)和delete操作，除非在实现你自己的底层数据结构这种少见的情况下（即使在此时也需要在 class 范围内保持完好的封装）。如果只能够知道你是另一个对象唯一的所有者，请使用unique_ptr来表示唯一所有权（TODO)。一个”new T”表达式会马上初始化另一个引用它的对象，通常是一个unique_ptr。</p>
+
+<p>[cpp]</p>
+
+<p>// C++11 Pimpl Idiom</p>
+
+<p>class widget {</p>
+
+<p>widget ();</p>
+
+<p>~widget ();</p>
+
+<p>private:</p>
+
+<p>class impl;</p>
+
+<p>unique_ptr<impl> pimpl;</p>
+
+<p>};</p>
+
+<p>// in .cpp file</p>
+
+<dl>
+<dt>class impl {</dt>
+</dl>
+
+<p>:::</p>
+
+<p>};</p>
+
+<dl>
+<dt>widget::widget ()</dt>
+<dd><p>pimpl ( new impl () )</p></dd>
+</dl>
+
+<p>{</p>
+
+<p>}</p>
+
+<p>widget::~widget () = default;</p>
+
+<p>[/cpp]</p>
+
+<p>使用shared_ptr来表示共享所有权。推荐使用make_shared来有效地创建共享对象。</p>
+
+<p>[cpp]</p>
+
+<p>// C++98</p>
+
+<dl>
+<dt>widget* pw = new widget ();</dt>
+</dl>
+
+<p>:::</p>
+
+<p>delete pw;</p>
+
+<p>// C++11</p>
+
+<p>auto pw = make_shared<widget>();</p>
+
+<p>[/cpp]</p>
+
+<p>使用 weak_ptr 来退出循环并且表示可选性（例如，实现一个对象缓存）</p>
+
+<p>[cpp]</p>
+
+<p>// C++11</p>
+
+<p>class gadget;</p>
+
+<p>class widget {</p>
+
+<p>private:</p>
+
+<p>shared_ptr<gadget> g; // if shared ownership</p>
+
+<p>};</p>
+
+<p>class gadget {</p>
+
+<p>private:</p>
+
+<p>weak_ptr<widget> w;</p>
+
+<p>};</p>
+
+<p>[/cpp]</p>
+
+<p>如果你知道另一个对象存在时间会更长久并且希望跟踪它，使用一个（非占有non-owning)原始指针。</p>
+
+<p>[cpp]</p>
+
+<p>// C++11</p>
+
+<p>class node {</p>
+
+<p>vector&lt; unique_ptr<node> &gt; children;</p>
+
+<p>node* parent;</p>
+
+<dl>
+<dt>public:</dt>
+</dl>
+
+<p>:::</p>
+
+<p>};</p>
+
+<p>[/cpp]</p>
+
+<p><strong>nullptr</strong></p>
+
+<p>始终使用nullptr表示一个null指针值，绝不要使用数字0或者NULL宏，因为它们也可以代表一个整数或者指针从而产生歧义。</p>
+
+<p><strong>Range for</strong></p>
+
+<p>基于范围的循环使得按顺序访问其中的每个元素变得非常方便。</p>
+
+<p>[cpp]</p>
+
+<p>// C++98</p>
+
+<p>for( vector<double>::iterator i = v.begin (); i != v.end (); ++i ) {</p>
+
+<p>total += *i;</p>
+
+<p>}</p>
+
+<p>// C++11</p>
+
+<p>for( auto d : v ) {</p>
+
+<p>total += d;</p>
+
+<p>}</p>
+
+<p>[/cpp]</p>
+
+<p><strong>非成员（nonmember） begin 和 end</strong></p>
+
+<p>始终使用非成员begin和end，因为它是可扩展的并且可以应用在所有的容器类型(container type)，不仅仅是遵循了STL风格提供了 .begin ()和 .end ()成员函数的容器，甚至数组都可以使用。</p>
+
+<p>如果你使用了一个非STL风格的collection类型，虽然提供了迭代但没有提供STL的 .begin ()和 .end ()，通常可以为这个类型编写自己的非成员begin和end来进行重载。这样你就可以使用STL容器的编程风格来遍历该类型。C++11标准提供了示 例:C数组就是这样一个类型，标准同时为数组提供了begin和end。</p>
+
+<p>[cpp]</p>
+
+<p>vector<int> v;</p>
+
+<p>int a[100];</p>
+
+<p>// C++98</p>
+
+<p>sort ( v.begin ()， v.end () );</p>
+
+<p>sort ( &amp;a[0], &amp;a[0] + sizeof(a)/sizeof(a[0]) );</p>
+
+<p>// C++11</p>
+
+<p>sort ( begin (v)， end (v) );</p>
+
+<p>sort ( begin (a)， end (a) );</p>
+
+<p>[/cpp]</p>
+
+<p><strong>Lambda 函数和算法</strong></p>
+
+<p>Lambda[TODO]是决定乾坤的因素，它会使你编写的代码变得更优雅、更快速。Lambda使得STL算法的可用性提高了近100倍。新近开 发的C++函数库都是基于lambda可以用的前提（例如，PPL）并且有些函数库甚至要求你编写lambda来调用函数库（例如，C++ AMP）</p>
+
+<p>下面是一个快速示例：找到v里面大于x并且小于y的第一个元素。在C++11中，最简单和干净的代码就是调用一个标准函数。</p>
+
+<p>[cpp]</p>
+
+<p>// C++98: write a naked loop (using std::find_if is impractically difficult)</p>
+
+<p>vector<int>::iterator i = v.begin (); // because we need to use i later</p>
+
+<p>for( ; i != v.end (); ++i ) {</p>
+
+<p>if( *i &gt; x &amp;&amp; *i &lt; y ) break;</p>
+
+<p>}</p>
+
+<p>// C++11: use std::find_if</p>
+
+<p>auto i = find_if ( begin (v)， end (v)， [=](int i) { return i &gt; x &amp;&amp; i &lt; y; } );</p>
+
+<p>[/cpp]</p>
+
+<p>想要使用C++编写一个循环或者类似的新特性？不用着急；只要编写一个模板函数（template function)(函数库算法），并且几乎可以将lambda当做语言特性来使用，与此同时会更加灵活，因为它不是固定的语言特性而是一个真正的函数库。</p>
+
+<p>[csharp]</p>
+
+<p>// C#</p>
+
+<p>lock( mut_x ) {</p>
+
+<p>&hellip; use x &hellip;</p>
+
+<p>}</p>
+
+<p>// 不使用 lambda 的C++11：已经非常简洁并且更灵活（例如，可以使用超时以及其他选项）</p>
+
+<p>{</p>
+
+<p>lock_guard<mutex> hold ( mut_x );</p>
+
+<p>&hellip; use x &hellip;</p>
+
+<p>}</p>
+
+<p>// C++11 with lambdas, and a helper algorithm: C# syntax in C++</p>
+
+<p>// 使用了 lambda 的C++11可以带一个辅助算法：在 C++ 中使用 C# 的文法</p>
+
+<p>// Algorithm: template<typename T, typename F> void lock ( T&amp; t, F f ) { lock_guard<T> hold (t); f (); }</p>
+
+<p>lock( mut_x， [&amp;]{</p>
+
+<p>&hellip; use x &hellip;</p>
+
+<p>});</p>
+
+<p>[/csharp]</p>
+
+<p>去熟悉lambda吧。你会大量使用它，不仅仅在C++中——它已经广泛应用于很多主流的编程语言。一个开始的好去处请参考我在PDC2010的演讲《无处不在的 lambda》</p>
+
+<p><strong>Move / &amp;&amp;</strong></p>
+
+<p>Move被认为是copy的最佳优化，尽管它也使得其他事情成为可能比如信息被转发。</p>
+
+<p>[cpp]</p>
+
+<p>// C++98：避免 copy 的替代方法</p>
+
+<dl>
+<dt>vector<int>* make_big_vector (); // 选择1: 返回指针: 没有拷贝，但不要忘记 delete</dt>
+</dl>
+
+<p>:::</p>
+
+<p>vector<int>* result = make_big_vector ();</p>
+
+<dl>
+<dt>void make_big_vector ( vector<int>&amp; out ); // 选择2: 通过引用传递: 没有拷贝，但是调用者需要传入一个有名对象</dt>
+</dl>
+
+<p>:::</p>
+
+<p>vector<int> result;</p>
+
+<p>make_big_vector ( result );</p>
+
+<p>// C++11: move</p>
+
+<dl>
+<dt>vector<int> make_big_vector (); // 通常对于”被调用者(callee)分配的空间“也适用</dt>
+</dl>
+
+<p>:::</p>
+
+<p>vector<int> result = make_big_vector ();</p>
+
+<p>[/cpp]</p>
+
+<p>Move语法改变了我们设计API的方式。我们可以更多地设计通过值传递。为你的类型启用move语法，使用时会比copy更有效。</p>
+
+<p><strong>更多变化</strong></p>
+
+<p>还有更多现代C++的特性。并且我计划在未来编写更多深入C++11新特性以及其他特性的短文，我们会知道更多并且喜欢上它。</p>
+
+<p>但目前，这是必须知道的新特性。这些特性组成了现代C++风格的核心，使得C++代码看起来和执行时像他们设计的那样，你将会看到这些特性会出现在 几乎每一段你看到或者编写的现代C++代码中。并且它们使得现代C++更加干净、安全且快速，使得C++在未来的若干年仍然是我们产业的依靠。</p>
+
+<p><strong>主要变更</strong></p>
+
+<p>2011-10-30:为Lambda增加C#lock示例。重新组织智能指针首先介绍unique_prt。</p>
+
+<p>文章出自：<a href="http://blog.jobbole.com/5748/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=%25e7%258e%25b0%25e4%25bb%25a3c%25e9%25a3%258e%25e6%25a0%25bc%25e7%259a%2584%25e6%2596%25b0%25e5%2585%2583%25e7%25b4%25a0" target="_blank" rel="nofollow" >伯乐在线</a></p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c-11" rel="tag" title="C 11">#C 11#</a>
+    
+    <a href="https://cppfans.org/tags/c&#43;&#43;" rel="tag" title="C&#43;&#43;">#C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%96%b0%e7%89%b9%e6%80%a7" rel="tag" title="新特性">#新特性#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1009.html" rel="next" title="VMware下Fedora16不能全屏的简易解决办法">
+        <i class="fa fa-chevron-left"></i> VMware下Fedora16不能全屏的简易解决办法
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/985.html" rel="prev" title="[加密解密]使用CryptoAPI进行文件加密解密——源码">
+        [加密解密]使用CryptoAPI进行文件加密解密——源码 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

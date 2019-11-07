@@ -1,0 +1,402 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>金山网络掀起开源之风，意欲何在？ - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="金山网络掀起开源之风，意欲何在？">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="金山网络掀起开源之风，意欲何在？ - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/72.html" itemprop="url">
+        金山网络掀起开源之风，意欲何在？
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2010-12-07">
+    2010-12-07
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1864 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>继3Q大战——这两家NB公司在用户的桌面上大打出手之后，互联网的格局就更微妙了，其中动作最大的可能就要数金山了，各种改革，多重变化，慢慢道来。</p>
+
+<p><span style="color: #ff6600;"><strong>一：独立出金山网络</strong></span></p>
+
+<p>以下摘自金山网络咨询：</p>
+
+<blockquote>
+<p>金山网络简介：</p>
+
+<p>金山网络是一家以安全为核心，为互联网用户提供基础应用服务的互联网公司，产品线涵盖了金山毒霸、金山卫士、可牛免费杀毒、金山网盾、可牛影像等。员工总数452人，研发技术人员292人，占总人数的64%。金山网络秉承金山13年安全技术积累和可牛的互联网基因，从成立伊始就以改善中国互联网安全为目标和最高价值准则，为用户提供更专业的安全解决方案。想要保住您的系统安全，不知道“杀毒软件哪个好”，请选择金山安全</p>
+
+<p>金山安全简介：</p>
+
+<p>1997年，金山软件在珠海成立反病毒研发小组进行反病毒产品的研发，是国内最早从事互联网安全业务的企业之一。在十多年的发展历程中，金山安全积累了丰富的互联网安全经验与能力，成为中国最专业的互联网安全企业之一，为上亿用户提供了完整的信息安全产品与服务。</p>
+
+<p>可牛网络简介：</p>
+
+<p>可牛网络诞生于2008年8月，是一家新兴的互联网公司，2009年9月获著名投资商经纬中国3000万注资，原360安全卫士总经理傅盛出任董事长兼任公司CEO。可牛网络致力于提供最优秀的互联网软件服务，旗下拥有可牛免费杀毒、可牛影像、可牛看图等深受用户喜爱的软件产品。</p>
+</blockquote>
+
+<p>金山启动 ijinshan.com 域名，专门用来做金山网络的相关产品，其中包括的东西通过上述咨询大家肯定也看出来了，主要是安全、网络以及可牛的产品。</p>
+
+<p>通过金山的介绍我们可以明显的看出来，金山也需要进一步扩展（或者说拓展）自己的业务，从以前较为单调的WPS和词霸到后面的杀毒软件、游戏、影像产品等等，不过在现在的网络格局，想要不被淘汰，一种是有独特的产品创新能力，第二种就是广泛业务，降低风险，金山这样做也无可厚非。</p>
+
+<p><span style="color: #ff6600;"><strong>二：宣布金山毒霸终身免费</strong></span></p>
+
+<p><a href="http://www.cppfans.org/wp-content/uploads/2010/12/41.png" rel="nofollow" target="_blank"><img class="aligncenter size-medium wp-image-76" title="4" src="http://www.cppfans.org/wp-content/uploads/2010/12/41-300x119.png" alt="" width="496" height="179" /></a></p>
+
+<p>我首先向说一下，金山毒霸虽然杀毒能力不是最强的，但是在国内现在隐隐已经是第一了，其杀毒速度的确是没话说，貌似在还拿过国际扫描速度第一名，我个人电脑上用的就是金山毒霸系列的产品，的确非常好用。<span style="color: #ff0000;">（想声明一下，本人非金山的推销人员，还有如果各位看官喜欢别的杀软，可以自由选择，请不要做没必要的争论！）</span></p>
+
+<p>现在想说的是，金山网络成立的第一件事情就是国产金山毒霸终身免费，以前收费的时候是10块/月，其实也不贵，但是在我国的网络环境下，免费来吸引用户才是王道，这个点子非常的好，以前各位网友在选择杀毒软件的时候，总是喜欢选择杀毒能力非常知名的杀软，但是前几年杀软普遍是收费的，而且价格昂贵，用户吃不消，就会做各种破解，也导致了安全厂商吃尽了苦头。金山毒霸终身免费，一个非常大的噱头，吸引了在苦苦寻找高端杀软的人群，可以说完全牵住了很大一批用户。</p>
+
+<p><span style="color: #ff6600;"><strong>三：重磅推出金山安全卫士开源计划</strong></span></p>
+
+<p><a href="http://www.cppfans.org/wp-content/uploads/2010/12/21.png" rel="nofollow" target="_blank"><img class="aligncenter size-full wp-image-74" title="2" src="http://www.cppfans.org/wp-content/uploads/2010/12/21.png" alt="" width="723" height="240" /></a>开源在中国来说稍微有点陌生，作为一名比较差劲的开发人员，开源对我来说好像印象里从来都是国外才会见到的。在国内，看一段代码都要是论坛的注册会员，不过这样也建立起了一批论坛，让我们有了一个网络栖息地。</p>
+
+<p>这次金山重磅强推开源计划，公布了金山安全卫士的一些SDK，我看了一些，包括很多同事也看了一些之后发现基本没什么用，都是一些很基础的代码，不过编码风格是非常值得我们学习的。公布的这些代码没什么实质内容也是很正常的，用金山的话来说怕出现安全问题，用我们的想法是金山比较怕源码公开后对公司产生影响，其实两者兼有吧。</p>
+
+<p>金山掀起开源之风，真正的用意是什么呢？</p>
+
+<p>其一：获取网络焦点。此事件被很多开发者所支持，正是由于国内“闭源”环境导致很多比较新的技术没办法推广开来，而技术圈的人总喜欢尝鲜，就会瞬间被关注，提升金山的品牌形象价值。</p>
+
+<p>其二：获取群众认可。一直以来，金山与360争纷不断，虽然说360的用户群广泛且数量多，但是每次来说金山总是能与其平手而结束争纷，原因在哪里，很大一部分是因为金山产品的质量还算可以，用户还是比较相信kingsoft这个品牌，再加上这次金山毒霸永久免费的高姿态，更是拉近了与用户之间的关系，在这个时代，能吸引到人不管做什么都可以赚钱的，人气旺才是王道。</p>
+
+<p>其三：吸引开发者。金山借开源之势推出开源社区</p>
+
+<p style="text-align: center;">
+  <a href="http://www.cppfans.org/wp-content/uploads/2010/12/31.png" rel="nofollow" target="_blank"><img class="aligncenter size-full wp-image-75" title="3" src="http://www.cppfans.org/wp-content/uploads/2010/12/31.png" alt="" width="564" height="264" /></a>
+</p>
+
+<p>如果以金山这个势头搞下去，金山势必将成为中国的GNU，可能会代表着中国比较中坚的开发力量。到时候吸引开发者过来为公司服务，有了更多的开发者的加入，金山应该会再创辉煌的。</p>
+
+<p>各位读者，您有什么观点吗？请在评论中发表你的观点，让更多人知道你的想法。</p>
+
+<p>以上评论为本人观点，非专业评论。版权所有，转载请注明出处，<a href="http://www.cppfans.org" target="_blank" rel="nofollow" >C++爱好者博客</a>。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/kingsoft" rel="tag" title="Kingsoft">#Kingsoft#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%85%8d%e8%b4%b9" rel="tag" title="免费">#免费#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bc%80%e6%ba%90" rel="tag" title="开源">#开源#</a>
+    
+    <a href="https://cppfans.org/tags/%e9%87%91%e5%b1%b1" rel="tag" title="金山">#金山#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/83.html" rel="next" title="游戏开发基础知识2——函数指针">
+        <i class="fa fa-chevron-left"></i> 游戏开发基础知识2——函数指针
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/62.html" rel="prev" title="Adobe CS5系列破解补丁">
+        Adobe CS5系列破解补丁 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

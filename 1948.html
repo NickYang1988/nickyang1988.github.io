@@ -1,0 +1,517 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>boost::flat_map性能测试 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="boost::flat_map性能测试">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="boost::flat_map性能测试 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1948.html" itemprop="url">
+        boost::flat_map性能测试
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2015-06-30">
+    2015-06-30
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1463 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<p>文章转自：<a class="question-hyperlink" href="http://stackoverflow.com/questions/21166675/boostflat-map-and-its-performance-compared-to-map-and-unordered-map" target="_blank"  rel="nofollow" >boost::flat_map and its performance compared to map and unordered_map</a></p>
+
+<p>have run a benchmark on different data structures very recently at my company so I feel I need to drop a word. It is very complicated to benchmark something correctly.</p>
+
+<h2 id="benchmarking">Benchmarking</h2>
+
+<p>On the web we rarely find (if ever) a well engineered benchmark. Until today I only found benchmarks that were done the journalist way (pretty quickly and sweeping dozens of variables under the carpet).</p>
+
+<p><strong>1)</strong> You need to consider about cache warming</p>
+
+<p>Most people running benchmarks are afraid of timer discrepancy, therefore they run their stuff thousands of times and take the whole time, they just are careful to take the same thousand of times for every operation, and then consider that comparable.</p>
+
+<p>The truth is, in real world it makes little sense, because your cache will not be warm, and your operation will likely be called just once. Therefore you need to benchmark using RDTSC, and time stuff calling them once only. Intel has made a paper describing how to use RDTSC (using a cpuid instruction to flush the pipeline, and calling it at least 3 times at the beginning of the program to stabilize it).</p>
+
+<p><strong>2)</strong> rdtsc accuracy measure</p>
+
+<p>I also recommend doing this:</p>
+
+<pre class="default prettyprint prettyprinted"><code>&lt;span class="pln">u64 g_correctionFactor&lt;/span>&lt;span class="pun">;&lt;/span>  &lt;span class="com">// number of clocks to offset after each measurment to remove the overhead of the measurer itself.&lt;/span>&lt;span class="pln">
+u64 g_accuracy&lt;/span>&lt;span class="pun">;&lt;/span>
+
+&lt;span class="kwd">static&lt;/span>&lt;span class="pln"> u64 &lt;/span>&lt;span class="kwd">const&lt;/span>&lt;span class="pln"> errormeasure &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="pun">~((&lt;/span>&lt;span class="pln">u64&lt;/span>&lt;span class="pun">)&lt;/span>&lt;span class="lit">0&lt;/span>&lt;span class="pun">);&lt;/span>
+
+&lt;span class="com">#ifdef&lt;/span>&lt;span class="pln"> _MSC_VER
+&lt;/span>&lt;span class="com">#pragma&lt;/span>&lt;span class="pln"> intrinsic&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">__rdtsc&lt;/span>&lt;span class="pun">)&lt;/span>
+&lt;span class="kwd">inline&lt;/span>&lt;span class="pln"> u64 &lt;/span>&lt;span class="typ">GetRDTSC&lt;/span>&lt;span class="pun">()&lt;/span>
+&lt;span class="pun">{&lt;/span>
+    &lt;span class="kwd">int&lt;/span>&lt;span class="pln"> a&lt;/span>&lt;span class="pun">[&lt;/span>&lt;span class="lit">4&lt;/span>&lt;span class="pun">];&lt;/span>&lt;span class="pln">
+    __cpuid&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">a&lt;/span>&lt;span class="pun">,&lt;/span> &lt;span class="lit">0x80000000&lt;/span>&lt;span class="pun">);&lt;/span>  &lt;span class="com">// flush OOO instruction pipeline&lt;/span>
+    &lt;span class="kwd">return&lt;/span>&lt;span class="pln"> __rdtsc&lt;/span>&lt;span class="pun">();&lt;/span>
+&lt;span class="pun">}&lt;/span>
+
+&lt;span class="kwd">inline&lt;/span> &lt;span class="kwd">void&lt;/span> &lt;span class="typ">WarmupRDTSC&lt;/span>&lt;span class="pun">()&lt;/span>
+&lt;span class="pun">{&lt;/span>
+    &lt;span class="kwd">int&lt;/span>&lt;span class="pln"> a&lt;/span>&lt;span class="pun">[&lt;/span>&lt;span class="lit">4&lt;/span>&lt;span class="pun">];&lt;/span>&lt;span class="pln">
+    __cpuid&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">a&lt;/span>&lt;span class="pun">,&lt;/span> &lt;span class="lit">0x80000000&lt;/span>&lt;span class="pun">);&lt;/span>  &lt;span class="com">// warmup cpuid.&lt;/span>&lt;span class="pln">
+    __cpuid&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">a&lt;/span>&lt;span class="pun">,&lt;/span> &lt;span class="lit">0x80000000&lt;/span>&lt;span class="pun">);&lt;/span>&lt;span class="pln">
+    __cpuid&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">a&lt;/span>&lt;span class="pun">,&lt;/span> &lt;span class="lit">0x80000000&lt;/span>&lt;span class="pun">);&lt;/span>
+
+    &lt;span class="com">// measure the measurer overhead with the measurer (crazy he..)&lt;/span>&lt;span class="pln">
+    u64 minDiff &lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln"> LLONG_MAX&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln">
+    u64 maxDiff &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="lit">0&lt;/span>&lt;span class="pun">;&lt;/span>   &lt;span class="com">// this is going to help calculate our PRECISION ERROR MARGIN&lt;/span>
+    &lt;span class="kwd">for&lt;/span> &lt;span class="pun">(&lt;/span>&lt;span class="kwd">int&lt;/span>&lt;span class="pln"> i &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="lit">0&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln"> i &lt;/span>&lt;span class="pun">&lt;&lt;/span> &lt;span class="lit">80&lt;/span>&lt;span class="pun">;&lt;/span> &lt;span class="pun">++&lt;/span>&lt;span class="pln">i&lt;/span>&lt;span class="pun">)&lt;/span>
+    &lt;span class="pun">{&lt;/span>&lt;span class="pln">
+        u64 tick1 &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="typ">GetRDTSC&lt;/span>&lt;span class="pun">();&lt;/span>&lt;span class="pln">
+        u64 tick2 &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="typ">GetRDTSC&lt;/span>&lt;span class="pun">();&lt;/span>&lt;span class="pln">
+        minDiff &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="typ">Aska&lt;/span>&lt;span class="pun">::&lt;/span>&lt;span class="typ">Min&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">minDiff&lt;/span>&lt;span class="pun">,&lt;/span>&lt;span class="pln"> tick2 &lt;/span>&lt;span class="pun">-&lt;/span>&lt;span class="pln"> tick1&lt;/span>&lt;span class="pun">);&lt;/span>   &lt;span class="com">// make many takes, take the smallest that ever come.&lt;/span>&lt;span class="pln">
+        maxDiff &lt;/span>&lt;span class="pun">=&lt;/span> &lt;span class="typ">Aska&lt;/span>&lt;span class="pun">::&lt;/span>&lt;span class="typ">Max&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="pln">maxDiff&lt;/span>&lt;span class="pun">,&lt;/span>&lt;span class="pln"> tick2 &lt;/span>&lt;span class="pun">-&lt;/span>&lt;span class="pln"> tick1&lt;/span>&lt;span class="pun">);&lt;/span>
+    &lt;span class="pun">}&lt;/span>&lt;span class="pln">
+    g_correctionFactor &lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln"> minDiff&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln">
+
+    printf&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="str">"Correction factor %llu clocks\n"&lt;/span>&lt;span class="pun">,&lt;/span>&lt;span class="pln"> g_correctionFactor&lt;/span>&lt;span class="pun">);&lt;/span>&lt;span class="pln">
+
+    g_accuracy &lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln"> maxDiff &lt;/span>&lt;span class="pun">-&lt;/span>&lt;span class="pln"> minDiff&lt;/span>&lt;span class="pun">;&lt;/span>&lt;span class="pln">
+    printf&lt;/span>&lt;span class="pun">(&lt;/span>&lt;span class="str">"Measurement Accuracy (in clocks) : %llu\n"&lt;/span>&lt;span class="pun">,&lt;/span>&lt;span class="pln"> g_accuracy&lt;/span>&lt;span class="pun">);&lt;/span>
+&lt;span class="pun">}&lt;/span>
+&lt;span class="com">#endif&lt;/span></code></pre>
+
+<p>This is a discrepancy measurer, and it will take the minimum of all measured values, to avoid to get a -10**18 (64 bits first negatives values) from time to time.</p>
+
+<p>Notice the use of intrinsics and not inline assembly. First inline assembly is rarely supported by compilers nowadays, but much worse of all, the compiler creates a full ordering barrier around inline assembly because it cannot static analyze the inside, so this is a problem to benchmark real world stuff, especially when calling stuff just once. So an intrinsic is suited here, because it doesn&rsquo;t break the compiler free-re-ordering of instructions.</p>
+
+<p><strong>3)</strong> parameters</p>
+
+<p>The last problem is people usually test for too few variations of the scenario. A container performance is affected by:</p>
+
+<ol>
+<li>Allocator</li>
+<li>size of contained type</li>
+<li>cost of implementation of copy operation, assignment operation, move operation, construction operation, of the contained type.</li>
+<li>number of elements in the container (size of the problem)</li>
+<li>type has trivial 3.-operations</li>
+<li>type is POD</li>
+</ol>
+
+<p>Point 1 is important because containers do allocate from time to time, and it matters a lot if they allocate using the CRT &ldquo;new&rdquo; or some user defined operation, like pool allocation or freelist or other&hellip;</p>
+
+<p>Point 2 is because some containers (say A) will loose time copying stuff around, and the bigger the type the bigger the overhead. The problem is that when comparing to another container B, A may win over B for small types, and loose for larger types.</p>
+
+<p>Point 3 is the same than point 2, except it multiplies the the cost by some weighting factor.</p>
+
+<p>Point 4 is a question of big O mixed with cache issues. Some bad complexities containers can largely outperform low complexity containers for small number of types (like <code>map</code> vs. <code>vector</code>, because their cache locality is good, but <code>map</code> fragments the memory). And then at some crossing point, they will lose, because the contained overall size starts to &ldquo;leak&rdquo; to main memory and cause cache misses, that plus the fact that the asymptoptic complexity can start to be felt.</p>
+
+<p>Point 5 is about compilers being able to ellude stuff that are empty or trivial at compile time. This can optimize greatly some operations, because the containers are template, therefore each type will have its own performance profile.</p>
+
+<p>Point 6 same as point 5, PODS can benefit from the fact that copy construction is just a memcpy, and some containers can have a specific implementation for these cases, using partial template specializations, or SFINAE to select algorithms according to traits of T.</p>
+
+<h2 id="about-the-flat-map">About the flat map</h2>
+
+<p>Apparently the flat map is a sorted vector wrapper, like Loki AssocVector, but with some supplementary modernizations coming with C++11, exploiting move semantics to accelerate insert and delete of single elements.</p>
+
+<p>This is still an ordered container. Most people usually don&rsquo;t need to ordering part, therefore the existence of <code>unordered..</code>.</p>
+
+<p>Have you considered that maybe you need a <code>flat_unorderedmap</code> ? which would be something like <code>google::sparse_map</code> or something like that. An open address hash map.</p>
+
+<p>The problem of open address hash maps, is that at the time of <code>rehash</code> they have to copy all around to the new extended flat land. When a standard unordered map just have to recreate the hash index, but the allocated data stays where it is. The disadvantage of course is that the memory is fragmented like hell.</p>
+
+<p>The criterion of a rehash in an open address hash map is when the capacity overpasses the size of the bucket vector multiplied by the load factor.</p>
+
+<p>A typical load factor is <code>0.8</code> therefore, you need to care about that, if you can pre-size your hash map before filling it, always presize to: <code>intended_filling * (1/0.8) + epsilon</code> this will give you a guarantee of never having to spuriously rehash and recopy everything during filling.</p>
+
+<p>The advantage of closed address maps (std::unordered..) is that you don&rsquo;t have to care about those parameters.</p>
+
+<p>But the <code>boost flat_map</code> is an ordered vector therefore it will always have a log(N) asymptoptic complexity, which is less good than the open address hash map (amortized constant time). You should consider that as well.</p>
+
+<h2 id="benchmark-results">Benchmark results</h2>
+
+<p>This is a test involving different maps (with int key and __int64/somestruct as value) and std::vector.</p>
+
+<p>tested types information:</p>
+
+<pre class="default prettyprint prettyprinted"><code>&lt;span class="kwd">typeid&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln">__int64 &lt;/span>&lt;span class="pun">.&lt;/span>  &lt;span class="kwd">sizeof&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="lit">8&lt;/span> &lt;span class="pun">.&lt;/span>&lt;span class="pln"> ispod&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln">yes
+&lt;/span>&lt;span class="kwd">typeid&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="kwd">struct&lt;/span> &lt;span class="typ">MediumTypePod&lt;/span> &lt;span class="pun">.&lt;/span>  &lt;span class="kwd">sizeof&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="lit">184&lt;/span> &lt;span class="pun">.&lt;/span>&lt;span class="pln"> ispod&lt;/span>&lt;span class="pun">=&lt;/span>&lt;span class="pln">yes&lt;/span></code></pre>
+
+<p><strong>Insertion</strong></p>
+
+<p><strong>EDIT:</strong></p>
+
+<p>Ok, because my previous results included a bug, they actually tested ordered insertion, which exhibited a very fast behavior for the flat maps.</p>
+
+<p>I left those results thereunder because they are interesting.</p>
+
+<p>This is the correct test: <img src="http://i.stack.imgur.com/mT1hl.png" alt="enter image description here" /></p>
+
+<p><img src="http://i.stack.imgur.com/cJa4h.png" alt="enter image description here" /></p>
+
+<p>I have checked the implementation, there is no such thing as a deferred sort implemented in the flat maps here. Each insertion sorts on the fly, therefore this benchmark exhibits the asymptotic tendencies:</p>
+
+<p>map : N * log(N)</p>
+
+<p>hashmaps : amortized N</p>
+
+<p>vector and flatmaps : N * N</p>
+
+<p><strong>Warning</strong>: hereafter the test for <code>std::map</code> and both <code>flat_map</code>s here is <strong>buggy</strong> and actually tests<strong>ordered insertion</strong>:</p>
+
+<p><img src="http://i.stack.imgur.com/AizkI.png" alt="random insert of 100 elements without reservation" /></p>
+
+<p>We can see that ordered insertion, results in back pushing, and is extremely fast. However, from non-charted results of my benchmark, I can also say that this is not near the optimiality of back-insertion in a vector. Which is 3Million cycles, we observe 4.8M here for boost (160% of the optimal).</p>
+
+<p><img src="http://i.stack.imgur.com/emqen.png" alt="random insert of 10000 elements without reservation" /></p>
+
+<p><strong>Random search of 3 elements (clocks renormalized to 1)</strong></p>
+
+<p>in size = 100</p>
+
+<p><img src="http://i.stack.imgur.com/8Lwtg.png" alt="rand search within container of 100 elements" /></p>
+
+<p>in size = 10000</p>
+
+<p><img src="http://i.stack.imgur.com/yC4fs.png" alt="rand search within container of 10000 elements" /></p>
+
+<p><strong>Iteration</strong></p>
+
+<p>over size 100 (only MediumPod type)</p>
+
+<p><img src="http://i.stack.imgur.com/27PqW.png" alt="Iteration over 100 medium pods" /></p>
+
+<p>over size 10000 (only MediumPod type)</p>
+
+<p><img src="http://i.stack.imgur.com/hv1gR.png" alt="Iteration over 10000 medium pods" /></p>
+
+<p>best regards</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/boost" rel="tag" title="boost">#boost#</a>
+    
+    <a href="https://cppfans.org/tags/flat_map" rel="tag" title="flat_map">#flat_map#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%80%a7%e8%83%bd" rel="tag" title="性能">#性能#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1993.html" rel="next" title="[转]做技术的你，如果别人找你创业，该怎么办?">
+        <i class="fa fa-chevron-left"></i> [转]做技术的你，如果别人找你创业，该怎么办?
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1945.html" rel="prev" title="[转]linux下TCP/IP及内核参数优化调优">
+        [转]linux下TCP/IP及内核参数优化调优 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

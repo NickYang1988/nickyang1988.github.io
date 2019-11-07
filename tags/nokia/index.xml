@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nokia on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/nokia/</link>
+    <description>Recent content in Nokia on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 03 Apr 2011 15:44:27 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/nokia/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nokia Symbian智能手机操作系统开源</title>
+      <link>https://cppfans.org/325.html</link>
+      <pubDate>Sun, 03 Apr 2011 15:44:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/325.html</guid>
+      <description>近日，Nokia官方网站宣布Symbian智能手机操作系统宣布开源，口号是“We are open!” 网页截图如下： 继诺基亚投靠微软之后，诺基亚的手</description>
+    </item>
+    
+  </channel>
+</rss>

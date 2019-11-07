@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pcanywhere on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/pcanywhere/</link>
+    <description>Recent content in pcanywhere on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 26 Feb 2012 11:43:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/pcanywhere/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源代码]symantec远程控制软件PcAnywhere源代码分享</title>
+      <link>https://cppfans.org/1106.html</link>
+      <pubDate>Sun, 26 Feb 2012 11:43:18 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1106.html</guid>
+      <description>前一阵传闻有赛门铁克的员工盗走很大一部分源代码出去，索价5万刀，这个人也太没出息了，才索价5万刀，不给力，后来就不知道怎么解决的，反正网上是</description>
+    </item>
+    
+  </channel>
+</rss>

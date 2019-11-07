@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>写作 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%86%99%E4%BD%9C/</link>
+    <description>Recent content in 写作 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 23 Oct 2012 14:01:06 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%86%99%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>坚持写博客，即使你不擅长</title>
+      <link>https://cppfans.org/1387.html</link>
+      <pubDate>Tue, 23 Oct 2012 14:01:06 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1387.html</guid>
+      <description>前几天看到了伯乐在线翻译的《开发者拒绝写技术博客的常见理由》，里面列举了一些开发者不愿意写博客的原因。 1.我不是这方面的专家，我写的东西不权</description>
+    </item>
+    
+  </channel>
+</rss>

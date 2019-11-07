@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flat_map on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/flat_map/</link>
+    <description>Recent content in flat_map on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 30 Jun 2015 02:11:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/flat_map/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>boost::flat_map性能测试</title>
+      <link>https://cppfans.org/1948.html</link>
+      <pubDate>Tue, 30 Jun 2015 02:11:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1948.html</guid>
+      <description>文章转自：boost::flat_map and its performance compared to map and unordered_map have run a benchmark on different data structures very recently at my company so I feel I need to drop a word. It is very complicated to benchmark something correctly. Benchmarking On the web we rarely find (if ever) a well engineered</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>UI设计技巧 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/ui%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/</link>
+    <description>Recent content in UI设计技巧 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 09 Jun 2013 16:04:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/ui%E8%AE%BE%E8%AE%A1%E6%8A%80%E5%B7%A7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]Ps改进UI设计的一些技巧</title>
+      <link>https://cppfans.org/1483.html</link>
+      <pubDate>Sun, 09 Jun 2013 16:04:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1483.html</guid>
+      <description>via:http://cued.xunlei.com/log066 author:嘘嘘 &amp;nbsp; UI设计不像平面设计那样随性，期间可以用点技巧来减少痛苦。 &amp;nbsp; 1. 设置网格线 保持像素完美 不在1:1分辨率下也能保持像素完美</description>
+    </item>
+    
+  </channel>
+</rss>

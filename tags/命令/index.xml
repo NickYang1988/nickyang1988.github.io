@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>命令 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%91%BD%E4%BB%A4/</link>
+    <description>Recent content in 命令 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 27 Jun 2013 12:23:31 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%91%BD%E4%BB%A4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]10 个你必须掌握的超酷 VI 命令技巧</title>
+      <link>https://cppfans.org/1485.html</link>
+      <pubDate>Thu, 27 Jun 2013 12:23:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1485.html</guid>
+      <description>via:http://wiki.itivy.com/?p=285 摘要：大部分Linux开发者对vi命相当熟悉，可是遗憾的是，大部分开发者都只能掌握一些最常用的Linux vi命令，下面介绍的10个vi命令</description>
+    </item>
+    
+  </channel>
+</rss>

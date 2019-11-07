@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>留言失败 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%95%99%E8%A8%80%E5%A4%B1%E8%B4%A5/</link>
+    <description>Recent content in 留言失败 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 21 Apr 2012 07:44:44 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%95%99%E8%A8%80%E5%A4%B1%E8%B4%A5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[WP相关]WP无法留言问题分析总结，博客恢复留言功能通知</title>
+      <link>https://cppfans.org/1309.html</link>
+      <pubDate>Sat, 21 Apr 2012 07:44:44 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1309.html</guid>
+      <description>大家都看到我前几天发布的关于博客暂时不能留言的问题了，由于我对php不熟悉，调试什么的都不懂，所以一直在向别人请教这个问题是如何解决的，大家</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>HTTP请求中GET和POST的分析 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="HTTP请求中GET和POST的分析">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="HTTP请求中GET和POST的分析 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1391.html" itemprop="url">
+        HTTP请求中GET和POST的分析
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-10-27">
+    2012-10-27
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1980 字 ~4分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    
+
+<p>近期一位朋友想写iOS上的应用，打算从微博应用做起，第一步先做一个微博客户端出来，然后做一个手机微博应用出来，具体做什么还不甚清楚，其实是在尝试中。而我正好在用asio写网络库，于是主动提出了承担web服务器网络库的部分，也是为了给我自己封装的网络库中增加一个http模块。</p>
+
+<p>http大家都不陌生，每天打开网页，地址栏前大多数显示的都是http，当然还有https等等，以前跟rangerlee讨论curl的时候有说过post和get，不是很清楚，查阅了众多文章和资料，有点小懂了。</p>
+
+<p>统一资源定位符（URL，英语 Uniform / Universal Resource Locator 的缩写）也被称为网页地址，是因特网上标准的资源的地址（Address)。其实URL就是代表一个特定地址的因特网标准资源<span><em>URI</em></span>。http请求中的get post put delete就是对这个资源进行 查 增 改 删 ，有点类似于数据库中的四大操作。get和post最主要的区别是前者是查询，后者是修改，get类似于C++中const函数，而post类似于set或者add函数。</p>
+
+<h3 id="原理">原理：</h3>
+
+<h4 id="get">GET</h4>
+
+<p>根据HTTP标准，GET用于信息的获取，并且是安全和幂等的。</p>
+
+<p>安全：GET操作用于获取信息/资源，并非修改信息/资源。主要表现在不能修改信息。</p>
+
+<p>幂等：这是一个数学/计算机上的概念。对于单目运算来说，如果一次运算和多次运算的结果是一样的，则该运算是幂等的，例如：C++中的abs(abs(a)) = abs(a)，所以abs函数运算就是幂等的；对于双目运算，两个相等的参与运算的值在运算之后的结果仍然等于这个值，则该运算是幂等的，例如：C++中的max(a, a) = a，所以max函数的幂等的。</p>
+
+<p>而GET是在同一个地址下获取到的资源是相同的，并且没有改变，所以GET是安全的、幂等的。</p>
+
+<p>不过，有些特殊情况也会认为是幂等的。例如：新闻某门户网站的头条新闻，可能在不断的更新，用户可能在不同的时间看到的内容不尽相同，但是这也认为是幂等的，因为对用户来说，他们访问的资源是同一个地址的。</p>
+
+<h4 id="post">POST</h4>
+
+<p>根据HTTP标准，POST用于可能修改服务器资源的请求。并没有什么特殊规定。</p>
+
+<p>例如：最常见的就是留言了，留言完之后页面会刷新，不管是整体刷新还是Ajax局部刷新，这时候用的请求就是POST。</p>
+
+<p>&nbsp;</p>
+
+<h3 id="表现形式">表现形式：</h3>
+
+<p>HTTP格式为：</p>
+
+<p><request line></p>
+
+<p><headers></p>
+
+<p><blank line></p>
+
+<p>[<request-body>]</p>
+
+<p>先是一个请求行(request line)，用来说明请求类型、请求地址、HTTP版本；然后是头部(headers)，用来说明服务器的一些附加信息；下来是一个空行(blank line)；再下来是数据主体(request-body)。</p>
+
+<h4 id="get格式">GET格式</h4>
+
+<p>GET / HTTP/1.1</p>
+
+<p>Host: www.cppfans.org</p>
+
+<p>Connection: keep-alive</p>
+
+<p>Cache-Control: max-age=0</p>
+
+<p>User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.10 (KHTML, like Gecko) Chrome/23.0.1262.0 Safari/537.10 AlexaToolbar/alxg-3.1</p>
+
+<p>Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</p>
+
+<p>Accept-Encoding: gzip,deflate,sdch</p>
+
+<p>Accept-Language: zh-CN,zh;q=0.8</p>
+
+<p>Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3</p>
+
+<p>&nbsp;</p>
+
+<h4 id="post格式">POST格式</h4>
+
+<p>POST /api/posts/create.json HTTP/1.1</p>
+
+<p>Host: duoshuo.com</p>
+
+<p>Connection: keep-alive</p>
+
+<p>Content-Length: 283</p>
+
+<p>Origin: <a href="http://duoshuo.com">http://duoshuo.com</a></p>
+
+<p>X-Requested-With: XMLHttpRequest</p>
+
+<p>User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.10 (KHTML, like Gecko) Chrome/23.0.1262.0 Safari/537.10 AlexaToolbar/alxg-3.1</p>
+
+<p>Content-Type: application/x-www-form-urlencoded</p>
+
+<p>Accept: */*</p>
+
+<p>Referer: <a href="http://duoshuo.com/cors/index.html?xdm_e=http%3A%2F%2Fjkirin.com&amp;xdm_c=default693&amp;xdm_p=1">http://duoshuo.com/cors/index.html?xdm_e=http%3A%2F%2Fjkirin.com&amp;xdm_c=default693&amp;xdm_p=1</a></p>
+
+<p>Accept-Encoding: gzip,deflate,sdch</p>
+
+<p>Accept-Language: zh-CN,zh;q=0.8</p>
+
+<p>Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3</p>
+
+<p>以上数据是通过Chrome的元素审查中的Network抓取到的。</p>
+
+<h5 id="1-地址的区别">1.地址的区别</h5>
+
+<p>举个例子：</p>
+
+<p>百度搜索的地址：</p>
+
+<p><a href="http://www.baidu.com/s?tn=monline_4_dg&amp;ie=utf-8&amp;bs=http&amp;f=8&amp;rsv_bp=1&amp;wd=http+get+post&amp;rsv_sug3=9&amp;rsv_sug1=7&amp;rsv_sug4=325&amp;inputT=2533">http://www.baidu.com/s?tn=monline_4_dg&amp;ie=utf-8&amp;bs=http&amp;f=8&amp;rsv_bp=1&amp;wd=http+get+post&amp;rsv_sug3=9&amp;rsv_sug1=7&amp;rsv_sug4=325&amp;inputT=2533</a></p>
+
+<p>Get请求会把数据附在URL之后，以?分割URL和传输数据，多个参数用&amp;连接，上述URL地址可以堪为URL是<a href="http://www.baidu.com/s，后面的tn=monline_4_dg">http://www.baidu.com/s，后面的tn=monline_4_dg</a> ie=utf-8 bs=http等都是参数。</p>
+
+<p>遇到空格用+替代，上述URL中的搜索词是http get post，而URL表现出来的是wd=http+get+post。</p>
+
+<p>数字和字母原样不变。wd=http+get+post</p>
+
+<p>中文和其他字符用Base64加密，例如有些URL表现为%D4%E3%A0%BD，其中%XX中XX表示该符号的16进制ANSII码。</p>
+
+<p>POST请求：把修改的数据放置在是HTTP包的包体中进行发送。</p>
+
+<p>Get请求的URL会在地址栏中显示出来，而Post只是修改，并不会改变URL。</p>
+
+<h5 id="2-传输数据的限制">2.传输数据的限制</h5>
+
+<p>HTTP协议对URL长度和传输的数据长度没有任何限制，不过在实际开发中会根据浏览器的限制条件做一些规定。</p>
+
+<p>GET：根据浏览器和操作系统有一些限制。例如：IE(包含IE内核)浏览器的URL限制是2K+35个字节长度，而其他浏览器理论没有限制，但却取决于操作系统支持的长度。</p>
+
+<p>POST：理论没有传输数据的限制，但总不能提交一个过大的数据，这样会很慢，所以Web服务器一般都会做限制的。</p>
+
+<h5 id="3-安全性">3.安全性</h5>
+
+<p>POST的安全性高于GET，这里是指Security而不是Safe，因为Get的URL可以通过分析得出一些数据出来，还有Cookie和历史记录等等都会造成一些恶意攻击或破解。</p>
+
+<p>&nbsp;</p>
+
+<p>好了，关于GET和POST就说这么多了，下来就是要写一个处理这些请求的http服务器了。有人会说为什么要自己写，而不是用Apache或者nginx等已经成熟的Web服务器？因为他们太复杂了，功能繁杂，而我却不需要这么多功能，所以我写一个简单实用的http server就可以了，不过可以借鉴成熟Web服务器的主要功能代码。敬请期待吧，估计测试和投入使用会时挺长时间的。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/get" rel="tag" title="GET">#GET#</a>
+    
+    <a href="https://cppfans.org/tags/http" rel="tag" title="HTTP">#HTTP#</a>
+    
+    <a href="https://cppfans.org/tags/post" rel="tag" title="POST">#POST#</a>
+    
+    <a href="https://cppfans.org/tags/url" rel="tag" title="URL">#URL#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%88%86%e6%9e%90" rel="tag" title="分析">#分析#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%8d%8f%e8%ae%ae" rel="tag" title="协议">#协议#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%af%b7%e6%b1%82" rel="tag" title="请求">#请求#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1394.html" rel="next" title="Lib和Dll的那点事">
+        <i class="fa fa-chevron-left"></i> Lib和Dll的那点事
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1389.html" rel="prev" title="如何增加博客的订阅量？">
+        如何增加博客的订阅量？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

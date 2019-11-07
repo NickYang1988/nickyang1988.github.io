@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>glog on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/glog/</link>
+    <description>Recent content in glog on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Feb 2014 05:49:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/glog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>glog使用与功能修改</title>
+      <link>https://cppfans.org/1566.html</link>
+      <pubDate>Wed, 19 Feb 2014 05:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1566.html</guid>
+      <description>在写代码的过程中，打log肯定是少不了的，毕竟不能总靠调试来发现问题。log库的选用就很纠结了，成熟的log库非常多，log4cpp、log</description>
+    </item>
+    
+  </channel>
+</rss>

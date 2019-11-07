@@ -1,0 +1,878 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[转]告诉你How To一眼认出英语单词的意思 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[转]告诉你How To一眼认出英语单词的意思">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[转]告诉你How To一眼认出英语单词的意思 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1515.html" itemprop="url">
+        [转]告诉你How To一眼认出英语单词的意思
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-11-16">
+    2013-11-16
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91" itemprop="url" rel="index">
+        <span itemprop="name">互联网</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">5512 字 ~12分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>via:<a href="http://blog.30c.org/2800.html" target="_blank"  rel="nofollow" ><a href="http://blog.30c.org/2800.html">http://blog.30c.org/2800.html</a></a></p>
+
+<p>请大家想一想，英语是谁发明的？英国人呗！英国人认不认识汉语？不认识！那么英国人在学英语单词的时候需不需要记住单词的汉语意思？不需要，英国人的英语课本里根本就没有汉字，何谈记住单词的汉语意思？那么既然英国人学英语不需要记住(甚至根本就见不到)单词的汉语意思，那么中国人学英语为什么要去记住单词的汉语意思呢？这种做法大家不觉得奇怪吗？</p>
+
+<p>然而由于中国人学英语时都在背单词的汉语意思，因此大家反而觉不出“背汉字”有什么奇怪的了。其实仔细想一想，这个行为真的很奇怪，奇怪的根源不在于行为本身，而在于中国人普遍不会直接识别英语单词的意思，因而只好靠汉语符号来机械地帮助记忆英语单词的意思，这样去学英语不仅多此一举，而且必然会陷入苦海无边的符号记忆灾难中。</p>
+
+<p>其实英语单词和汉字一样，存在着很多的“偏旁部首”，知道了偏旁部首你就可以根据它们直接来猜测单词的意思，虽不说百分之百猜准，但起码可以猜测个大概，至少在别人告诉过你单词的意思后你可以恍然大悟地领会它，这样就可以大大增强你对英语单词“见字识意”的能力，做到真正认识一个单词，而把它的汉语意思仅做为一般参考。</p>
+
+<p>举几个例子来说吧：</p>
+
+<p>比如单词representative，请别急着告诉我你认识这个单词，其实你不见得“认识”这个单词，你仅是凭着你的记忆力记住了这串英语字母和两个汉字符号“代表”之间的对应关系，这样去学英语你会多费劲？下面我来告诉你这个单词为什么是“代表”的意思。re在英语里是一个偏旁部首，它是“回来”的意思；pre也是一个偏旁部首，是“向前”的意思；sent也是一个偏旁部首，是“发出去、派出去”的意思；a仅是偏旁部首之间的一个“连接件”，没了它两个辅音字母t就要连在一起了，发音会分不开，会费劲，因此用一个元音字母a隔开一下；tive也是一个偏旁部首，是“人”的意思。那么这几个偏旁部首连在一起是什么意思呢？re-pre-sent-a-tive，就是“回来-向前-派出去-的人”，即“回来征求大家的意见后又被派出去替大家讲话的人”，这不就是“代表”的意思吗！这么去认识一个单词才是真正“认识”了这个单词，把它认识到了骨子里。</p>
+
+<p>再举一个例子吧：psychology。</p>
+
+<p>psy=sci，是一个偏旁部首，是“知道”的意思；cho是一个偏旁部首，是“心”的意思；lo是一个偏旁部首，是“说”的意思；gy是一个偏旁部首，是“学”的意思，logy合起来是“学说”的意思。因此psy-cho-logy连起来就是“知道心的学说”，因此就是“心理学”的意思。</p>
+
+<p>依此类推，不多举例了，我要表达的观点已经清楚了，那就是，不要去死记硬背单词的汉语意思，而要用识别“偏旁部首”的方法去真正认识一个单词，真正认识了单词后，你会发现单词表里的汉语翻译原来其实很勉强，有时甚至根本翻译不出来，因为汉语和英语是两种不同的文字体系，两者在文字上本来就不是一一对应的，只背英语单词的汉字意思是不能真正认识这个单词的，会造成很多的后续学习困难，会造成你一辈子看英语单词如雾里看花，永远有退不掉的陌生感。</p>
+
+<p>那么接下来的问题是，英语里有多少个“偏旁部首”，怎样知道和学会它们？</p>
+
+<p>回答这个问题时我才发现中国人对英语偏旁部首陌生的两个主要原因，一是这些重要内容不在学校的英语教材当中，大家在课堂上学不到(这是目前学校英语教材急需弥补的缺陷)；二是少数书店里销售的有关这方面内容的书过分复杂化，动辙几百上千页，内容苦涩庞大，影响了这些常识的普及，使得本来是常识的东西不常识。其实英语里偏旁部首的学名叫“字根”，常用的也就二百多个，它们就像26个字母一样普通而重要，就像汉语里的偏旁部首那样普通而重要，它们是学英语第一课里就应该学习的重要内容，学英语者应及早地掌握这些重要的常识，及早地摆脱死记硬背的蛮干状态，及早地进入科学、高效的识字状态。</p>
+
+<p>【英语字根】</p>
+
+<p>1,ag=do,act 做，动</p>
+
+<p>2,agri=field 田地，农田(agri也做agro,agr)</p>
+
+<p>3,ann=year年</p>
+
+<p>4,audi=hear听</p>
+
+<p>5,bell=war战争</p>
+
+<p>6,brev=short短</p>
+
+<p>7,ced,ceed,cess=go行走</p>
+
+<p>8,cept=take拿取</p>
+
+<p>9,cid,cis=cut,kill切，杀</p>
+
+<p>10,circ=ring环，圈</p>
+
+<p>11,claim,clam=cry,shout喊叫</p>
+
+<p>12,clar=clear清楚，明白</p>
+
+<p>13,clud=close,shut关闭</p>
+
+<p>14,cogn=known知道</p>
+
+<p>15,cord=heart心</p>
+
+<p>16,corpor=body体</p>
+
+<p>17,cred=believe,trust相信，信任</p>
+
+<p>18,cruc=cross 十字</p>
+
+<p>19,cur=care关心</p>
+
+<p>20,cur,curs,cour,cours=run跑</p>
+
+<p>21,dent=tooth牙齿</p>
+
+<p>22,di=day 日</p>
+
+<p>23,dict=say说</p>
+
+<p>24,dit=give给</p>
+
+<p>25,don=give给</p>
+
+<p>26,du=tow二</p>
+
+<p>27,duc,duct=lead引导</p>
+
+<p>28,ed=eat吃</p>
+
+<p>29,equ=equal等，均，平</p>
+
+<p>30,ev=age年龄，寿命，时代，时期</p>
+
+<p>31,fact=do,make做，作</p>
+
+<p>32,fer=bring,carry带拿</p>
+
+<p>33,flor=flower花</p>
+
+<p>34,flu=flow流</p>
+
+<p>35,fus=pour灌，流，倾泄</p>
+
+<p>36,grad=step,go,grade步，走，级</p>
+
+<p>37,gram=write,draw写，画，文字，图形</p>
+
+<p>38,graph=write,records写，画，记录器，图形</p>
+
+<p>39,gress=go,walk 行走</p>
+
+<p>40,habit=dwell居住</p>
+
+<p>41,hibit=hold拿，持</p>
+
+<p>42,hospit=guest客人</p>
+
+<p>43,idio=peculiar,own,private,proper特殊的，个人的，专有的</p>
+
+<p>44,insul=island岛</p>
+
+<p>45,it=go行走</p>
+
+<p>46,ject=throw投掷</p>
+
+<p>47,juven=young年轻，年少</p>
+
+<p>48,lectchoose,gather选，收</p>
+
+<p>49,lev=raise举，升</p>
+
+<p>50,liber=free自由</p>
+
+<p>51,lingu=language语言</p>
+
+<p>52,liter=letter文字，字母</p>
+
+<p>53,loc=place地方</p>
+
+<p>54,log=speak言，说</p>
+
+<p>55,loqu=speak言，说</p>
+
+<p>56,lun=moon月亮</p>
+
+<p>57,man=dwell,stay居住，停留</p>
+
+<p>58,manu=hand手</p>
+
+<p>59,mar=sea海</p>
+
+<p>60,medi=middle中间</p>
+
+<p>61,memor=memory记忆</p>
+
+<p>62,merg=dip,sink 沉，没</p>
+
+<p>63,migr=remove,move迁移</p>
+
+<p>64,milit=soldier兵</p>
+
+<p>65,mini=small,little小</p>
+
+<p>66,mir=wonder惊奇</p>
+
+<p>67,miss=send 投，送，发(miss也作mit)</p>
+
+<p>68,mob=move动</p>
+
+<p>69,mort=death死</p>
+
+<p>70,mot=move移动，动</p>
+
+<p>71,nomin=name名</p>
+
+<p>72,nov=new新</p>
+
+<p>73,numer=number 数</p>
+
+<p>74,onym=name 名</p>
+
+<p>75,oper=work工作</p>
+
+<p>76,ori=rise升起</p>
+
+<p>77,paci=peace和平，平静</p>
+
+<p>78,pel=push,drive推，逐，驱</p>
+
+<p>79,pend,pens=hang悬挂/weigh称量/pay支出，付钱，花费</p>
+
+<p>80,pet=seek追求</p>
+
+<p>81,phon=sound声音</p>
+
+<p>82,pict=paint画，描绘</p>
+
+<p>83,plen=full满，全</p>
+
+<p>84,plic=fold折，重叠</p>
+
+<p>85,pon=put放置</p>
+
+<p>86,popul=people人民</p>
+
+<p>87,port=carry拿，带，运</p>
+
+<p>88,pos=put放置</p>
+
+<p>89,preci=price价值</p>
+
+<p>90,punct=point,prick点，刺</p>
+
+<p>91,pur=pure清，纯，净</p>
+
+<p>92,rect=right,straight正，直</p>
+
+<p>93,rupt=break破</p>
+
+<p>94,sal=salt盐</p>
+
+<p>95,scend,scens=climb爬，攀</p>
+
+<p>96,sci=know知</p>
+
+<p>97,sec,sequ=follow跟随</p>
+
+<p>98,sect=cut切割</p>
+
+<p>99,sent,sens=feel感觉</p>
+
+<p>100,sid=sit坐</p>
+
+<p>101,sist=stand站立</p>
+
+<p>102,son=sound声音</p>
+
+<p>103,spect=look看</p>
+
+<p>104,spir=breathe呼吸</p>
+
+<p>105,tail=cut切割</p>
+
+<p>106,tain,ten,tin=hold握，持，守</p>
+
+<p>107,tect=cover掩盖</p>
+
+<p>108,tele=far远</p>
+
+<p>109,tempor=time时</p>
+
+<p>110,tend(tens,tent)=stretch伸</p>
+
+<p>111,terr=land,earth土地，陆地</p>
+
+<p>112,text=weave纺织</p>
+
+<p>113,tract=draw拉，抽，引</p>
+
+<p>114,un=one一</p>
+
+<p>115,urb=city城市</p>
+
+<p>116,vac,vacu=empty空</p>
+
+<p>117,vad,vas=walk,go行走</p>
+
+<p>118,vari=change变化</p>
+
+<p>119,ven=come来</p>
+
+<p>120,vert,vers=turn转</p>
+
+<p>121,vi,via=way道路</p>
+
+<p>122,vis,vid=see看</p>
+
+<p>123,vit=life生命</p>
+
+<p>124,viv=live活</p>
+
+<p>【第二部分，多认词根，多识单词】</p>
+
+<p>125,aer(o)空气，空中，航空</p>
+
+<p>126,alt高</p>
+
+<p>127,am爱</p>
+
+<p>128,ambul行走</p>
+
+<p>129,anim生命，活，心神，意见</p>
+
+<p>130,anthrop(o)人，人类</p>
+
+<p>131,aqu水</p>
+
+<p>132,arch统治者，首脑archy 统治</p>
+
+<p>133,avi鸟</p>
+
+<p>134,bat打</p>
+
+<p>135,biblio书</p>
+
+<p>136,birg战斗，打</p>
+
+<p>137,cad,cas降落，降临</p>
+
+<p>138,cert 确定，确信</p>
+
+<p>139,chron时</p>
+
+<p>140,cid降落，降临</p>
+
+<p>141,clin倾</p>
+
+<p>142,cosm(o)世界，宇宙</p>
+
+<p>143,cracy统治crat支持</p>
+
+<p>144,cub躺，卧</p>
+
+<p>145,cult耕，培养</p>
+
+<p>146,cycl(o)圈，环，轮</p>
+
+<p>147,dem(o)人民</p>
+
+<p>148,dexter右</p>
+
+<p>149,doc教</p>
+
+<p>150,dom屋，家</p>
+
+<p>151,dorm睡眠</p>
+
+<p>152,drom跑</p>
+
+<p>153,ego我</p>
+
+<p>154,err漫游，走，行</p>
+
+<p>155,fabl,fabul 言</p>
+
+<p>156,feder联盟</p>
+
+<p>157,ferv沸，热</p>
+
+<p>158,fict,fig塑造，虚构</p>
+
+<p>159,fid信任</p>
+
+<p>160,fil线</p>
+
+<p>161,flat 吹</p>
+
+<p>162,flect,flex弯曲</p>
+
+<p>163,flict打击</p>
+
+<p>164,frag,fract破，折</p>
+
+<p>165,frig冷</p>
+
+<p>166,fug逃，散</p>
+
+<p>167,fund,found底，基础</p>
+
+<p>168,gam婚姻</p>
+
+<p>169,gram谷物，谷粒</p>
+
+<p>170,grav重</p>
+
+<p>171,greg群，集合</p>
+
+<p>172,gyn,gynce(o)妇女</p>
+
+<p>173,hal呼吸</p>
+
+<p>174,helic(o)螺旋</p>
+
+<p>175,hes,her粘着</p>
+
+<p>176,ign火</p>
+
+<p>177,integr整，全</p>
+
+<p>178,junct连接，连结</p>
+
+<p>179,later边</p>
+
+<p>180,leg读</p>
+
+<p>181,leg,legis法</p>
+
+<p>182,luc光</p>
+
+<p>183,lumin光</p>
+
+<p>184,magn(i)大</p>
+
+<p>185,matr(i)，metro母</p>
+
+<p>186,mega大</p>
+
+<p>187,mens测量</p>
+
+<p>188,ment心，神，智，思，意</p>
+
+<p>189,min伸出，突出</p>
+
+<p>190,misc混合，混杂</p>
+
+<p>191,mis(o)恨，厌恶</p>
+
+<p>192,mon告诫，提醒</p>
+
+<p>193,mon单独，一个</p>
+
+<p>194,mur墙</p>
+
+<p>195,mut变换</p>
+
+<p>196,nat诞生</p>
+
+<p>197,nav船</p>
+
+<p>198,nect,nex结，系</p>
+
+<p>199,negr,nigr黑</p>
+
+<p>200,nihil无</p>
+
+<p>201,noc,nox伤害</p>
+
+<p>202,noct(i)夜</p>
+
+<p>203,norm规范，正规，正常</p>
+
+<p>204,nutri营养</p>
+
+<p>205,orn装饰</p>
+
+<p>206,par生，产</p>
+
+<p>207,parl说，谈</p>
+
+<p>208,past喂，食</p>
+
+<p>209,path(o)，pathy疾病，疗法</p>
+
+<p>210,patr(i)父，祖</p>
+
+<p>211,ped脚，足</p>
+
+<p>212,ped儿童，小孩</p>
+
+<p>213,petr(o)石</p>
+
+<p>214,phag吃</p>
+
+<p>215,phil(o)爱</p>
+
+<p>216,phob(ia)怕</p>
+
+<p>217,plex重叠，重</p>
+
+<p>218,polis城市</p>
+
+<p>219,prim第一，最初</p>
+
+<p>220,radic根</p>
+
+<p>221,ras,rad擦，刮</p>
+
+<p>222,rid,ris笑</p>
+
+<p>223,rod,ros咬，啮</p>
+
+<p>224,rot轮，转</p>
+
+<p>225,rud原始，粗野</p>
+
+<p>226,rur,rus农村</p>
+
+<p>227,sat,satis,satur足，满，饱</p>
+
+<p>228,sen老</p>
+
+<p>229,simil,simul相似，相同</p>
+
+<p>230,sol单独</p>
+
+<p>231,sol太阳</p>
+
+<p>232,soph智慧</p>
+
+<p>233,sper希望</p>
+
+<p>234,spers,spars散，撒</p>
+
+<p>235,splend发光，照耀</p>
+
+<p>236,stell星</p>
+
+<p>237,tact,tag触</p>
+
+<p>238,the(o)神</p>
+
+<p>239,ton音</p>
+
+<p>240,tort扭</p>
+
+<p>241,tour迂回，转</p>
+
+<p>242,trud,trus推，冲</p>
+
+<p>243,tut,tuit监护，看管</p>
+
+<p>244,umbr阴影</p>
+
+<p>245,ut,us用</p>
+
+<p>246,vas走，漫游</p>
+
+<p>247,val强</p>
+
+<p>248,van空，无</p>
+
+<p>249,ver(i)真实</p>
+
+<p>250,voc,vok声音，叫喊</p>
+
+<p>251,vol,volunt意志，意愿</p>
+
+<p>252，volu,volv滚，转</p>
+
+<p>这些叫词根词缀。拉丁语系所有的语言以及衍生语言都是由前缀+词根+曲折变化、复合、派生+后缀组成的。在国外学语言学，音位学，语法的都要学习词语构成。国内官方机构的英语教学说实话很不成熟。教学方式很害人。根本不科学，不专业，不系统。很多写教材的人自己就不专业，背了两篇课文记了基本字典就觉出来教学了。语法全部掰碎了来讲，根本不系统。而且语言这个东西是习惯性的，是一步一步积累的，国内全部讲究速成，速记，速考，速忘。搞不懂的就死背。完全没有引入系统的语言学，语法，音位学，语音学。学徒怎么可能体会到语言构成形成的奥妙。国内的外语都是拿来应考的，不是拿来使用的。大陆在外语研究的水平上远远不及港台，日韩。到现在我们连一本专门的解释外部语言历史，发展，结构的译本都没有，可是在国外到处都是，装备到高中图书馆。倒不是因为大陆人少，出国的人少，是因为机制和动机就有毛病。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%8d%95%e8%af%8d" rel="tag" title="单词">#单词#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%bf%ab%e9%80%9f" rel="tag" title="快速">#快速#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%8b%b1%e8%af%ad" rel="tag" title="英语">#英语#</a>
+    
+    <a href="https://cppfans.org/tags/%e8%ae%b0%e5%bf%86" rel="tag" title="记忆">#记忆#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1519.html" rel="next" title="linux下link错误undefined reference&#39;dlclose&#39;">
+        <i class="fa fa-chevron-left"></i> linux下link错误undefined reference&#39;dlclose&#39;
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1514.html" rel="prev" title="goagent3.0.8解决翻墙404问题">
+        goagent3.0.8解决翻墙404问题 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RakNet on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/raknet/</link>
+    <description>Recent content in RakNet on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 10 Jun 2012 09:09:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/raknet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(6)——Bitstream</title>
+      <link>https://cppfans.org/1335.html</link>
+      <pubDate>Sun, 10 Jun 2012 09:09:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1335.html</guid>
+      <description>Bitstream概述 Bitstream类是一个RakNet命名空间下的helper类，是一个用于打包、解包bits的动态数组。它有如下四个</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(5)——SystemAddress</title>
+      <link>https://cppfans.org/1333.html</link>
+      <pubDate>Sat, 02 Jun 2012 15:14:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1333.html</guid>
+      <description>什么是系统地址？ 系统地址是网络中包含系统二进制IP地址和端口的结构体。这个结构体定义在RakNetTypes.h文件中，这里有一些你需要的系</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(4)——Recieving Packets</title>
+      <link>https://cppfans.org/1322.html</link>
+      <pubDate>Sun, 20 May 2012 13:30:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1322.html</guid>
+      <description>抱歉这篇文章出现这么迟。 当一个数据包出现在网络上的时候，例如收到了返回值不为零的数据，涉及了三个步骤来处理它。 1.确定这个数据包的类型，它通</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(3)——Creating Packets</title>
+      <link>https://cppfans.org/1314.html</link>
+      <pubDate>Sat, 05 May 2012 17:40:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1314.html</guid>
+      <description>如何将你的数据编码到一个数据包中？ 运行RakNet的系统通过人们所熟知的数据包进行通讯，实际上所有在Internet上运行的系统都如此。更准</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(2)——Connecting</title>
+      <link>https://cppfans.org/1299.html</link>
+      <pubDate>Sun, 15 Apr 2012 14:37:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1299.html</guid>
+      <description>Connecting to other systems &amp;nbsp; 找到连接的对象 下面是5种连接到其他系统的方法： 1.直接通过IP地址(前提是你已经知道该IP) 2.LAN广播 3.使用云服务器或者云客</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]Raknet文档翻译(1)——Startup</title>
+      <link>https://cppfans.org/1239.html</link>
+      <pubDate>Sun, 08 Apr 2012 11:05:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1239.html</guid>
+      <description>开始Raknet [cpp] StartupResult RakPeer::Startup( unsigned short maxConnections, SocketDescriptor * socketDescriptors,unsigned socketDescriptorCount, int threadPriority ); [/cpp] 第一件你应该做的事情是调用RakpeerInterface::StartUp()函数，Start</description>
+    </item>
+    
+    <item>
+      <title>RakNet简单应用——hello World(服务器端)</title>
+      <link>https://cppfans.org/901.html</link>
+      <pubDate>Sun, 23 Oct 2011 14:32:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/901.html</guid>
+      <description>我们学习很多编程语言的时候都是从Hello world开始的，所以这次我们也打算开始从hello world写起，不过本文只写了服务器端，客户端</description>
+    </item>
+    
+    <item>
+      <title>初识RakNet (RakNet第二篇)</title>
+      <link>https://cppfans.org/881.html</link>
+      <pubDate>Wed, 12 Oct 2011 16:35:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/881.html</guid>
+      <description>上篇文章简单介绍了一下RakNet，现在我们初步的认识一下RakNet。 前面发的文章中有RakNet的压缩包，解压之后我们会看到RakNet</description>
+    </item>
+    
+    <item>
+      <title>RakNet简单介绍，最新版本分享</title>
+      <link>https://cppfans.org/877.html</link>
+      <pubDate>Tue, 11 Oct 2011 14:58:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/877.html</guid>
+      <description>前一阵简单的看了看RakNet的东西，觉得挺好用，想写一点东西给大家分享，还是从最基础的讲起吧，虽然有点俗套，不过真不知道怎么写这些东西，各</description>
+    </item>
+    
+  </channel>
+</rss>

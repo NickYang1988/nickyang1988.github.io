@@ -1,0 +1,394 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>答某位朋友邮件中关于编程风格的问题 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="答某位朋友邮件中关于编程风格的问题">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="答某位朋友邮件中关于编程风格的问题 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1497.html" itemprop="url">
+        答某位朋友邮件中关于编程风格的问题
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2013-07-15">
+    2013-07-15
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94" itemprop="url" rel="index">
+        <span itemprop="name">心情随笔</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2433 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p>今天有位朋友邮件问我了一些关于编程风格的问题，先引用下邮件原文：</p>
+
+<blockquote>
+<p>eliteYang，您好，一直喜欢看你的博客，一直觉得你是一个对程序对生活都要求质量高的人，因为我太热爱程序，但是同时也对美的定义有了更加严格的要求。所以最近有些迷茫，想听听你的怎么处理这些问题的。</p>
+
+<p>比如1.你平时代码写注释的时候，如果用英文写的话，是习惯全小写原则还是习惯首字母大写的原则？因为我看了观察了几本C++国外的英文原版，发现他们写注释往往都喜欢通篇小些，一旦写自己的文件头或者自己的作者名的时候就喜欢用首字母大写，我想听听你的想法</p>
+
+<p>2.还有平时在Linux和Windows两者系统之间切换的时候，你命名或者文件夹有没有什么区别，可以举点例子吗？比如同样的project和Project或者同样的MyTest和mytest(my_test)，你的习惯是什么样的？我对这种命名该不该大写会一直很在意，我也不知道是不是程序员做的久对任何事物都会有一种近乎完美的控制，一会切到windows一会切到linux,能简单的谈下你对大小写的理解和控制吗？是主推大小写还是主推小写的多，包括平常在手机上打字，类似要大写的时候也会这样吗？是坚持标准的首字母大写还是小写。</p>
+
+<p>3.我就想问下像我这种毛病的人还有救吗？经常会为这些事情所纠结，而且往往会影响平时的工作效率，比如创建文件夹的时候我就会想是首字母大写好看呢还是全小写来保持统一呢（Movie，movie，mytest，MyTest），当写程序注释的时候我会想是写// this function proves that&hellip;好呢还是// This function proves that..</p>
+
+<p>4.eliteYang，我不知道我这种对大小写在意的习惯是一种好习惯还是一种坏习惯，我做不到一般人所谓的那种随意，想到什么写什么，我就是比较想统一，比较想一致，但是冲突存在windows和Linux之间，希望eliteYang能够牺牲点时间说下你的想法，洗耳恭听。谢谢！</p>
+
+<p>感谢如此认真的回答我的问题，非常感谢，呵呵，我的意思还有就是抛去编程以外的范畴，像MyMovie,MyPhoto如此之类的，你更倾向于这种形式，还是mymovie的Linux形式。生活当中，当你触及一些英语的时候，你还会认真去考虑过首字母大写的问题吗？会不会这种东西往往会影响自己的思路或者打断自己的思路。因为我不敢确定养成这种首字母都大写的习惯会不会影响自己以后的工作效率或者生活效率（PS：常常要多按一个键），请豆子哥开导开导，因为Linux和Windows之间的来回穿梭，工作和生活上的文件工程名，目录名都会让我困扰，包括手机用户名和电脑用户名，我也会去纠结大小写的问题，似乎想要一招鲜吃遍天，感觉自己想要极端化，就是要么全小写要么全大写，一定要找出那个最适合的方法，但效果往往不尽如人意。有时候我会觉得全小写比较好（因为速度快，可以加快工作效率和生活效率（写小便签的时候）），但有时候也会觉得全小写很丑，有个首字母大写来过渡似乎更舒服，所以一直处在这两者之间犹豫。问过身边的同事和朋友，都觉得我神经病，会去考虑这些，但我真的为这件事情给困扰了，再次谢谢你</p>
+</blockquote>
+
+<p>其实这个问题我看到的时候，第一反应是这位署名为 <a href="mailto:lsdzdp2@163.com" target="_blank" rel="nofollow" >LionFlex</a>的朋友中度强迫症，而且很纠结。这个问题从头到尾的意思就是问编程中一些关于大小写的问题。</p>
+
+<p>先说下我的习惯吧：</p>
+
+<p>我以前的习惯是windows风格，因为我原来大部分时间在windows上写代码，而且再加上当年mfc的残留症，喜欢用驼峰命名法，也就是m_OneTwo这样的风格，不过如今接触linux时间越多之后，逐渐变成了小写字母+下划线的方式，例如：one_two，通过我的博文大家应该也会感受到我编程风格的变化，总结为下面几点吧！</p>
+
+<p>1.代码风格为小写字母 + 下换线的方式，例如：one_two</p>
+
+<p>2.括号风格为最外层括号不加空格，里面的符号加空格，例如：((a + b) / (c + d))</p>
+
+<p>3.英文注释一般是首字母大写，与英语语法一致</p>
+
+<p>4.文件夹命名也是小写字母 + 下划线方式</p>
+
+<p>下来再回答你的问题：</p>
+
+<p>1.如果用英文写注释，一般的风格是跟英文语法一致，首字母大写，关于你说的那些英文书籍中，很多首字母小写的，这可能是这些人自己的习惯，从boost库来看，一般都是首字母大写，还有一些关键的单词全词大写。作者名字大写是因为英文名字一般都是首字母大写的，当然了，如果你的代码和文档大部分都是国人看，可以注释成中文的，这样就没有任何纠结了</p>
+
+<p>2.linux和windows系统切换时，文件和文件夹命名，我的意见是一切以高效查找为目的，boost是全部是小写字母命名文件名和文件夹名称的</p>
+
+<p>3.你这种其实就是个习惯而已，不存在什么救不救的问题，可能是你的编程中见到不同的风格太多了，并且你各个时间段内也觉得不同的方式比较好看，所以就形成了这种纠结的习惯，不过这种习惯挺影响效率的，前提是你的风格不停变化</p>
+
+<p>4.注意大小写不算好习惯也不算坏习惯，只能说你比较注重细节和整体的美观，如果你在win和linux之间切换，建议你用小写字母总结下你的</p>
+
+<p>这些问题的结论：</p>
+
+<p>1.编程风格的统一主要是为了方便多人书写阅读代码，也就是说多人合作时才会牵扯到这个问题，如果你的代码是你一个人写一个人看，就不存在什么风格了，写成什么样子都可以的。所以如果你的团队习惯某一种风格，试着去适应这个风格</p>
+
+<p>2.对于细节不要过度重视，不然你会写的很累，当你在和团队合作时，大家编程水平和风格良莠不齐的时候你就会很难受，这个时候你就需要接受别人的风格</p>
+
+<p>3.更多的时候考虑效率，而不是特定的风格，当你效率很高，准确率很高，那么别人对你的风格就不是那么在意了</p>
+
+<p>4.不要在意别人对你的看法，要分清楚别人是在给你带来正面的东西还是在打击你，对于刻意打击你的人，送给他们Fuc* them，大家更看重的是你的能力，而不是编程风格，所以基本可以无视</p>
+
+<p>最后，如果你还在纠结关于编程风格的问题，建议你参考boost的代码规范，可以去boost网站上搜下，具体地址我忘记了。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/%e5%91%bd%e5%90%8d%e8%a7%84%e5%88%99" rel="tag" title="命名规则">#命名规则#</a>
+    
+    <a href="https://cppfans.org/tags/%e7%bc%96%e7%a8%8b%e8%a7%84%e8%8c%83" rel="tag" title="编程规范">#编程规范#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1506.html" rel="next" title="因主机流量用光导致无法访问的致歉">
+        <i class="fa fa-chevron-left"></i> 因主机流量用光导致无法访问的致歉
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1471.html" rel="prev" title="谈谈当今的游戏行业(1)——是否端游已死，页游将死？">
+        谈谈当今的游戏行业(1)——是否端游已死，页游将死？ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>屌丝 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%B1%8C%E4%B8%9D/</link>
+    <description>Recent content in 屌丝 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 17 Nov 2012 02:25:54 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%B1%8C%E4%B8%9D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>赏析某程序员寒冬自助暖手程序</title>
+      <link>https://cppfans.org/1405.html</link>
+      <pubDate>Sat, 17 Nov 2012 02:25:54 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1405.html</guid>
+      <description>群中发了一个精辟的代码段，说是OSChina上某屌丝程序员抱怨没有妹子，没有电暖宝，没有热水，从而苦于寒冬手冷无法写代码，于是自己写了一段程</description>
+    </item>
+    
+  </channel>
+</rss>

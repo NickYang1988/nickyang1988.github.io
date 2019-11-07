@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NFrame on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/nframe/</link>
+    <description>Recent content in NFrame on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 16 May 2015 10:00:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/nframe/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NFrame——敏捷服务器开发解决方案简介</title>
+      <link>https://cppfans.org/1938.html</link>
+      <pubDate>Sat, 16 May 2015 10:00:21 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1938.html</guid>
+      <description>NFrame是我和一个朋友在闲暇时间写的服务器框架，主要思想是模块化，插件化，分层设计，事件驱动，现在开始用它做游戏项目了，很快我们就会有一</description>
+    </item>
+    
+    <item>
+      <title>后续博客的方向</title>
+      <link>https://cppfans.org/1920.html</link>
+      <pubDate>Wed, 15 Apr 2015 06:33:43 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1920.html</guid>
+      <description>又是半个月博客没有动静了，所以决定写点什么，说说后面我的个人博客的大致方向吧。 1.不会单纯的写太多的技术文章了，因为这些文章网上太多了，虽然</description>
+    </item>
+    
+  </channel>
+</rss>

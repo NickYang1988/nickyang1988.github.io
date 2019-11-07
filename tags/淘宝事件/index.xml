@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>淘宝事件 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%B7%98%E5%AE%9D%E4%BA%8B%E4%BB%B6/</link>
+    <description>Recent content in 淘宝事件 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 16 Oct 2011 08:38:18 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%B7%98%E5%AE%9D%E4%BA%8B%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>淘宝事件简单分析——商务部不应该介入，淘宝在规范行业规则</title>
+      <link>https://cppfans.org/889.html</link>
+      <pubDate>Sun, 16 Oct 2011 08:38:18 +0000</pubDate>
+      
+      <guid>https://cppfans.org/889.html</guid>
+      <description>近日内，淘宝商城的事情闹得沸沸扬扬的，搞得大家觉得都有点动荡不安了，比发射天宫一号还热闹，大概是因为天宫一号不关大家的事情吧，纯粹为了欣赏火</description>
+    </item>
+    
+  </channel>
+</rss>

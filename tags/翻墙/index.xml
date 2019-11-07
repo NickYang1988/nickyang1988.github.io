@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>翻墙 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BF%BB%E5%A2%99/</link>
+    <description>Recent content in 翻墙 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 14 Nov 2013 07:57:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>goagent3.0.8解决翻墙404问题</title>
+      <link>https://cppfans.org/1514.html</link>
+      <pubDate>Thu, 14 Nov 2013 07:57:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1514.html</guid>
+      <description>貌似在双十一前几天，不知道GFW搞了什么东西，导致goagent无法翻墙，一直提示404错误。微博上很多人都在说，去看了下goagent项目</description>
+    </item>
+    
+  </channel>
+</rss>

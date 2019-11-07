@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gtalk on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/gtalk/</link>
+    <description>Recent content in gtalk on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 17 Apr 2015 08:58:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/gtalk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>介绍一款源代码协作工具——极客讨论器</title>
+      <link>https://cppfans.org/1922.html</link>
+      <pubDate>Fri, 17 Apr 2015 08:58:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1922.html</guid>
+      <description>无意间翻到一个好用的软件，极客讨论器，下载下来玩了玩，发现功能还是蛮强大的。这里介绍给大家使用。 先介绍下这个软件， 极客讨论器是一款源代码批注</description>
+    </item>
+    
+  </channel>
+</rss>

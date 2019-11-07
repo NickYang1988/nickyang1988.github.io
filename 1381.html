@@ -1,0 +1,482 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>Windows平台下如何检测C/C&#43;&#43;内存泄露？ - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="Windows平台下如何检测C/C&#43;&#43;内存泄露？">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="Windows平台下如何检测C/C&#43;&#43;内存泄露？ - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/1381.html" itemprop="url">
+        Windows平台下如何检测C/C&#43;&#43;内存泄露？
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2012-10-14">
+    2012-10-14
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0" itemprop="url" rel="index">
+        <span itemprop="name">技术文章</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91" itemprop="url" rel="index">
+        <span itemprop="name">程序开发</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">1445 字 ~3分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p><img class="aligncenter" title="如何检测内存泄露" src="https://kzj5va.blu.livefilestore.com/y1pRz7q_4dVhOjtUH_qDW6kw4-LmnO6_pDT78Q3IXzzDtib7V7b49knh1KX-yEwbJWwaPGpe3LpS9O-IXQYPf8wM7tKpektGlyQ/how_to_check_memory_leak.png?psid=1" alt="如何检测内存泄露" width="566" height="116" /></p>
+
+<p>对于C/C++程序员来说，效率和优雅性大多数情况是对立的，我们经常会在这里面抉择，到底应该怎么取舍。而说到效率，就不得不说让这类程序员头疼了N年的问题，内存泄露，至少从C/C++发明以来很多人都在头疼。而Java/C#之类的语言并不存在这种问题，因为他们从堆中申请内存，根据引用计数等<span style="color: #888888;">(据说有六种方法，大家可以搜一下Java垃圾回收器简介)</span>方法来管理内存，也就是传说中的垃圾回收器(<span>Garbage collector</span>)。C/C++的程序员一向都是相信自己对内存的掌控能力，所以经常会出现各种内存泄露问题，有可能是因为自己疏忽大意，有可能是因为坑太深了，有可能是潜规则，总之，我们要做的是解决问题。</p>
+
+<p>1.使用Window说自身的宏_CrtDumpMemoryLeaks</p>
+
+<p>例如我们有如下的代码：</p>
+
+<pre class="lang:c++ decode:true">#include &lt;crtdbg.h&gt;
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    int* pInt = new int[10];
+    _CrtDumpMemoryLeaks();
+    return 0;
+}</pre>
+
+<p>执行之后，在输出窗口中会打印如下内容：</p>
+
+<p><strong><span style="color: #ff0000;">Detected memory leaks!</span></strong></p>
+
+<p>** <span style="color: #ff0000;">Dumping objects -&gt;</span>**</p>
+
+<p>** <span style="color: #ff0000;">{108} normal block at 0x003BA1C0, 40 bytes long.</span>**</p>
+
+<p>** <span style="color: #ff0000;">Data: &lt;                &gt; CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD</span>**</p>
+
+<p>** <span style="color: #ff0000;">Object dump complete.</span>**</p>
+
+<p>** <span style="color: #ff0000;">程序“[5364] AllTest.exe”已退出，返回值为 0 (0x0)。</span>**</p>
+
+<p>他会告诉你检测到内存泄露，泄露了多少字节等内容。</p>
+
+<p>遗憾的是看不到那里内存泄露了，我们可以稍微改下这个代码，让他支持在哪个文件的哪个函数里哪一行有内存泄露。修改内容如下：</p>
+
+<pre>//MemoryLeak_h
+// 
+#ifdef _DEBUG
+#include &lt;crtdbg.h&gt;
+#define DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
+#else
+#define DEBUG_NEW new
+#endif</pre>
+
+<pre>#ifdef _DEBUG
+#include "MemoryLeak.h"
+#endif
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+    int* pInt = DEBUG_NEW int[10];
+    _CrtDumpMemoryLeaks();
+    return 0;
+}</pre>
+
+<p>再次运行输出窗口的内容如下：</p>
+
+<p><span style="color: #ff0000;"><strong>Detected memory leaks!</strong></span></p>
+
+<p><span style="color: #ff0000;"><strong>Dumping objects -&gt;</strong></span></p>
+
+<p><span style="color: #ff0000;"><strong>d:\project\alltest\alltest\alltest.cpp(12) : {108} normal block at 0x0060A1C0, 40 bytes long.</strong></span></p>
+
+<p><span style="color: #ff0000;"><strong> Data: &lt;                &gt; CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD CD </strong></span></p>
+
+<p><span style="color: #ff0000;"><strong>Object dump complete.</strong></span></p>
+
+<p><span style="color: #ff0000;"><strong>程序“[6372] AllTest.exe”已退出，返回值为 0 (0x0)。</strong></span></p>
+
+<p>它标明了alltest.cpp第12行有内存泄露，泄露内存块在0x0060A1C0位置，泄露大小为40字节，这样就能帮助我们快速的定位问题所在了。</p>
+
+<p>&nbsp;</p>
+
+<p>2.Visual Leak Detector 库（VLD）</p>
+
+<p>项目主页地址：<a href="http://vld.codeplex.com/，codeproject和sourceforge上都有其项目主页，大家可以自行选择下载。">http://vld.codeplex.com/，codeproject和sourceforge上都有其项目主页，大家可以自行选择下载。</a></p>
+
+<p>其中包含Windows版本和源代码版本，windows版本是头文件和lib文件，用户可以自行调用，而源码版本可以自己编译。</p>
+
+<p>使用方法异常简单，只需要包含vld.h头文件即可</p>
+
+<p><strong><span style="color: #ff0000;">&mdash;&mdash;&mdash;- Block 58 at 0x004EBF58: 76 bytes &mdash;&mdash;&mdash;-</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">  Call Stack:</span></strong></p>
+
+<p><span style="color: #0000ff;"><strong>    d:\project\alltest\alltest\alltest.cpp (9): AllTest.exe!wmain + 0x7 bytes</strong></span></p>
+
+<p><strong><span style="color: #ff0000;">    f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c (240): AllTest.exe!__tmainCRTStartup + 0x19 bytes</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    f:\dd\vctools\crt_bld\self_x86\crt\src\crt0.c (164): AllTest.exe!wmainCRTStartup</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    0x75C8339A (File and line number not available): kernel32.dll!BaseThreadInitThunk + 0x12 bytes</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    0x772C9EF2 (File and line number not available): ntdll.dll!RtlInitializeExceptionChain + 0x63 bytes</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    0x772C9EC5 (File and line number not available): ntdll.dll!RtlInitializeExceptionChain + 0x36 bytes</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">  Data:</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    40 BA 4E 00    00 00 00 00    00 00 00 00    00 00 00 00     @.N&hellip;.. &hellip;&hellip;..</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    28 00 00 00    01 00 00 00    3A 00 00 00    FD FD FD FD     (&hellip;&hellip;. :&hellip;&hellip;.</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    CD CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     &hellip;&hellip;.. &hellip;&hellip;..</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    CD CD CD CD    CD CD CD CD    CD CD CD CD    CD CD CD CD     &hellip;&hellip;.. &hellip;&hellip;..</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">    CD CD CD CD    CD CD CD CD    FD FD FD FD                    &hellip;&hellip;.. &hellip;&hellip;..</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">Visual Leak Detector detected 50 memory leaks (6904 bytes).</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">Largest number used: 11346 bytes.</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">Total allocations: 17030 bytes.</span></strong></p>
+
+<p><strong><span style="color: #ff0000;">Visual Leak Detector is now exiting.</span></strong></p>
+
+<p>通过上面蓝色加粗的字体我们就很容易得知具体的泄露位置了。而且VLD现在2.2.3的新版本有一个vld.ini文件，用来配置各种开关和参数，具体的配置说明请查看<a href="http://vld.codeplex.com/wikipage?title=Configuration%20Options&amp;referringTitle=Documentation">http://vld.codeplex.com/wikipage?title=Configuration%20Options&amp;referringTitle=Documentation</a></p>
+
+<blockquote>
+<p>注意：如果你发现你按照这种做法做了，但是却出现0xc0150002的问题，请拷贝vld安装目录下的对应平台的Microsoft.DTfW.DHL.manifest和dbghelp.dll到你的程序目录下。（To ensure that vld.dll finds the required private assembly, you need to copy <em>dbghelp.dll</em> and <em>Microsoft.DTfW.DHL.manifest</em> to the same directory that vld.dll is in.）</p>
+</blockquote>
+
+<p>最后不得不吐槽一下这种需要lib还需要dll的方法，甚至还需要对应mainfest文件，太麻烦了，还不如直接给一个Lib完事了。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/c/c&#43;&#43;" rel="tag" title="C/C&#43;&#43;">#C/C&#43;&#43;#</a>
+    
+    <a href="https://cppfans.org/tags/vld" rel="tag" title="VLD">#VLD#</a>
+    
+    <a href="https://cppfans.org/tags/_crtdumpmemoryleaks" rel="tag" title="_CrtDumpMemoryLeaks">#_CrtDumpMemoryLeaks#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%86%85%e5%ad%98%e6%b3%84%e9%9c%b2" rel="tag" title="内存泄露">#内存泄露#</a>
+    
+    <a href="https://cppfans.org/tags/%e5%9e%83%e5%9c%be%e5%9b%9e%e6%94%b6%e5%99%a8" rel="tag" title="垃圾回收器">#垃圾回收器#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%a3%80%e6%b5%8b" rel="tag" title="检测">#检测#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/1385.html" rel="next" title="分享仿异次元百度分享工具条">
+        <i class="fa fa-chevron-left"></i> 分享仿异次元百度分享工具条
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/1375.html" rel="prev" title="几款好的图床介绍！">
+        几款好的图床介绍！ <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">9</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">418</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

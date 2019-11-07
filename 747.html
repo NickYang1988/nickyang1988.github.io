@@ -1,0 +1,458 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+    <title>[软件分享 体验]欧朋浏览器试用体验 - C&#43;&#43;爱好者博客</title>
+    <meta name="keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习">
+    
+    <meta property="og:title" content="[软件分享 体验]欧朋浏览器试用体验">
+    <meta property="og:site_name" content="C&#43;&#43;爱好者博客">
+    <meta property="og:image" content="/img/author.jpg"> 
+    <meta name="title" content="[软件分享 体验]欧朋浏览器试用体验 - C&#43;&#43;爱好者博客" />
+    <meta name="description" content="关注游戏开发，互联网动态，服务器，后端，大数据等相关内容"> 
+    <link rel="shortcut icon" href="https://cppfans.org/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="https://cppfans.org/img/apple-touch-icon.png" />
+    <link href="https://cppfans.org/js/vendor/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://cppfans.org/css/syntax.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+     fancybox: true, 
+    motion: true
+  };
+</script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<div class="container one-collumn sidebar-position-left page-home  ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-meta  custom-logo ">
+
+  <div class="custom-logo-site-title">
+    <a href="https://cppfans.org"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">C&#43;&#43;爱好者博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">Be a simple man.</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+    <ul id="menu" class="menu">
+      
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />首页
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/posts/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/about/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于
+          </a>
+        </li>
+      
+        <li class="menu-item ">
+          <a href="https://cppfans.org/links/" rel="section">
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />友链
+          </a>
+        </li>
+      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger"> <i class="menu-item-icon fa fa-search fa-fw"></i> <br /> 搜索</a>
+      </li>
+    </ul>
+    <div class="site-search">
+      <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+    </div>
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+<section id="posts" class="posts-expand">
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+        <a class="post-title-link" href="https://cppfans.org/747.html" itemprop="url">
+        [软件分享 体验]欧朋浏览器试用体验
+        </a>
+      </h1>
+      <div class="post-meta">
+      <span class="post-time">
+<span class="post-meta-item-icon">
+    <i class="fa fa-calendar-o"></i>
+</span>
+<span class="post-meta-item-text">时间：</span>
+<time itemprop="dateCreated" datetime="2016-03-22T13:04:35+08:00" content="2011-08-28">
+    2011-08-28
+</time>
+</span> 
+      
+
+  <span class="post-category" >
+  &nbsp; | &nbsp;
+  <span class="post-meta-item-icon">
+    <i class="fa fa-folder-o"></i>
+  </span>
+  <span class="post-meta-item-text">分类：</span>
+  
+    <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+      <a href="https://cppfans.org/categories/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6" itemprop="url" rel="index">
+        <span itemprop="name">实用软件</span>
+      </a>
+      &nbsp; 
+    </span>
+  
+</span>
+
+
+       <span>
+&nbsp; | &nbsp;
+<span class="post-meta-item-icon">
+    <i class="fa fa-eye"></i>
+</span>
+<span class="post-meta-item-text">阅读：</span>
+<span class="leancloud-visitors-count">2425 字 ~5分钟</span>
+</span>
+      </div>
+    </header>
+    <div class="post-body" itemprop="articleBody">
+    <p style="text-align: center;">
+  新闻来源:<a href="http://www.williamlong.info/archives/2786.html" target="_blank" rel="nofollow" >月光博客</a><br /> 2011年8月9日，Opera Mini这个国际流行的手机浏览器软件终于进入中国，正式发布欧朋品牌及旗下欧朋手机浏览器，进军中国移动互联网市场。Opera是全球最大的手机浏览器 厂商，每月有超过1.3亿用户在手机上通过Opera上网，这次进入中国有望提高Opera品牌浏览器在中国的市场份额。我也在第一时间对这个浏览器进行 了试用。 <strong>手机浏览器的综述</strong>
+</p>
+
+<p>目前手机浏览器主要有两类，一类是手机自带的浏览器，例如Android浏览器，Nokia浏览器，iPhone的Safari浏览器，对于高端手 机，如iPhone和Android来说，其自带浏览器的浏览体验也不错，但是较为浪费流量，并且不支持单页浏览模式，另一类就是第三方开发的专用手机浏 览器软件，包括Opera Mini、海豚浏览器，UCWEB，QQ浏览器等。</p>
+
+<p>移动互联网是未来的一个热点，其重要性显而易见，互联网的PC终端时代，浏览器显然垄断了互联网的入口，国内各大公司也纷纷推出自家浏览器，如360、搜狗、腾讯等，与IE、Firefox和Chrome相竞争，浏览器之于互联网的重要性是不言而喻。</p>
+
+<p>延伸到手机上，浏览器作为控制互联网的入口，其功能没有改变。虽然在智能手机上，手机应用的作用越来越大，但手机浏览器依旧是移动互联网的一个重要入口，控制手机浏览器的重要性不言而喻。</p>
+
+<p><strong>欧朋浏览器使用体验</strong></p>
+
+<p>目前欧朋浏览器支持Android、诺基亚 Symbian、Java 等平台，iPhone平台版本正在开发中，我这里以Android平台的欧朋浏览器为例进行一些试用评测。</p>
+
+<p><strong>首页</strong></p>
+
+<p>欧朋浏览器的首页界面非常简洁清爽，左上角的是地址框，右边的是搜索框，中间是快速访问的地址，下边是浏览器导航按钮和设置按钮。中间的快速访问默认是欧朋提供的几个常用网址：网址导航、微博咨询、微博娱乐、微博、应用下载。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565501838133957.jpg" alt="欧朋浏览器" /></p>
+
+<p>欧朋浏览器的首页</p>
+
+<p>欧朋浏览器的搜索框默认使用的是百度搜素，而不是Opera Mini默认的谷歌搜索。</p>
+
+<p><strong>设置</strong></p>
+
+<p>设置的界面也很简介，包括书签、历史、编辑首页、保存网页下载、设置、页内查找、分享、帮助、退出。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/1256561458549065.jpg" alt="欧朋浏览器" /></p>
+
+<p>用过Opera Mini的用户可能会发现，原有Opera Mini的同步Opera Mini的功能不见了，据说此功能的中国版还在调试中，预计稍后会提供给用户使用。</p>
+
+<p><strong>特色功能</strong></p>
+
+<p>首页提供的几个欧朋浏览器的特色功能，主要是针对中国用户定制的。</p>
+
+<p>网址导航功能类似手机版hao123，提供了常用的门户网站列表，并整理了常用互联网分类以及分类下的热门站点，以便用户可以快速访问。这种功能比较适合低端手机用户上网使用。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/1256562851112300.jpg" alt="欧朋浏览器" /></p>
+
+<p>网址导航</p>
+
+<p>微博资讯和微博娱乐是一个微博聚合功能，从新浪微博里汇集了社会、体育、财经、科技等各种频道。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565631697517826.jpg" alt="欧朋浏览器" /></p>
+
+<p>微博资讯</p>
+
+<p>微博则是欧朋浏览器内置的新浪微博组件，支持微博更新、阅读、一键发布、转发、评论和收藏等功能。不过我认为，微博增强功能，对于微博重度用户来说并 没有什么太多用户，微博重度微博用户主要使用微博专用客户端应用来更新和查看微博。同时，微博的手机客户端应用的使用体验可能会更好。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/125656491880240.jpg" alt="欧朋浏览器" /></p>
+
+<p>微博</p>
+
+<p>应用下载则类似一个应用商店，提供了常用的Android应用下载地址，以便用户安装使用。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/1256565307486095.jpg" alt="欧朋浏览器" /></p>
+
+<p>应用下载</p>
+
+<p><strong>浏览体验</strong></p>
+
+<p>欧朋浏览器的主要特点是简洁，页面还原好，省流量和速度快。</p>
+
+<p>1、简洁：少广告，页面干净。</p>
+
+<p>2、真浏览：真实还原电脑上的浏览效果到移动手机上，页面还原和渲染效果好。</p>
+
+<p>3、流量：节省流量，比系统默认浏览器节省很多流量。即使在WiFi环境下，压缩技术也可以让浏览速度加快，提高浏览体验。</p>
+
+<p><strong>代理浏览器</strong></p>
+
+<p>欧朋浏览器是一个代理浏览器，是透过Opera的服务器来进行网页的传送，它预先将文字依照手机的宽度做好调整，通过压缩的方式传送到用户的手机上，因此会节省不少流量。</p>
+
+<p>然而，在手机的分辨率下显示整个页面，会将页面文字缩小，需要通过不断的缩放浏览来查看信息，对于大多数浏览页面来说，其使用体验并不如单列浏览好用。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565662108905266.jpg" alt="代理浏览器" /></p>
+
+<p>在欧朋浏览器里使用单列浏览的功能也很简单，在设置中，打开“单列显示模式”即可实现单列浏览，这种浏览方式和国内的UCWEB默认浏览方式相同。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565771176385416.jpg" alt="欧朋浏览器" /></p>
+
+<p>单列显示模式</p>
+
+<p>代理浏览器带来的另一个问题就是用户隐私，虽然Opera对于用户隐私的处理还是非常完善的，但所有用户访问的网址都会被传输到服务器端，在中国这样一个特殊的国家里，这绝不是一件好事。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565782126159218.jpg" alt="欧朋浏览器" /></p>
+
+<p><strong>平板电脑</strong></p>
+
+<p>Android平板下的欧朋浏览器界面也手机端很类似，快速访问的图标看起来比较大。</p>
+
+<p><img src="http://img.cnbeta.com/newsimg/110828/12565791619907516.jpg" alt="" /></p>
+
+<p>Android平板下的欧朋浏览器</p>
+
+<p>对于Android平板以及iPad来说，欧朋浏览器具有替代原生浏览器的潜质。平板电脑因为本身就具有较大的分辨率，因此不存在单列浏览的问题，更加注重页面的真实还原性。</p>
+
+<p><img class="aligncenter" src="http://img.cnbeta.com/newsimg/110828/12565710744185349.jpg" alt="" /></p>
+
+<p>Android平板下的欧朋浏览器</p>
+
+<p>对于普通网页访问来说，欧朋浏览器通过压缩方式传输页面，对于大部分网页来说传输速度会有所提高，页面的还原和渲染效果也不错。目前能在平板电脑上使 用的浏览器并不算多，而系统默认浏览器都不带有压缩传输功能，不过就页面还原效果来看，Android自带浏览器的还原效果似乎更好一些，如下图所示，这 可能是欧朋浏览器的一些BUG。</p>
+
+<p><img class="aligncenter" src="http://img.cnbeta.com/newsimg/110828/125657111305485441.jpg" alt="" /></p>
+
+<p>Android平板下的默认浏览器</p>
+
+<p><strong>综述</strong></p>
+
+<p>总的来看，针对中国用户推出的欧朋浏览器做了不少功夫，通过一些方法来增加中国手机用户的使用体验，包括增加网址站和微博等功能。网址站这个功能对于 普通手机用户来说比较有用，不会上网的人非常依赖网址站，这会大大降低那些用户通过手机上网的难度；而微博这个功能我觉得并不太实用，因为微博用户大多会 使用客户端来上微博，网页浏览是手机浏览器的核心功能，与其开发一些辅助功能，不如把精力聚焦于核心功能的完善更好；默认浏览模式的显示也值得商榷，对于 使用2G网络的手机用户来说，我觉得默认使用单列浏览更能增加这些用户的使用体验，因为大多数中国用户的手机屏幕都不大，对流量很敏感，太小的文字要让用 户不断放大观看，并不是一种好的浏览体验。而对于平板浏览器用户来说，就不需要单列浏览模式，因为平板电脑的屏幕足够大。</p>
+
+    </div>
+    <footer class="post-footer">
+     
+ 
+<div class="post-tags">     
+     
+    <a href="https://cppfans.org/tags/opera" rel="tag" title="Opera">#Opera#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%89%8b%e6%9c%ba" rel="tag" title="手机">#手机#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%ac%a7%e6%9c%8b" rel="tag" title="欧朋">#欧朋#</a>
+    
+    <a href="https://cppfans.org/tags/%e6%b5%8f%e8%a7%88%e5%99%a8" rel="tag" title="浏览器">#浏览器#</a>
+    
+</div>
+
+
+
+     <div class="post-nav">
+    <div class="post-nav-next post-nav-item">
+    
+        <a href="https://cppfans.org/749.html" rel="next" title="[安全资讯]一种伪装成输入法图标的恶意木马现身互联网">
+        <i class="fa fa-chevron-left"></i> [安全资讯]一种伪装成输入法图标的恶意木马现身互联网
+        </a>
+    
+    </div>
+
+    <div class="post-nav-prev post-nav-item">
+    
+        <a href="https://cppfans.org/745.html" rel="prev" title="[硬件资讯]32nm Atom性能首曝：GPU性能三倍于今">
+        [硬件资讯]32nm Atom性能首曝：GPU性能三倍于今 <i class="fa fa-chevron-right"></i>
+        </a>
+    
+    </div>
+</div>
+      
+     
+     
+     
+
+
+
+
+    </footer>
+  </article>
+</section>
+
+          </div>
+        </div>
+        <div class="sidebar-toggle">
+  <div class="sidebar-toggle-line-wrap">
+    <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+    <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  </div>
+</div>
+<aside id="sidebar" class="sidebar">
+  <div class="sidebar-inner">
+
+    <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+        src="https://cppfans.org/img/author.jpg"
+        alt="NickYang" />
+    <p class="site-author-name" itemprop="name">NickYang</p>
+    <p class="site-description motion-element" itemprop="description"> 
+        Programmer &amp; Architect</p>
+</div>
+      <nav class="site-state motion-element">
+    <div class="site-state-item site-state-posts">
+      <a href="https://cppfans.org/post/">
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">日志</span>
+      </a>
+    </div>
+    <div class="site-state-item site-state-categories">    
+        <a href="https://cppfans.org/categories/">      
+         
+        <span class="site-state-item-count">10</span>
+        
+        <span class="site-state-item-name">分类</span>
+        
+        </a>
+    </div>
+
+    <div class="site-state-item site-state-tags">
+        <a href="https://cppfans.org/tags/">
+         
+        <span class="site-state-item-count">767</span>
+        
+        <span class="site-state-item-name">标签</span>
+        </a>
+    </div>
+</nav>
+      
+      
+<div class="links-of-author motion-element">
+    
+        <span class="links-of-author-item">
+        <a href="https://github.com/NickYang1988/" target="_blank" title="GitHub">
+            <i class="fa fa-fw fa-github"></i>
+            GitHub
+        </a>
+        </span>
+    
+</div>
+
+
+      
+
+      <div class="links-of-blogroll motion-element inline">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5b4f2ucxar6&amp;m=0&amp;s=220&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33&amp;bv=35" async="async"></script>
+</div>
+
+    </section>
+    
+  </div>
+</aside>
+
+      </div>
+    </main>
+   
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  <span itemprop="copyrightYear">  &copy; 
+  2009 - 2019</span>
+  <span class="with-love"><i class="fa fa-heart"></i></span>
+  <span class="author" itemprop="copyrightHolder">C&#43;&#43;爱好者博客</span>
+</div>
+<div class="powered-by">
+  Powered by - <a class="theme-link" href="http://gohugo.io" target="_blank" title="hugo" >Hugo v0.59.0</a>
+</div>
+<div class="theme-info">
+  Theme by - <a class="theme-link" href="https://github.com/xtfly/hugo-theme-next" target="_blank"> NexT
+  </a>
+</div>
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+      <span id="scrollpercent"><span>0</span>%</span>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery/index.js?v=2.1.3"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/fastclick/lib/fastclick.min.js?v=1.0.6"></script> 
+<script type="text/javascript" src="https://cppfans.org/js/vendor/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.min.js?v=1.2.1"></script>
+<script type="text/javascript" src="https://cppfans.org/js/vendor/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="https://cppfans.org/js/vendor/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+
+<script src="https://cppfans.org/js/vendor/fancybox/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/utils.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/motion.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/affix.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/schemes/pisces.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/scrollspy.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/post-details.js"></script>
+<script type="text/javascript" src="https://cppfans.org/js/toc.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/bootstrap.js"></script>
+
+<script type="text/javascript" src="https://cppfans.org/js/search.js"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'] ],
+      displayMath: [ ['$$','$$'] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { fonts: ["TeX"] }
+  });
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML' async></script>
+</body>
+</html>

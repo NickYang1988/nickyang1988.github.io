@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/windows/</link>
+    <description>Recent content in Windows on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 30 Oct 2011 06:39:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Win7下去掉快捷方式的小箭头</title>
+      <link>https://cppfans.org/912.html</link>
+      <pubDate>Sun, 30 Oct 2011 06:39:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/912.html</guid>
+      <description>软件装多了，通常都会在桌面放很对快捷方式，有的人嫌麻烦就放在一个统一的文件夹里，不过快捷方式的小箭头图标令大家看起来都很不爽，相信很多人曾经</description>
+    </item>
+    
+    <item>
+      <title>Win7下 Windows Media Player版本故障解决办法</title>
+      <link>https://cppfans.org/185.html</link>
+      <pubDate>Sun, 13 Feb 2011 14:54:42 +0000</pubDate>
+      
+      <guid>https://cppfans.org/185.html</guid>
+      <description>最近不知道由于系统更新还是什么原因，导致Windows Media Player打开视频文件的时候显示服务器异常，网上搜了一下，比较普通的办法是在运行中</description>
+    </item>
+    
+  </channel>
+</rss>

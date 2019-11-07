@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iPhone on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/iphone/</link>
+    <description>Recent content in iPhone on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 18 Sep 2014 03:17:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iOS8.0更新内容</title>
+      <link>https://cppfans.org/1723.html</link>
+      <pubDate>Thu, 18 Sep 2014 03:17:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1723.html</guid>
+      <description>iOS 8 本更新推出了数百个新功能，其中包括： • “信息”功能改进 ◦ 一按一扫即可发送语音、视频和照片 ◦ 提供群发信息选项来命名对话、添加联系人、移除联</description>
+    </item>
+    
+    <item>
+      <title>讯飞语音输入法iPhone公测版发布</title>
+      <link>https://cppfans.org/690.html</link>
+      <pubDate>Mon, 08 Aug 2011 14:32:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/690.html</guid>
+      <description>2011年8月8日，安徽科大讯飞信息科技股份有限公司发布了讯飞语音输入法（iPhone）首个公测版本。讯飞语音输入法iPhone版集语音、手</description>
+    </item>
+    
+  </channel>
+</rss>

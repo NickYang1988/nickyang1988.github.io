@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 03 Dec 2012 01:20:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu12.04下安装eclipse C/C&#43;&#43;开发环境</title>
+      <link>https://cppfans.org/1413.html</link>
+      <pubDate>Mon, 03 Dec 2012 01:20:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1413.html</guid>
+      <description>前段时间在linux上一直使用的是codeblocks，但是感觉提示还是不智能，所以想试试eclipse，下载安装。 安装方法有两种，都很简单</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下如何安装boost？</title>
+      <link>https://cppfans.org/1402.html</link>
+      <pubDate>Tue, 13 Nov 2012 01:30:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1402.html</guid>
+      <description>最近有开始折腾Linux了，没办法，太多的东西都是在Linux下很高效并且不提供VS的工程文件，所以还是学学Linux吧，免得以后被人说做服</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下输入法不显示问题</title>
+      <link>https://cppfans.org/1360.html</link>
+      <pubDate>Sat, 08 Sep 2012 17:07:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1360.html</guid>
+      <description>ubuntu下的默认输入法是ibus，还有一个sunpinyin，个人觉得ibus已经不比任何国内的输入法差了，词组很精确，非常完美。 那天遇</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04LTS下如何安装和彻底卸载xfce4？</title>
+      <link>https://cppfans.org/1356.html</link>
+      <pubDate>Sat, 08 Sep 2012 16:14:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1356.html</guid>
+      <description>今天将Ubuntu12.04更新完了，用的网易的源，更新速度还是很给力的，平均500多K的下载速度。发现虚拟机上unity界面还是比较卡的，</description>
+    </item>
+    
+    <item>
+      <title>vmvare虚拟机下的Ubuntu如何设置设置无线联网？</title>
+      <link>https://cppfans.org/1354.html</link>
+      <pubDate>Fri, 07 Sep 2012 17:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1354.html</guid>
+      <description>今天晚上突然心血来潮，想更新一下很久不用的Ubuntu系统，因为已经到了12.04LTS版本了，打开vmvare启动电源后发现网络都无法连接</description>
+    </item>
+    
+  </channel>
+</rss>

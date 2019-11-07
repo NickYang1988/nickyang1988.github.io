@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>调试 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%B0%83%E8%AF%95/</link>
+    <description>Recent content in 调试 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 31 Aug 2016 02:41:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%B0%83%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]高并发性能调试经验分享</title>
+      <link>https://cppfans.org/2167.html</link>
+      <pubDate>Wed, 31 Aug 2016 02:41:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2167.html</guid>
+      <description>作者：helloworlds 链接：https://zhuanlan.zhihu.com/p/21348220 来源：知乎 著作权归作者所有。商业</description>
+    </item>
+    
+  </channel>
+</rss>

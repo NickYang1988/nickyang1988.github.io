@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>七牛 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%B8%83%E7%89%9B/</link>
+    <description>Recent content in 七牛 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 15 Aug 2014 02:01:44 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%B8%83%E7%89%9B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>七牛云存储Demo征集大赛正式启动，Google Glass等你来拿！</title>
+      <link>https://cppfans.org/1699.html</link>
+      <pubDate>Fri, 15 Aug 2014 02:01:44 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1699.html</guid>
+      <description>七牛云存储专注于为开发者提供一站式的数据托管服务。在与广大开发者接触的过程中，我们发现，越来越多的人正在基于七牛打造产品。2014年，七牛决</description>
+    </item>
+    
+    <item>
+      <title>[帮宣]七牛云存储加盟DNSPod创业D计划  共助创业梦想起航</title>
+      <link>https://cppfans.org/1647.html</link>
+      <pubDate>Fri, 23 May 2014 02:10:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1647.html</guid>
+      <description>本文是帮七牛的朋友转发，跟本博客无关，里面傲娇的文字请各位包涵。 5月20日，在这个充满爱的日子里，锤子举办发布会，酷派缔造大神节。智能手机的</description>
+    </item>
+    
+    <item>
+      <title>七牛cdn云存储使用心得</title>
+      <link>https://cppfans.org/1611.html</link>
+      <pubDate>Wed, 12 Feb 2014 07:29:56 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1611.html</guid>
+      <description>从2013年中间开始，因为博客的访问量和内容逐渐增多，再加上主机在香港，访问起来速度有点慢了。以前用过国外的一个cdn，发现效果不是很大，看</description>
+    </item>
+    
+  </channel>
+</rss>

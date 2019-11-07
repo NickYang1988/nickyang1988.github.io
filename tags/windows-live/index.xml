@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>windows live on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/windows-live/</link>
+    <description>Recent content in windows live on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 26 Apr 2013 12:33:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/windows-live/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>恢复网站色彩并试用Windows live</title>
+      <link>https://cppfans.org/1478.html</link>
+      <pubDate>Fri, 26 Apr 2013 12:33:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1478.html</guid>
+      <description>博客已经改为黑白色一周了，地震救援工作也已经进行了一周了，各地也积极的开始了捐款、捐物资等活动，觉得可以去掉这个黑白滤镜了，心意到了就好了。</description>
+    </item>
+    
+  </channel>
+</rss>

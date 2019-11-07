@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kingsoft on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/kingsoft/</link>
+    <description>Recent content in Kingsoft on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 08 Aug 2011 14:13:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/kingsoft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[软件资讯]金山装机精灵新版上线 改名金山重装高手</title>
+      <link>https://cppfans.org/678.html</link>
+      <pubDate>Mon, 08 Aug 2011 14:13:36 +0000</pubDate>
+      
+      <guid>https://cppfans.org/678.html</guid>
+      <description>Windows系统重装软件金山装机精灵2.0正式版近日推出，并更名为更加贴近普通电脑用户的“金山重装高手”。金山网络称，2.0版不仅支持快速</description>
+    </item>
+    
+    <item>
+      <title>[软件资讯]金山毒霸2012(猎豹) 8-4更新 全新K&#43;（铠甲）防御技术</title>
+      <link>https://cppfans.org/674.html</link>
+      <pubDate>Sat, 06 Aug 2011 11:09:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/674.html</guid>
+      <description>全新K+（铠甲）防御技术，新一代主动防御技术 上线了！！ 突出对流行样本的广谱防御能力，包含最新启发规则及多点集成判定等改进。全面拦截目前流行的</description>
+    </item>
+    
+    <item>
+      <title>[转][软件资讯]WPS Office 2012引入Ribbon界面</title>
+      <link>https://cppfans.org/607.html</link>
+      <pubDate>Thu, 28 Jul 2011 04:10:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/607.html</guid>
+      <description>其实这个消息很早就有了，只不过我现在才知道。早在今年6月一位网友细心的在中央办公用品采购单中发现了WPS Office 2012，介绍中说“金山WPS Office 2</description>
+    </item>
+    
+    <item>
+      <title>对金山开源的一些失望</title>
+      <link>https://cppfans.org/283.html</link>
+      <pubDate>Sun, 06 Mar 2011 14:45:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/283.html</guid>
+      <description>前些阵子听到金山分组出金山网络，同时金山网络宣布了开源项目以及金山毒霸终身免费消息。详情请查看:《金山网络掀起开源之风，寓意何在？》当时觉得</description>
+    </item>
+    
+    <item>
+      <title>金山网络掀起开源之风，意欲何在？</title>
+      <link>https://cppfans.org/72.html</link>
+      <pubDate>Tue, 07 Dec 2010 11:15:19 +0000</pubDate>
+      
+      <guid>https://cppfans.org/72.html</guid>
+      <description>继3Q大战——这两家NB公司在用户的桌面上大打出手之后，互联网的格局就更微妙了，其中动作最大的可能就要数金山了，各种改革，多重变化，慢慢道来</description>
+    </item>
+    
+  </channel>
+</rss>
