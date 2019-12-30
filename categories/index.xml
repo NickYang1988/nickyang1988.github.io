@@ -6,10 +6,19 @@
     <description>Recent content in Categories on C&#43;&#43;爱好者博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 04 Jun 2018 03:27:17 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 15:09:27 +0800</lastBuildDate>
     
 	<atom:link href="https://cppfans.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>心情随笔</title>
+      <link>https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/</link>
+      <pubDate>Mon, 30 Dec 2019 15:09:27 +0800</pubDate>
+      
+      <guid>https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>技术文章</title>
@@ -35,15 +44,6 @@
       <pubDate>Thu, 16 Nov 2017 06:39:03 +0000</pubDate>
       
       <guid>https://cppfans.org/categories/ARK-GAME/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>心情随笔</title>
-      <link>https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/</link>
-      <pubDate>Thu, 09 Mar 2017 08:11:48 +0000</pubDate>
-      
-      <guid>https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/</guid>
       <description></description>
     </item>
     
