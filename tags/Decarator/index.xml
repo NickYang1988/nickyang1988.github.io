@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Decarator on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Decarator/</link>
+    <description>Recent content in Decarator on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 21 May 2016 06:56:01 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Decarator/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]理解Python装饰器</title>
+      <link>https://cppfans.org/2117.html</link>
+      <pubDate>Sat, 21 May 2016 06:56:01 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2117.html</guid>
+      <description>作者：xlzd 链接：http://www.zhihu.com/question/26930016/answer/81263287 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。简单来讲，可以不严谨地把Python的装饰器看做一个包装函数的函数。 比如，</description>
+    </item>
+    
+  </channel>
+</rss>

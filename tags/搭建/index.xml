@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>搭建 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%90%AD%E5%BB%BA/</link>
+    <description>Recent content in 搭建 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 29 Nov 2012 01:20:27 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%90%AD%E5%BB%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Unix网络编程第三版中代码环境搭建</title>
+      <link>https://cppfans.org/1411.html</link>
+      <pubDate>Thu, 29 Nov 2012 01:20:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1411.html</guid>
+      <description>最近在啃《Unix网络编程第三版 卷1》，其中出现了很多关于unp.h的地方，应该是书中自带的文件，搜索了一下，下载了源代码来自己编译。 源代码下载地址：unpv13e.tar.gz下载 &amp;nbsp; 编译步骤 tar zxvf unpv13e.tar.gz ./configure cd lib make cd ../libfree make cd ../libgai make cd .. // 回到主目录 // 修改unp.h gedit lib/unp.h // 修改 #include &#34;../config.h&#34; 为 #include &#34;config.h&#34; // 拷贝头文</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>内存 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%86%85%E5%AD%98/</link>
+    <description>Recent content in 内存 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 29 Dec 2010 04:57:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%86%85%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>游戏服务器程序基础1-内存/类型转换/编程习惯</title>
+      <link>https://cppfans.org/85.html</link>
+      <pubDate>Wed, 29 Dec 2010 04:57:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/85.html</guid>
+      <description>内存管理方式 游戏服务端的工作主要就是实时的处理用户的逻辑，存取，大量数据包的收发，这其中，网络因素是一个重要的原因，这个东西无法避免，但是更重要的是程序内部的运作方式，通常我们知道，程序中最耗资源与硬件的不是程序的执行和操作，主要是内存和资源的频繁切换，让CPU和内存一直在忙。其</description>
+    </item>
+    
+  </channel>
+</rss>

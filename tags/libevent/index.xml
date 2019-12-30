@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>libevent on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/libevent/</link>
+    <description>Recent content in libevent on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 30 Jan 2014 15:38:26 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/libevent/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>静态编译libevent</title>
+      <link>https://cppfans.org/1564.html</link>
+      <pubDate>Thu, 30 Jan 2014 15:38:26 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1564.html</guid>
+      <description>libevent简介 libevent是一个事件触发的网络库，适用于windows、linux、bsd等多种平台，内部使用select、epoll、kqueue等系统调用管理事件机制。著名分布式缓存软件memcached也是libevent based，而且libevent在使用上可</description>
+    </item>
+    
+  </channel>
+</rss>

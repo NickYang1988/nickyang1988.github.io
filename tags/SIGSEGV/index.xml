@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SIGSEGV on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/SIGSEGV/</link>
+    <description>Recent content in SIGSEGV on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 27 Feb 2014 03:09:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/SIGSEGV/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux常见问题汇总(长期顶置更新)</title>
+      <link>https://cppfans.org/1544.html</link>
+      <pubDate>Thu, 27 Feb 2014 03:09:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1544.html</guid>
+      <description>&lt;h3 id=&#34;2014-12-23更新&#34;&gt;2014/12/23更新：&lt;/h3&gt;
+
+&lt;p&gt;7.glibc版本查看&lt;/p&gt;
+
+&lt;p&gt;把libc.so.6当成执行文件运行下就可以看到版本号&lt;/p&gt;
+
+&lt;p&gt;6.GLIBCXX版本查看&lt;/p&gt;
+
+&lt;p&gt;strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;5.mysql++静态编译方法&lt;/p&gt;
+
+&lt;p&gt;mysql++下载来后无法静态编译，加了 &amp;ndash;enable-static=yes也不行，不过我们可以直接使用ar命令编译.o文件，命令如下&lt;/p&gt;
+
+&lt;pre&gt;ar rcu libmysqlpp.a mysqlpp_beemutex.o mysqlpp_cmdline.o mysqlpp_connection.o mysqlpp_cpool.o mysqlpp_datetime.o mysqlpp_dbdriver.o mysqlpp_field_names.o mysqlpp_field_types.o mysqlpp_manip.o mysqlpp_myset.o mysqlpp_mysql++.o mysqlpp_mystring.o mysqlpp_null.o mysqlpp_options.o mysqlpp_qparms.o mysqlpp_query.o mysqlpp_result.o mysqlpp_row.o mysqlpp_scopedconnection.o mysqlpp_sql_buffer.o mysqlpp_sqlstream.o mysqlpp_ssqls2.o mysqlpp_stadapter.o mysqlpp_tcp_connection.o mysqlpp_transaction.o mysqlpp_type_info.o mysqlpp_uds_connection.o mysqlpp_utility.o mysqlpp_vallist.o mysqlpp_wnp_connection.o ssqls2parse_parsev2.o&lt;/pre&gt;
+
+&lt;p&gt;然后直接使用libmysqlpp.a就好了&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;4.linux下服务自启动几种方法&lt;/p&gt;
+
+&lt;p&gt;(1)chkconfig&lt;/p&gt;
+
+&lt;p&gt;例如将httpd自启动，首先查看httpd服务是否已经自启动了&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --list | grep httpd&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:off   3:off   4:off   5:off   6:off&lt;/pre&gt;
+
+&lt;p&gt;如果结果是上述，则使用下面命令打开自启动&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig httpd on&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:on    3:on    4:on    5:on    6:off&lt;/pre&gt;
+
+&lt;p&gt;如果httpd没有加入自启动列表，先增加进列表中&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --add httpd&lt;/pre&gt;
+
+&lt;p&gt;(2)修改rc.local文件&lt;/p&gt;
+
+&lt;p&gt;例如我们想自启动mysqld_safe，在rc.local中增加如下命令&lt;/p&gt;
+
+&lt;pre&gt;#mysql&lt;/pre&gt;
+
+&lt;pre&gt;/usr/local/mysql/bin/mysqld_safe &amp;&lt;/pre&gt;
+
+&lt;p&gt;保存后就可以了&lt;/p&gt;
+
+&lt;p&gt;(3)ln软链接的方法就不做介绍了，感觉太麻烦了，大家请自行查阅&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

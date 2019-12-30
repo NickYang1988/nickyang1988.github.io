@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文档 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%96%87%E6%A1%A3/</link>
+    <description>Recent content in 文档 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 10 Jun 2012 09:09:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(6)——Bitstream</title>
+      <link>https://cppfans.org/1335.html</link>
+      <pubDate>Sun, 10 Jun 2012 09:09:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1335.html</guid>
+      <description>Bitstream概述 Bitstream类是一个RakNet命名空间下的helper类，是一个用于打包、解包bits的动态数组。它有如下四个优点： 1.动态的创建数据包 2.压缩 3.写入Bits 4.字节序转化 对于结构体打包来说，需要预定义结构体，并将他们转化为一个(char*)的类型</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(4)——Recieving Packets</title>
+      <link>https://cppfans.org/1322.html</link>
+      <pubDate>Sun, 20 May 2012 13:30:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1322.html</guid>
+      <description>抱歉这篇文章出现这么迟。 当一个数据包出现在网络上的时候，例如收到了返回值不为零的数据，涉及了三个步骤来处理它。 1.确定这个数据包的类型，它通过如下代码被返回 unsigned char GetPacketIdentifier(Packet *p) { if ((unsigned char)p-&amp;gt;data[0] == ID_TIMESTAMP) return (unsigned char)p-&amp;gt;data[sizeof(unsigned char) + sizeof(unsigned long)]; else return (unsigned char) p-&amp;gt;data[0]; } 2.处理数据 接收到结构体 如果你最开始发送了一个结构体，你可以通过如下代码转化回</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(3)——Creating Packets</title>
+      <link>https://cppfans.org/1314.html</link>
+      <pubDate>Sat, 05 May 2012 17:40:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1314.html</guid>
+      <description>如何将你的数据编码到一个数据包中？ 运行RakNet的系统通过人们所熟知的数据包进行通讯，实际上所有在Internet上运行的系统都如此。更准确的说，在UDP协议下，它用的是数据报。每一个通过RakNet创建的数据报中都包含了一条或者多条信息。消息可以是通过你创建的，例如位置信息，</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>例子 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BE%8B%E5%AD%90/</link>
+    <description>Recent content in 例子 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 06 Jan 2013 01:15:58 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BE%8B%E5%AD%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浅析epoll - epoll例子以及分析</title>
+      <link>https://cppfans.org/1419.html</link>
+      <pubDate>Sun, 06 Jan 2013 01:15:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1419.html</guid>
+      <description>上篇我们讲到epoll的函数和性能。这一篇用用这些个函数，给出一个最简单的epoll的例子。 // // a simple echo server using epoll in linux // // 2009-11-05 // by sparkling // #include &amp;lt;sys/socket.h&amp;gt; #include &amp;lt;sys/epoll.h&amp;gt; #include &amp;lt;netinet/in.h&amp;gt; #include &amp;lt;arpa/inet.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; #define MAX_EVENTS 500 struct myevent_s { int fd; void (*call_back)(int fd, int events, void *arg); int events; void *arg; int status; // 1: in epoll wait list, 0 not in char buff[128]; // recv data buffer int len; long last_active; // last active time }; // set event void EventSet(myevent_s *ev, int fd, void (*call_back)(int, int,</description>
+    </item>
+    
+  </channel>
+</rss>

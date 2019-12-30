@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VS2010 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/VS2010/</link>
+    <description>Recent content in VS2010 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 06 May 2012 07:12:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/VS2010/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[开发工具]详解Visual Stdio之编译后事件</title>
+      <link>https://cppfans.org/1315.html</link>
+      <pubDate>Sun, 06 May 2012 07:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1315.html</guid>
+      <description>用VS做开发，通常最痛苦的事情就是配置工程了，建各种目录结构，加入各种库头文件和Lib，输出路径，编译后事件等等，说起来都很麻烦。 今天主要想说一下编译后事件，因为其他的配置看着宏就可以配出来，而编译后事件还需要写一点点批处理，所以着重写一下，如果别的不会配置，大家可以留言说明，我</description>
+    </item>
+    
+  </channel>
+</rss>

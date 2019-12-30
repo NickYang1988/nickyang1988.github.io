@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BitStreams on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/BitStreams/</link>
+    <description>Recent content in BitStreams on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 10 Jun 2012 09:09:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/BitStreams/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(6)——Bitstream</title>
+      <link>https://cppfans.org/1335.html</link>
+      <pubDate>Sun, 10 Jun 2012 09:09:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1335.html</guid>
+      <description>Bitstream概述 Bitstream类是一个RakNet命名空间下的helper类，是一个用于打包、解包bits的动态数组。它有如下四个优点： 1.动态的创建数据包 2.压缩 3.写入Bits 4.字节序转化 对于结构体打包来说，需要预定义结构体，并将他们转化为一个(char*)的类型</description>
+    </item>
+    
+  </channel>
+</rss>

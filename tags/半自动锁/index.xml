@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>半自动锁 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%8D%8A%E8%87%AA%E5%8A%A8%E9%94%81/</link>
+    <description>Recent content in 半自动锁 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 29 Aug 2012 14:44:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%8D%8A%E8%87%AA%E5%8A%A8%E9%94%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源码分享]Windows下的半自动线程锁</title>
+      <link>https://cppfans.org/1350.html</link>
+      <pubDate>Wed, 29 Aug 2012 14:44:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1350.html</guid>
+      <description>写在前面的话：开始写一套网络库，打算先用IOCP吧，Asio毕竟还在学习阶段，定义名字为FreeNet，会慢慢放出来代码的，希望大家持续关注，并互相交流。 关于IOCP的网络库，里面必不可少的肯定会用到多线程，所以轻量级的线程锁还是需要的，所以简单写了一个半自动的线程锁，所谓半自动</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>asio on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/asio/</link>
+    <description>Recent content in asio on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 26 Aug 2012 14:29:21 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/asio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]boost::asio简介</title>
+      <link>https://cppfans.org/1348.html</link>
+      <pubDate>Sun, 26 Aug 2012 14:29:21 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1348.html</guid>
+      <description>boost前几天发布了1.51版本，更新内容请查看：http://www.boost.org/users/history/version_1_51_0.html，asio修改如下内容： Asio: Fixed an incompatibility between ip::tcp::iostream and C++11 (#7162). Decorated GCC attribute names with underscores to prevent interaction with user-defined macros (#6415). Added missing #include &amp;lt;cctype&amp;gt;, needed for some versions of MinGW. Changed to use gcc&#39;s atomic builtins on ARM CPUs, when available (#7140). Changed strand destruction to</description>
+    </item>
+    
+  </channel>
+</rss>

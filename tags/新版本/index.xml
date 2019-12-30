@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>新版本 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%96%B0%E7%89%88%E6%9C%AC/</link>
+    <description>Recent content in 新版本 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 14 Nov 2013 07:57:33 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%96%B0%E7%89%88%E6%9C%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>goagent3.0.8解决翻墙404问题</title>
+      <link>https://cppfans.org/1514.html</link>
+      <pubDate>Thu, 14 Nov 2013 07:57:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1514.html</guid>
+      <description>貌似在双十一前几天，不知道GFW搞了什么东西，导致goagent无法翻墙，一直提示404错误。微博上很多人都在说，去看了下goagent项目，发现有新版本了，项目地址：https://code.google.com/p/goagent/ 本次更新主要是增加了google_cn和go</description>
+    </item>
+    
+    <item>
+      <title>wordpress百度分享工具条最新版本1.0发布</title>
+      <link>https://cppfans.org/1449.html</link>
+      <pubDate>Tue, 29 Jan 2013 01:10:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1449.html</guid>
+      <description>好长一段时间都没理会百度分享工具条了，最近看到倡萌将这个工具条进行了一些优化和精简(《WordPress添加仿异次元百度分享工具条》)，决定采用倡萌的版本，再加上一些自己的改动再次发一个版本，以后基本就不会再动了，感谢这么多人的使用和支持。 具体效果请查看本博客任何一篇文章顶部的工</description>
+    </item>
+    
+  </channel>
+</rss>

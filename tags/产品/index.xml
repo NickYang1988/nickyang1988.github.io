@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>产品 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E4%BA%A7%E5%93%81/</link>
+    <description>Recent content in 产品 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 09 Mar 2016 11:33:35 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E4%BA%A7%E5%93%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]钱没了，公司就死了，科技创业公司如何才能不把钱花光？</title>
+      <link>https://cppfans.org/2105.html</link>
+      <pubDate>Wed, 09 Mar 2016 11:33:35 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2105.html</guid>
+      <description>&amp;nbsp;编者按：本文作者 Carol Leaman 是 Axonify公司的 CEO，她之前创办的公司被 Google 收购。 10年 前，我成了一家创业早期软件公司的 CEO。我本来受雇于一家私人股权公司，他们让我掌管他们觉得已经走错方向的业务。这并不完全是一场灾难，但是公司投入了上百万元，他们的一致认为：三位创始人需要</description>
+    </item>
+    
+    <item>
+      <title>[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了</title>
+      <link>https://cppfans.org/2103.html</link>
+      <pubDate>Fri, 04 Mar 2016 10:23:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2103.html</guid>
+      <description>&amp;nbsp;编者按：不管是大公司还是创业公司，我们很多时候都需要去给别人 Demo 产品，给客户 Demo，给投资人 Demo。但很多时候你会发现你的产品 Demo 并不尽如人意。为什么呢？如何才能做一个成功的产品 Demo 呢？本文就是为回答这个问题而来的。 “有人会讨厌你，也有人会质疑你，然后你会想办法证明他们</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intel on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Intel/</link>
+    <description>Recent content in Intel on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 27 Jan 2013 13:01:45 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Intel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>初识英特尔线程构建模块之内存管理tbb_malloc</title>
+      <link>https://cppfans.org/1437.html</link>
+      <pubDate>Sun, 27 Jan 2013 13:01:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1437.html</guid>
+      <description>什么是TBB？ TBB(Thread Building Blocks)是英特尔发布的一个库，全称为 Threading Building Blocks，里面包含了 Algorithms、Containers、Memory Allocation、Synchronization、Timing、Task Scheduling这六个模块。暂时我只用到了Memory A</description>
+    </item>
+    
+  </channel>
+</rss>

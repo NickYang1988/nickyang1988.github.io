@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术文章 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/</link>
+    <description>Recent content in 技术文章 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 Jun 2018 03:27:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>关于WebSocket的一些总结</title>
+      <link>https://cppfans.org/2247.html</link>
+      <pubDate>Mon, 04 Jun 2018 03:27:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2247.html</guid>
+      <description>WebSocket下面简称ws ws出现之前的http连接 在ws出现以前，http都是客户端发起-服务器回应的模式，全靠客户端主动交流，服务器完全是被动等待请求，回复数据。如果需要服务器主动推送信息给客户端(例如现在手机上的应用提醒），只能靠客户端主动pulling 或 long pullin</description>
+    </item>
+    
+    <item>
+      <title>接口设计六大原则</title>
+      <link>https://cppfans.org/2245.html</link>
+      <pubDate>Fri, 25 May 2018 04:41:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2245.html</guid>
+      <description>一. 单一职责原则 Single Responsibility Principle, 简称SRP。 定义 There should never be more than one reason for a class to change 应该有且仅有一个原因引起类的变 准则 职责的划分？单一的定义和级别？ 应该根据实际业务情况而定。关注变化点。 实际使用时，类很难做到职责单一，但是接口的职责应该尽量单一。 二. 里氏替换原则 Liskov Substitution Principle, 简称LSP。 定义 Functions that use pointers or references to base</description>
+    </item>
+    
+    <item>
+      <title>说说协程coroutine</title>
+      <link>https://cppfans.org/2217.html</link>
+      <pubDate>Sun, 07 May 2017 06:06:44 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2217.html</guid>
+      <description>&lt;p&gt;近几年来，协程的概念和使用被越多越多的人提到了，确实帮助很多人解决了很多问题，例如网络上的问题，异步逻辑流程控制等。我的工作中也接触到一些，所以打算总结下。&lt;/p&gt;
+
+&lt;p&gt;简单来说，协程就是一种用户态、编程语言层面的轻量级线程。&lt;/p&gt;
+
+&lt;p&gt;然而线程与协程又有很多差异的地方，线程是靠操作系统OS本身来调度，是抢占式的任务处理方式，谁抢到算谁的，所以大部分多线程程序中都要单独调用sleep来让出CPU给其他线程；线程每次阻塞、切换时都需要系统调用system call，然后调用调度函数来决定运行哪一个线程；协程拥有自己的用户态的上下文和栈(&lt;span style=&#34;color: #808080;&#34;&gt;&lt;em&gt;分为stackless和stackfulness，这个下一篇文章来讲&lt;/em&gt;&lt;/span&gt;)，协程切换时，先将寄存器上下文和栈内容保存起来，再次切换回来的时候再恢复之前保存的内容继续运行；&lt;/p&gt;
+
+&lt;p&gt;通过上面的讲解，明白了一个道理，协程是编译器来保证的，线程是操作系统来调度的；协程能更好的保证流程，而线程需要仔细处理公共数据资源；协程本质是单线程的，能提高单个CPU core的性能，适合计算密集型的应用；协程切换非常轻量，所以能大量的使用，线程切换成本较高，一般要控制线程数。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;协程的概念和原理明白了后，其实有点类似于异步事件驱动，可以看看libevent/libuv等经典的C语言库，发现大量使用了异步事件回调，有一个event_loop来循环检查要处理的事件，不过就是代码相对协程恶心了一些，协程能让用户以类似同步的方式来处理异步流程，更加便于理解。&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;不过协程也是有缺点的，无法利用现代多核机器的性能，所以还需要配合多进程来提高性能；有阻塞操作的时候依然会阻塞整个进程，需要用其他方式来解决。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]并发编程：Actors模型和CSP模型</title>
+      <link>https://cppfans.org/2176.html</link>
+      <pubDate>Mon, 17 Oct 2016 10:01:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2176.html</guid>
+      <description>&lt;h3 id=&#34;section-1&#34;&gt;一、前言&lt;/h3&gt;
+
+&lt;p&gt;不同的编程模型与具体的语言无关，大部分现代语言都可以通过巧妙地结构处理实现不同的模型.杂谈的意思是很杂，想到哪儿写到哪儿，不对正确性负责 :D.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3 id=&#34;actors&#34;&gt;二、Actors模型&lt;/h3&gt;
+
+&lt;p&gt;传统的并发模型主要由两种实现的形式，一是同一个进程下，多个线程天然的共享内存，由程序对读写做同步控制(有锁或无锁). 二是多个进程通过进程间通讯或者内存映射实现数据的同步.&lt;/p&gt;
+
+&lt;p&gt;Actors模型更多的使用消息机制来实现并发，目标是让开发者不再考虑线程这种东西，&lt;strong&gt;每个Actor最多同时只能进行一样工作，Actor内部可以有自己的变量和数据&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Actors模型避免了由操作系统进行任务调度的问题，在操作系统进程之上，多个Actor可能运行在同一个进程(或线程)中.这就节省了大量的Context切换.&lt;/p&gt;
+
+&lt;p&gt;在Actors模型中，每个Actor都有一个专属的命名”邮箱”, 其他Actor可以随时选择一个Actor通过邮箱收发数据,对于“邮箱”的维护，通常是使用发布订阅的机制实现的，比如我们可以定义发布者是自己，订阅者可以是某个Socket接口，另外的消息总线或者直接是目标Actor.&lt;/p&gt;
+
+&lt;p&gt;目前akka库是比较流行的Actors编程模型实现，支持Scala和Java语言.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3 id=&#34;csp&#34;&gt;三、CSP模型&lt;/h3&gt;
+
+&lt;p&gt;CSP(Communicating Sequential Process)模型提供一种多个进程公用的“管道(channel)”, 这个channel中存放的是一个个”任务”.&lt;/p&gt;
+
+&lt;p&gt;目前正流行的go语言中的goroutine就是参考的CSP模型，原始的CSP中channel里的任务都是立即执行的，而go语言为其增加了一个缓存，即任务可以先暂存起来，等待执行进程准备好了再逐个按顺序执行.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3 id=&#34;cspactor&#34;&gt;四、CSP和Actor的区别&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;CSP进程通常是同步的(即任务被推送进Channel就立即执行，如果任务执行的线程正忙，则发送者就暂时无法推送新任务)，Actor进程通常是异步的(消息传递给Actor后并不一定马上执行).&lt;/li&gt;
+&lt;li&gt;CSP中的Channel通常是匿名的, 即任务放进Channel之后你并不需要知道是哪个Channel在执行任务，而Actor是有“身份”的，你可以明确的知道哪个Actor在执行任务.&lt;/li&gt;
+&lt;li&gt;在CSP中，我们只能通过Channel在任务间传递消息, 在Actor中我们可以直接从一个Actor往另一个Actor传输数据.&lt;/li&gt;
+&lt;li&gt;CSP中消息的交互是同步的，Actor中支持异步的消息交互.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;h3 id=&#34;section-2&#34;&gt;五、参考文档&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://stackoverflow.com/questions/22621514/is-scalas-actors-similar-to-gos-coroutines&#34; target=&#34;_blank&#34;  rel=&#34;nofollow&#34; &gt;Scala中的actors和Go中的goroutines对比&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/Communicating_sequential_processes#Comparison_with_the_Actor_Model&#34; target=&#34;_blank&#34;  rel=&#34;nofollow&#34; &gt;CSP Model From Wiki&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;文章转载自：&lt;a href=&#34;http://sobuhu.com/program/2014/09/07/concurrent-models.html&#34;&gt;http://sobuhu.com/program/2014/09/07/concurrent-models.html&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转]高并发性能调试经验分享</title>
+      <link>https://cppfans.org/2167.html</link>
+      <pubDate>Wed, 31 Aug 2016 02:41:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2167.html</guid>
+      <description>作者：helloworlds 链接：https://zhuanlan.zhihu.com/p/21348220 来源：知乎 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。 引文 4月份的时候看到一道面试题，据说是腾讯校招面试官提的：在多线程和高并发环境下，如果有一个平</description>
+    </item>
+    
+    <item>
+      <title>A simple Spark test project</title>
+      <link>https://cppfans.org/2142.html</link>
+      <pubDate>Wed, 10 Aug 2016 12:31:10 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2142.html</guid>
+      <description>I start to learn Spark to process some log files, here is a simple example. How to build Spark, please see http://spark.apache.org/docs/latest/building-spark.html Scala file import org.apache.spark.SparkContext import org.apache.spark.SparkContext._ import org.apache.spark.SparkConf object SimpleApp { def main(args: Array[String]) { val conf = new SparkConf().setAppName(&#34;wordCount&#34;) val sc = new SparkContext(conf) val input = sc.textFile(&#34;/home/nickyang/develop/spark/spark-1.6.1/README.md&#34;) val words = input.flatMap(line =&amp;gt; line.split(&#34; &#34;)) val couts = words.map(word =&amp;gt; (word, 1)).reduceByKey{case (x, y) =&amp;gt; x + y} couts.saveAsTextFile(&#34;/home/nickyang/develop/spark/spark-1.6.1/examples/wordCount/result&#34;) } } sbt file(use sbt to build this example) name := &#34;SampleApp&#34; version := &#34;0.0.1&#34; scalaVersion := &#34;2.10.5&#34; libraryDependencies += &#34;org.apache.spark&#34; %% &#34;spark-core&#34; % &#34;1.6.2&#34; % &#34;provided&#34; sbt package YOUR_SPARK_HOME/bin/spark-submit --class &amp;lt;span class=&#34;s2&#34;&#34;SimpleApp&#34;&amp;lt;/span --master &amp;lt;span class=&#34;nb&#34;local&amp;lt;/span&amp;lt;span class=&#34;o&#34;[&amp;lt;/span1&amp;lt;span class=&#34;o&#34;]&amp;lt;/span target/scala-2.11/sampleapp_2.10-0.0.1.jar The result is in result directory, two files, one is _SUCCESS that tells us the right result, the other one is &amp;ldquo;part-00000&amp;rdquo;, contains words and words&amp;rsquo; count in this</description>
+    </item>
+    
+    <item>
+      <title>[转]我在系统设计上犯过的14个错</title>
+      <link>https://cppfans.org/2111.html</link>
+      <pubDate>Thu, 28 Apr 2016 10:12:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2111.html</guid>
+      <description>转自:http://hellojava.info/?p=458 在上篇《架构师画像》的文章中提到了自己在系统设计上犯过的一些错，觉得还挺有意义的，这篇文章就来回顾下自己近八年来所做的一些系统设计，看看犯的一些比较大的血淋淋的错误（很多都是推倒重来），这八年来主要做了三个基础技术产品</description>
+    </item>
+    
+    <item>
+      <title>什么时候需要学一门新的编程语言？</title>
+      <link>https://cppfans.org/2038.html</link>
+      <pubDate>Tue, 08 Dec 2015 04:55:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2038.html</guid>
+      <description>声明：本文没有任何褒贬或者对比各种编程语言的意思，请不要做无谓的语言之争。 我们这些80后程序员大部分人都是从delphi，C，C++开始接触编程的，然后等到了大学或者工作，因为生计或者其他种种原因，大家从事的行业开始有了变化，从而导致开发语言也有了一些变化，一些做后端的，开始使用</description>
+    </item>
+    
+    <item>
+      <title>[转]单表60亿记录等大数据场景的MySQL优化和运维之道 | 高可用架构</title>
+      <link>https://cppfans.org/2030.html</link>
+      <pubDate>Wed, 18 Nov 2015 07:50:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2030.html</guid>
+      <description>此文是根据杨尚刚在【QCON高可用架构群】中，针对MySQL在单表海量记录等场景下，业界广泛关注的MySQL问题的经验分享整理而成，转发请注明出处。 杨尚刚，美图公司数据库高级DBA，负责美图后端数据存储平台建设和架构设计。前新浪高级数据库工程师，负责新浪微博核心数据库架构改造优化</description>
+    </item>
+    
+    <item>
+      <title>Docker初窥</title>
+      <link>https://cppfans.org/2020.html</link>
+      <pubDate>Mon, 16 Nov 2015 14:34:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2020.html</guid>
+      <description>&lt;p&gt;提前多说一句：后续的文章不会是直接发一整篇文章出来，而是有点顺手笔记的意思，想到哪儿写到哪儿，可能会写不完一片，会用TODO来标识出来，也有可能会跳过某一段直接写后面，写完后可能还会重新在整理，大家请知晓。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录《QMWS》服务器性能优化过程</title>
+      <link>https://cppfans.org/2018.html</link>
+      <pubDate>Fri, 13 Nov 2015 08:26:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2018.html</guid>
+      <description>性能优化(图片来自网络) 本文是为了记录下《QMWS》项目服务器在对外测试期间，性能表现和技术审核时的性能表现差距很大，从而做出的一些优化过程，期间还是比较头疼，接近两个连续通宵来修改。第一个通宵一直在查找问题和猜问题，找问题是如何出现的，第二天主要是解决对应的性能问题。 性能问题主</description>
+    </item>
+    
+    <item>
+      <title>boost::flat_map性能测试</title>
+      <link>https://cppfans.org/1948.html</link>
+      <pubDate>Tue, 30 Jun 2015 02:11:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1948.html</guid>
+      <description>文章转自：boost::flat_map and its performance compared to map and unordered_map have run a benchmark on different data structures very recently at my company so I feel I need to drop a word. It is very complicated to benchmark something correctly. Benchmarking On the web we rarely find (if ever) a well engineered benchmark. Until today I only found benchmarks that were done the journalist way (pretty quickly and sweeping dozens of variables under the carpet). 1) You need to consider about cache warming Most people running benchmarks are afraid of timer discrepancy, therefore they run their stuff thousands of times and take the whole time, they just are careful to take the same thousand of times for every operation, and then consider</description>
+    </item>
+    
+    <item>
+      <title>[转]linux下TCP/IP及内核参数优化调优</title>
+      <link>https://cppfans.org/1945.html</link>
+      <pubDate>Thu, 25 Jun 2015 06:41:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1945.html</guid>
+      <description>via:http://www.sudops.com/linux-kernel-tcp-ip-sysctl-optimize.html Linux下TCP/IP及内核参数优化有多种方式，参数配置得当可以大大提高系统的性能，也可以根据特定场景进行专门的优化，如TIME_WAIT过高，DDOS攻击等等。 如下配置是写在sysctl.conf中，可使用sysctl -p生效，文中附带了一些默认值和中文解释（从网上收集和翻</description>
+    </item>
+    
+    <item>
+      <title>介绍一个headonly的log库easylogging&#43;&#43;</title>
+      <link>https://cppfans.org/1901.html</link>
+      <pubDate>Fri, 03 Apr 2015 02:14:11 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1901.html</guid>
+      <description>因为TX的log要求按照小时滚动，并且按照大小滚动，原来的glog设置完大小后，容量了就不会再写入了，而且按小时滚动也很麻烦，所以就找了找其他的log库。 主要要求简单上手，支持大小和时间滚动，不需要改动太多。 看了之前用过的log4cxx等库，发现编译成静态文件后太大了，我们又必须</description>
+    </item>
+    
+    <item>
+      <title>protobuf通过反射来赋值</title>
+      <link>https://cppfans.org/1758.html</link>
+      <pubDate>Wed, 26 Nov 2014 12:48:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1758.html</guid>
+      <description>最近因为项目逻辑方面都做的差不多了，于是赶紧去做做测试工作，免得项目上线之后出问题，于是打算用配置的形式做一个类似与白盒测试工具的东西出来。 因为项目使用pb来做协议通讯，所以配置的xml也是类似于pb，将pb的字段和类型配置进去，然后加上值，一个协议结构就可以了，现在只能通过修改</description>
+    </item>
+    
+    <item>
+      <title>google-breakpad在C&#43;&#43; 11下编译错误修改</title>
+      <link>https://cppfans.org/1730.html</link>
+      <pubDate>Mon, 29 Sep 2014 06:23:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1730.html</guid>
+      <description>我只用到了exception_handler模块，暂时还未用到Server模块，因为用到了C++ 11的一些特性，而google-breadpad还没有C++11版本，所以做了一些修改，集中在类型定义处 1. typedef typeof(((struct user*) 0)-&amp;gt;u_debugreg[0]) debugreg_t; 修改为 #if __cplusplus &amp;gt; 199711L&amp;lt;br /&amp;gt; typedef std::remove_reference&amp;lt;decltype(((struct user*) 0)-&amp;gt;u_debugreg[0])&amp;gt;::type debugreg_t;&amp;lt;br /&amp;gt; #else&amp;lt;br /&amp;gt; typedef typeof(((struct user*) 0)-&amp;gt;u_debugreg[0]) debugreg_t;&amp;lt;br /&amp;gt; #endif &amp;nbsp; 2. typedef typeof(((elf_aux_entry*) 0)-&amp;gt;a_un.a_val) elf_aux_val_t; 修改为 #if __cplusplus</description>
+    </item>
+    
+    <item>
+      <title>[投稿]operator delete异常分析</title>
+      <link>https://cppfans.org/1716.html</link>
+      <pubDate>Mon, 22 Sep 2014 02:23:20 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1716.html</guid>
+      <description>C 中delete表达式执行的操作是：1，调用析构函数；2，释放对象内存（operator delete(&amp;hellip;)）。 如果父类的析构函数没有声明为virtual函数，且子类中至少存在一个virtual函数，此时将子类的对象地址赋值给父类指针。当对父类的指针执行delete操</description>
+    </item>
+    
+    <item>
+      <title>linux下升级gcc的方法 - 亲测可用</title>
+      <link>https://cppfans.org/1719.html</link>
+      <pubDate>Fri, 19 Sep 2014 09:33:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1719.html</guid>
+      <description>由于工作主要平台换到了linux上，而linux因为源上没有比较新的gcc，只有4.7，而我们用到了C++11， 只好自己升级了，升级方法也比较简单，就是耗时间。 1.下载gcc最新的源码包 wget http://gcc.skazkaforyou.com/releases/gcc-4.9.1/gcc-4.9.1.tar.gz 2.解压缩 tar -xf gcc-4.9.1.tar.gz cd gcc-4.9.1 4.运行download_prerequisites脚本， ./contrib/download_prerequisites ，这个脚本</description>
+    </item>
+    
+    <item>
+      <title>使用boost进行CRC64计算</title>
+      <link>https://cppfans.org/1713.html</link>
+      <pubDate>Mon, 25 Aug 2014 12:03:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1713.html</guid>
+      <description>因接入平台，平台提供的是一个字符串的key作为用户标识，而且要用到分布式，所以没法用以前的数据库递增来做用户ID，于是用CRC64来生成uint64_t来作为用户ID，做法也比较简单。如下： std::map&amp;lt;size_t, size_t&amp;gt; xLongMap; char szTemp[128] = {0}; boost::crc_optimal&amp;lt;64, 0x04C11DB7, 0, 0, false, false&amp;gt; crc; for (uint32_t i = 0; i &amp;lt; 1000000000; ++i) { memset(szTemp, 0, sizeof(szTemp)); sprintf_s(szTemp, &#34;%d%s%s%s&#34;, i, &#34;1a2b3c&#34;, &#34;4d5e6f&#34;, &#34;7g8h9i&#34;); crc.process_bytes(szTemp, strlen(szTemp)); size_t nPos = crc.checksum(); crc.reset(); if (!xLongMap.insert(std::map&amp;lt;size_t, size_t&amp;gt;::value_type(nPos, 0)).second) {</description>
+    </item>
+    
+    <item>
+      <title>[转]一致性hash算法 - consistent hashing</title>
+      <link>https://cppfans.org/1703.html</link>
+      <pubDate>Mon, 25 Aug 2014 03:09:36 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1703.html</guid>
+      <description>via.http://blog.csdn.net/sparkliang/article/details/5279393 一致性 hash 算法（ consistent hashing ） 张亮 consistent hashing 算法早在 1997 年就在论文 Consistent hashing and random trees 中被提出，目前在cache 系统中应用越来越广泛； 1 基本场景 比如你有 N 个 cache 服务器（后面简称 cache ），那么如何将一个对象 object 映射到 N 个 cache 上呢，你很可能会采用类似下面的通用方法计算 object 的 hash 值，然后均匀的映射到到 N 个 cache ； hash(object)%N 一切都运行正常</description>
+    </item>
+    
+    <item>
+      <title>Compile python to exe</title>
+      <link>https://cppfans.org/1676.html</link>
+      <pubDate>Fri, 11 Jul 2014 03:47:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1676.html</guid>
+      <description>When we write a python file, we can use command line &amp;ldquo;python test.py&amp;rdquo; to execute this file, but we need python environment, when publish programs, most user don&amp;rsquo;t have python in their PC, so sometimes we need to transfer python to executable file, like exe. &amp;nbsp; Here are two methods to make it. Suppose our code like below: #encoding:utf-8 #test.py if __name__ == &#34;__main__&#34;: print(&#34;Hello world!&#34;) &amp;nbsp; 1. py2exe project link: http://sourceforge.net/projects/py2exe/ latest version just support python 2.6 Install py2exe Create a python file named setup.py, code is: #encoding=utf-8 # test.py from distutils.core import setup import py2exe setup(console=[&#34;test.py&#34;]) then execute in command: python setup.py py2exe It will generate a dir named dist, dir dist include test.exe, python26.dll,library.zip, etc. &amp;nbsp; 2.python.cx_freeze project link: http://sourceforge.net/projects/cx-freeze/ support python version 2.x 3.x install it Create a python file named setup.py, code is: # encoding:utf-8</description>
+    </item>
+    
+    <item>
+      <title>使用redis五倍加速WP博客</title>
+      <link>https://cppfans.org/1665.html</link>
+      <pubDate>Tue, 01 Jul 2014 05:53:24 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1665.html</guid>
+      <description>已经换了linode-vps有一段时间了，但是博客的访问速度一直不理想，使用了xcache和eAccelerator，但是速度还是不给力，于是想试试redis这个kv缓存服务，增加了之后，速度提升了5、6倍，下面是使用redis加速wordpress博客的过程。 1.在vps主机上</description>
+    </item>
+    
+    <item>
+      <title>[转]Leveldb实现原理</title>
+      <link>https://cppfans.org/1652.html</link>
+      <pubDate>Sat, 07 Jun 2014 02:17:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1652.html</guid>
+      <description>看leveldb的时候搜到这篇文章，觉得很不错，就转过来了，原文地址：http://www.cnblogs.com/haippy/archive/2011/12/04/2276064.html &amp;nbsp; 郑重声明：本篇博客是自己学习 Leveldb 实现原理时参考了郎格科技系列博客整理的，原文地址：htt</description>
+    </item>
+    
+    <item>
+      <title>leveldb小尝试</title>
+      <link>https://cppfans.org/1651.html</link>
+      <pubDate>Sat, 07 Jun 2014 01:54:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1651.html</guid>
+      <description>最近项目挺忙的，也没什么时间写博客了，这篇也是工作中遇到mysql经常同时请求数据就CPU暴高，就看了下nosql，redis已经有同事尝试了，所以我就来试试leveldb。 leveldb是google开源的一个高效率的K/V数据库，地址：https://code.google.</description>
+    </item>
+    
+    <item>
+      <title>share_ptr的几个注意点</title>
+      <link>https://cppfans.org/1641.html</link>
+      <pubDate>Wed, 14 May 2014 01:24:35 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1641.html</guid>
+      <description>智能指针在boost中很早就有了，在tr1上也很早，但是没怎么用，后来0x标准出来之后，智能指针变成了标准库，所以现在用起来就不区分boost和std了。 主要说下share_ptr的几个注意点，待补全。 1.环状的链式结构可能会形成内存泄露 例如： class BaseClass; class ChildClass; typedef std::shared_ptr&amp;lt;BaseClass&amp;gt; BaseClassPtr; typedef std::shared_ptr&amp;lt;ChildClass&amp;gt; ChildClassPtr; class BaseClass { public: ChildClassPtr childClass; protected: private:</description>
+    </item>
+    
+    <item>
+      <title>mysqlpp中一些特殊功能总结</title>
+      <link>https://cppfans.org/1634.html</link>
+      <pubDate>Tue, 15 Apr 2014 08:52:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1634.html</guid>
+      <description>之前有写过一篇mysql++的文章 《C++使用MySql++操作数据库实例》,里面讲了C++如何用mysql++的库来操作mysql数据库，现在这个手机项目原来的mysql操作库是从mysql原生封装的，大致做了三四层，看着挺麻烦的，就换成了mysql++，不过这次用遇到了一些问</description>
+    </item>
+    
+    <item>
+      <title>boost相关小知识(长期顶置更新)</title>
+      <link>https://cppfans.org/1534.html</link>
+      <pubDate>Fri, 04 Apr 2014 12:46:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1534.html</guid>
+      <description>2.boost throw_exception unresolved 在项目中(windows VS环境)增加了一些boost库，导致一个链接报错， throw_exception unresolved (link error) 可以修改vs的工程属性，/EH 和 /GX属性 修改方法见： http://msdn.microsoft.com/zh-cn/library/1deeycx5.aspx http://msdn.microsoft.com/zh-cn/library/d42ws1f6(v=vs.80).aspx 1.boost::noncopyable nonycopyable是一个可以通过继承来防止你自己的类拷贝构造或者拷贝赋值的类。有些复杂对象，并没有明确的拷贝构造/拷贝赋值函</description>
+    </item>
+    
+    <item>
+      <title>[投稿]一年工作总结 (单进程网游服务器框架介绍)</title>
+      <link>https://cppfans.org/1624.html</link>
+      <pubDate>Thu, 03 Apr 2014 06:25:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1624.html</guid>
+      <description>工作已经满一年了。。。记得还是去年十月多的时候来广州找工作的，找了大概一个星期左右，然后找到这家公司后就一直待到现在。今年毕业的时候回了趟学校，到现在工作时间大概有一年了。第一个手游项目已经上线有一段时间了，还不知道盈利情况怎么样，又开始了一个新的卡牌游戏。工作一直挺充实的，第一</description>
+    </item>
+    
+    <item>
+      <title>网游服务器中的GUID(唯一标识码)实现-基于snowflake算法</title>
+      <link>https://cppfans.org/1623.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:53:24 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1623.html</guid>
+      <description>本文中的算法采用twitter的snowflake算法，具体请搜索介绍，原来是用Scala写的，因我项目需要，改写成C++语言，主要用于高效的生成唯一的ID, 核心算法就是毫秒级时间(41位)+机器ID(10位)+毫秒内序列(12位). 网上也有好多PHP写的插件模块，核心用了网络通</description>
+    </item>
+    
+    <item>
+      <title>linux常见问题汇总(长期顶置更新)</title>
+      <link>https://cppfans.org/1544.html</link>
+      <pubDate>Thu, 27 Feb 2014 03:09:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1544.html</guid>
+      <description>&lt;h3 id=&#34;2014-12-23更新&#34;&gt;2014/12/23更新：&lt;/h3&gt;
+
+&lt;p&gt;7.glibc版本查看&lt;/p&gt;
+
+&lt;p&gt;把libc.so.6当成执行文件运行下就可以看到版本号&lt;/p&gt;
+
+&lt;p&gt;6.GLIBCXX版本查看&lt;/p&gt;
+
+&lt;p&gt;strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;5.mysql++静态编译方法&lt;/p&gt;
+
+&lt;p&gt;mysql++下载来后无法静态编译，加了 &amp;ndash;enable-static=yes也不行，不过我们可以直接使用ar命令编译.o文件，命令如下&lt;/p&gt;
+
+&lt;pre&gt;ar rcu libmysqlpp.a mysqlpp_beemutex.o mysqlpp_cmdline.o mysqlpp_connection.o mysqlpp_cpool.o mysqlpp_datetime.o mysqlpp_dbdriver.o mysqlpp_field_names.o mysqlpp_field_types.o mysqlpp_manip.o mysqlpp_myset.o mysqlpp_mysql++.o mysqlpp_mystring.o mysqlpp_null.o mysqlpp_options.o mysqlpp_qparms.o mysqlpp_query.o mysqlpp_result.o mysqlpp_row.o mysqlpp_scopedconnection.o mysqlpp_sql_buffer.o mysqlpp_sqlstream.o mysqlpp_ssqls2.o mysqlpp_stadapter.o mysqlpp_tcp_connection.o mysqlpp_transaction.o mysqlpp_type_info.o mysqlpp_uds_connection.o mysqlpp_utility.o mysqlpp_vallist.o mysqlpp_wnp_connection.o ssqls2parse_parsev2.o&lt;/pre&gt;
+
+&lt;p&gt;然后直接使用libmysqlpp.a就好了&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;4.linux下服务自启动几种方法&lt;/p&gt;
+
+&lt;p&gt;(1)chkconfig&lt;/p&gt;
+
+&lt;p&gt;例如将httpd自启动，首先查看httpd服务是否已经自启动了&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --list | grep httpd&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:off   3:off   4:off   5:off   6:off&lt;/pre&gt;
+
+&lt;p&gt;如果结果是上述，则使用下面命令打开自启动&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig httpd on&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:on    3:on    4:on    5:on    6:off&lt;/pre&gt;
+
+&lt;p&gt;如果httpd没有加入自启动列表，先增加进列表中&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --add httpd&lt;/pre&gt;
+
+&lt;p&gt;(2)修改rc.local文件&lt;/p&gt;
+
+&lt;p&gt;例如我们想自启动mysqld_safe，在rc.local中增加如下命令&lt;/p&gt;
+
+&lt;pre&gt;#mysql&lt;/pre&gt;
+
+&lt;pre&gt;/usr/local/mysql/bin/mysqld_safe &amp;&lt;/pre&gt;
+
+&lt;p&gt;保存后就可以了&lt;/p&gt;
+
+&lt;p&gt;(3)ln软链接的方法就不做介绍了，感觉太麻烦了，大家请自行查阅&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>glog使用与功能修改</title>
+      <link>https://cppfans.org/1566.html</link>
+      <pubDate>Wed, 19 Feb 2014 05:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1566.html</guid>
+      <description>在写代码的过程中，打log肯定是少不了的，毕竟不能总靠调试来发现问题。log库的选用就很纠结了，成熟的log库非常多，log4cpp、log4cxx、poco.log、boost.log、glog等等，以前我用过log4cxx，觉得配置巨麻烦，一大段看着好纠结，不过用起来很舒服。</description>
+    </item>
+    
+    <item>
+      <title>静态编译libevent</title>
+      <link>https://cppfans.org/1564.html</link>
+      <pubDate>Thu, 30 Jan 2014 15:38:26 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1564.html</guid>
+      <description>libevent简介 libevent是一个事件触发的网络库，适用于windows、linux、bsd等多种平台，内部使用select、epoll、kqueue等系统调用管理事件机制。著名分布式缓存软件memcached也是libevent based，而且libevent在使用上可</description>
+    </item>
+    
+    <item>
+      <title>linux下link错误undefined reference&#39;dlclose&#39;</title>
+      <link>https://cppfans.org/1519.html</link>
+      <pubDate>Tue, 03 Dec 2013 14:15:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1519.html</guid>
+      <description>最近因为换了工作，服务器是在linux环境下，又开始捣鼓linux了，与同事两天的奋战中，发现差不多可以写一本《某哥的linux私房菜》了，开个玩笑。 对于linux我持中立态度，而且我认为linux这么多年发展比较慢的原因是因为桌面化做的不好或者不够好，所以我比较偏爱ubuntu</description>
+    </item>
+    
+    <item>
+      <title>网站设计之CSS精灵图</title>
+      <link>https://cppfans.org/1468.html</link>
+      <pubDate>Sun, 24 Mar 2013 14:48:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1468.html</guid>
+      <description>写完这个标题后，我就后悔了，因为这个标题会让别人误以为我很懂网站设计似的，其实对于web开发我是个外行。没改标题的原因是可以让大家有“虽不懂但觉厉”的感觉。 我研究web技术仅限于折腾我这个博客，当随便翻到某个网站的时候，看到有好的地方，就抄袭过来，我这往大了说应该属于网络犯罪。 今</description>
+    </item>
+    
+    <item>
+      <title>使用jsoncpp解析JSON数据</title>
+      <link>https://cppfans.org/1445.html</link>
+      <pubDate>Tue, 05 Mar 2013 15:36:28 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1445.html</guid>
+      <description>上节《JSON数据格式》中我们讲到了JSON的数据格式和一些应用的地方,接着上面的说下去，jsoncpp和boost.property_tree都可以解析JSON文件，我们先将jsoncpp如何解析。 1.jsoncpp是什么？ jsoncpp是一个使用C++语言来解析json文件的</description>
+    </item>
+    
+    <item>
+      <title>JSON数据格式</title>
+      <link>https://cppfans.org/1442.html</link>
+      <pubDate>Sun, 24 Feb 2013 12:17:36 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1442.html</guid>
+      <description>看到boost::property_tree类库的时候，发现它可以解析XML、JSON、INI，INFO格式的文件，XML和INI已经使用过，并且用别的库读取过了，而JSON这个看着面熟的格式，完全没有用过，只是知道在web应用里经常用到。所以今天我们就来看看JSON到底是个什么</description>
+    </item>
+    
+    <item>
+      <title>初识英特尔线程构建模块之内存管理tbb_malloc</title>
+      <link>https://cppfans.org/1437.html</link>
+      <pubDate>Sun, 27 Jan 2013 13:01:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1437.html</guid>
+      <description>什么是TBB？ TBB(Thread Building Blocks)是英特尔发布的一个库，全称为 Threading Building Blocks，里面包含了 Algorithms、Containers、Memory Allocation、Synchronization、Timing、Task Scheduling这六个模块。暂时我只用到了Memory A</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll - epoll例子以及分析</title>
+      <link>https://cppfans.org/1419.html</link>
+      <pubDate>Sun, 06 Jan 2013 01:15:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1419.html</guid>
+      <description>上篇我们讲到epoll的函数和性能。这一篇用用这些个函数，给出一个最简单的epoll的例子。 // // a simple echo server using epoll in linux // // 2009-11-05 // by sparkling // #include &amp;lt;sys/socket.h&amp;gt; #include &amp;lt;sys/epoll.h&amp;gt; #include &amp;lt;netinet/in.h&amp;gt; #include &amp;lt;arpa/inet.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; #define MAX_EVENTS 500 struct myevent_s { int fd; void (*call_back)(int fd, int events, void *arg); int events; void *arg; int status; // 1: in epoll wait list, 0 not in char buff[128]; // recv data buffer int len; long last_active; // last active time }; // set event void EventSet(myevent_s *ev, int fd, void (*call_back)(int, int,</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; POD(Plain Old Data)类型</title>
+      <link>https://cppfans.org/1431.html</link>
+      <pubDate>Sun, 30 Dec 2012 03:41:23 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1431.html</guid>
+      <description>群里发过来一份他们公司的笔试题，看了下，发现里面考了一个判断如下是否为POD类型，没搞明白什么是POD，多方查阅后，发现其实是指一个C风格代码的概念。 POD全称Plain Old Data是指C风格的struct结构体定义的数据结构，其中struct结构体中只能定义常规数据类型(不能含有</description>
+    </item>
+    
+    <item>
+      <title>[转载]Pthreads mutex VS Pthreads spinlock</title>
+      <link>https://cppfans.org/1426.html</link>
+      <pubDate>Wed, 26 Dec 2012 12:15:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1426.html</guid>
+      <description>转载自：http://www.searchtb.com/2011/01/pthreads-mutex-vs-pthread-spinlock.html 锁机制(lock) 是多线程编程中最常用的同步机制,用来对多线程间共享的临界区(Critical Section) 进行保护。 Pthreads提供了多</description>
+    </item>
+    
+    <item>
+      <title>wordpress中加载JQuery库的几种方法</title>
+      <link>https://cppfans.org/1425.html</link>
+      <pubDate>Sun, 23 Dec 2012 06:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1425.html</guid>
+      <description>Jquery是继prototype之后又一个优秀的Javascrīpt框架。它是轻量级的js库(压缩后只有21k) ，它兼容CSS3，还兼容各种浏览器 （IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+）。jQuery使用户能更方便地处理HTML documents、events、实现动画效果，并且方便地为网</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll - epoll函数深入讲解</title>
+      <link>https://cppfans.org/1418.html</link>
+      <pubDate>Sun, 16 Dec 2012 10:14:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1418.html</guid>
+      <description>前一篇大致讲了一下epoll是个什么东西，优点等内容，这篇延续上一篇的内容，主要是分析epoll的函数，epoll高性能的深入分析。 epoll的三大函数 1.创建epoll fd函数 int epoll_create(int size); epoll_create()创建一个epoll的事例，通知内核需要监听size个fd。size指</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll-为何多路复用I/O要使用epoll</title>
+      <link>https://cppfans.org/1417.html</link>
+      <pubDate>Mon, 10 Dec 2012 01:20:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1417.html</guid>
+      <description>现如今，网络通讯中用epoll(linux)和IOCP(windows)几乎是大家津津乐道的东西，不为别的，就因为高效，所以大家喜欢用。IOCP的基础东西已经讲过了，可翻阅《IOCP浅析》 《IOCP浅析[二]——IOCP出现的意义和函数接口》. 什么是epoll？ epoll是Lin</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04下安装eclipse C/C&#43;&#43;开发环境</title>
+      <link>https://cppfans.org/1413.html</link>
+      <pubDate>Mon, 03 Dec 2012 01:20:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1413.html</guid>
+      <description>前段时间在linux上一直使用的是codeblocks，但是感觉提示还是不智能，所以想试试eclipse，下载安装。 安装方法有两种，都很简单。 方法一 打开Ubuntu软件中心，查找到eclipse，然后安装即可 方法二 打开终端 sudo apt-get install eclipse sudo ap-get install eclipse-pde sudo ap-get install eclipse-jdt 因为我们需要开发C/C++项目，所</description>
+    </item>
+    
+    <item>
+      <title>[转载]永远不要将三种东西放进数据库里</title>
+      <link>https://cppfans.org/1412.html</link>
+      <pubDate>Sat, 01 Dec 2012 01:25:40 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1412.html</guid>
+      <description>导读：作者Frank Wiles发 表了一篇博文,Frank Wiles曾在很多演讲里说过,改进你的系统的最好的方法是先避免做“蠢事”.并不是说你或你开发的东西“蠢”,只是有些决定很容易被人们忽略掉其暗含的 牵连,认识不到这样做对系统维护尤其是系统升级带来多大的麻烦.作为一个顾问,像这样</description>
+    </item>
+    
+    <item>
+      <title>Unix网络编程第三版中代码环境搭建</title>
+      <link>https://cppfans.org/1411.html</link>
+      <pubDate>Thu, 29 Nov 2012 01:20:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1411.html</guid>
+      <description>最近在啃《Unix网络编程第三版 卷1》，其中出现了很多关于unp.h的地方，应该是书中自带的文件，搜索了一下，下载了源代码来自己编译。 源代码下载地址：unpv13e.tar.gz下载 &amp;nbsp; 编译步骤 tar zxvf unpv13e.tar.gz ./configure cd lib make cd ../libfree make cd ../libgai make cd .. // 回到主目录 // 修改unp.h gedit lib/unp.h // 修改 #include &#34;../config.h&#34; 为 #include &#34;config.h&#34; // 拷贝头文</description>
+    </item>
+    
+    <item>
+      <title>对象序列化类库MsgPack介绍</title>
+      <link>https://cppfans.org/1410.html</link>
+      <pubDate>Mon, 26 Nov 2012 13:24:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1410.html</guid>
+      <description>MessagePack(以下简称MsgPack)一个基于二进制高效的对象序列化类库，可用于跨语言通信。它可以像JSON那样，在许多种语言之间交换结构对象；但是它比JSON更快速也更轻巧。支持Python、Ruby、Java、C/C++等众多语言。比Google Protocol Buffers还要</description>
+    </item>
+    
+    <item>
+      <title>分享自定义静态断言代码</title>
+      <link>https://cppfans.org/1408.html</link>
+      <pubDate>Wed, 21 Nov 2012 01:20:47 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1408.html</guid>
+      <description>本文代码来自于QQ群中nous大神，类似于static assert，不过断言异常内容可以自定义。 代码分为boost版本和标准版本，使用ENSURE_HAS_BOOST 宏来区分。 代码： // // ensure.hpp // // Copyright (c) Nous Xiong. // // Macro ENSURE impl. // #ifndef ENSURE_HPP #define ENSURE_HPP #ifdef ENSURE_HAS_BOOST #include &amp;lt;boost/exception/all&amp;gt; #include &amp;lt;boost/thread/tss.hpp&amp;gt; #include &amp;lt;boost/preprocessor/seq/for_each.hpp&amp;gt; #include &amp;lt;boost/integer.hpp&amp;gt; #include &amp;lt;stdexcept&amp;gt; #include &amp;lt;sstream&amp;gt; #include &amp;lt;iostream&amp;gt; namespace un { /// 运行时刻信息 typedef boost::error_info&amp;lt;struct tag_runtime, std::string&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>浅析国内某种端游服务器架构</title>
+      <link>https://cppfans.org/1404.html</link>
+      <pubDate>Thu, 15 Nov 2012 01:40:20 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1404.html</guid>
+      <description>做服务器开发两年了，也没学到太多的东西，更多的应该是处理问题的思路。而思路决定你如何处理问题，我觉得这个很关键，比你噼里啪啦的打了一通代码要好一些。 现在逐渐从游戏服务器的逻辑层转到了稍微深层次一点的内容了，比如服务器架构，服务器AOI，网络底层，一些库等等，所以也慢慢的与大家分享</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下如何安装boost？</title>
+      <link>https://cppfans.org/1402.html</link>
+      <pubDate>Tue, 13 Nov 2012 01:30:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1402.html</guid>
+      <description>最近有开始折腾Linux了，没办法，太多的东西都是在Linux下很高效并且不提供VS的工程文件，所以还是学学Linux吧，免得以后被人说做服务器竟然不懂Linux。 这篇文章的前提是系统是Ubuntu12.04LTS，系统完全更新过，并且一系列编译工具都已经安装过了，如果你还不清楚</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 0x之auto - 从初始化中推断数据类型</title>
+      <link>https://cppfans.org/1398.html</link>
+      <pubDate>Wed, 07 Nov 2012 01:40:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1398.html</guid>
+      <description>引言 曾几何时，C++ 0x出现在我们眼前，我们还在苦逼的用老的规则写代码，因为我们是码畜，我们的顶头上司要求我们必须用土的掉渣的VS2005来写代码，并且用各种存在很棘手问题的库，还有我们的用户都用的XP，新的库包含一些其他的内容，用户根本都没法用，所以我们依然苦逼着。不过曙光就在</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 0x之右值引用</title>
+      <link>https://cppfans.org/1397.html</link>
+      <pubDate>Sun, 04 Nov 2012 09:39:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1397.html</guid>
+      <description>C++ 0x标准出来有一段时间了，一直没时间看，导致最近看一些代码完全不明白是什么意思了，只好硬着头皮来看了。 这次先说一个简单的，右值引用。 关于引用，大家都很清楚了，只会做一标识，而不会拷贝对象，例如：int a = 0; int&amp;amp; b = a; 这个就是传统的引用，如今也称为左值引用，一般我们将引用用在函数返</description>
+    </item>
+    
+    <item>
+      <title>Lib和Dll的那点事</title>
+      <link>https://cppfans.org/1394.html</link>
+      <pubDate>Thu, 01 Nov 2012 01:40:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1394.html</guid>
+      <description>搞程序开发的朋友应该对Lib和Dll很熟悉，对于这两个东西，可谓是几家欢喜几家忧，喜欢的人觉得它可以封装代码，避免别人剽窃，不喜欢的人觉得它很麻烦，干嘛不直接用源文件。而特别是新手对于Lib和Dll的关系和使用完全搞不清楚。 Lib称为静态链接库(static link library)，是</description>
+    </item>
+    
+    <item>
+      <title>HTTP请求中GET和POST的分析</title>
+      <link>https://cppfans.org/1391.html</link>
+      <pubDate>Sat, 27 Oct 2012 03:00:45 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1391.html</guid>
+      <description>近期一位朋友想写iOS上的应用，打算从微博应用做起，第一步先做一个微博客户端出来，然后做一个手机微博应用出来，具体做什么还不甚清楚，其实是在尝试中。而我正好在用asio写网络库，于是主动提出了承担web服务器网络库的部分，也是为了给我自己封装的网络库中增加一个http模块。 htt</description>
+    </item>
+    
+    <item>
+      <title>如何增加博客的订阅量？</title>
+      <link>https://cppfans.org/1389.html</link>
+      <pubDate>Thu, 25 Oct 2012 01:00:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1389.html</guid>
+      <description>订阅服务是如今各个网站都会增加的一个功能，他可以使读者第一时间获得订阅网站的新内容，同时好的订阅方式会让留住一大批读者和用户。国内主要提供订阅服务网站有那么几个，用的多的主要是FeedSky，下来应该是google的Feed burner和腾讯的QQ邮件订阅了，订阅服务现在免费提供</description>
+    </item>
+    
+    <item>
+      <title>分享仿异次元百度分享工具条</title>
+      <link>https://cppfans.org/1385.html</link>
+      <pubDate>Sat, 20 Oct 2012 10:07:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1385.html</guid>
+      <description>现在做网站一个社会化分享工具还是很有必要的，百度在不久前提供了百度分享功能，据说这个功能会让百度更加青睐你的网站。百度提供的分享工具条样式比较单一而且不是太好看，看到异次元的百度分享工具条非常好看，于是仿了一个近似的，先分享出来给大家用。 作者:eliteYang 博客地址:http</description>
+    </item>
+    
+    <item>
+      <title>Windows平台下如何检测C/C&#43;&#43;内存泄露？</title>
+      <link>https://cppfans.org/1381.html</link>
+      <pubDate>Sun, 14 Oct 2012 11:02:11 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1381.html</guid>
+      <description>对于C/C++程序员来说，效率和优雅性大多数情况是对立的，我们经常会在这里面抉择，到底应该怎么取舍。而说到效率，就不得不说让这类程序员头疼了N年的问题，内存泄露，至少从C/C++发明以来很多人都在头疼。而Java/C#之类的语言并不存在这种问题，因为他们从堆中申请内存，根据引用计</description>
+    </item>
+    
+    <item>
+      <title>[PC技术]硬盘从IDE修改为AHCI模式后蓝屏如何处理？</title>
+      <link>https://cppfans.org/1369.html</link>
+      <pubDate>Sat, 29 Sep 2012 01:35:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1369.html</guid>
+      <description>这几天将win7换到了64位下，本来想虚拟机装Mac，结果CPU因为不支持VT，所以就作罢了，不想折腾VMware了，太麻烦了。当时磁盘换到IDE模式下之后，忘了换回来了，直接装了Win7 x64，完了之后换回来却蓝屏了，连错误都不给我看。查了查原来是有方法可以修改的。 1.打开注册</description>
+    </item>
+    
+    <item>
+      <title>[源代码]Nana GUI示例代码</title>
+      <link>https://cppfans.org/1368.html</link>
+      <pubDate>Tue, 25 Sep 2012 01:22:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1368.html</guid>
+      <description>关于nana的介绍，可以查看《[GUI]nana GUI初尝试》，本文主要是分享其中UI的实现代码。 #include &amp;lt;tchar.h&amp;gt; #include &amp;lt;Windows.h&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;nana/gui/wvl.hpp&amp;gt; #include &amp;lt;nana/gui/basis.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/label.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/textbox.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/combox.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/button.hpp&amp;gt; #include &amp;lt;nana/paint/image.hpp&amp;gt; #include &amp;lt;nana/paint/graphics.hpp&amp;gt; #include &amp;lt;nana/gui/layout.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/picture.hpp&amp;gt; int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow) { // 设置窗体属性 nana::gui::form my_form(nana::gui::API::make_center(450, 220), nana::gui::appearance(true, true, false, false, true, false, false)); my_form.caption(STR(&#34;Webpage2Image By eliteYang&#34;)); nana::gui::API::window_icon(my_form, nana::paint::image(STR(&#34;small.ico&#34;))); // 窗体背景图 nana::paint::image image_bg; bool bOpen = image_bg.open(STR(&#34;bg.png&#34;)); nana::gui::drawing drawing_bg(my_form); drawing_bg.clear(); drawing_bg.bitblt(0, 0, 450, 220, image_bg, 0, 0); drawing_bg.update(); // 设置label显</description>
+    </item>
+    
+    <item>
+      <title>[GUI]nana GUI初尝试</title>
+      <link>https://cppfans.org/1364.html</link>
+      <pubDate>Tue, 18 Sep 2012 15:36:59 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1364.html</guid>
+      <description>前几天群里讨论GUI的时候大家各抒己见，提出了一些非常好的GUI工具和代码，大部分都是已经用过的，比如MFC，Qt，DirectUI等等，不过DUI现在基本都是收费的，有一个炫彩界面还不错，不过只是提供接口和dll，nana就是一位朋友提出来的，说很轻巧，全部是自己写，很方便，不</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下输入法不显示问题</title>
+      <link>https://cppfans.org/1360.html</link>
+      <pubDate>Sat, 08 Sep 2012 17:07:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1360.html</guid>
+      <description>ubuntu下的默认输入法是ibus，还有一个sunpinyin，个人觉得ibus已经不比任何国内的输入法差了，词组很精确，非常完美。 那天遇到的输入法不显示可选项，着实比较郁闷，后来研究了下可能是键盘设备出了问题，ubuntu右上角有一个键盘的标志，里面有首选项可以选择输入法，并</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04LTS下如何安装和彻底卸载xfce4？</title>
+      <link>https://cppfans.org/1356.html</link>
+      <pubDate>Sat, 08 Sep 2012 16:14:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1356.html</guid>
+      <description>今天将Ubuntu12.04更新完了，用的网易的源，更新速度还是很给力的，平均500多K的下载速度。发现虚拟机上unity界面还是比较卡的，想换成gnome3.6试一下，结果rangerlee说xfce和lxde桌面很清爽，并且轻量占用内存少，打算试试。 xfce的安装命令为： sudo apt-get</description>
+    </item>
+    
+    <item>
+      <title>vmvare虚拟机下的Ubuntu如何设置设置无线联网？</title>
+      <link>https://cppfans.org/1354.html</link>
+      <pubDate>Fri, 07 Sep 2012 17:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1354.html</guid>
+      <description>今天晚上突然心血来潮，想更新一下很久不用的Ubuntu系统，因为已经到了12.04LTS版本了，打开vmvare启动电源后发现网络都无法连接，mozilla thunderbird提示无法连接网络，上次打开还没有问题，察看了网络设置是选择的NAT，按道理是没有任何问题的，以往设置网</description>
+    </item>
+    
+    <item>
+      <title>[源码分享]Windows下的半自动线程锁</title>
+      <link>https://cppfans.org/1350.html</link>
+      <pubDate>Wed, 29 Aug 2012 14:44:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1350.html</guid>
+      <description>写在前面的话：开始写一套网络库，打算先用IOCP吧，Asio毕竟还在学习阶段，定义名字为FreeNet，会慢慢放出来代码的，希望大家持续关注，并互相交流。 关于IOCP的网络库，里面必不可少的肯定会用到多线程，所以轻量级的线程锁还是需要的，所以简单写了一个半自动的线程锁，所谓半自动</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]boost::asio简介</title>
+      <link>https://cppfans.org/1348.html</link>
+      <pubDate>Sun, 26 Aug 2012 14:29:21 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1348.html</guid>
+      <description>boost前几天发布了1.51版本，更新内容请查看：http://www.boost.org/users/history/version_1_51_0.html，asio修改如下内容： Asio: Fixed an incompatibility between ip::tcp::iostream and C++11 (#7162). Decorated GCC attribute names with underscores to prevent interaction with user-defined macros (#6415). Added missing #include &amp;lt;cctype&amp;gt;, needed for some versions of MinGW. Changed to use gcc&#39;s atomic builtins on ARM CPUs, when available (#7140). Changed strand destruction to</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(6)——Bitstream</title>
+      <link>https://cppfans.org/1335.html</link>
+      <pubDate>Sun, 10 Jun 2012 09:09:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1335.html</guid>
+      <description>Bitstream概述 Bitstream类是一个RakNet命名空间下的helper类，是一个用于打包、解包bits的动态数组。它有如下四个优点： 1.动态的创建数据包 2.压缩 3.写入Bits 4.字节序转化 对于结构体打包来说，需要预定义结构体，并将他们转化为一个(char*)的类型</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(5)——SystemAddress</title>
+      <link>https://cppfans.org/1333.html</link>
+      <pubDate>Sat, 02 Jun 2012 15:14:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1333.html</guid>
+      <description>什么是系统地址？ 系统地址是网络中包含系统二进制IP地址和端口的结构体。这个结构体定义在RakNetTypes.h文件中，这里有一些你需要的系统地址的例子。 服务器收到一个特定客户端的消息，同时想要中转给其他客户端。你需要在发送函数中指定发送者的系统地址(在Packet::syste</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(4)——Recieving Packets</title>
+      <link>https://cppfans.org/1322.html</link>
+      <pubDate>Sun, 20 May 2012 13:30:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1322.html</guid>
+      <description>抱歉这篇文章出现这么迟。 当一个数据包出现在网络上的时候，例如收到了返回值不为零的数据，涉及了三个步骤来处理它。 1.确定这个数据包的类型，它通过如下代码被返回 unsigned char GetPacketIdentifier(Packet *p) { if ((unsigned char)p-&amp;gt;data[0] == ID_TIMESTAMP) return (unsigned char)p-&amp;gt;data[sizeof(unsigned char) + sizeof(unsigned long)]; else return (unsigned char) p-&amp;gt;data[0]; } 2.处理数据 接收到结构体 如果你最开始发送了一个结构体，你可以通过如下代码转化回</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(3)——Creating Packets</title>
+      <link>https://cppfans.org/1314.html</link>
+      <pubDate>Sat, 05 May 2012 17:40:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1314.html</guid>
+      <description>如何将你的数据编码到一个数据包中？ 运行RakNet的系统通过人们所熟知的数据包进行通讯，实际上所有在Internet上运行的系统都如此。更准确的说，在UDP协议下，它用的是数据报。每一个通过RakNet创建的数据报中都包含了一条或者多条信息。消息可以是通过你创建的，例如位置信息，</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(2)——Connecting</title>
+      <link>https://cppfans.org/1299.html</link>
+      <pubDate>Sun, 15 Apr 2012 14:37:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1299.html</guid>
+      <description>Connecting to other systems &amp;nbsp; 找到连接的对象 下面是5种连接到其他系统的方法： 1.直接通过IP地址(前提是你已经知道该IP) 2.LAN广播 3.使用云服务器或者云客户端插件 4.使用大厅服务器或者房间插件(译者注：类型与游戏大厅和游戏房间的模式，想想QQ棋牌游戏) 5.使用DirectoryServer.p</description>
+    </item>
+    
+    <item>
+      <title>[源码分享]Aion模拟器</title>
+      <link>https://cppfans.org/1294.html</link>
+      <pubDate>Sun, 15 Apr 2012 06:32:14 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1294.html</guid>
+      <description>永恒之塔游戏介绍： 通向Abyss世界的“永恒之塔”被强大的恶魔打开，囚禁在Abyss世界的龙类被唤醒，开始了它们对世界的报复。一场围绕在天使，恶魔和龙类之间的史诗大战风雨欲来。为完成拯救世界的使命，玩家踏上漫漫征途…… 你可能会是魔族的一员&amp;hellip;也可能会是天族的一员&amp;he</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]IOCP完整例子</title>
+      <link>https://cppfans.org/1267.html</link>
+      <pubDate>Mon, 09 Apr 2012 13:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1267.html</guid>
+      <description>本文是我在学习IOCP的时候，第一次写一个完整的例子出来，当然了，参考了CSDN上一些朋友的博客，大部分都是按照他们的思路写的，毕竟我是初学者，参考现成的学起来比较快。当然了，真正用到项目中的IOCP肯定不止这么简单的，还有内存池，环形缓冲区，socket连接池等高端内容，后面我</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]Raknet文档翻译(1)——Startup</title>
+      <link>https://cppfans.org/1239.html</link>
+      <pubDate>Sun, 08 Apr 2012 11:05:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1239.html</guid>
+      <description>开始Raknet [cpp] StartupResult RakPeer::Startup( unsigned short maxConnections, SocketDescriptor * socketDescriptors,unsigned socketDescriptorCount, int threadPriority ); [/cpp] 第一件你应该做的事情是调用RakpeerInterface::StartUp()函数，Startup()函数将会： 1.生成RakNet Guid，一个RakpeerInterface的唯一实例，你可以通过下面函数得到这个Guid [cpp] RakNetGUID g = rakPeer-&amp;gt;GetGuidFormSystemAddress(</description>
+    </item>
+    
+    <item>
+      <title>[源代码]如何删除svn版本控制文件夹</title>
+      <link>https://cppfans.org/1212.html</link>
+      <pubDate>Sat, 31 Mar 2012 13:35:51 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1212.html</guid>
+      <description>许多时候，我们拿到的代码都是带有版本控制文件的，比如说.svn文件夹，这些文件非常大， 占用了很多硬盘，但是自己删除也很慢，工具下来也不好用，怕出问题，误删等情况，不过批处理就可以很轻松的实现这个功能。 批处理算是一项简单而且实用的语言了，大家都可以写，但是实现的功能确是非常大的，我</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43;使用MySql&#43;&#43;操作数据库实例</title>
+      <link>https://cppfans.org/1117.html</link>
+      <pubDate>Sun, 04 Mar 2012 14:30:34 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1117.html</guid>
+      <description>有朋友让帮忙写个C++修改数据库中用户名密码的工具，因为他是做VPN的，要给很多客户端展示访问速度等，有一个固定的用户名来展示，但是每次给用户试用的是不同的密码，是随机生成的。 所以就想到了用MySql++这个数据库操作类库，我们项目中也是用这个的，非常好用。 MySql++简介： MySQL++</description>
+    </item>
+    
+    <item>
+      <title>IOCP浅析[二]——IOCP出现的意义和函数接口</title>
+      <link>https://cppfans.org/1089.html</link>
+      <pubDate>Sun, 19 Feb 2012 14:14:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1089.html</guid>
+      <description>上一篇《IOCP浅析》中翻翻的谈了一下IOCP的简单含义，这篇稍微深入讨论下IOCP到底有什么好的，让大家将他推向神坛，同时简单的讨论下基本函数。 IOCP出现的意义？ 写过网络程序的朋友应该很清楚网络程序的原型代码，startup一个WSADATA，然后建立一个监听socket对象</description>
+    </item>
+    
+    <item>
+      <title>WordPress修改主题后无法正常显示页面解决方法</title>
+      <link>https://cppfans.org/1066.html</link>
+      <pubDate>Sun, 05 Feb 2012 08:31:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1066.html</guid>
+      <description>下午看到一个挺漂亮的主题，下载来想试用下看看效果，结果却导致我的前台页面无法正常显示，成白板儿了，这下郁闷了，难道又要折腾了，悲剧，不过想起来WP的所有配置相关的东西全存在数据库里，去数据库里改了主题不就行了吗？绝佳的好办法。 从空间后台进入phpMyAdmin，打开wp_opti</description>
+    </item>
+    
+    <item>
+      <title>IOCP浅析</title>
+      <link>https://cppfans.org/1054.html</link>
+      <pubDate>Mon, 16 Jan 2012 14:44:14 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1054.html</guid>
+      <description>这一年半来一直在做游戏项目逻辑层，学会了不少东西，觉得自己应该看看服务器底层的东西了，主要的东西就是网络模块，网络模块是沿用以前项目的，在 我们项目中被我们头改动过几次，现在还是比较稳定的。因为是Windows平台，所以用的依然是被大多数人神话了的IOCP，不过的确IOCP 表现的非</description>
+    </item>
+    
+    <item>
+      <title>简单的模拟多线程引用计数原理</title>
+      <link>https://cppfans.org/1033.html</link>
+      <pubDate>Sun, 18 Dec 2011 08:08:28 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1033.html</guid>
+      <description>大家都知道多线程编程学习中有一个很重要的东西——引用计数，一个线程的生或死或运行状态都跟这个计数有关，他同样是在适当的时候加加减减的。这篇文章的目的就是模拟下简单的引用计数，原因是因为项目中GateServer莫名宕机，而且运维没有给过来宕机详细信息中的偏移地址，所以纵然我们又c</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]ZeroMQ初体验——hello world</title>
+      <link>https://cppfans.org/1018.html</link>
+      <pubDate>Sun, 27 Nov 2011 10:02:43 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1018.html</guid>
+      <description>群里最近在说网络库的东西，群主推荐说可以看看ØMQ，说非常精简，而且支持多种语言，非常高效率，于是下载来看看。 ØMQ官网 www.zeromq.org Guide还没看完，大概先看了下，觉得很精简，而且写的非常清里面包含了多种设计模式的应用，建议大家有时间看看。 所有网络交互所使用的API实际上是Berkele</description>
+    </item>
+    
+    <item>
+      <title>[转]现代C&#43;&#43;风格的新元素</title>
+      <link>https://cppfans.org/1003.html</link>
+      <pubDate>Wed, 16 Nov 2011 15:21:18 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1003.html</guid>
+      <description>****“C++11就像一门新的语言。” – Bjarne Stroustrup C++11标准推出了很多有用的新特性。本文特别关注相比C++98更像是一门新语言的那部分特性，因为： 这些特性改变了编写C++程序使用的代码风格和习语[TODO]，通常也包括你设计C++函数库的方式。例如，你会看到更多参数和返回值类型为</description>
+    </item>
+    
+    <item>
+      <title>[加密解密]使用CryptoAPI进行文件加密解密——源码</title>
+      <link>https://cppfans.org/985.html</link>
+      <pubDate>Mon, 07 Nov 2011 15:11:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/985.html</guid>
+      <description>前一篇简单介绍了下CryptoAPI的东西，这篇就将那点代码放出来给大家看看，以作交流参考目的。 [cpp] /************************ FileName:CryptoDefine.h Author :eliteYang Mail :elite_yang@163.com Desc :加密需要的常量定义 ************************/ #ifndef __CRYPTO_DEFINE_H_ #define __CRYPTO_DEFINE_H_ #include #define MY_ENCODING_TYPE ( PKCS_7_ASN_ENCODING | X509_ASN_ENCODING ) #define KEY_LENGTH 0x00800000 #define ENCRYPT_ALGORITHM CALG_RC4 #define ENCRYPT_BLOCK_SIZE 8 #endif [/cpp] [cpp] /************************ FileName:LogDefine.h Author :eliteYang Mail :elite_yang@163.com Desc :提示信息 ************************/ #ifndef __LOG_DEFINE_H__ #define __LOG_DEFINE_H__ #define MAX_INFO 1024 #include void (*g_fnPrintInfoCallBack)( char* format ) = NULL; void OutputInfoMessage( char* format ) { if ( g_fnPrintInfoCallBack != NULL ) { char temp[ MAX_INFO ] = { 0 };</description>
+    </item>
+    
+    <item>
+      <title>[加密解密]CryptoAPI简介</title>
+      <link>https://cppfans.org/911.html</link>
+      <pubDate>Mon, 07 Nov 2011 14:29:52 +0000</pubDate>
+      
+      <guid>https://cppfans.org/911.html</guid>
+      <description>帮那个小朋友写加密工具也写完了，用的是微软的CryptAPI库，支持的加密方式挺多的，最坑爹的是他们老师让做加密与解密，结果加密方式是MD5，绝对是坑爹。效果图在前面的文章已经放出来了，大家可以去围观丑陋的界面。 CryptoAPI概述 Windows CryptoAPI是Microsoft 公司提</description>
+    </item>
+    
+  </channel>
+</rss>

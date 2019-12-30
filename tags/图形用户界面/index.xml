@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>图形用户界面 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/</link>
+    <description>Recent content in 图形用户界面 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 25 Sep 2012 01:22:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[源代码]Nana GUI示例代码</title>
+      <link>https://cppfans.org/1368.html</link>
+      <pubDate>Tue, 25 Sep 2012 01:22:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1368.html</guid>
+      <description>关于nana的介绍，可以查看《[GUI]nana GUI初尝试》，本文主要是分享其中UI的实现代码。 #include &amp;lt;tchar.h&amp;gt; #include &amp;lt;Windows.h&amp;gt; #include &amp;lt;iostream&amp;gt; #include &amp;lt;nana/gui/wvl.hpp&amp;gt; #include &amp;lt;nana/gui/basis.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/label.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/textbox.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/combox.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/button.hpp&amp;gt; #include &amp;lt;nana/paint/image.hpp&amp;gt; #include &amp;lt;nana/paint/graphics.hpp&amp;gt; #include &amp;lt;nana/gui/layout.hpp&amp;gt; #include &amp;lt;nana/gui/widgets/picture.hpp&amp;gt; int APIENTRY _tWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPTSTR lpCmdLine, int nCmdShow) { // 设置窗体属性 nana::gui::form my_form(nana::gui::API::make_center(450, 220), nana::gui::appearance(true, true, false, false, true, false, false)); my_form.caption(STR(&#34;Webpage2Image By eliteYang&#34;)); nana::gui::API::window_icon(my_form, nana::paint::image(STR(&#34;small.ico&#34;))); // 窗体背景图 nana::paint::image image_bg; bool bOpen = image_bg.open(STR(&#34;bg.png&#34;)); nana::gui::drawing drawing_bg(my_form); drawing_bg.clear(); drawing_bg.bitblt(0, 0, 450, 220, image_bg, 0, 0); drawing_bg.update(); // 设置label显</description>
+    </item>
+    
+    <item>
+      <title>[GUI]nana GUI初尝试</title>
+      <link>https://cppfans.org/1364.html</link>
+      <pubDate>Tue, 18 Sep 2012 15:36:59 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1364.html</guid>
+      <description>前几天群里讨论GUI的时候大家各抒己见，提出了一些非常好的GUI工具和代码，大部分都是已经用过的，比如MFC，Qt，DirectUI等等，不过DUI现在基本都是收费的，有一个炫彩界面还不错，不过只是提供接口和dll，nana就是一位朋友提出来的，说很轻巧，全部是自己写，很方便，不</description>
+    </item>
+    
+  </channel>
+</rss>

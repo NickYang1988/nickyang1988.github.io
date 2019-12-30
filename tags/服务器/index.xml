@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>服务器 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <description>Recent content in 服务器 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 16 Nov 2017 06:39:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ArkGameFrame开源跨平台游戏服务器框架0.2.0版本发布</title>
+      <link>https://cppfans.org/2224.html</link>
+      <pubDate>Thu, 16 Nov 2017 06:39:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2224.html</guid>
+      <description>各位朋友好，ArkGameFrame 0.2.0 版本发布了，Ark 是一个游戏服务器框架，主要提供了抽象的数据组织结构和通用的服务器架构，主要特性包括： 抽象且通用的数据组织框架 面向数据和接口编程 事件和数据驱动模式 插件化和模块化 自由组织的分布式架构 跨平台 Excel 配置文件(对策划友好) 高性能(libe</description>
+    </item>
+    
+    <item>
+      <title>Docker初窥</title>
+      <link>https://cppfans.org/2020.html</link>
+      <pubDate>Mon, 16 Nov 2015 14:34:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2020.html</guid>
+      <description>&lt;p&gt;提前多说一句：后续的文章不会是直接发一整篇文章出来，而是有点顺手笔记的意思，想到哪儿写到哪儿，可能会写不完一片，会用TODO来标识出来，也有可能会跳过某一段直接写后面，写完后可能还会重新在整理，大家请知晓。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>记录《QMWS》服务器性能优化过程</title>
+      <link>https://cppfans.org/2018.html</link>
+      <pubDate>Fri, 13 Nov 2015 08:26:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2018.html</guid>
+      <description>性能优化(图片来自网络) 本文是为了记录下《QMWS》项目服务器在对外测试期间，性能表现和技术审核时的性能表现差距很大，从而做出的一些优化过程，期间还是比较头疼，接近两个连续通宵来修改。第一个通宵一直在查找问题和猜问题，找问题是如何出现的，第二天主要是解决对应的性能问题。 性能问题主</description>
+    </item>
+    
+    <item>
+      <title>[投稿]一年工作总结 (单进程网游服务器框架介绍)</title>
+      <link>https://cppfans.org/1624.html</link>
+      <pubDate>Thu, 03 Apr 2014 06:25:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1624.html</guid>
+      <description>工作已经满一年了。。。记得还是去年十月多的时候来广州找工作的，找了大概一个星期左右，然后找到这家公司后就一直待到现在。今年毕业的时候回了趟学校，到现在工作时间大概有一年了。第一个手游项目已经上线有一段时间了，还不知道盈利情况怎么样，又开始了一个新的卡牌游戏。工作一直挺充实的，第一</description>
+    </item>
+    
+    <item>
+      <title>网游服务器中的GUID(唯一标识码)实现-基于snowflake算法</title>
+      <link>https://cppfans.org/1623.html</link>
+      <pubDate>Mon, 03 Mar 2014 14:53:24 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1623.html</guid>
+      <description>本文中的算法采用twitter的snowflake算法，具体请搜索介绍，原来是用Scala写的，因我项目需要，改写成C++语言，主要用于高效的生成唯一的ID, 核心算法就是毫秒级时间(41位)+机器ID(10位)+毫秒内序列(12位). 网上也有好多PHP写的插件模块，核心用了网络通</description>
+    </item>
+    
+    <item>
+      <title>浅析国内某种端游服务器架构</title>
+      <link>https://cppfans.org/1404.html</link>
+      <pubDate>Thu, 15 Nov 2012 01:40:20 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1404.html</guid>
+      <description>做服务器开发两年了，也没学到太多的东西，更多的应该是处理问题的思路。而思路决定你如何处理问题，我觉得这个很关键，比你噼里啪啦的打了一通代码要好一些。 现在逐渐从游戏服务器的逻辑层转到了稍微深层次一点的内容了，比如服务器架构，服务器AOI，网络底层，一些库等等，所以也慢慢的与大家分享</description>
+    </item>
+    
+    <item>
+      <title>RakNet简单应用——hello World(服务器端)</title>
+      <link>https://cppfans.org/901.html</link>
+      <pubDate>Sun, 23 Oct 2011 14:32:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/901.html</guid>
+      <description>我们学习很多编程语言的时候都是从Hello world开始的，所以这次我们也打算开始从hello world写起，不过本文只写了服务器端，客户端后面一篇文章会放出来的，一个人写有点无聊，而且工程配置比较麻烦，一切都得按项目标准来，不能随便写写就好了，为了以后也可以用，就标准些吧。 (不</description>
+    </item>
+    
+    <item>
+      <title>RakNet简单介绍，最新版本分享</title>
+      <link>https://cppfans.org/877.html</link>
+      <pubDate>Tue, 11 Oct 2011 14:58:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/877.html</guid>
+      <description>前一阵简单的看了看RakNet的东西，觉得挺好用，想写一点东西给大家分享，还是从最基础的讲起吧，虽然有点俗套，不过真不知道怎么写这些东西，各位见谅。 什么是RakNet？ Raknet是一个基于UDP网络传输协议的C++网络库，允许程序员在他们自己的程序中实现高效的网络传输服务。通常</description>
+    </item>
+    
+    <item>
+      <title>游戏服务器程序基础1-内存/类型转换/编程习惯</title>
+      <link>https://cppfans.org/85.html</link>
+      <pubDate>Wed, 29 Dec 2010 04:57:25 +0000</pubDate>
+      
+      <guid>https://cppfans.org/85.html</guid>
+      <description>内存管理方式 游戏服务端的工作主要就是实时的处理用户的逻辑，存取，大量数据包的收发，这其中，网络因素是一个重要的原因，这个东西无法避免，但是更重要的是程序内部的运作方式，通常我们知道，程序中最耗资源与硬件的不是程序的执行和操作，主要是内存和资源的频繁切换，让CPU和内存一直在忙。其</description>
+    </item>
+    
+  </channel>
+</rss>

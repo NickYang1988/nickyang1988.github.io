@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>订阅 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%AE%A2%E9%98%85/</link>
+    <description>Recent content in 订阅 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 25 Oct 2012 01:00:08 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%AE%A2%E9%98%85/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何增加博客的订阅量？</title>
+      <link>https://cppfans.org/1389.html</link>
+      <pubDate>Thu, 25 Oct 2012 01:00:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1389.html</guid>
+      <description>订阅服务是如今各个网站都会增加的一个功能，他可以使读者第一时间获得订阅网站的新内容，同时好的订阅方式会让留住一大批读者和用户。国内主要提供订阅服务网站有那么几个，用的多的主要是FeedSky，下来应该是google的Feed burner和腾讯的QQ邮件订阅了，订阅服务现在免费提供</description>
+    </item>
+    
+  </channel>
+</rss>

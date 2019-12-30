@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>翻译文档 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BF%BB%E8%AF%91%E6%96%87%E6%A1%A3/</link>
+    <description>Recent content in 翻译文档 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 02 Jun 2012 15:14:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BF%BB%E8%AF%91%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(5)——SystemAddress</title>
+      <link>https://cppfans.org/1333.html</link>
+      <pubDate>Sat, 02 Jun 2012 15:14:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1333.html</guid>
+      <description>什么是系统地址？ 系统地址是网络中包含系统二进制IP地址和端口的结构体。这个结构体定义在RakNetTypes.h文件中，这里有一些你需要的系统地址的例子。 服务器收到一个特定客户端的消息，同时想要中转给其他客户端。你需要在发送函数中指定发送者的系统地址(在Packet::syste</description>
+    </item>
+    
+    <item>
+      <title>[网络开发]RakNet文档翻译(2)——Connecting</title>
+      <link>https://cppfans.org/1299.html</link>
+      <pubDate>Sun, 15 Apr 2012 14:37:29 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1299.html</guid>
+      <description>Connecting to other systems &amp;nbsp; 找到连接的对象 下面是5种连接到其他系统的方法： 1.直接通过IP地址(前提是你已经知道该IP) 2.LAN广播 3.使用云服务器或者云客户端插件 4.使用大厅服务器或者房间插件(译者注：类型与游戏大厅和游戏房间的模式，想想QQ棋牌游戏) 5.使用DirectoryServer.p</description>
+    </item>
+    
+  </channel>
+</rss>

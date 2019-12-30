@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Startup on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Startup/</link>
+    <description>Recent content in Startup on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 08 Apr 2012 11:05:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Startup/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]Raknet文档翻译(1)——Startup</title>
+      <link>https://cppfans.org/1239.html</link>
+      <pubDate>Sun, 08 Apr 2012 11:05:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1239.html</guid>
+      <description>开始Raknet [cpp] StartupResult RakPeer::Startup( unsigned short maxConnections, SocketDescriptor * socketDescriptors,unsigned socketDescriptorCount, int threadPriority ); [/cpp] 第一件你应该做的事情是调用RakpeerInterface::StartUp()函数，Startup()函数将会： 1.生成RakNet Guid，一个RakpeerInterface的唯一实例，你可以通过下面函数得到这个Guid [cpp] RakNetGUID g = rakPeer-&amp;gt;GetGuidFormSystemAddress(</description>
+    </item>
+    
+  </channel>
+</rss>

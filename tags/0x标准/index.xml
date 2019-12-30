@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>0x标准 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/0x%E6%A0%87%E5%87%86/</link>
+    <description>Recent content in 0x标准 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 22 Jan 2014 05:00:05 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/0x%E6%A0%87%E5%87%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]C&#43;&#43;强大背后</title>
+      <link>https://cppfans.org/1557.html</link>
+      <pubDate>Wed, 22 Jan 2014 05:00:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1557.html</guid>
+      <description>在31年前(1979年)，一名刚获得博士学位的研究员，为了开发一个软件项目发明了一门新编程语言，该研究员名为Bjarne Stroustrup，该门语言则命名为——C with classes，四年后改称为C++。C++是一门通用编程语言，支持多种编程范式，包括过程式、面向对象(object</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 0x之auto - 从初始化中推断数据类型</title>
+      <link>https://cppfans.org/1398.html</link>
+      <pubDate>Wed, 07 Nov 2012 01:40:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1398.html</guid>
+      <description>引言 曾几何时，C++ 0x出现在我们眼前，我们还在苦逼的用老的规则写代码，因为我们是码畜，我们的顶头上司要求我们必须用土的掉渣的VS2005来写代码，并且用各种存在很棘手问题的库，还有我们的用户都用的XP，新的库包含一些其他的内容，用户根本都没法用，所以我们依然苦逼着。不过曙光就在</description>
+    </item>
+    
+    <item>
+      <title>C&#43;&#43; 0x之右值引用</title>
+      <link>https://cppfans.org/1397.html</link>
+      <pubDate>Sun, 04 Nov 2012 09:39:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1397.html</guid>
+      <description>C++ 0x标准出来有一段时间了，一直没时间看，导致最近看一些代码完全不明白是什么意思了，只好硬着头皮来看了。 这次先说一个简单的，右值引用。 关于引用，大家都很清楚了，只会做一标识，而不会拷贝对象，例如：int a = 0; int&amp;amp; b = a; 这个就是传统的引用，如今也称为左值引用，一般我们将引用用在函数返</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>架构 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%9E%B6%E6%9E%84/</link>
+    <description>Recent content in 架构 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 28 Apr 2016 10:12:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%9E%B6%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]我在系统设计上犯过的14个错</title>
+      <link>https://cppfans.org/2111.html</link>
+      <pubDate>Thu, 28 Apr 2016 10:12:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2111.html</guid>
+      <description>转自:http://hellojava.info/?p=458 在上篇《架构师画像》的文章中提到了自己在系统设计上犯过的一些错，觉得还挺有意义的，这篇文章就来回顾下自己近八年来所做的一些系统设计，看看犯的一些比较大的血淋淋的错误（很多都是推倒重来），这八年来主要做了三个基础技术产品</description>
+    </item>
+    
+    <item>
+      <title>[投稿]一年工作总结 (单进程网游服务器框架介绍)</title>
+      <link>https://cppfans.org/1624.html</link>
+      <pubDate>Thu, 03 Apr 2014 06:25:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1624.html</guid>
+      <description>工作已经满一年了。。。记得还是去年十月多的时候来广州找工作的，找了大概一个星期左右，然后找到这家公司后就一直待到现在。今年毕业的时候回了趟学校，到现在工作时间大概有一年了。第一个手游项目已经上线有一段时间了，还不知道盈利情况怎么样，又开始了一个新的卡牌游戏。工作一直挺充实的，第一</description>
+    </item>
+    
+    <item>
+      <title>浅析国内某种端游服务器架构</title>
+      <link>https://cppfans.org/1404.html</link>
+      <pubDate>Thu, 15 Nov 2012 01:40:20 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1404.html</guid>
+      <description>做服务器开发两年了，也没学到太多的东西，更多的应该是处理问题的思路。而思路决定你如何处理问题，我觉得这个很关键，比你噼里啪啦的打了一通代码要好一些。 现在逐渐从游戏服务器的逻辑层转到了稍微深层次一点的内容了，比如服务器架构，服务器AOI，网络底层，一些库等等，所以也慢慢的与大家分享</description>
+    </item>
+    
+  </channel>
+</rss>

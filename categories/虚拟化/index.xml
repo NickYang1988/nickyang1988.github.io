@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>虚拟化 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/%E8%99%9A%E6%8B%9F%E5%8C%96/</link>
+    <description>Recent content in 虚拟化 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 04 Jul 2016 06:53:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/%E8%99%9A%E6%8B%9F%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]你闺女也能看懂的插画版Kubernetes指南</title>
+      <link>https://cppfans.org/2133.html</link>
+      <pubDate>Mon, 04 Jul 2016 06:53:36 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2133.html</guid>
+      <description>编者按：Matt Butcher是Deis的平台架构师，热爱哲学，咖啡和精雕细琢的代码。有一天女儿走进书房问他什么是Kubernetes，于是就有了这本插画版的Kubernetes指南，讲述了勇敢的Phippy（一个PHP应用），在Kubernetes的冒险故事，满满的父爱有木有！</description>
+    </item>
+    
+    <item>
+      <title>[转]为什么我们抛弃ECS而选择了Kubernetes</title>
+      <link>https://cppfans.org/2078.html</link>
+      <pubDate>Tue, 19 Jan 2016 12:00:44 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2078.html</guid>
+      <description>转载自：http://mp.weixin.qq.com/s?__biz=MzA5OTAyNzQ2OA==&amp;mid=401368207&amp;idx=1&amp;sn=6bb2b3fe6ece8f41e7f2e2a54f52e46c&amp;scene=1&amp;srcid=0113d03chnJkdvhm8</description>
+    </item>
+    
+    <item>
+      <title>Docker初窥</title>
+      <link>https://cppfans.org/2020.html</link>
+      <pubDate>Mon, 16 Nov 2015 14:34:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2020.html</guid>
+      <description>&lt;p&gt;提前多说一句：后续的文章不会是直接发一整篇文章出来，而是有点顺手笔记的意思，想到哪儿写到哪儿，可能会写不完一片，会用TODO来标识出来，也有可能会跳过某一段直接写后面，写完后可能还会重新在整理，大家请知晓。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

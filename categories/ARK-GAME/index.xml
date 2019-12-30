@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ARK-GAME on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/ARK-GAME/</link>
+    <description>Recent content in ARK-GAME on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 16 Nov 2017 06:39:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/ARK-GAME/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ArkGameFrame开源跨平台游戏服务器框架0.2.0版本发布</title>
+      <link>https://cppfans.org/2224.html</link>
+      <pubDate>Thu, 16 Nov 2017 06:39:03 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2224.html</guid>
+      <description>各位朋友好，ArkGameFrame 0.2.0 版本发布了，Ark 是一个游戏服务器框架，主要提供了抽象的数据组织结构和通用的服务器架构，主要特性包括： 抽象且通用的数据组织框架 面向数据和接口编程 事件和数据驱动模式 插件化和模块化 自由组织的分布式架构 跨平台 Excel 配置文件(对策划友好) 高性能(libe</description>
+    </item>
+    
+    <item>
+      <title>ArkGameFrame实战系列文章说明</title>
+      <link>https://cppfans.org/2171.html</link>
+      <pubDate>Mon, 12 Sep 2016 09:10:00 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2171.html</guid>
+      <description>ArkGameFrame是一个面向中小型企业的开源游戏服务器敏捷开发框架，继承自NFrame，主要是项目的管理方式不同，这块经过沟通，很难有一个大家都满意的结果，所以暂时新作一个组织结构来管理这几个项目，后面再看结果是否合并。 关于这个框架的设计过程的介绍文章，请查看NF博客。 前面</description>
+    </item>
+    
+  </channel>
+</rss>

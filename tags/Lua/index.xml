@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lua on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Lua/</link>
+    <description>Recent content in Lua on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 09 Jan 2013 14:05:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Lua/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为何python现在越来越多的人在用了？</title>
+      <link>https://cppfans.org/1436.html</link>
+      <pubDate>Wed, 09 Jan 2013 14:05:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1436.html</guid>
+      <description>曾几何时，python这门语言我并没有听过，那个时候只知道C，后来学了C++，用了C++ Builder和VS，再后来学了C#的皮毛，继之是Lua，觉得差不多了。但是最近买了本python的书之后，觉得python处理问题更简便了。 C++之父Bjarne Stroustrup曾经说过</description>
+    </item>
+    
+    <item>
+      <title>Lua基础语法</title>
+      <link>https://cppfans.org/113.html</link>
+      <pubDate>Tue, 04 Jan 2011 16:26:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/113.html</guid>
+      <description>注释 像我们这样的码农，接触新语言第一个想的肯定是如何打注释，代码写不出来，伪代码总能写的出来一些。Lua中的注释使用两个短线来表示本行以后是注释内容，使用&amp;ndash;[[ &amp;ndash;]]来注释多行内容，例如 &amp;lt;br /&amp;gt; print (1); --打印1，单行注释&amp;lt;/p&amp;gt; &amp;lt;p&amp;gt;print (1); --[[这里是多行</description>
+    </item>
+    
+    <item>
+      <title>Lua语言语法讲解的一点准备文章</title>
+      <link>https://cppfans.org/107.html</link>
+      <pubDate>Mon, 03 Jan 2011 07:55:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/107.html</guid>
+      <description>(本文主要是对Lua的一点小解释和对后面的准备，如果读者不喜欢，可以略过……) 什么是Lua语言？ Lua是一种轻量语言，它的官方版本只包括一个精简的核心和最基本的库。这使得Lua体积小、启动速度快。它用标准C语言编写并以源 代码形式开放，编译后仅仅一百餘K，可以很方便的嵌入别的程式裡</description>
+    </item>
+    
+    <item>
+      <title>[教程预告]lua系列文章通知</title>
+      <link>https://cppfans.org/102.html</link>
+      <pubDate>Sun, 02 Jan 2011 14:36:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/102.html</guid>
+      <description>最近一直在做关于脚本方面的东西，所以就想写一写关于自己对脚本这块东西的小见解。 脚本系统在一个游戏中发挥的作用个人觉得非常巨大，比如游戏中的任务，活动，AI，玩法等等很多东西都要用脚本来控制。脚本对游戏的可玩性和多玩性做了很大的贡献。 脚本语言可谓种类繁多，比如lua, perl, python, 甚至是自定</description>
+    </item>
+    
+  </channel>
+</rss>

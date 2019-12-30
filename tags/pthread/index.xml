@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pthread on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/pthread/</link>
+    <description>Recent content in pthread on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 03 Dec 2013 14:15:37 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/pthread/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux下link错误undefined reference&#39;dlclose&#39;</title>
+      <link>https://cppfans.org/1519.html</link>
+      <pubDate>Tue, 03 Dec 2013 14:15:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1519.html</guid>
+      <description>最近因为换了工作，服务器是在linux环境下，又开始捣鼓linux了，与同事两天的奋战中，发现差不多可以写一本《某哥的linux私房菜》了，开个玩笑。 对于linux我持中立态度，而且我认为linux这么多年发展比较慢的原因是因为桌面化做的不好或者不够好，所以我比较偏爱ubuntu</description>
+    </item>
+    
+    <item>
+      <title>[转载]Pthreads mutex VS Pthreads spinlock</title>
+      <link>https://cppfans.org/1426.html</link>
+      <pubDate>Wed, 26 Dec 2012 12:15:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1426.html</guid>
+      <description>转载自：http://www.searchtb.com/2011/01/pthreads-mutex-vs-pthread-spinlock.html 锁机制(lock) 是多线程编程中最常用的同步机制,用来对多线程间共享的临界区(Critical Section) 进行保护。 Pthreads提供了多</description>
+    </item>
+    
+  </channel>
+</rss>

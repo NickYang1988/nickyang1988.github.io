@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网络设置 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/</link>
+    <description>Recent content in 网络设置 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 07 Sep 2012 17:01:38 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vmvare虚拟机下的Ubuntu如何设置设置无线联网？</title>
+      <link>https://cppfans.org/1354.html</link>
+      <pubDate>Fri, 07 Sep 2012 17:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1354.html</guid>
+      <description>今天晚上突然心血来潮，想更新一下很久不用的Ubuntu系统，因为已经到了12.04LTS版本了，打开vmvare启动电源后发现网络都无法连接，mozilla thunderbird提示无法连接网络，上次打开还没有问题，察看了网络设置是选择的NAT，按道理是没有任何问题的，以往设置网</description>
+    </item>
+    
+  </channel>
+</rss>

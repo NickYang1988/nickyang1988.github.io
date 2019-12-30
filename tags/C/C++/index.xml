@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C/C&#43;&#43; on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/C/C&#43;&#43;/</link>
+    <description>Recent content in C/C&#43;&#43; on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 19 Feb 2014 05:49:02 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/C/C++/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>glog使用与功能修改</title>
+      <link>https://cppfans.org/1566.html</link>
+      <pubDate>Wed, 19 Feb 2014 05:49:02 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1566.html</guid>
+      <description>在写代码的过程中，打log肯定是少不了的，毕竟不能总靠调试来发现问题。log库的选用就很纠结了，成熟的log库非常多，log4cpp、log4cxx、poco.log、boost.log、glog等等，以前我用过log4cxx，觉得配置巨麻烦，一大段看着好纠结，不过用起来很舒服。</description>
+    </item>
+    
+    <item>
+      <title>静态编译libevent</title>
+      <link>https://cppfans.org/1564.html</link>
+      <pubDate>Thu, 30 Jan 2014 15:38:26 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1564.html</guid>
+      <description>libevent简介 libevent是一个事件触发的网络库，适用于windows、linux、bsd等多种平台，内部使用select、epoll、kqueue等系统调用管理事件机制。著名分布式缓存软件memcached也是libevent based，而且libevent在使用上可</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04下安装eclipse C/C&#43;&#43;开发环境</title>
+      <link>https://cppfans.org/1413.html</link>
+      <pubDate>Mon, 03 Dec 2012 01:20:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1413.html</guid>
+      <description>前段时间在linux上一直使用的是codeblocks，但是感觉提示还是不智能，所以想试试eclipse，下载安装。 安装方法有两种，都很简单。 方法一 打开Ubuntu软件中心，查找到eclipse，然后安装即可 方法二 打开终端 sudo apt-get install eclipse sudo ap-get install eclipse-pde sudo ap-get install eclipse-jdt 因为我们需要开发C/C++项目，所</description>
+    </item>
+    
+    <item>
+      <title>Windows平台下如何检测C/C&#43;&#43;内存泄露？</title>
+      <link>https://cppfans.org/1381.html</link>
+      <pubDate>Sun, 14 Oct 2012 11:02:11 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1381.html</guid>
+      <description>对于C/C++程序员来说，效率和优雅性大多数情况是对立的，我们经常会在这里面抉择，到底应该怎么取舍。而说到效率，就不得不说让这类程序员头疼了N年的问题，内存泄露，至少从C/C++发明以来很多人都在头疼。而Java/C#之类的语言并不存在这种问题，因为他们从堆中申请内存，根据引用计</description>
+    </item>
+    
+    <item>
+      <title>【C/C&#43;&#43;】sprintf中如何将容器作为可变参数列表传入</title>
+      <link>https://cppfans.org/254.html</link>
+      <pubDate>Wed, 02 Mar 2011 16:00:15 +0000</pubDate>
+      
+      <guid>https://cppfans.org/254.html</guid>
+      <description>近日做脚本接口时遇到一个变参的传入接口，因为我们游戏中的脚本系统是自定义的，这个接口的参数因为是可变，所以将参数读进来存入一个Vector容器中，然后利用Sprintf格式化之后发送给客户端做逻辑，以前的做法就是switch&amp;hellip;case&amp;hellip;这个容器中元素的</description>
+    </item>
+    
+  </channel>
+</rss>

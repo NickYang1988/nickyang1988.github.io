@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>简单应用 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/</link>
+    <description>Recent content in 简单应用 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 23 Oct 2011 14:32:16 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>RakNet简单应用——hello World(服务器端)</title>
+      <link>https://cppfans.org/901.html</link>
+      <pubDate>Sun, 23 Oct 2011 14:32:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/901.html</guid>
+      <description>我们学习很多编程语言的时候都是从Hello world开始的，所以这次我们也打算开始从hello world写起，不过本文只写了服务器端，客户端后面一篇文章会放出来的，一个人写有点无聊，而且工程配置比较麻烦，一切都得按项目标准来，不能随便写写就好了，为了以后也可以用，就标准些吧。 (不</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Linux/</link>
+    <description>Recent content in Linux on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 25 Jun 2015 06:41:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]linux下TCP/IP及内核参数优化调优</title>
+      <link>https://cppfans.org/1945.html</link>
+      <pubDate>Thu, 25 Jun 2015 06:41:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1945.html</guid>
+      <description>via:http://www.sudops.com/linux-kernel-tcp-ip-sysctl-optimize.html Linux下TCP/IP及内核参数优化有多种方式，参数配置得当可以大大提高系统的性能，也可以根据特定场景进行专门的优化，如TIME_WAIT过高，DDOS攻击等等。 如下配置是写在sysctl.conf中，可使用sysctl -p生效，文中附带了一些默认值和中文解释（从网上收集和翻</description>
+    </item>
+    
+    <item>
+      <title>linux下升级gcc的方法 - 亲测可用</title>
+      <link>https://cppfans.org/1719.html</link>
+      <pubDate>Fri, 19 Sep 2014 09:33:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1719.html</guid>
+      <description>由于工作主要平台换到了linux上，而linux因为源上没有比较新的gcc，只有4.7，而我们用到了C++11， 只好自己升级了，升级方法也比较简单，就是耗时间。 1.下载gcc最新的源码包 wget http://gcc.skazkaforyou.com/releases/gcc-4.9.1/gcc-4.9.1.tar.gz 2.解压缩 tar -xf gcc-4.9.1.tar.gz cd gcc-4.9.1 4.运行download_prerequisites脚本， ./contrib/download_prerequisites ，这个脚本</description>
+    </item>
+    
+    <item>
+      <title>linux常见问题汇总(长期顶置更新)</title>
+      <link>https://cppfans.org/1544.html</link>
+      <pubDate>Thu, 27 Feb 2014 03:09:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1544.html</guid>
+      <description>&lt;h3 id=&#34;2014-12-23更新&#34;&gt;2014/12/23更新：&lt;/h3&gt;
+
+&lt;p&gt;7.glibc版本查看&lt;/p&gt;
+
+&lt;p&gt;把libc.so.6当成执行文件运行下就可以看到版本号&lt;/p&gt;
+
+&lt;p&gt;6.GLIBCXX版本查看&lt;/p&gt;
+
+&lt;p&gt;strings /usr/lib64/libstdc++.so.6 | grep GLIBCXX&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;5.mysql++静态编译方法&lt;/p&gt;
+
+&lt;p&gt;mysql++下载来后无法静态编译，加了 &amp;ndash;enable-static=yes也不行，不过我们可以直接使用ar命令编译.o文件，命令如下&lt;/p&gt;
+
+&lt;pre&gt;ar rcu libmysqlpp.a mysqlpp_beemutex.o mysqlpp_cmdline.o mysqlpp_connection.o mysqlpp_cpool.o mysqlpp_datetime.o mysqlpp_dbdriver.o mysqlpp_field_names.o mysqlpp_field_types.o mysqlpp_manip.o mysqlpp_myset.o mysqlpp_mysql++.o mysqlpp_mystring.o mysqlpp_null.o mysqlpp_options.o mysqlpp_qparms.o mysqlpp_query.o mysqlpp_result.o mysqlpp_row.o mysqlpp_scopedconnection.o mysqlpp_sql_buffer.o mysqlpp_sqlstream.o mysqlpp_ssqls2.o mysqlpp_stadapter.o mysqlpp_tcp_connection.o mysqlpp_transaction.o mysqlpp_type_info.o mysqlpp_uds_connection.o mysqlpp_utility.o mysqlpp_vallist.o mysqlpp_wnp_connection.o ssqls2parse_parsev2.o&lt;/pre&gt;
+
+&lt;p&gt;然后直接使用libmysqlpp.a就好了&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;4.linux下服务自启动几种方法&lt;/p&gt;
+
+&lt;p&gt;(1)chkconfig&lt;/p&gt;
+
+&lt;p&gt;例如将httpd自启动，首先查看httpd服务是否已经自启动了&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --list | grep httpd&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:off   3:off   4:off   5:off   6:off&lt;/pre&gt;
+
+&lt;p&gt;如果结果是上述，则使用下面命令打开自启动&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig httpd on&lt;/pre&gt;
+
+&lt;pre&gt;httpd           0:off   1:off   2:on    3:on    4:on    5:on    6:off&lt;/pre&gt;
+
+&lt;p&gt;如果httpd没有加入自启动列表，先增加进列表中&lt;/p&gt;
+
+&lt;pre&gt;#chkconfig --add httpd&lt;/pre&gt;
+
+&lt;p&gt;(2)修改rc.local文件&lt;/p&gt;
+
+&lt;p&gt;例如我们想自启动mysqld_safe，在rc.local中增加如下命令&lt;/p&gt;
+
+&lt;pre&gt;#mysql&lt;/pre&gt;
+
+&lt;pre&gt;/usr/local/mysql/bin/mysqld_safe &amp;&lt;/pre&gt;
+
+&lt;p&gt;保存后就可以了&lt;/p&gt;
+
+&lt;p&gt;(3)ln软链接的方法就不做介绍了，感觉太麻烦了，大家请自行查阅&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>linux下link错误undefined reference&#39;dlclose&#39;</title>
+      <link>https://cppfans.org/1519.html</link>
+      <pubDate>Tue, 03 Dec 2013 14:15:37 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1519.html</guid>
+      <description>最近因为换了工作，服务器是在linux环境下，又开始捣鼓linux了，与同事两天的奋战中，发现差不多可以写一本《某哥的linux私房菜》了，开个玩笑。 对于linux我持中立态度，而且我认为linux这么多年发展比较慢的原因是因为桌面化做的不好或者不够好，所以我比较偏爱ubuntu</description>
+    </item>
+    
+    <item>
+      <title>[转载]10 个你必须掌握的超酷 VI 命令技巧</title>
+      <link>https://cppfans.org/1485.html</link>
+      <pubDate>Thu, 27 Jun 2013 12:23:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1485.html</guid>
+      <description>via:http://wiki.itivy.com/?p=285 摘要：大部分Linux开发者对vi命相当熟悉，可是遗憾的是，大部分开发者都只能掌握一些最常用的Linux vi命令，下面介绍的10个vi命令虽然很多不为人知，但是在实际应用中又能让你大大提高效率。 在使用vi 编辑器时—无论是初次使用的用户，还是有经验的用户—大多数人往往只掌握核心命</description>
+    </item>
+    
+    <item>
+      <title>为何python现在越来越多的人在用了？</title>
+      <link>https://cppfans.org/1436.html</link>
+      <pubDate>Wed, 09 Jan 2013 14:05:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1436.html</guid>
+      <description>曾几何时，python这门语言我并没有听过，那个时候只知道C，后来学了C++，用了C++ Builder和VS，再后来学了C#的皮毛，继之是Lua，觉得差不多了。但是最近买了本python的书之后，觉得python处理问题更简便了。 C++之父Bjarne Stroustrup曾经说过</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll - epoll例子以及分析</title>
+      <link>https://cppfans.org/1419.html</link>
+      <pubDate>Sun, 06 Jan 2013 01:15:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1419.html</guid>
+      <description>上篇我们讲到epoll的函数和性能。这一篇用用这些个函数，给出一个最简单的epoll的例子。 // // a simple echo server using epoll in linux // // 2009-11-05 // by sparkling // #include &amp;lt;sys/socket.h&amp;gt; #include &amp;lt;sys/epoll.h&amp;gt; #include &amp;lt;netinet/in.h&amp;gt; #include &amp;lt;arpa/inet.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; #define MAX_EVENTS 500 struct myevent_s { int fd; void (*call_back)(int fd, int events, void *arg); int events; void *arg; int status; // 1: in epoll wait list, 0 not in char buff[128]; // recv data buffer int len; long last_active; // last active time }; // set event void EventSet(myevent_s *ev, int fd, void (*call_back)(int, int,</description>
+    </item>
+    
+    <item>
+      <title>[转载]Pthreads mutex VS Pthreads spinlock</title>
+      <link>https://cppfans.org/1426.html</link>
+      <pubDate>Wed, 26 Dec 2012 12:15:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1426.html</guid>
+      <description>转载自：http://www.searchtb.com/2011/01/pthreads-mutex-vs-pthread-spinlock.html 锁机制(lock) 是多线程编程中最常用的同步机制,用来对多线程间共享的临界区(Critical Section) 进行保护。 Pthreads提供了多</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll - epoll函数深入讲解</title>
+      <link>https://cppfans.org/1418.html</link>
+      <pubDate>Sun, 16 Dec 2012 10:14:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1418.html</guid>
+      <description>前一篇大致讲了一下epoll是个什么东西，优点等内容，这篇延续上一篇的内容，主要是分析epoll的函数，epoll高性能的深入分析。 epoll的三大函数 1.创建epoll fd函数 int epoll_create(int size); epoll_create()创建一个epoll的事例，通知内核需要监听size个fd。size指</description>
+    </item>
+    
+    <item>
+      <title>浅析epoll-为何多路复用I/O要使用epoll</title>
+      <link>https://cppfans.org/1417.html</link>
+      <pubDate>Mon, 10 Dec 2012 01:20:30 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1417.html</guid>
+      <description>现如今，网络通讯中用epoll(linux)和IOCP(windows)几乎是大家津津乐道的东西，不为别的，就因为高效，所以大家喜欢用。IOCP的基础东西已经讲过了，可翻阅《IOCP浅析》 《IOCP浅析[二]——IOCP出现的意义和函数接口》. 什么是epoll？ epoll是Lin</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04下安装eclipse C/C&#43;&#43;开发环境</title>
+      <link>https://cppfans.org/1413.html</link>
+      <pubDate>Mon, 03 Dec 2012 01:20:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1413.html</guid>
+      <description>前段时间在linux上一直使用的是codeblocks，但是感觉提示还是不智能，所以想试试eclipse，下载安装。 安装方法有两种，都很简单。 方法一 打开Ubuntu软件中心，查找到eclipse，然后安装即可 方法二 打开终端 sudo apt-get install eclipse sudo ap-get install eclipse-pde sudo ap-get install eclipse-jdt 因为我们需要开发C/C++项目，所</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下如何安装boost？</title>
+      <link>https://cppfans.org/1402.html</link>
+      <pubDate>Tue, 13 Nov 2012 01:30:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1402.html</guid>
+      <description>最近有开始折腾Linux了，没办法，太多的东西都是在Linux下很高效并且不提供VS的工程文件，所以还是学学Linux吧，免得以后被人说做服务器竟然不懂Linux。 这篇文章的前提是系统是Ubuntu12.04LTS，系统完全更新过，并且一系列编译工具都已经安装过了，如果你还不清楚</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下输入法不显示问题</title>
+      <link>https://cppfans.org/1360.html</link>
+      <pubDate>Sat, 08 Sep 2012 17:07:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1360.html</guid>
+      <description>ubuntu下的默认输入法是ibus，还有一个sunpinyin，个人觉得ibus已经不比任何国内的输入法差了，词组很精确，非常完美。 那天遇到的输入法不显示可选项，着实比较郁闷，后来研究了下可能是键盘设备出了问题，ubuntu右上角有一个键盘的标志，里面有首选项可以选择输入法，并</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04LTS下如何安装和彻底卸载xfce4？</title>
+      <link>https://cppfans.org/1356.html</link>
+      <pubDate>Sat, 08 Sep 2012 16:14:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1356.html</guid>
+      <description>今天将Ubuntu12.04更新完了，用的网易的源，更新速度还是很给力的，平均500多K的下载速度。发现虚拟机上unity界面还是比较卡的，想换成gnome3.6试一下，结果rangerlee说xfce和lxde桌面很清爽，并且轻量占用内存少，打算试试。 xfce的安装命令为： sudo apt-get</description>
+    </item>
+    
+    <item>
+      <title>vmvare虚拟机下的Ubuntu如何设置设置无线联网？</title>
+      <link>https://cppfans.org/1354.html</link>
+      <pubDate>Fri, 07 Sep 2012 17:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1354.html</guid>
+      <description>今天晚上突然心血来潮，想更新一下很久不用的Ubuntu系统，因为已经到了12.04LTS版本了，打开vmvare启动电源后发现网络都无法连接，mozilla thunderbird提示无法连接网络，上次打开还没有问题，察看了网络设置是选择的NAT，按道理是没有任何问题的，以往设置网</description>
+    </item>
+    
+  </channel>
+</rss>

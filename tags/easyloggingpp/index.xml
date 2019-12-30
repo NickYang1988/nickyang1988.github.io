@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>easyloggingpp on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/easyloggingpp/</link>
+    <description>Recent content in easyloggingpp on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 03 Apr 2015 02:14:11 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/easyloggingpp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>介绍一个headonly的log库easylogging&#43;&#43;</title>
+      <link>https://cppfans.org/1901.html</link>
+      <pubDate>Fri, 03 Apr 2015 02:14:11 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1901.html</guid>
+      <description>因为TX的log要求按照小时滚动，并且按照大小滚动，原来的glog设置完大小后，容量了就不会再写入了，而且按小时滚动也很麻烦，所以就找了找其他的log库。 主要要求简单上手，支持大小和时间滚动，不需要改动太多。 看了之前用过的log4cxx等库，发现编译成静态文件后太大了，我们又必须</description>
+    </item>
+    
+  </channel>
+</rss>

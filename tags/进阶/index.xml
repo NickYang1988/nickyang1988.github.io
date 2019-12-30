@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>进阶 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E8%BF%9B%E9%98%B6/</link>
+    <description>Recent content in 进阶 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 19 Sep 2015 08:14:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E8%BF%9B%E9%98%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]七个对我最重要的职业建议（译文）</title>
+      <link>https://cppfans.org/1995.html</link>
+      <pubDate>Sat, 19 Sep 2015 08:14:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1995.html</guid>
+      <description>作者： 阮一峰 日期： 2015年9月18日 Nicholas C. Zakas 是全世界最著名的 JavaScript 程序员之一。 两年前，他写了一篇长文，回顾自己的职业生涯，提到七个对他来说最重要的建议。 我读完很受启发，决定做一点摘录。你可以先读下面的精简版，再去读全文。 =============================== 七个对我最好的职业建议（精简版） 作者：Nicholas C. Zakas 译者</description>
+    </item>
+    
+  </channel>
+</rss>

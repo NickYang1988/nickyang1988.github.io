@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%9D%A2%E8%AF%95/</link>
+    <description>Recent content in 面试 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 14 Feb 2016 02:18:17 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]为什么面试官很少向求职者解释原因</title>
+      <link>https://cppfans.org/2099.html</link>
+      <pubDate>Sun, 14 Feb 2016 02:18:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2099.html</guid>
+      <description>_本文译自Linkedin，作者 Ambra Benjamin。_ 作为一个面试官，拒绝人是我们工作中最糟糕的部分。相信我，就像求职者害怕接到拒绝电话一样，我也害怕打出这样的电话。虽然你也会遇到一些公司会详细解释原因，但多数情况下，你得到的将是简单的拒绝电话或者邮件，没有更多的详细解释。求职过</description>
+    </item>
+    
+  </channel>
+</rss>

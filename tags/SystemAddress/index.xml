@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SystemAddress on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/SystemAddress/</link>
+    <description>Recent content in SystemAddress on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 02 Jun 2012 15:14:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/SystemAddress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(5)——SystemAddress</title>
+      <link>https://cppfans.org/1333.html</link>
+      <pubDate>Sat, 02 Jun 2012 15:14:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1333.html</guid>
+      <description>什么是系统地址？ 系统地址是网络中包含系统二进制IP地址和端口的结构体。这个结构体定义在RakNetTypes.h文件中，这里有一些你需要的系统地址的例子。 服务器收到一个特定客户端的消息，同时想要中转给其他客户端。你需要在发送函数中指定发送者的系统地址(在Packet::syste</description>
+    </item>
+    
+  </channel>
+</rss>

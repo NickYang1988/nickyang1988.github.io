@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/Ubuntu/</link>
+    <description>Recent content in Ubuntu on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 03 Dec 2012 01:20:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/Ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu12.04下安装eclipse C/C&#43;&#43;开发环境</title>
+      <link>https://cppfans.org/1413.html</link>
+      <pubDate>Mon, 03 Dec 2012 01:20:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1413.html</guid>
+      <description>前段时间在linux上一直使用的是codeblocks，但是感觉提示还是不智能，所以想试试eclipse，下载安装。 安装方法有两种，都很简单。 方法一 打开Ubuntu软件中心，查找到eclipse，然后安装即可 方法二 打开终端 sudo apt-get install eclipse sudo ap-get install eclipse-pde sudo ap-get install eclipse-jdt 因为我们需要开发C/C++项目，所</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu下如何安装boost？</title>
+      <link>https://cppfans.org/1402.html</link>
+      <pubDate>Tue, 13 Nov 2012 01:30:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1402.html</guid>
+      <description>最近有开始折腾Linux了，没办法，太多的东西都是在Linux下很高效并且不提供VS的工程文件，所以还是学学Linux吧，免得以后被人说做服务器竟然不懂Linux。 这篇文章的前提是系统是Ubuntu12.04LTS，系统完全更新过，并且一系列编译工具都已经安装过了，如果你还不清楚</description>
+    </item>
+    
+    <item>
+      <title>解决Ubuntu下输入法不显示问题</title>
+      <link>https://cppfans.org/1360.html</link>
+      <pubDate>Sat, 08 Sep 2012 17:07:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1360.html</guid>
+      <description>ubuntu下的默认输入法是ibus，还有一个sunpinyin，个人觉得ibus已经不比任何国内的输入法差了，词组很精确，非常完美。 那天遇到的输入法不显示可选项，着实比较郁闷，后来研究了下可能是键盘设备出了问题，ubuntu右上角有一个键盘的标志，里面有首选项可以选择输入法，并</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu12.04LTS下如何安装和彻底卸载xfce4？</title>
+      <link>https://cppfans.org/1356.html</link>
+      <pubDate>Sat, 08 Sep 2012 16:14:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1356.html</guid>
+      <description>今天将Ubuntu12.04更新完了，用的网易的源，更新速度还是很给力的，平均500多K的下载速度。发现虚拟机上unity界面还是比较卡的，想换成gnome3.6试一下，结果rangerlee说xfce和lxde桌面很清爽，并且轻量占用内存少，打算试试。 xfce的安装命令为： sudo apt-get</description>
+    </item>
+    
+    <item>
+      <title>vmvare虚拟机下的Ubuntu如何设置设置无线联网？</title>
+      <link>https://cppfans.org/1354.html</link>
+      <pubDate>Fri, 07 Sep 2012 17:01:38 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1354.html</guid>
+      <description>今天晚上突然心血来潮，想更新一下很久不用的Ubuntu系统，因为已经到了12.04LTS版本了，打开vmvare启动电源后发现网络都无法连接，mozilla thunderbird提示无法连接网络，上次打开还没有问题，察看了网络设置是选择的NAT，按道理是没有任何问题的，以往设置网</description>
+    </item>
+    
+  </channel>
+</rss>

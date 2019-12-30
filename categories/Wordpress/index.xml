@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/Wordpress/</link>
+    <description>Recent content in Wordpress on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 01 Jul 2014 05:53:24 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/Wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用redis五倍加速WP博客</title>
+      <link>https://cppfans.org/1665.html</link>
+      <pubDate>Tue, 01 Jul 2014 05:53:24 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1665.html</guid>
+      <description>已经换了linode-vps有一段时间了，但是博客的访问速度一直不理想，使用了xcache和eAccelerator，但是速度还是不给力，于是想试试redis这个kv缓存服务，增加了之后，速度提升了5、6倍，下面是使用redis加速wordpress博客的过程。 1.在vps主机上</description>
+    </item>
+    
+    <item>
+      <title>网站设计之CSS精灵图</title>
+      <link>https://cppfans.org/1468.html</link>
+      <pubDate>Sun, 24 Mar 2013 14:48:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1468.html</guid>
+      <description>写完这个标题后，我就后悔了，因为这个标题会让别人误以为我很懂网站设计似的，其实对于web开发我是个外行。没改标题的原因是可以让大家有“虽不懂但觉厉”的感觉。 我研究web技术仅限于折腾我这个博客，当随便翻到某个网站的时候，看到有好的地方，就抄袭过来，我这往大了说应该属于网络犯罪。 今</description>
+    </item>
+    
+    <item>
+      <title>wordpress中加载JQuery库的几种方法</title>
+      <link>https://cppfans.org/1425.html</link>
+      <pubDate>Sun, 23 Dec 2012 06:12:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1425.html</guid>
+      <description>Jquery是继prototype之后又一个优秀的Javascrīpt框架。它是轻量级的js库(压缩后只有21k) ，它兼容CSS3，还兼容各种浏览器 （IE 6.0+, FF 1.5+, Safari 2.0+, Opera 9.0+）。jQuery使用户能更方便地处理HTML documents、events、实现动画效果，并且方便地为网</description>
+    </item>
+    
+    <item>
+      <title>如何增加博客的订阅量？</title>
+      <link>https://cppfans.org/1389.html</link>
+      <pubDate>Thu, 25 Oct 2012 01:00:08 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1389.html</guid>
+      <description>订阅服务是如今各个网站都会增加的一个功能，他可以使读者第一时间获得订阅网站的新内容，同时好的订阅方式会让留住一大批读者和用户。国内主要提供订阅服务网站有那么几个，用的多的主要是FeedSky，下来应该是google的Feed burner和腾讯的QQ邮件订阅了，订阅服务现在免费提供</description>
+    </item>
+    
+    <item>
+      <title>分享仿异次元百度分享工具条</title>
+      <link>https://cppfans.org/1385.html</link>
+      <pubDate>Sat, 20 Oct 2012 10:07:31 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1385.html</guid>
+      <description>现在做网站一个社会化分享工具还是很有必要的，百度在不久前提供了百度分享功能，据说这个功能会让百度更加青睐你的网站。百度提供的分享工具条样式比较单一而且不是太好看，看到异次元的百度分享工具条非常好看，于是仿了一个近似的，先分享出来给大家用。 作者:eliteYang 博客地址:http</description>
+    </item>
+    
+    <item>
+      <title>WordPress修改主题后无法正常显示页面解决方法</title>
+      <link>https://cppfans.org/1066.html</link>
+      <pubDate>Sun, 05 Feb 2012 08:31:55 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1066.html</guid>
+      <description>下午看到一个挺漂亮的主题，下载来想试用下看看效果，结果却导致我的前台页面无法正常显示，成白板儿了，这下郁闷了，难道又要折腾了，悲剧，不过想起来WP的所有配置相关的东西全存在数据库里，去数据库里改了主题不就行了吗？绝佳的好办法。 从空间后台进入phpMyAdmin，打开wp_opti</description>
+    </item>
+    
+  </channel>
+</rss>

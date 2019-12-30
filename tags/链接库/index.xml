@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>链接库 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%93%BE%E6%8E%A5%E5%BA%93/</link>
+    <description>Recent content in 链接库 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 01 Nov 2012 01:40:41 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%93%BE%E6%8E%A5%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lib和Dll的那点事</title>
+      <link>https://cppfans.org/1394.html</link>
+      <pubDate>Thu, 01 Nov 2012 01:40:41 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1394.html</guid>
+      <description>搞程序开发的朋友应该对Lib和Dll很熟悉，对于这两个东西，可谓是几家欢喜几家忧，喜欢的人觉得它可以封装代码，避免别人剽窃，不喜欢的人觉得它很麻烦，干嘛不直接用源文件。而特别是新手对于Lib和Dll的关系和使用完全搞不清楚。 Lib称为静态链接库(static link library)，是</description>
+    </item>
+    
+  </channel>
+</rss>

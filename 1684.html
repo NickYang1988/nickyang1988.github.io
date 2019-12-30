@@ -1,0 +1,1863 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[转]国外程序员推荐：每个程序员都应该读的非编程书 | C&#43;&#43;爱好者博客</title>
+    <meta property="og:title" content="[转]国外程序员推荐：每个程序员都应该读的非编程书 - C&#43;&#43;爱好者博客">
+    <meta property="og:type" content="article">
+        
+    <meta property="article:published_time" content='2014-07-16T01:37:49&#43;08:00'>
+        
+        
+    <meta property="article:modified_time" content='2014-07-16T01:37:49&#43;08:00'>
+        
+    <meta name="Keywords" content="backend,game develop,programming,python,linux,vps,大数据,后端,游戏开发,服务器,机器学习,深度学习,博客,项目管理,python,软件架构,公众号,小程序">
+    <meta name="description" content="[转]国外程序员推荐：每个程序员都应该读的非编程书">
+        <meta name="author" content="NickYang">
+        
+    <meta property="og:url" content="https://cppfans.org/1684.html">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    
+
+
+    
+    
+        <link rel="stylesheet" href='/css/douban.css'>
+    
+        <link rel="stylesheet" href='/css/other.css'>
+    
+</head>
+
+
+<body>
+    <header id="header" class="clearfix">
+    <div class="container">
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <a id="logo" href="https://cppfans.org">
+                        C&#43;&#43;爱好者博客
+                    </a>
+                
+                <p class="description">Be a simple man, 言行相成内外相应</p>
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://cppfans.org">首页</a>
+                    
+                    <a  href="https://cppfans.org/archives/" title="归档">归档</a>
+                    
+                    <a  href="https://cppfans.org/about/" title="关于">关于</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    <style type="text/css">
+    .post-toc {
+        position: fixed;
+        width: 200px;
+        margin-left: -210px;
+        padding: 5px 10px;
+        font-family: Athelas, STHeiti, Microsoft Yahei, serif;
+        font-size: 12px;
+        border: 1px solid rgba(0, 0, 0, .07);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.98);
+        background-clip: padding-box;
+        -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .125);
+        word-wrap: break-word;
+        white-space: nowrap;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        z-index: 999;
+        cursor: pointer;
+        max-height: 70%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .post-toc .post-toc-title {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .post-toc .post-toc-content {
+        font-size: 15px;
+    }
+
+    .post-toc .post-toc-content>nav>ul {
+        margin: 10px 0;
+    }
+
+    .post-toc .post-toc-content ul {
+        padding-left: 20px;
+        list-style: square;
+        margin: 0.5em;
+        line-height: 1.8em;
+    }
+
+    .post-toc .post-toc-content ul ul {
+        padding-left: 15px;
+        display: none;
+    }
+
+    @media print,
+    screen and (max-width:1057px) {
+        .post-toc {
+            display: none;
+        }
+    }
+</style>
+<div class="post-toc" style="position: absolute; top: 188px;">
+    <h2 class="post-toc-title">文章目录</h2>
+    <div class="post-toc-content">
+        
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var postToc = $(".post-toc");
+        if (postToc.length) {
+            var leftPos = $("#main").offset().left;
+            if(leftPos<220){
+                postToc.css({"width":leftPos-10,"margin-left":(0-leftPos)})
+            }
+
+            var t = postToc.offset().top - 20,
+                a = {
+                    start: {
+                        position: "absolute",
+                        top: t
+                    },
+                    process: {
+                        position: "fixed",
+                        top: 20
+                    },
+                };
+            $(window).scroll(function () {
+                var e = $(window).scrollTop();
+                e < t ? postToc.css(a.start) : postToc.css(a.process)
+            })
+        }
+    })
+</script>
+    <article class="post">
+        <header>
+            <h1 class="post-title">[转]国外程序员推荐：每个程序员都应该读的非编程书</h1>
+        </header>
+        <date class="post-meta meta-date">
+            2014年7月16日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91'>互联网</a></span>
+            
+        </div>
+        
+        
+        <div class="post-meta">
+            <span id="busuanzi_container_page_pv">|<span id="busuanzi_value_page_pv"></span><span>
+                    阅读</span></span>
+        </div>
+        
+        
+        <div class="post-content">
+            <p style="color: #000000;">
+  五年前有网友在 Stackoverflow 发帖提问：『<a style="color: #3e62a6;" href="http://stackoverflow.com/questions/38210/what-non-programming-books-should-programmers-read" target="_blank" rel="nofollow" >程序员应该读哪些非编程方面的书？</a>』。有很多程序员响应，他们在推荐的同时也写下了自己的评语。本文摘编其中 29 本书，下面就按照各书的推荐数排列。另外，本月初我们在伯乐头条也发起了相同的讨论帖《<a style="color: #3e62a6;" href="http://top.jobbole.com/4000/" target="_blank" rel="nofollow" >你最喜欢的非编程书是哪一本？</a>》，已有很多的朋友推荐了他们喜欢的书。
+</p>
+
+<p style="color: #000000;">
+  <h2 style="color: #000000;">
+    1.《银河系漫游指南》by Douglas Adams
+  </h2>
+  
+  <p style="color: #000000;">
+    推荐数：480
+  </p>
+  
+
+<p><p style="color: #000000;">
+    <img src="http://static.oschina.net/uploads/img/201407/16065519_ueXA.jpg" alt="" />
+  </p></p>
+
+<p><p style="color: #000000;">
+    生活，宇宙，所有的一切。
+  </p></p>
+
+<p><p style="color: #000000;">
+    “看在前，思考在后，然后去实践。但是看总是在最前面。否则，你只能看到你以为的样子。大多数的科学家忘记了这一点。”–<a style="color: #3e62a6;" href="http://www.wonko.com/" target="_blank" rel="nofollow" >Wonko</a>的智慧
+  </p></p>
+
+<p><p style="color: #000000;">
+    作为开发者以及曾经的技术支持，从这本书（以及整个系列）中我们能学到一件事情：不要恐慌！！！另外，这本书读起来的舒适程度远胜于你自己存在的问题。–  <a style="color: #3e62a6;" title="1236 reputation" href="http://stackoverflow.com/users/80813/sirdemon" target="_blank" rel="nofollow" >SirDemon</a>
+  </p></p>
+
+<p><p style="color: #000000;">
+    <h2 style="color: #000000;">
+      2.《人性的弱点》 by Dale Carnegie
+    </h2></p>
+
+<pre><code>&lt;p style=&quot;color: #000000;&quot;&gt;
+  推荐数：322
+&lt;/p&gt;
+
+&lt;p style=&quot;color: #000000;&quot;&gt;
+  &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065519_l1C4.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;/p&gt;
+
+&lt;p style=&quot;color: #000000;&quot;&gt;
+  尽管这本书是在1936年首次出版的，书中给出的建议仍然是一如既往的新鲜和适当。不要被它的名字误导。这并不是给未知情的受害者找到自己做人的方式的欺骗性指南，而是关于如何与人相处，如何培养人际关系并充分利用你自己和你的男人（女人）方面很有意义的建议。
+&lt;/p&gt;
+
+&lt;p style=&quot;color: #000000;&quot;&gt;
+  众所周知，技术宅（包括程序员）经常被认为并不是非常的”以人为本（善于交际）“（这是不是一个合理的成见是另一个讨论的话题），那么这本书是一个教你更好的与人打交道方面的无价的资源。
+&lt;/p&gt;
+
+&lt;p style=&quot;color: #000000;&quot;&gt;
+  它温暖，真诚，全面，直白，持续写成。强烈推荐。
+&lt;/p&gt;
+
+&lt;p style=&quot;color: #000000;&quot;&gt;
+  &lt;h2 style=&quot;color: #000000;&quot;&gt;
+    3.《别逗了，费曼先生》
+  &lt;/h2&gt;
+
+  &lt;p style=&quot;color: #000000;&quot;&gt;
+    推荐数：317
+  &lt;/p&gt;
+
+  &lt;p style=&quot;color: #000000;&quot;&gt;
+    &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065519_ybxV.jpg&quot; alt=&quot;&quot; /&gt;
+  &lt;/p&gt;
+
+  &lt;p style=&quot;color: #000000;&quot;&gt;
+    这本书将启发每一位读者思考，并回归原始。
+  &lt;/p&gt;
+
+  &lt;p style=&quot;color: #000000;&quot;&gt;
+    绝对惊奇的一本书！体现思考和与众不同的乐趣。他不只是赞美它，作者的生活本就如此并爱着它。这本书如此有趣。（另外，作者是如此有才，以至于本书深刻并让人着迷。）–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;6707 reputation&quot; href=&quot;http://stackoverflow.com/users/57120/beska&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Beska&lt;/a&gt;
+  &lt;/p&gt;
+
+  &lt;p style=&quot;color: #000000;&quot;&gt;
+    &lt;h2 style=&quot;color: #000000;&quot;&gt;
+      4.《一九八四》 by George Orwell
+    &lt;/h2&gt;
+
+    &lt;p style=&quot;color: #000000;&quot;&gt;
+      推荐数：312
+    &lt;/p&gt;
+
+    &lt;p style=&quot;color: #000000;&quot;&gt;
+      &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_8VaE.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;color: #000000;&quot;&gt;
+      需要买来读吗？哼，我总觉得你会错过它的要点。 –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;1537 reputation&quot; href=&quot;http://stackoverflow.com/users/44996/applepieisgood&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;ApplePieIsGood&lt;/a&gt;
+    &lt;/p&gt;
+
+    &lt;p style=&quot;color: #000000;&quot;&gt;
+      &lt;h2 style=&quot;color: #000000;&quot;&gt;
+        5.《哥德尔、艾舍尔、巴赫:集异璧之大成》 by Douglas Hofstadter
+      &lt;/h2&gt;
+
+      &lt;p style=&quot;color: #000000;&quot;&gt;
+        推荐数：275
+      &lt;/p&gt;
+
+      &lt;p style=&quot;color: #000000;&quot;&gt;
+        &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_uQ7N.jpg&quot; alt=&quot;&quot; /&gt;
+      &lt;/p&gt;
+
+      &lt;p style=&quot;color: #000000;&quot;&gt;
+        我读到一半，并认为它被高估了。作者总是重复一些概念但这往往会变得烦人。很多时候我都想朝着作者大吼：”我已经懂了一次又一次！“。 –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;1716 reputation&quot; href=&quot;http://stackoverflow.com/users/38893/heeen&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;heeen&lt;/a&gt;
+      &lt;/p&gt;
+
+      &lt;p style=&quot;color: #000000;&quot;&gt;
+        &lt;h2 style=&quot;color: #000000;&quot;&gt;
+          6.《设计心理学》 by Donald A. Norman
+        &lt;/h2&gt;
+
+        &lt;p style=&quot;color: #000000;&quot;&gt;
+          推荐数：243
+        &lt;/p&gt;
+
+        &lt;p style=&quot;color: #000000;&quot;&gt;
+          &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_UOyO.jpg&quot; alt=&quot;&quot; /&gt;
+        &lt;/p&gt;
+
+        &lt;p style=&quot;color: #000000;&quot;&gt;
+          很棒的书，会让你更欣赏很棒的设计！ –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;562 reputation&quot; href=&quot;http://stackoverflow.com/users/39040/danielb&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Danielb&lt;/a&gt;
+        &lt;/p&gt;
+
+        &lt;p style=&quot;color: #000000;&quot;&gt;
+          我大概从上个月开始读这本书。真的会让你以不同的眼光（大多是愤怒）来看待事物。 –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;1776 reputation&quot; href=&quot;http://stackoverflow.com/users/984/jammus&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;jammus&lt;/a&gt;
+        &lt;/p&gt;
+
+        &lt;p style=&quot;color: #000000;&quot;&gt;
+          &lt;h2 style=&quot;color: #000000;&quot;&gt;
+            7.《搞定：无压工作的艺术》by David Allen
+          &lt;/h2&gt;
+
+          &lt;p style=&quot;color: #000000;&quot;&gt;
+            推荐数：230
+          &lt;/p&gt;
+
+          &lt;p style=&quot;color: #000000;&quot;&gt;
+            &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_kaYL.jpg&quot; alt=&quot;&quot; /&gt;
+          &lt;/p&gt;
+
+          &lt;p style=&quot;color: #000000;&quot;&gt;
+            我一直想读的一本书。–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;3429 reputation&quot; href=&quot;http://stackoverflow.com/users/24913/kaz-dragon&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Kaz Dragon&lt;/a&gt;
+          &lt;/p&gt;
+
+          &lt;p style=&quot;color: #000000;&quot;&gt;
+            我强烈推荐这本。它不会改变你的生活，但是它会帮助你思考解决效率和拖延的问题，而不再是你生活中必须忍受的固有的问题。这种心态的转变让像我这样的懒惰者变得很不一样。 –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;8383 reputation&quot; href=&quot;http://stackoverflow.com/users/81491/brandon-yarbrough&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Brandon Yarbrough&lt;/a&gt;
+          &lt;/p&gt;
+
+          &lt;p style=&quot;color: #000000;&quot;&gt;
+            &lt;h2 style=&quot;color: #000000;&quot;&gt;
+              8.《人月神话》by Fred Brooks
+            &lt;/h2&gt;
+
+            &lt;p style=&quot;color: #000000;&quot;&gt;
+              推荐数：216
+            &lt;/p&gt;
+
+            &lt;p style=&quot;color: #000000;&quot;&gt;
+              &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_nEAs.jpg&quot; alt=&quot;&quot; /&gt;
+            &lt;/p&gt;
+
+            &lt;p style=&quot;color: #000000;&quot;&gt;
+              这怎么是非编程方面的书呢？ –  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;49068 reputation&quot; href=&quot;http://stackoverflow.com/users/14606/musigenesis&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;MusiGenesis&lt;/a&gt;
+            &lt;/p&gt;
+
+            &lt;p style=&quot;color: #000000;&quot;&gt;
+              &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                9.《点石成金：访客至上的网页设计秘笈》by Steve Krug
+              &lt;/h2&gt;
+
+              &lt;p style=&quot;color: #000000;&quot;&gt;
+                推荐数：200
+              &lt;/p&gt;
+
+              &lt;p style=&quot;color: #000000;&quot;&gt;
+                &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_yhh7.jpg&quot; alt=&quot;&quot; /&gt;
+              &lt;/p&gt;
+
+              &lt;p style=&quot;color: #000000;&quot;&gt;
+                web应用方面很有意义的一本书。正如作者所说：”常识并不总是显而易见的“。
+              &lt;/p&gt;
+
+              &lt;p style=&quot;color: #000000;&quot;&gt;
+                &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                  10.《人件：生产性项目和团队》by Tom DeMarco and Timothy Lister
+                &lt;/h2&gt;
+
+                &lt;p style=&quot;color: #000000;&quot;&gt;
+                  推荐数：186
+                &lt;/p&gt;
+
+                &lt;p style=&quot;color: #000000;&quot;&gt;
+                  &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_dR2a.jpg&quot; alt=&quot;&quot; /&gt;
+                &lt;/p&gt;
+
+                &lt;p style=&quot;color: #000000;&quot;&gt;
+                  这本经典的书鼓励我们来思考人的重要性，而不是过程。它里面充满了关于团队建设，生产率以及办公环境的实践建议。它是一本必须读的书，不管是项目管理者还是任意的软件开发参与者。
+                &lt;/p&gt;
+
+                &lt;p style=&quot;color: #000000;&quot;&gt;
+                  搞两本，一本自己读，一本给你的主管。
+                &lt;/p&gt;
+
+                &lt;p style=&quot;color: #000000;&quot;&gt;
+                  &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                    11.《禅与摩托车维修的艺术》by Robert M. Pirsig
+                  &lt;/h2&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    推荐数：183
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_qETf.jpg&quot; alt=&quot;&quot; /&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    这本书讲了很多东西，但是你可以认为它是呈现”神交“在哲学上的意义。
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    来自于&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://stackoverflow.com/users/9119/garth-gilmour&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Garth Gilmore&lt;/a&gt;的评论：
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;我敢笃定，这本书教会我的有关软件开发方面的东西远比其他任何一本编程书都多。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;这本书的主线是关于我们对于世界上浪漫主义（艺术）和现实主义（科学/理性）的认知是如何来自于，我们是怎样看待我们周围的环境的。这种理解然后被应用于一般性的任务,比如摩托车维修。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;给出几个这个理论如何应用于编程的例子：&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;如何处理摩托车的”质量理念“以引导进程的章节,也同样适用于编程区域。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;”进取心的陷阱（欲速则不达）“阻止了进程并导致你损坏机器的章节是无价的。解决方案也同样能在修改遗留代码而不引入新的bug中有效果。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;有一个纯粹描述发动机部分的经典章节是无用的（因为它没有任何地方可以让用户提出异议），但应该被每一个被卷入需求分析的人来阅读。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;span style=&quot;color: #888888;&quot;&gt;总之它是一本好书。&lt;/span&gt;
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    （编注：关于这本书，也可以看看&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://blog.jobbole.com/10309/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;阮一峰的读后感&lt;/a&gt;。）
+                  &lt;/p&gt;
+
+                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                    &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                      12.《安德的游戏》 by Orson Scott Card
+                    &lt;/h2&gt;
+
+                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                      推荐数：183
+                    &lt;/p&gt;
+
+                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                      &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_E28z.jpg&quot; alt=&quot;&quot; /&gt;
+                    &lt;/p&gt;
+
+                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                      这本书被高估了，除非你在你还是一个性格阴郁的怪胎少年的时候第一次读它。我知道没有人（包括我自己）在自己年纪比较大的时候读完它会觉得它是一本必读的书。– &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;10493 reputation&quot; href=&quot;http://stackoverflow.com/users/44065/jmucchiello&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;jmucchiello&lt;/a&gt;
+                    &lt;/p&gt;
+
+                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                      &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                        13.《 Cryptonomicon | 编码宝典 》 by Neal Stephenson
+                      &lt;/h2&gt;
+
+                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                        推荐数：158
+                      &lt;/p&gt;
+
+                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                        &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_TX7S.jpg&quot; alt=&quot;&quot; /&gt;
+                      &lt;/p&gt;
+
+                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                        这本书讲述的是关于第二次世界大战密码破解的真实故事，今天他的后代致力于计算机的发展（阿兰·图灵在书里单独作为一章来讲解）。是极客必读之书。
+                      &lt;/p&gt;
+
+                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                        &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                          14.《The Visual Display of Quantitative Information》by Edward Tufte
+                        &lt;/h2&gt;
+
+                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                          推荐数：158
+                        &lt;/p&gt;
+
+                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                          &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_Snd1.jpg&quot; alt=&quot;&quot; /&gt;
+                        &lt;/p&gt;
+
+                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                          讨论了如何以图形方式表示不同类型的复杂的数据。
+                        &lt;/p&gt;
+
+                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                          书中对于PPT的危害简短而又简单的评论也很有优秀。–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;4052 reputation&quot; href=&quot;http://stackoverflow.com/users/112614/chet&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Chet&lt;/a&gt;
+                        &lt;/p&gt;
+
+                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                          &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                            15.《风格的要素》by William Strunk &amp; E.B. White
+                          &lt;/h2&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            推荐数：156
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_wUMS.jpg&quot; alt=&quot;&quot; /&gt;
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            在看过Joshua Bloch（因《Effective Java》而名言四海）对于此书的推荐后我们也在我们的R&amp;D（研究与开发）图书馆引进了一本：
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            这本薄薄的小册子宣扬简单性和清晰性的信条,因为它适用于英语散文。如果你谨记在心，它不只会提高你写诗的水平，也会提高你的编码水平。
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            在&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.oracle.com/technetwork/java/index.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;另一个专访&lt;/a&gt;中，Bloch阐述了为什么它对程序员有好处：
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            &lt;span style=&quot;color: #888888;&quot;&gt;我认为阅读斯特伦克和怀 特（作者）会让你成为一名更优秀的程序员，因为好的编程与好的书写都是关于词句的简单性与简洁性的。如果你不知道你要表达什么，你是写不出好的代码和好的 散文的。斯特伦克和怀特里很多的警告在编程中也是类似的。比如，斯特伦克和怀特说：“去掉不必要的语句”。Andy Hunt 和Dave Thomas（“实效程序员”）也说：“不要重复造轮子”。斯特伦克和怀特说：“要推敲和重写”，马丁·福勒说：“要重构”。还有等等诸如此类的。&lt;/span&gt;
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            &lt;span style=&quot;color: #888888;&quot;&gt;现在，我个人认为《风格的要素》这本书中很多建议有点过时了，因为英语的使用出现了演化（比如，现在以”Hoverever”作为一个句子的开头是完全可以的，或者使用hopefully代替“I hope”）。但是大多数的地方我还是同意作者的，而且很享受阅读此书。&lt;/span&gt;
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            &lt;span style=&quot;color: #888888;&quot;&gt;&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.codinghorror.com/blog/archives/001184.html&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;&lt;span style=&quot;color: #888888;&quot;&gt;这里&lt;/span&gt;&lt;/a&gt;是阿特伍德对于《风格的要素》不得不说的更多的信息。也许它是比约书亚·布洛克说的更好的 更好的阅读指南。&lt;/span&gt;
+                          &lt;/p&gt;
+
+                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                            &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                              16.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.com/dp/0441013597/?tag=job0ae-20&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;沙丘魔堡&lt;/a&gt;》by Frank Herbert
+                            &lt;/h2&gt;
+
+                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                              推荐数：152
+                            &lt;/p&gt;
+
+                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                              &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_SHzs.jpg&quot; alt=&quot;&quot; /&gt;
+                            &lt;/p&gt;
+
+                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                              《沙丘魔堡》是科幻小说的顶峰。
+                            &lt;/p&gt;
+
+                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                              &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                17《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B0011CT3HW/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B0011CT3HW&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;孙子兵法&lt;/a&gt;》
+                              &lt;/h2&gt;
+
+                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                这个就不需要介绍了
+                              &lt;/p&gt;
+
+                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                  18.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/0241953189/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=0241953189&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;雪崩&lt;/a&gt;》By Neal Stephenson
+                                &lt;/h2&gt;
+
+                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                  推荐数：120
+                                &lt;/p&gt;
+
+                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                  &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_ZMcI.jpg&quot; alt=&quot;&quot; /&gt;
+                                &lt;/p&gt;
+
+                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                  最近我在某人的推荐下阅读了这本书，我非常失望，它都过时了。– &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;7901 reputation&quot; href=&quot;http://stackoverflow.com/users/6716/ian-dickinson&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Ian Dickinson&lt;/a&gt;
+                                &lt;/p&gt;
+
+                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                  &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                    19.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00AYBWRLA/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00AYBWRLA&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;爱丽丝漫游奇境记&lt;/a&gt;》by Lewis Carroll
+                                  &lt;/h2&gt;
+
+                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                    推荐数：114
+                                  &lt;/p&gt;
+
+                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                    &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065520_FMkf.jpg&quot; alt=&quot;&quot; /&gt;
+                                  &lt;/p&gt;
+
+                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                    “《爱丽丝梦游仙境》是门外汉最好的编程书”，是因为对门外汉来说，对于任何事物它都是最好的。–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;16337 reputation&quot; href=&quot;http://stackoverflow.com/users/131930/jeremy-friesner&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Jeremy Friesner&lt;/a&gt;
+                                  &lt;/p&gt;
+
+                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                    &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                      20.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.vavatch.co.uk/books/asimov/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;基地系列&lt;/a&gt;》by Isaac Asimov’s
+                                    &lt;/h2&gt;
+
+                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                      推荐数：114
+                                    &lt;/p&gt;
+
+                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                      &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_0Xdv.jpg&quot; alt=&quot;&quot; /&gt;
+                                    &lt;/p&gt;
+
+                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                      很棒的图书。我发现这本书里的理论像是通过通过混沌理论来介绍社会学。关于社会发展很好的阐述。简单有趣，就是有点厚。–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;6707 reputation&quot; href=&quot;http://stackoverflow.com/users/57120/beska&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Beska&lt;/a&gt;
+                                    &lt;/p&gt;
+
+                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                      &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                        21.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B0069HL656/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B0069HL656&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;魔戒&lt;/a&gt;》
+                                      &lt;/h2&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        推荐数：114
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_yq5s.jpg&quot; alt=&quot;&quot; /&gt;
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        除了它之一本科幻巨作外，这也是(几乎所有)的现代幻想小说的基础。（而且，对于一群计算机程序员来说更有意义的是，它也是龙与地下城的核心启示之一）
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        退几步说,为了能在午餐的时候加入到话题中，每个程序员必读的三本书是指环王,沙丘,银河系漫游指南。（这个有点夸张）
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        如果你只是看过电影，那么试着去读下书。
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        从科技的角度，书里的不重要的人物能对世界有深刻而积极的影响的基本信息，以及他们周边的组织让大公司的编程看到了希望。
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        我需要补充的是团队协作是很重要的，甚至是在团队里有些人有破坏作用，有的人很自私或者不能融入团队，当到了最后的期限或者索隆即将出现的时候，你仍然可以让他们做的很好而扭转战局。– &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;3323 reputation&quot; href=&quot;http://stackoverflow.com/users/26196/anonymous-coward&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;anonymous coward&lt;/a&gt;
+                                      &lt;/p&gt;
+
+                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                        &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                          22.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00BOELK6E/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00BOELK6E&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;平面国&lt;/a&gt;》by Abbott
+                                        &lt;/h2&gt;
+
+                                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                                          推荐数：111
+                                        &lt;/p&gt;
+
+                                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                                          这本书太旧了，以至于它现在都不出版了。你可以在这里阅读全书：&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.geom.uiuc.edu/~banchoff/Flatland/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;geom.uiuc.edu/~banchoff/Flatland&lt;/a&gt; – &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;34581 reputation&quot; href=&quot;http://stackoverflow.com/users/2635/simucal&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Simucal&lt;/a&gt;
+                                        &lt;/p&gt;
+
+                                        &lt;p style=&quot;color: #000000;&quot;&gt;
+                                          &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                            23.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00116OR88/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00116OR88&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;时间简史&lt;/a&gt;》by Stephen Hawking
+                                          &lt;/h2&gt;
+
+                                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                                            推荐数：104
+                                          &lt;/p&gt;
+
+                                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                                            &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_SAnb.jpg&quot; alt=&quot;&quot; /&gt;
+                                          &lt;/p&gt;
+
+                                          &lt;p style=&quot;color: #000000;&quot;&gt;
+                                            &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                              24.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://en.wikipedia.org/wiki/The_Screwtape_Letters&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;地狱来鸿&lt;/a&gt;》by C. S. Lewis
+                                            &lt;/h2&gt;
+
+                                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                                              推荐数：83
+                                            &lt;/p&gt;
+
+                                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                                              &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_D9nH.jpg&quot; alt=&quot;&quot; /&gt;
+                                            &lt;/p&gt;
+
+                                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                                              想象一个恶魔在编写一个关于人的程序…..
+                                            &lt;/p&gt;
+
+                                            &lt;p style=&quot;color: #000000;&quot;&gt;
+                                              &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                                25.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00DUNOVD6/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00DUNOVD6&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;神经漫游者&lt;/a&gt;》By William Gibson
+                                              &lt;/h2&gt;
+
+                                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                推荐数：74
+                                              &lt;/p&gt;
+
+                                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_GSf5.jpg&quot; alt=&quot;&quot; width=&quot;217&quot; height=&quot;360&quot; /&gt;
+                                              &lt;/p&gt;
+
+                                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                他创造了网络空间这个词，它延伸的三部曲是我想当一个编码仔的原因。
+                                              &lt;/p&gt;
+
+                                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                具有讽刺意味的是，他写的这些书打击了技术迷，并渗透到社会的今天（和未来）–  &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;6505 reputation&quot; href=&quot;http://stackoverflow.com/users/64976/j-steen&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;J. Steen&lt;/a&gt;
+                                              &lt;/p&gt;
+
+                                              &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                                  26.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/0099470438/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=0099470438&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;深夜小狗神秘习题&lt;/a&gt;》by Mark Haddon
+                                                &lt;/h2&gt;
+
+                                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                  推荐数：73
+                                                &lt;/p&gt;
+
+                                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                  &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_EBc8.jpg&quot; alt=&quot;&quot; /&gt;
+                                                &lt;/p&gt;
+
+                                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                  它给出了有关你古怪同事的一些看法。
+                                                &lt;/p&gt;
+
+                                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                  这本书真的很不错。他帮助我认识了孤独症和阿斯伯格综合症患者（作者为了写书和孤独症患者一起工作了一些时间，从我和一些阿斯伯格综合症患者儿童的相处来看，它非常真实）。– &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;1327 reputation&quot; href=&quot;http://stackoverflow.com/users/46523/mongoose&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Mongoose&lt;/a&gt;
+                                                &lt;/p&gt;
+
+                                                &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                  &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                                    27.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00FDJWLB4/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00FDJWLB4&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;仿生人会梦见电子羊吗&lt;/a&gt;》by Philip K. Dick
+                                                  &lt;/h2&gt;
+
+                                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                    推荐数：66
+                                                  &lt;/p&gt;
+
+                                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                    作者写的其他东西当然也很棒。
+                                                  &lt;/p&gt;
+
+                                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                    他的离奇古怪的故事肯定帮助人们有更多的思考。
+                                                  &lt;/p&gt;
+
+                                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                    对于程序员来说是奇幻的一本书和一部电影。而且，对于PKD的其他书（也不尽然只是书，还有必须的电影，比如《致命报酬》）也很不错。不过显然总记得是一个很棒的电影。– &lt;a style=&quot;color: #3e62a6;&quot; title=&quot;615 reputation&quot; href=&quot;http://stackoverflow.com/users/88218/troy-nichols&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Troy Nichols&lt;/a&gt;
+                                                  &lt;/p&gt;
+
+                                                  &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                    &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                                      28.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B007Q2XXXG/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B007Q2XXXG&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;交互设计之路&lt;/a&gt;》by Alan Cooper
+                                                    &lt;/h2&gt;
+
+                                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                      推荐数：66
+                                                    &lt;/p&gt;
+
+                                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                      &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_ZhXb.jpg&quot; alt=&quot;&quot; /&gt;
+                                                    &lt;/p&gt;
+
+                                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                      它讲述的用正确的语言来谈论项目–用故事（和角色模型）代替产品特点来谈论我们需要认识到的东西。还有一些在交互设计以及相关活动上的强调，要提供用户需要的而不是要求的。
+                                                    &lt;/p&gt;
+
+                                                    &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                      &lt;h2 style=&quot;color: #000000;&quot;&gt;
+                                                        29.《&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.amazon.cn/gp/product/B00B4NTCT2/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=536&amp;creative=3200&amp;creativeASIN=B00B4NTCT2&amp;linkCode=as2&amp;tag=vastwork-23&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;高效能人士的7个习惯&lt;/a&gt;》by Stephen Covey
+                                                      &lt;/h2&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        推荐数：61
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        &lt;img src=&quot;http://static.oschina.net/uploads/img/201407/16065521_jvdV.jpg&quot; alt=&quot;&quot; /&gt;
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        如果你没有读过这本，你会错过很多你潜在的能力–最初摘自John Channing的文章。
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        编辑：你可以获取它的&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://www.audible.com/pderror&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;免费有声读物&lt;/a&gt;。
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        来自&lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://stackoverflow.com/users/8217/julie&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Julie&lt;/a&gt;的评论：
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        这本书具有普世价值–不仅仅是对于软件开发者来说。鉴于你做很多事来帮助你处理日常的事务，7个习惯能帮助你保持高效的生活和一个你需要转化为日常细节的普世方法论。这本书是从这方面考虑来处理事情的完美补充。
+                                                      &lt;/p&gt;
+
+                                                      &lt;p style=&quot;color: #000000;&quot;&gt;
+                                                        原文链接： &lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://stackoverflow.com/questions/38210/what-non-programming-books-should-programmers-read&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot; &gt;Stackoverflow&lt;/a&gt;   翻译： &lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://blog.jobbole.com/&quot; target=&quot;_blank&quot;  rel=&quot;nofollow&quot; &gt;伯乐在线 &lt;/a&gt;- &lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://blog.jobbole.com/author/abell123/&quot; target=&quot;_blank&quot;  rel=&quot;nofollow&quot; &gt;abell123&lt;/a&gt;&lt;br /&gt; 译文链接： &lt;a style=&quot;color: #3e62a6;&quot; href=&quot;http://blog.jobbole.com/72365/&quot; target=&quot;_blank&quot;  rel=&quot;nofollow&quot; &gt;http://blog.jobbole.com/72365/&lt;/a&gt;
+                                                      &lt;/p&gt;
+</code></pre>
+
+        </div>
+
+        
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://cppfans.org">NickYang</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://cppfans.org/1684.html">https://cppfans.org/1684.html</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议</a>进行许可，非商业转载请注明出处（作者，原文链接），商业转载请联系作者获得授权。</li>
+    </ul>
+</div>
+<br/>
+
+
+
+        
+
+<div class="post-archive">
+    <h2>See Also</h2>
+    <ul class="listing">
+        
+        <li><a href="/1645.html">[转载]PM和程序员（RD）的相处之道－－写给那些血气方刚的产品经理（PM）</a></li>
+        
+        <li><a href="/1676.html">Compile python to exe</a></li>
+        
+        <li><a href="/1665.html">使用redis五倍加速WP博客</a></li>
+        
+        <li><a href="/1653.html">LNMP折腾小记</a></li>
+        
+        <li><a href="/1652.html">[转]Leveldb实现原理</a></li>
+        
+    </ul>
+</div>
+
+
+        <div class="post-meta meta-tags">
+            
+            <ul class="clearfix">
+                
+                <li><a href='https://cppfans.org/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF'>程序猿</a></li>
+                
+                <li><a href='https://cppfans.org/tags/%E8%AF%BB%E4%B9%A6'>读书</a></li>
+                
+                <li><a href='https://cppfans.org/tags/%E9%9D%9E%E7%BC%96%E7%A8%8B'>非编程</a></li>
+                
+            </ul>
+            
+        </div>
+    </article>
+    
+    
+
+    
+    
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "NickYang1988/nickyang1988.github.io"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
+    </div>
+    
+</div>
+
+                </div>
+
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='https://cppfans.org/search/' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://cppfans.org">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://cppfans.org/2247.html" title="关于WebSocket的一些总结">关于WebSocket的一些总结</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2245.html" title="接口设计六大原则">接口设计六大原则</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2233.html" title="Unity3D 2017.x Failed to start Unity Package Manager">Unity3D 2017.x Failed to start Unity Package Manager</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2224.html" title="ArkGameFrame开源跨平台游戏服务器框架0.2.0版本发布">ArkGameFrame开源跨平台游戏服务器框架0.2.0版本发布</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2217.html" title="说说协程coroutine">说说协程coroutine</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2203.html" title="我为什么离开MK">我为什么离开MK</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2176.html" title="[转]并发编程：Actors模型和CSP模型">[转]并发编程：Actors模型和CSP模型</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2171.html" title="ArkGameFrame实战系列文章说明">ArkGameFrame实战系列文章说明</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2167.html" title="[转]高并发性能调试经验分享">[转]高并发性能调试经验分享</a>
+    </li>
+    
+    <li>
+        <a href="https://cppfans.org/2162.html" title="Jason Bourne 5观影感">Jason Bourne 5观影感</a>
+    </li>
+    
+</ul>
+    </section>
+
+    
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
+    
+    <li><a href="https://cppfans.org/categories/ARK-GAME/">ARK-GAME (2)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/Wordpress/">Wordpress (6)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91/">互联网 (27)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/">大数据 (2)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6/">实用软件 (11)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E5%BF%83%E6%83%85%E9%9A%8F%E7%AC%94/">心情随笔 (39)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/">技术文章 (83)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91/">程序开发 (79)</a></li>
+    
+    <li><a href="https://cppfans.org/categories/%E8%99%9A%E6%8B%9F%E5%8C%96/">虚拟化 (3)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://cppfans.org/tags/0x%E6%A0%87%E5%87%86/">0x标准</a>
+    
+    <a href="https://cppfans.org/tags/2003/">2003</a>
+    
+    <a href="https://cppfans.org/tags/2011%E6%80%BB%E7%BB%93/">2011，总结</a>
+    
+    <a href="https://cppfans.org/tags/2013/">2013</a>
+    
+    <a href="https://cppfans.org/tags/2014/">2014</a>
+    
+    <a href="https://cppfans.org/tags/2015/">2015</a>
+    
+    <a href="https://cppfans.org/tags/2d/">2d</a>
+    
+    <a href="https://cppfans.org/tags/404/">404</a>
+    
+    <a href="https://cppfans.org/tags/AHCI/">AHCI</a>
+    
+    <a href="https://cppfans.org/tags/API/">API</a>
+    
+    <a href="https://cppfans.org/tags/AWS/">AWS</a>
+    
+    <a href="https://cppfans.org/tags/Aion/">Aion</a>
+    
+    <a href="https://cppfans.org/tags/Algorithm/">Algorithm</a>
+    
+    <a href="https://cppfans.org/tags/ArkGame/">ArkGame</a>
+    
+    <a href="https://cppfans.org/tags/ArkGameFrame/">ArkGameFrame</a>
+    
+    <a href="https://cppfans.org/tags/Assert/">Assert</a>
+    
+    <a href="https://cppfans.org/tags/Big-data/">Big data</a>
+    
+    <a href="https://cppfans.org/tags/BitStreams/">BitStreams</a>
+    
+    <a href="https://cppfans.org/tags/C&#43;&#43;/">C&#43;&#43;</a>
+    
+    <a href="https://cppfans.org/tags/C&#43;&#43;%E6%A0%87%E5%87%86/">C&#43;&#43;标准</a>
+    
+    <a href="https://cppfans.org/tags/C-11/">C 11</a>
+    
+    <a href="https://cppfans.org/tags/C/C&#43;&#43;/">C/C&#43;&#43;</a>
+    
+    <a href="https://cppfans.org/tags/CDT/">CDT</a>
+    
+    <a href="https://cppfans.org/tags/CRC64/">CRC64</a>
+    
+    <a href="https://cppfans.org/tags/CSP/">CSP</a>
+    
+    <a href="https://cppfans.org/tags/CSS/">CSS</a>
+    
+    <a href="https://cppfans.org/tags/Connect/">Connect</a>
+    
+    <a href="https://cppfans.org/tags/CppCheck/">CppCheck</a>
+    
+    <a href="https://cppfans.org/tags/CryptoAPI/">CryptoAPI</a>
+    
+    <a href="https://cppfans.org/tags/Decarator/">Decarator</a>
+    
+    <a href="https://cppfans.org/tags/Dll/">Dll</a>
+    
+    <a href="https://cppfans.org/tags/DrawItem/">DrawItem</a>
+    
+    <a href="https://cppfans.org/tags/Dynamic-Lib/">Dynamic Lib</a>
+    
+    <a href="https://cppfans.org/tags/ECS/">ECS</a>
+    
+    <a href="https://cppfans.org/tags/Fedora/">Fedora</a>
+    
+    <a href="https://cppfans.org/tags/Flickr/">Flickr</a>
+    
+    <a href="https://cppfans.org/tags/GCC/">GCC</a>
+    
+    <a href="https://cppfans.org/tags/GET/">GET</a>
+    
+    <a href="https://cppfans.org/tags/GUI/">GUI</a>
+    
+    <a href="https://cppfans.org/tags/GUID/">GUID</a>
+    
+    <a href="https://cppfans.org/tags/HTTP/">HTTP</a>
+    
+    <a href="https://cppfans.org/tags/I/O/">I/O</a>
+    
+    <a href="https://cppfans.org/tags/IDE/">IDE</a>
+    
+    <a href="https://cppfans.org/tags/IOCP/">IOCP</a>
+    
+    <a href="https://cppfans.org/tags/Intel/">Intel</a>
+    
+    <a href="https://cppfans.org/tags/JQuery/">JQuery</a>
+    
+    <a href="https://cppfans.org/tags/JQueryUI/">JQueryUI</a>
+    
+    <a href="https://cppfans.org/tags/JSON/">JSON</a>
+    
+    <a href="https://cppfans.org/tags/K/V/">K/V</a>
+    
+    <a href="https://cppfans.org/tags/Kubernetes/">Kubernetes</a>
+    
+    <a href="https://cppfans.org/tags/LNMP/">LNMP</a>
+    
+    <a href="https://cppfans.org/tags/Lib/">Lib</a>
+    
+    <a href="https://cppfans.org/tags/Linux/">Linux</a>
+    
+    <a href="https://cppfans.org/tags/Lua/">Lua</a>
+    
+    <a href="https://cppfans.org/tags/Luabind/">Luabind</a>
+    
+    <a href="https://cppfans.org/tags/MFC/">MFC</a>
+    
+    <a href="https://cppfans.org/tags/Malloc/">Malloc</a>
+    
+    <a href="https://cppfans.org/tags/Microsoft/">Microsoft</a>
+    
+    <a href="https://cppfans.org/tags/MsgPack/">MsgPack</a>
+    
+    <a href="https://cppfans.org/tags/MySQL/">MySQL</a>
+    
+    <a href="https://cppfans.org/tags/NoSQL/">NoSQL</a>
+    
+    <a href="https://cppfans.org/tags/PM/">PM</a>
+    
+    <a href="https://cppfans.org/tags/POD/">POD</a>
+    
+    <a href="https://cppfans.org/tags/POST/">POST</a>
+    
+    <a href="https://cppfans.org/tags/Partten/">Partten</a>
+    
+    <a href="https://cppfans.org/tags/RakNet/">RakNet</a>
+    
+    <a href="https://cppfans.org/tags/SIGSEGV/">SIGSEGV</a>
+    
+    <a href="https://cppfans.org/tags/Scala/">Scala</a>
+    
+    <a href="https://cppfans.org/tags/Server/">Server</a>
+    
+    <a href="https://cppfans.org/tags/SkyDrive/">SkyDrive</a>
+    
+    <a href="https://cppfans.org/tags/Socket/">Socket</a>
+    
+    <a href="https://cppfans.org/tags/Spark/">Spark</a>
+    
+    <a href="https://cppfans.org/tags/Sprite/">Sprite</a>
+    
+    <a href="https://cppfans.org/tags/Startup/">Startup</a>
+    
+    <a href="https://cppfans.org/tags/Static-Lib/">Static Lib</a>
+    
+    <a href="https://cppfans.org/tags/SystemAddress/">SystemAddress</a>
+    
+    <a href="https://cppfans.org/tags/TBB/">TBB</a>
+    
+    <a href="https://cppfans.org/tags/Threading-Building-Blocks/">Threading Building Blocks</a>
+    
+    <a href="https://cppfans.org/tags/TortoiseGit/">TortoiseGit</a>
+    
+    <a href="https://cppfans.org/tags/TortoiseSVN/">TortoiseSVN</a>
+    
+    <a href="https://cppfans.org/tags/UI/">UI</a>
+    
+    <a href="https://cppfans.org/tags/URL/">URL</a>
+    
+    <a href="https://cppfans.org/tags/UUID/">UUID</a>
+    
+    <a href="https://cppfans.org/tags/Ubuntu/">Ubuntu</a>
+    
+    <a href="https://cppfans.org/tags/Unity/">Unity</a>
+    
+    <a href="https://cppfans.org/tags/Unix/">Unix</a>
+    
+    <a href="https://cppfans.org/tags/VLD/">VLD</a>
+    
+    <a href="https://cppfans.org/tags/VPS/">VPS</a>
+    
+    <a href="https://cppfans.org/tags/VS2010/">VS2010</a>
+    
+    <a href="https://cppfans.org/tags/WebSocket/">WebSocket</a>
+    
+    <a href="https://cppfans.org/tags/Win7/">Win7</a>
+    
+    <a href="https://cppfans.org/tags/Win8/">Win8</a>
+    
+    <a href="https://cppfans.org/tags/Xfce/">Xfce</a>
+    
+    <a href="https://cppfans.org/tags/ZMQ/">ZMQ</a>
+    
+    <a href="https://cppfans.org/tags/ZeroMQ/">ZeroMQ</a>
+    
+    <a href="https://cppfans.org/tags/_CrtDumpMemoryLeaks/">_CrtDumpMemoryLeaks</a>
+    
+    <a href="https://cppfans.org/tags/asio/">asio</a>
+    
+    <a href="https://cppfans.org/tags/auto/">auto</a>
+    
+    <a href="https://cppfans.org/tags/boost/">boost</a>
+    
+    <a href="https://cppfans.org/tags/breakpad/">breakpad</a>
+    
+    <a href="https://cppfans.org/tags/cloud/">cloud</a>
+    
+    <a href="https://cppfans.org/tags/codeblocks/">codeblocks</a>
+    
+    <a href="https://cppfans.org/tags/consistent-hashing/">consistent hashing</a>
+    
+    <a href="https://cppfans.org/tags/coroutine/">coroutine</a>
+    
+    <a href="https://cppfans.org/tags/cx-freeze/">cx-freeze</a>
+    
+    <a href="https://cppfans.org/tags/delete/">delete</a>
+    
+    <a href="https://cppfans.org/tags/demo/">demo</a>
+    
+    <a href="https://cppfans.org/tags/dlclose/">dlclose</a>
+    
+    <a href="https://cppfans.org/tags/docker/">docker</a>
+    
+    <a href="https://cppfans.org/tags/easyloggingpp/">easyloggingpp</a>
+    
+    <a href="https://cppfans.org/tags/eclipse/">eclipse</a>
+    
+    <a href="https://cppfans.org/tags/ensure/">ensure</a>
+    
+    <a href="https://cppfans.org/tags/epoll/">epoll</a>
+    
+    <a href="https://cppfans.org/tags/feed/">feed</a>
+    
+    <a href="https://cppfans.org/tags/feedburner/">feedburner</a>
+    
+    <a href="https://cppfans.org/tags/feedsky/">feedsky</a>
+    
+    <a href="https://cppfans.org/tags/flat_map/">flat_map</a>
+    
+    <a href="https://cppfans.org/tags/git/">git</a>
+    
+    <a href="https://cppfans.org/tags/glog/">glog</a>
+    
+    <a href="https://cppfans.org/tags/goagent/">goagent</a>
+    
+    <a href="https://cppfans.org/tags/google/">google</a>
+    
+    <a href="https://cppfans.org/tags/headonly/">headonly</a>
+    
+    <a href="https://cppfans.org/tags/httpd/">httpd</a>
+    
+    <a href="https://cppfans.org/tags/iOS7/">iOS7</a>
+    
+    <a href="https://cppfans.org/tags/iSpriter/">iSpriter</a>
+    
+    <a href="https://cppfans.org/tags/ibus/">ibus</a>
+    
+    <a href="https://cppfans.org/tags/jsoncpp/">jsoncpp</a>
+    
+    <a href="https://cppfans.org/tags/leveldb/">leveldb</a>
+    
+    <a href="https://cppfans.org/tags/libevent/">libevent</a>
+    
+    <a href="https://cppfans.org/tags/linode/">linode</a>
+    
+    <a href="https://cppfans.org/tags/log/">log</a>
+    
+    <a href="https://cppfans.org/tags/log%E5%BA%93/">log库</a>
+    
+    <a href="https://cppfans.org/tags/lxde/">lxde</a>
+    
+    <a href="https://cppfans.org/tags/msysgit/">msysgit</a>
+    
+    <a href="https://cppfans.org/tags/mutex/">mutex</a>
+    
+    <a href="https://cppfans.org/tags/mysqlpp/">mysqlpp</a>
+    
+    <a href="https://cppfans.org/tags/nana/">nana</a>
+    
+    <a href="https://cppfans.org/tags/noncopyable/">noncopyable</a>
+    
+    <a href="https://cppfans.org/tags/php/">php</a>
+    
+    <a href="https://cppfans.org/tags/property_tree/">property_tree</a>
+    
+    <a href="https://cppfans.org/tags/protobuf/">protobuf</a>
+    
+    <a href="https://cppfans.org/tags/pthread/">pthread</a>
+    
+    <a href="https://cppfans.org/tags/py2exe/">py2exe</a>
+    
+    <a href="https://cppfans.org/tags/python/">python</a>
+    
+    <a href="https://cppfans.org/tags/recieve-packet/">recieve packet</a>
+    
+    <a href="https://cppfans.org/tags/redis/">redis</a>
+    
+    <a href="https://cppfans.org/tags/runtime/">runtime</a>
+    
+    <a href="https://cppfans.org/tags/sae/">sae</a>
+    
+    <a href="https://cppfans.org/tags/sbt/">sbt</a>
+    
+    <a href="https://cppfans.org/tags/selinux/">selinux</a>
+    
+    <a href="https://cppfans.org/tags/share_ptr/">share_ptr</a>
+    
+    <a href="https://cppfans.org/tags/spinlock/">spinlock</a>
+    
+    <a href="https://cppfans.org/tags/spirit/">spirit</a>
+    
+    <a href="https://cppfans.org/tags/svn/">svn</a>
+    
+    <a href="https://cppfans.org/tags/tcp/">tcp</a>
+    
+    <a href="https://cppfans.org/tags/undefined-reference/">undefined reference</a>
+    
+    <a href="https://cppfans.org/tags/vim/">vim</a>
+    
+    <a href="https://cppfans.org/tags/vmware/">vmware</a>
+    
+    <a href="https://cppfans.org/tags/web/">web</a>
+    
+    <a href="https://cppfans.org/tags/windows-live/">windows live</a>
+    
+    <a href="https://cppfans.org/tags/wordpress/">wordpress</a>
+    
+    <a href="https://cppfans.org/tags/ws/">ws</a>
+    
+    <a href="https://cppfans.org/tags/xml/">xml</a>
+    
+    <a href="https://cppfans.org/tags/xshell/">xshell</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/">一致性哈希</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B8%83%E5%AE%97%E7%BD%AA/">七宗罪</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B8%8B%E8%BD%BD/">下载</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B8%BB%E6%9C%BA/">主机</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B8%BB%E9%A2%98/">主题</a>
+    
+    <a href="https://cppfans.org/tags/%E4%B9%A0%E6%83%AF/">习惯</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/">云计算</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BA%92%E6%96%A5%E9%94%81/">互斥锁</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BA%A4%E6%B5%81/">交流</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BA%A7%E5%93%81/">产品</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BB%A3%E7%A0%81/">代码</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BB%A3%E7%A0%81%E5%88%86%E4%BA%AB/">代码分享</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BB%B7%E5%80%BC/">价值</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BC%98%E5%8C%96/">优化</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BD%BF%E7%94%A8/">使用</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BE%8B%E5%AD%90/">例子</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BF%9D%E9%92%93%E4%BA%8B%E4%BB%B6/">保钓事件</a>
+    
+    <a href="https://cppfans.org/tags/%E4%BF%AE%E6%94%B9/">修改</a>
+    
+    <a href="https://cppfans.org/tags/%E5%85%83%E6%97%A6/">元旦</a>
+    
+    <a href="https://cppfans.org/tags/%E5%85%A8%E5%B1%8F/">全屏</a>
+    
+    <a href="https://cppfans.org/tags/%E5%85%AC%E5%8F%B8/">公司</a>
+    
+    <a href="https://cppfans.org/tags/%E5%85%B1%E4%BA%AB/">共享</a>
+    
+    <a href="https://cppfans.org/tags/%E5%86%85%E5%AD%98/">内存</a>
+    
+    <a href="https://cppfans.org/tags/%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2/">内存泄露</a>
+    
+    <a href="https://cppfans.org/tags/%E5%86%85%E5%AE%B9/">内容</a>
+    
+    <a href="https://cppfans.org/tags/%E5%86%99%E4%BD%9C/">写作</a>
+    
+    <a href="https://cppfans.org/tags/%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88/">函数指针</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%86%E4%BA%AB/">分享</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%86%E6%9E%90/">分析</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%9B%E4%B8%9A/">创业</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%A0%E9%99%A4/">删除</a>
+    
+    <a href="https://cppfans.org/tags/%E5%88%B6%E5%BA%A6/">制度</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8A%A0%E5%AF%86/">加密</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8A%A0%E7%8F%AD/">加班</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8A%A0%E9%80%9F/">加速</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%81%E4%B8%80/">十一</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%87%E7%BA%A7/">升级</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%8A%E8%87%AA%E5%8A%A8%E9%94%81/">半自动锁</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%8F%E7%A8%8B/">协程</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%8F%E8%AE%AE/">协议</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%95%E8%AF%8D/">单词</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8E%9F%E5%88%99/">原则</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%88%E6%8B%8D%E7%BD%91/">又拍网</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%8D%E5%B0%84/">反射</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">反序列化</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%91%E5%B1%95/">发展</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/">可视化</a>
+    
+    <a href="https://cppfans.org/tags/%E5%8F%B3%E5%80%BC%E5%BC%95%E7%94%A8/">右值引用</a>
+    
+    <a href="https://cppfans.org/tags/%E5%91%BD%E4%BB%A4/">命令</a>
+    
+    <a href="https://cppfans.org/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/">命令行</a>
+    
+    <a href="https://cppfans.org/tags/%E5%91%BD%E5%90%8D%E8%A7%84%E5%88%99/">命名规则</a>
+    
+    <a href="https://cppfans.org/tags/%E5%94%AF%E4%B8%80%E6%A0%87%E7%A4%BA%E7%A0%81/">唯一标示码</a>
+    
+    <a href="https://cppfans.org/tags/%E5%95%86%E4%B8%9A/">商业</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%A2%E9%98%9F/">团队</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%A2%E9%98%9F%E5%BB%BA%E8%AE%BE/">团队建设</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%BD%E5%BA%86/">国庆</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%BD%E6%88%98/">国战</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%BE%E5%BA%8A/">图床</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%BE%E5%BD%A2%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2/">图形用户界面</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9B%BE%E7%89%87/">图片</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9C%B0%E9%9C%87/">地震</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9D%9A%E6%8C%81/">坚持</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/">垃圾回收器</a>
+    
+    <a href="https://cppfans.org/tags/%E5%9F%9F%E5%90%8D/">域名</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%87%E6%A1%88/">备案</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%9A%E6%A0%B8/">多核</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">多线程</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%9A%E8%AF%AD%E8%A8%80/">多语言</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/">多路复用</a>
+    
+    <a href="https://cppfans.org/tags/%E5%A4%A9%E9%BE%99%E5%85%AB%E9%83%A8/">天龙八部</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AD%97%E4%BD%93/">字体</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AD%A6%E4%B9%A0/">学习</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AE%89%E8%A3%85%E7%BC%96%E8%AF%91/">安装编译</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AE%9E%E6%88%98/">实战</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/">实现原理</a>
+    
+    <a href="https://cppfans.org/tags/%E5%AE%B9%E5%99%A8/">容器</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B1%8C%E4%B8%9D/">屌丝</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B7%A5%E4%BD%9C/">工作</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B7%A5%E5%85%B7%E6%9D%A1/">工具条</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B7%A6%E5%80%BC%E5%BC%95%E7%94%A8/">左值引用</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B9%B4%E4%BC%9A/">年会</a>
+    
+    <a href="https://cppfans.org/tags/%E5%B9%B6%E5%8F%91/">并发</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BA%8F%E5%88%97%E5%8C%96/">序列化</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">开发环境</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%80%E6%BA%90/">开源</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%82%E5%B8%B8/">异常</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%82%E6%AD%A5/">异步</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%82%E6%AD%A5I/O/">异步I/O</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0/">引用计数</a>
+    
+    <a href="https://cppfans.org/tags/%E5%BF%AB%E9%80%9F/">快速</a>
+    
+    <a href="https://cppfans.org/tags/%E6%80%9D%E8%B7%AF/">思路</a>
+    
+    <a href="https://cppfans.org/tags/%E6%80%A7%E8%83%BD/">性能</a>
+    
+    <a href="https://cppfans.org/tags/%E6%80%BB%E7%BB%93/">总结</a>
+    
+    <a href="https://cppfans.org/tags/%E6%84%9F%E6%82%9F/">感悟</a>
+    
+    <a href="https://cppfans.org/tags/%E6%84%9F%E8%A7%A6/">感触</a>
+    
+    <a href="https://cppfans.org/tags/%E6%89%81%E5%B9%B3%E5%8C%96/">扁平化</a>
+    
+    <a href="https://cppfans.org/tags/%E6%89%8B%E6%B8%B8/">手游</a>
+    
+    <a href="https://cppfans.org/tags/%E6%89%B9%E5%A4%84%E7%90%86/">批处理</a>
+    
+    <a href="https://cppfans.org/tags/%E6%8A%80%E5%B7%A7/">技巧</a>
+    
+    <a href="https://cppfans.org/tags/%E6%8A%80%E6%9C%AF/">技术</a>
+    
+    <a href="https://cppfans.org/tags/%E6%8E%A5%E5%8F%A3/">接口</a>
+    
+    <a href="https://cppfans.org/tags/%E6%8F%90%E9%AB%98%E8%AE%A2%E9%98%85%E9%87%8F/">提高订阅量</a>
+    
+    <a href="https://cppfans.org/tags/%E6%90%AD%E5%BB%BA/">搭建</a>
+    
+    <a href="https://cppfans.org/tags/%E6%95%88%E7%8E%87/">效率</a>
+    
+    <a href="https://cppfans.org/tags/%E6%95%99%E7%A8%8B/">教程</a>
+    
+    <a href="https://cppfans.org/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+    
+    <a href="https://cppfans.org/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a>
+    
+    <a href="https://cppfans.org/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%87%E4%BA%BA%E7%9B%B8%E8%BD%BB/">文人相轻</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%87%E4%BB%B6/">文件</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%87%E4%BB%B6%E6%A0%BC%E5%BC%8F/">文件格式</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%87%E6%A1%A3/">文档</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%87%E7%AB%A0/">文章</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%B0%E5%B9%B4/">新年</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%B0%E7%89%88%E6%9C%AC/">新版本</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%B0%E7%89%B9%E6%80%A7/">新特性</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%B0%E8%AA%89/">新誉</a>
+    
+    <a href="https://cppfans.org/tags/%E6%96%B9%E6%B3%95/">方法</a>
+    
+    <a href="https://cppfans.org/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    
+    <a href="https://cppfans.org/tags/%E6%97%B6%E9%97%B4/">时间</a>
+    
+    <a href="https://cppfans.org/tags/%E6%99%BA%E6%85%A7/">智慧</a>
+    
+    <a href="https://cppfans.org/tags/%E6%99%BA%E8%83%BD%E6%8C%87%E9%92%88/">智能指针</a>
+    
+    <a href="https://cppfans.org/tags/%E6%9C%8D%E5%8A%A1/">服务</a>
+    
+    <a href="https://cppfans.org/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+    
+    <a href="https://cppfans.org/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A1%86%E6%9E%B6/">服务器框架</a>
+    
+    <a href="https://cppfans.org/tags/%E6%9E%B6%E6%9E%84/">架构</a>
+    
+    <a href="https://cppfans.org/tags/%E6%A1%82%E6%9E%97/">桂林</a>
+    
+    <a href="https://cppfans.org/tags/%E6%A3%80%E6%B5%8B/">检测</a>
+    
+    <a href="https://cppfans.org/tags/%E6%A8%A1%E6%8B%9F/">模拟</a>
+    
+    <a href="https://cppfans.org/tags/%E6%A8%A1%E6%8B%9F%E5%99%A8/">模拟器</a>
+    
+    <a href="https://cppfans.org/tags/%E6%AD%A6%E7%A5%9E/">武神</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B0%B4%E6%B5%92%E6%97%A0%E5%8F%8C/">水浒无双</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B1%82%E8%81%8C/">求职</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B2%9F%E9%80%9A/">沟通</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B5%8B%E8%AF%95/">测试</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B6%88%E6%81%AF%E5%86%85%E6%A0%B8/">消息内核</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F/">游戏</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/">游戏开发</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%9A/">游戏行业</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a>
+    
+    <a href="https://cppfans.org/tags/%E6%B8%B8%E6%88%8F%E8%B5%84%E6%BA%90/">游戏资源</a>
+    
+    <a href="https://cppfans.org/tags/%E6%BA%90%E4%BB%A3%E7%A0%81/">源代码</a>
+    
+    <a href="https://cppfans.org/tags/%E6%BA%90%E7%A0%81/">源码</a>
+    
+    <a href="https://cppfans.org/tags/%E6%BC%AB%E7%94%BB/">漫画</a>
+    
+    <a href="https://cppfans.org/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">版本控制</a>
+    
+    <a href="https://cppfans.org/tags/%E7%90%86%E6%80%A7%E7%88%B1%E5%9B%BD/">理性爱国</a>
+    
+    <a href="https://cppfans.org/tags/%E7%94%9F%E6%B4%BB/">生活</a>
+    
+    <a href="https://cppfans.org/tags/%E7%94%B5%E5%BD%B1/">电影</a>
+    
+    <a href="https://cppfans.org/tags/%E7%96%91%E9%97%AE/">疑问</a>
+    
+    <a href="https://cppfans.org/tags/%E7%99%BE%E5%BA%A6%E5%88%86%E4%BA%AB/">百度分享</a>
+    
+    <a href="https://cppfans.org/tags/%E7%99%BE%E5%BA%A6%E5%96%9C%E6%AC%A2/">百度喜欢</a>
+    
+    <a href="https://cppfans.org/tags/%E7%9B%AE%E5%BD%95/">目录</a>
+    
+    <a href="https://cppfans.org/tags/%E7%9B%AE%E6%A0%87/">目标</a>
+    
+    <a href="https://cppfans.org/tags/%E7%A1%AC%E7%9B%98/">硬盘</a>
+    
+    <a href="https://cppfans.org/tags/%E7%A5%88%E7%A6%8F/">祈福</a>
+    
+    <a href="https://cppfans.org/tags/%E7%A5%9E%E7%A7%98%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98/">神秘的程序员</a>
+    
+    <a href="https://cppfans.org/tags/%E7%A8%8B%E5%BA%8F%E5%91%98/">程序员</a>
+    
+    <a href="https://cppfans.org/tags/%E7%A8%8B%E5%BA%8F%E7%8C%BF/">程序猿</a>
+    
+    <a href="https://cppfans.org/tags/%E7%AB%AF%E6%B8%B8/">端游</a>
+    
+    <a href="https://cppfans.org/tags/%E7%AE%80%E5%8D%95%E5%BA%94%E7%94%A8/">简单应用</a>
+    
+    <a href="https://cppfans.org/tags/%E7%AE%97%E6%B3%95/">算法</a>
+    
+    <a href="https://cppfans.org/tags/%E7%AE%A1%E7%90%86/">管理</a>
+    
+    <a href="https://cppfans.org/tags/%E7%B1%BB%E5%BA%93/">类库</a>
+    
+    <a href="https://cppfans.org/tags/%E7%B2%BE%E7%81%B5%E5%9B%BE/">精灵图</a>
+    
+    <a href="https://cppfans.org/tags/%E7%B3%BB%E7%BB%9F/">系统</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BA%BF%E7%A8%8B%E9%94%81/">线程锁</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BB%86%E5%BF%83/">细心</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BB%8F%E9%AA%8C/">经验</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BB%93%E6%9D%9F%E8%AF%AD/">结束语</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%93%E5%AD%98/">缓存</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E7%A8%8B/">编程</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83/">编程规范</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/">编程语言</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E8%AF%91/">编译</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E8%AF%91%E5%90%8E%E4%BA%8B%E4%BB%B6/">编译后事件</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BC%96%E8%AF%91%E5%B7%A5%E5%85%B7/">编译工具</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E6%B8%B8/">网游</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E6%B8%B8%E6%9C%8D%E5%8A%A1%E5%99%A8/">网游服务器</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%AB%99%E9%BB%91%E7%99%BD/">网站黑白</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9CC&#43;&#43;/">网络，C&#43;&#43;</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E5%BA%93/">网络库</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E5%BC%80%E5%8F%91/">网络开发</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E5%BC%95%E6%93%8E/">网络引擎</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">网络编程</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BD%91%E7%BB%9C%E8%AE%BE%E7%BD%AE/">网络设置</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BF%BB%E5%A2%99/">翻墙</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BF%BB%E8%AF%91/">翻译</a>
+    
+    <a href="https://cppfans.org/tags/%E7%BF%BB%E8%AF%91%E6%96%87%E6%A1%A3/">翻译文档</a>
+    
+    <a href="https://cppfans.org/tags/%E8%81%8C%E4%B8%9A/">职业</a>
+    
+    <a href="https://cppfans.org/tags/%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92/">职业规划</a>
+    
+    <a href="https://cppfans.org/tags/%E8%81%8C%E5%9C%BA/">职场</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%8A%A8/">自动</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/">自动化</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%8A%A8%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%BC%94/">自动类型推演</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%8A%A9%E7%A8%8B%E5%BA%8F/">自助程序</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%90%AF%E5%8A%A8/">自启动</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8/">自定义异常</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E6%97%8B%E9%94%81/">自旋锁</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%AA%E7%84%B6%E9%A3%8E%E6%99%AF/">自然风景</a>
+    
+    <a href="https://cppfans.org/tags/%E8%87%B4%E6%AD%89/">致歉</a>
+    
+    <a href="https://cppfans.org/tags/%E8%8B%B1%E8%AF%AD/">英语</a>
+    
+    <a href="https://cppfans.org/tags/%E8%93%9D%E5%B1%8F/">蓝屏</a>
+    
+    <a href="https://cppfans.org/tags/%E8%96%AA%E8%B5%84/">薪资</a>
+    
+    <a href="https://cppfans.org/tags/%E8%99%9A%E6%8B%9F%E5%8C%96/">虚拟化</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A1%8C%E4%B8%9A/">行业</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A3%85%E9%A5%B0%E5%99%A8/">装饰器</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A7%84%E5%88%99/">规则</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A7%A3%E5%AF%86/">解密</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A7%A3%E6%9E%90JSON/">解析JSON</a>
+    
+    <a href="https://cppfans.org/tags/%E8%A7%A3%E7%AD%94/">解答</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AE%A2%E9%98%85/">订阅</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AE%B0%E5%BF%86/">记忆</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AE%BE%E8%AE%A1/">设计</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%84%E8%AE%BA/">评论</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%86%E5%88%AB/">识别</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%AD%E6%B3%95/">语法</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%AD%E8%A8%80/">语言</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%B7%E6%B1%82/">请求</a>
+    
+    <a href="https://cppfans.org/tags/%E8%AF%BB%E4%B9%A6/">读书</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B0%83%E8%AF%95/">调试</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B0%8D%E5%BD%B1%E9%87%8D%E9%87%8D5/">谍影重重5</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B4%A3%E4%BB%BB/">责任</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B5%84%E6%9C%AC/">资本</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B6%A3%E5%91%B3%E4%BB%A3%E7%A0%81/">趣味代码</a>
+    
+    <a href="https://cppfans.org/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/">跨平台</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6/">转义字符</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6/">软件</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E5%8D%B8%E8%BD%BD/">软件卸载</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/">软件安装</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1/">软件设计</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BE%93%E5%85%A5%E6%B3%95/">输入法</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BF%91%E5%86%B5/">近况</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BF%9B%E9%98%B6/">进阶</a>
+    
+    <a href="https://cppfans.org/tags/%E8%BF%9E%E6%8E%A5/">连接</a>
+    
+    <a href="https://cppfans.org/tags/%E9%80%89%E6%8B%A9/">选择</a>
+    
+    <a href="https://cppfans.org/tags/%E9%81%93%E6%AD%89/">道歉</a>
+    
+    <a href="https://cppfans.org/tags/%E9%81%BF%E5%85%8D%E9%94%99%E8%AF%AF/">避免错误</a>
+    
+    <a href="https://cppfans.org/tags/%E9%85%8D%E8%89%B2/">配色</a>
+    
+    <a href="https://cppfans.org/tags/%E9%93%BE%E6%8E%A5%E5%BA%93/">链接库</a>
+    
+    <a href="https://cppfans.org/tags/%E9%97%AE%E9%A2%98/">问题</a>
+    
+    <a href="https://cppfans.org/tags/%E9%9B%85%E5%AE%89/">雅安</a>
+    
+    <a href="https://cppfans.org/tags/%E9%9D%99%E6%80%81%E6%96%AD%E8%A8%80/">静态断言</a>
+    
+    <a href="https://cppfans.org/tags/%E9%9D%99%E6%80%81%E7%BC%96%E8%AF%91/">静态编译</a>
+    
+    <a href="https://cppfans.org/tags/%E9%9D%9E%E7%BC%96%E7%A8%8B/">非编程</a>
+    
+    <a href="https://cppfans.org/tags/%E9%9D%A2%E8%AF%95/">面试</a>
+    
+    <a href="https://cppfans.org/tags/%E9%A1%B5%E6%B8%B8/">页游</a>
+    
+    <a href="https://cppfans.org/tags/%E9%A1%B9%E7%9B%AE/">项目</a>
+    
+    <a href="https://cppfans.org/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/">项目经理</a>
+    
+    <a href="https://cppfans.org/tags/%E9%AB%98%E4%BC%B0/">高估</a>
+    
+    <a href="https://cppfans.org/tags/%E9%AB%98%E5%B9%B6%E5%8F%91/">高并发</a>
+    
+    <a href="https://cppfans.org/tags/%E9%AB%98%E6%80%A7%E8%83%BD/">高性能</a>
+    
+    <a href="https://cppfans.org/tags/%E9%AB%98%E6%95%88/">高效</a>
+    
+</div>
+    </section>
+
+    
+<section class="widget">
+    <h3 class="widget-title">友情链接</h3>
+    <ul class="widget-list">
+        
+        <li>
+            <a target="_blank" href="https://www.flysnow.org/" title="飞雪无情的博客">飞雪无情的博客</a>
+        </li>
+        
+    </ul>
+</section>
+
+
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://cppfans.org/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2019 <a href="https://cppfans.org">C&#43;&#43;爱好者博客 By NickYang</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+    
+    <script type="text/javascript">
+        window.MathJax = {
+            tex2jax: {
+                inlineMath: [['$', '$']],
+                processEscapes: true
+                }
+            };
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+    <script type="text/javascript" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+
+
+
+
+    <script src='/js/douban.js'></script>
+
+</body>
+
+</html>

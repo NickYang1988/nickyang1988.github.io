@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>web on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/web/</link>
+    <description>Recent content in web on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 24 Mar 2013 14:48:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>网站设计之CSS精灵图</title>
+      <link>https://cppfans.org/1468.html</link>
+      <pubDate>Sun, 24 Mar 2013 14:48:39 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1468.html</guid>
+      <description>写完这个标题后，我就后悔了，因为这个标题会让别人误以为我很懂网站设计似的，其实对于web开发我是个外行。没改标题的原因是可以让大家有“虽不懂但觉厉”的感觉。 我研究web技术仅限于折腾我这个博客，当随便翻到某个网站的时候，看到有好的地方，就抄袭过来，我这往大了说应该属于网络犯罪。 今</description>
+    </item>
+    
+  </channel>
+</rss>

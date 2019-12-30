@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>静态断言 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%9D%99%E6%80%81%E6%96%AD%E8%A8%80/</link>
+    <description>Recent content in 静态断言 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 21 Nov 2012 01:20:47 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%9D%99%E6%80%81%E6%96%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>分享自定义静态断言代码</title>
+      <link>https://cppfans.org/1408.html</link>
+      <pubDate>Wed, 21 Nov 2012 01:20:47 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1408.html</guid>
+      <description>本文代码来自于QQ群中nous大神，类似于static assert，不过断言异常内容可以自定义。 代码分为boost版本和标准版本，使用ENSURE_HAS_BOOST 宏来区分。 代码： // // ensure.hpp // // Copyright (c) Nous Xiong. // // Macro ENSURE impl. // #ifndef ENSURE_HPP #define ENSURE_HPP #ifdef ENSURE_HAS_BOOST #include &amp;lt;boost/exception/all&amp;gt; #include &amp;lt;boost/thread/tss.hpp&amp;gt; #include &amp;lt;boost/preprocessor/seq/for_each.hpp&amp;gt; #include &amp;lt;boost/integer.hpp&amp;gt; #include &amp;lt;stdexcept&amp;gt; #include &amp;lt;sstream&amp;gt; #include &amp;lt;iostream&amp;gt; namespace un { /// 运行时刻信息 typedef boost::error_info&amp;lt;struct tag_runtime, std::string&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

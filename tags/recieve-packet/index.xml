@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>recieve packet on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/recieve-packet/</link>
+    <description>Recent content in recieve packet on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 20 May 2012 13:30:09 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/recieve-packet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[网络开发]RakNet翻译文档(4)——Recieving Packets</title>
+      <link>https://cppfans.org/1322.html</link>
+      <pubDate>Sun, 20 May 2012 13:30:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1322.html</guid>
+      <description>抱歉这篇文章出现这么迟。 当一个数据包出现在网络上的时候，例如收到了返回值不为零的数据，涉及了三个步骤来处理它。 1.确定这个数据包的类型，它通过如下代码被返回 unsigned char GetPacketIdentifier(Packet *p) { if ((unsigned char)p-&amp;gt;data[0] == ID_TIMESTAMP) return (unsigned char)p-&amp;gt;data[sizeof(unsigned char) + sizeof(unsigned long)]; else return (unsigned char) p-&amp;gt;data[0]; } 2.处理数据 接收到结构体 如果你最开始发送了一个结构体，你可以通过如下代码转化回</description>
+    </item>
+    
+  </channel>
+</rss>

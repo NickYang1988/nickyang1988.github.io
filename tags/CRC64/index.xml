@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CRC64 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/CRC64/</link>
+    <description>Recent content in CRC64 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 25 Aug 2014 12:03:32 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/CRC64/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>使用boost进行CRC64计算</title>
+      <link>https://cppfans.org/1713.html</link>
+      <pubDate>Mon, 25 Aug 2014 12:03:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1713.html</guid>
+      <description>因接入平台，平台提供的是一个字符串的key作为用户标识，而且要用到分布式，所以没法用以前的数据库递增来做用户ID，于是用CRC64来生成uint64_t来作为用户ID，做法也比较简单。如下： std::map&amp;lt;size_t, size_t&amp;gt; xLongMap; char szTemp[128] = {0}; boost::crc_optimal&amp;lt;64, 0x04C11DB7, 0, 0, false, false&amp;gt; crc; for (uint32_t i = 0; i &amp;lt; 1000000000; ++i) { memset(szTemp, 0, sizeof(szTemp)); sprintf_s(szTemp, &#34;%d%s%s%s&#34;, i, &#34;1a2b3c&#34;, &#34;4d5e6f&#34;, &#34;7g8h9i&#34;); crc.process_bytes(szTemp, strlen(szTemp)); size_t nPos = crc.checksum(); crc.reset(); if (!xLongMap.insert(std::map&amp;lt;size_t, size_t&amp;gt;::value_type(nPos, 0)).second) {</description>
+    </item>
+    
+  </channel>
+</rss>

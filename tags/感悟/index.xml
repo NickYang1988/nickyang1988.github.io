@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>感悟 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%84%9F%E6%82%9F/</link>
+    <description>Recent content in 感悟 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 26 Feb 2011 10:58:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>最近工作生活的一点小总结</title>
+      <link>https://cppfans.org/229.html</link>
+      <pubDate>Sat, 26 Feb 2011 10:58:53 +0000</pubDate>
+      
+      <guid>https://cppfans.org/229.html</guid>
+      <description>最近两周工作中，感觉明显状态不行了，每天做的事情都非常少，效率极低，有可能是年前封闭太累了，封闭完之后，直接过年了，所以状态包括身体都感觉比较疲惫导致的。 并且，最近跟策划沟通方面也显得比较毛糙，可能是年龄小了一点，很多东西都没考虑到，焦躁了一些吧。这毛病得改改了。 最近有点心高气傲</description>
+    </item>
+    
+  </channel>
+</rss>

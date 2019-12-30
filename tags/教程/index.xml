@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 06 Jan 2013 01:15:58 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>浅析epoll - epoll例子以及分析</title>
+      <link>https://cppfans.org/1419.html</link>
+      <pubDate>Sun, 06 Jan 2013 01:15:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1419.html</guid>
+      <description>上篇我们讲到epoll的函数和性能。这一篇用用这些个函数，给出一个最简单的epoll的例子。 // // a simple echo server using epoll in linux // // 2009-11-05 // by sparkling // #include &amp;lt;sys/socket.h&amp;gt; #include &amp;lt;sys/epoll.h&amp;gt; #include &amp;lt;netinet/in.h&amp;gt; #include &amp;lt;arpa/inet.h&amp;gt; #include &amp;lt;fcntl.h&amp;gt; #include &amp;lt;unistd.h&amp;gt; #include &amp;lt;stdio.h&amp;gt; #include &amp;lt;errno.h&amp;gt; #include &amp;lt;iostream&amp;gt; using namespace std; #define MAX_EVENTS 500 struct myevent_s { int fd; void (*call_back)(int fd, int events, void *arg); int events; void *arg; int status; // 1: in epoll wait list, 0 not in char buff[128]; // recv data buffer int len; long last_active; // last active time }; // set event void EventSet(myevent_s *ev, int fd, void (*call_back)(int, int,</description>
+    </item>
+    
+    <item>
+      <title>[多图]TortoiseSVN配置管理使用</title>
+      <link>https://cppfans.org/349.html</link>
+      <pubDate>Sat, 16 Apr 2011 17:44:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/349.html</guid>
+      <description>本文最开始有我写在锋酷开发社区(www.flycode.org)，现转载过来供大家查看。 一.下载并安装TortoiseSVN程序，点击Next，下图为安装顺序 点击【Finish】会重新启动计算机，重启后，运行中文语言包进行汉化。 二、TortoiseSVN的基本使用方法 安装完成后，</description>
+    </item>
+    
+    <item>
+      <title>[教程预告]lua系列文章通知</title>
+      <link>https://cppfans.org/102.html</link>
+      <pubDate>Sun, 02 Jan 2011 14:36:58 +0000</pubDate>
+      
+      <guid>https://cppfans.org/102.html</guid>
+      <description>最近一直在做关于脚本方面的东西，所以就想写一写关于自己对脚本这块东西的小见解。 脚本系统在一个游戏中发挥的作用个人觉得非常巨大，比如游戏中的任务，活动，AI，玩法等等很多东西都要用脚本来控制。脚本对游戏的可玩性和多玩性做了很大的贡献。 脚本语言可谓种类繁多，比如lua, perl, python, 甚至是自定</description>
+    </item>
+    
+  </channel>
+</rss>

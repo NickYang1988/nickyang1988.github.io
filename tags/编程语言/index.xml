@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>编程语言 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 编程语言 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 09 Jan 2013 14:05:07 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为何python现在越来越多的人在用了？</title>
+      <link>https://cppfans.org/1436.html</link>
+      <pubDate>Wed, 09 Jan 2013 14:05:07 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1436.html</guid>
+      <description>曾几何时，python这门语言我并没有听过，那个时候只知道C，后来学了C++，用了C++ Builder和VS，再后来学了C#的皮毛，继之是Lua，觉得差不多了。但是最近买了本python的书之后，觉得python处理问题更简便了。 C++之父Bjarne Stroustrup曾经说过</description>
+    </item>
+    
+  </channel>
+</rss>

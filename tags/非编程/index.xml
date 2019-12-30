@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>非编程 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E9%9D%9E%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 非编程 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 16 Jul 2014 01:37:49 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E9%9D%9E%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]国外程序员推荐：每个程序员都应该读的非编程书</title>
+      <link>https://cppfans.org/1684.html</link>
+      <pubDate>Wed, 16 Jul 2014 01:37:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1684.html</guid>
+      <description>五年前有网友在 Stackoverflow 发帖提问：『程序员应该读哪些非编程方面的书？』。有很多程序员响应，他们在推荐的同时也写下了自己的评语。本文摘编其中 29 本书，下面就按照各书的推荐数排列。另外，本月初我们在伯乐头条也发起了相同的讨论帖《你最喜欢的非编程书是哪一本？》，已有很多的朋友推荐了他们喜欢的书。</description>
+    </item>
+    
+  </channel>
+</rss>

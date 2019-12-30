@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 20 Mar 2013 14:59:28 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转载]我眼中的技术高手 - lifesinger</title>
+      <link>https://cppfans.org/1467.html</link>
+      <pubDate>Wed, 20 Mar 2013 14:59:28 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1467.html</guid>
+      <description>今天发了一条微博： 会原生 JavaScript 不代表什么，懂 jQuery、YUI 等才真正好。怎么这么多人有原生主义情结呢？走出那点小天地，海阔天高。 很多人已经猜出，这是为了晚上的文章而发，提前收集大家的想法。这个话题，很早就想谈，肯定会引起口水仗，但有些事不辩不明，不理不清，与其和谐社会，不如辛亥革</description>
+    </item>
+    
+  </channel>
+</rss>

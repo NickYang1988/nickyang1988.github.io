@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>互联网 on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91/</link>
+    <description>Recent content in 互联网 on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 19 May 2016 07:26:22 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/categories/%E4%BA%92%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[转]学习新东西的唯一方法</title>
+      <link>https://cppfans.org/2114.html</link>
+      <pubDate>Thu, 19 May 2016 07:26:22 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2114.html</guid>
+      <description>转自：http://www.jianshu.com/p/3a515cc30df3 有人曾从我工作的一家公司盗取了9千万美元。我不太懂得如何观人识人。这家公司最终关门了。 有一些事情我就是学不会。我很容易相信一个人。 因此，无论我如何尝试，判断一个人对我来说，简直太难了。所以，我寻找擅长</description>
+    </item>
+    
+    <item>
+      <title>[转]钱没了，公司就死了，科技创业公司如何才能不把钱花光？</title>
+      <link>https://cppfans.org/2105.html</link>
+      <pubDate>Wed, 09 Mar 2016 11:33:35 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2105.html</guid>
+      <description>&amp;nbsp;编者按：本文作者 Carol Leaman 是 Axonify公司的 CEO，她之前创办的公司被 Google 收购。 10年 前，我成了一家创业早期软件公司的 CEO。我本来受雇于一家私人股权公司，他们让我掌管他们觉得已经走错方向的业务。这并不完全是一场灾难，但是公司投入了上百万元，他们的一致认为：三位创始人需要</description>
+    </item>
+    
+    <item>
+      <title>[转]为何你的产品 Demo 如此糟糕？因为你太注重产品本身了</title>
+      <link>https://cppfans.org/2103.html</link>
+      <pubDate>Fri, 04 Mar 2016 10:23:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2103.html</guid>
+      <description>&amp;nbsp;编者按：不管是大公司还是创业公司，我们很多时候都需要去给别人 Demo 产品，给客户 Demo，给投资人 Demo。但很多时候你会发现你的产品 Demo 并不尽如人意。为什么呢？如何才能做一个成功的产品 Demo 呢？本文就是为回答这个问题而来的。 “有人会讨厌你，也有人会质疑你，然后你会想办法证明他们</description>
+    </item>
+    
+    <item>
+      <title>[转]为什么面试官很少向求职者解释原因</title>
+      <link>https://cppfans.org/2099.html</link>
+      <pubDate>Sun, 14 Feb 2016 02:18:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2099.html</guid>
+      <description>_本文译自Linkedin，作者 Ambra Benjamin。_ 作为一个面试官，拒绝人是我们工作中最糟糕的部分。相信我，就像求职者害怕接到拒绝电话一样，我也害怕打出这样的电话。虽然你也会遇到一些公司会详细解释原因，但多数情况下，你得到的将是简单的拒绝电话或者邮件，没有更多的详细解释。求职过</description>
+    </item>
+    
+    <item>
+      <title>[转]程序员如何谋划出月薪3万</title>
+      <link>https://cppfans.org/2066.html</link>
+      <pubDate>Mon, 04 Jan 2016 02:14:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2066.html</guid>
+      <description>转载自：http://www.techug.com/how-to-plan 不久前我发表了一篇文章，“月薪3万的程序员都避开了哪些坑”，在我的微信订阅号“程序视界”、CSDN博客、简书等平台都受了非常广泛的关注，点击量和评论出奇的多。有一些朋友觉得很难做到，其实，月薪3万是可以一步</description>
+    </item>
+    
+    <item>
+      <title>[转]提问的智慧</title>
+      <link>https://cppfans.org/2060.html</link>
+      <pubDate>Sun, 13 Dec 2015 09:07:06 +0000</pubDate>
+      
+      <guid>https://cppfans.org/2060.html</guid>
+      <description>提问的智慧 &amp;lt;div&amp;gt; &amp;lt;div class=&amp;quot;author&amp;quot;&amp;gt; &amp;lt;h3 class=&amp;quot;author&amp;quot;&amp;gt; 艾瑞克.史蒂文.雷蒙德（&amp;lt;span class=&amp;quot;firstname&amp;quot;&amp;gt;Eric&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;othername&amp;quot;&amp;gt;Steven&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quot;surname&amp;quot;&amp;gt;Raymond）&amp;lt;/span&amp;gt; &amp;lt;/h3&amp;gt; &amp;lt;div class=&amp;quot;affiliation&amp;quot;&amp;gt; &amp;lt;span class=&amp;quot;orgname&amp;quot;&amp;gt;&amp;lt;a href=&amp;quot;http://www.catb.org/~esr/&amp;quot; target=&amp;quot;_top&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;nofollow&amp;quot; &amp;gt;Thyrsus Enterprises&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt; &amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;div class=&amp;quot;address&amp;quot;&amp;gt; &amp;lt;code class=&amp;quot;email&amp;quot;&amp;gt;&amp;amp;lt;&amp;amp;lt;a href=&amp;quot;mailto:esr@thyrsus.com&amp;quot; target=&amp;quot;_blank&amp;quot; rel=&amp;quot;nofollow&amp;quot; &amp;gt;esr@thyrsus.com&amp;amp;lt;/a&amp;gt;&amp;amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div&amp;gt; &amp;lt;div class=&amp;quot;author&amp;quot;&amp;gt; &amp;lt;h3 class=&amp;quot;author&amp;quot;&amp;gt; 瑞克.莫恩（&amp;lt;span class=&amp;quot;firstname&amp;quot;&amp;gt;Rick&amp;lt;/span&amp;gt; &amp;lt;span class=&amp;quo</description>
+    </item>
+    
+    <item>
+      <title>[转]七个对我最重要的职业建议（译文）</title>
+      <link>https://cppfans.org/1995.html</link>
+      <pubDate>Sat, 19 Sep 2015 08:14:09 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1995.html</guid>
+      <description>作者： 阮一峰 日期： 2015年9月18日 Nicholas C. Zakas 是全世界最著名的 JavaScript 程序员之一。 两年前，他写了一篇长文，回顾自己的职业生涯，提到七个对他来说最重要的建议。 我读完很受启发，决定做一点摘录。你可以先读下面的精简版，再去读全文。 =============================== 七个对我最好的职业建议（精简版） 作者：Nicholas C. Zakas 译者</description>
+    </item>
+    
+    <item>
+      <title>[转]做技术的你，如果别人找你创业，该怎么办?</title>
+      <link>https://cppfans.org/1993.html</link>
+      <pubDate>Mon, 07 Sep 2015 12:35:46 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1993.html</guid>
+      <description>&lt;p&gt;&lt;span style=&#34;color: #ff6600; background-color: #ccffcc;&#34;&gt;这个文章总结的简直不能再赞了，所有点基本都说到了。&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;转载自：&lt;a href=&#34;http://blog.eood.cn/business-plan&#34;&gt;http://blog.eood.cn/business-plan&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>[转载]理解云计算：SaaS、PaaS与IaaS</title>
+      <link>https://cppfans.org/1840.html</link>
+      <pubDate>Sat, 28 Feb 2015 07:59:48 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1840.html</guid>
+      <description>作为一个广义的术语，云计算描述了一种范围广泛的服务。许多IT厂商都抓住了“云”这个概念，并将其作为产品的一种通用技术。对于公司而言，为了真正了解并利用云计算的价值，首先要了解什么是云计算，及其不同的组成部分。由于云服务是一个广泛的服务集合，因此用户可以选择何时、何地以及如何使用云</description>
+    </item>
+    
+    <item>
+      <title>[转]程序员真正的价值</title>
+      <link>https://cppfans.org/1744.html</link>
+      <pubDate>Fri, 14 Nov 2014 02:14:28 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1744.html</guid>
+      <description>看到这篇文章有一些感触，所以就转过来了。虽然我也不是什么大牛，但是文章中提到的情况也遇到过，各位共勉吧。 &amp;nbsp; -&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash;-&amp;ndash</description>
+    </item>
+    
+    <item>
+      <title>[转]22条日常技巧助程序员提高工作效率、节约时间</title>
+      <link>https://cppfans.org/1737.html</link>
+      <pubDate>Tue, 28 Oct 2014 02:00:21 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1737.html</guid>
+      <description>我一直在测试和调整各种生产效率的技术，在过去的五年中，阅读了大量的书籍（其中大多数是重复的） ，这里是我的一些结论： 这不是一个关于时间的问题，而是关于精力。 为了“有效率”，我们试图在一个工作日内塞进尽可能多的小时，但最终一切都更多地取决于你的注意力，积极性和良好状态（这些都是直接与</description>
+    </item>
+    
+    <item>
+      <title>[转]国外程序员推荐：每个程序员都应该读的非编程书</title>
+      <link>https://cppfans.org/1684.html</link>
+      <pubDate>Wed, 16 Jul 2014 01:37:49 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1684.html</guid>
+      <description>五年前有网友在 Stackoverflow 发帖提问：『程序员应该读哪些非编程方面的书？』。有很多程序员响应，他们在推荐的同时也写下了自己的评语。本文摘编其中 29 本书，下面就按照各书的推荐数排列。另外，本月初我们在伯乐头条也发起了相同的讨论帖《你最喜欢的非编程书是哪一本？》，已有很多的朋友推荐了他们喜欢的书。</description>
+    </item>
+    
+    <item>
+      <title>[转载]PM和程序员（RD）的相处之道－－写给那些血气方刚的产品经理（PM）</title>
+      <link>https://cppfans.org/1645.html</link>
+      <pubDate>Sat, 17 May 2014 09:17:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1645.html</guid>
+      <description>写在前面： 虽然我是程序猿，不是PM，但觉得这篇文章讲的思维方式比较好，适合团队内沟通，所以转了过来。 &amp;nbsp; 转载正文：最近有位刚做 PM（产品经理）的小伙跑来跟我控诉，说公司技术部的 RD 们（程序员）个个不给力。需求过了千百遍还是理解错，或者就是简单回一句“做不了”，表情如死灰。这位 PM 血气方</description>
+    </item>
+    
+    <item>
+      <title>[转载]想提升工作效率，就別再做这七件事</title>
+      <link>https://cppfans.org/1644.html</link>
+      <pubDate>Tue, 13 May 2014 02:56:17 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1644.html</guid>
+      <description>原文出处： medium 译文出处： inside - elaine。 试想一位小公司老板每日孜孜不倦地工作，为何不能从为数众多的竞争者脱颖而出？ 一位创业家可以不眠不休一天工作24 小时，整整一周不休假。 然而，时间有限，且竞争者却永远可以投入更多钱与心力，让竞争更剧烈。 那么，为什么某些小型新创公司可以完成许多大型</description>
+    </item>
+    
+    <item>
+      <title>[转]想要不加班，就先丢掉这7样东西...</title>
+      <link>https://cppfans.org/1627.html</link>
+      <pubDate>Tue, 11 Mar 2014 12:36:13 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1627.html</guid>
+      <description>via: http://www.aow.me/jian-shao-gong-zuo-jian-dan-gong-zuo/ 如果你的工作似乎总是做不完，每天都要加班，即使到了周末，也不能休息，还要拖着疲惫的身体继续去公司上班，你就需要停下来好好地思考自己的工作方法是否出了错误？连续加班，不仅工作效率低下，而且长期的疲累加班会影响身体健康，甚至因为工作压力，有性命之忧。 作为职场工作的上班族，工作的第</description>
+    </item>
+    
+    <item>
+      <title>回复某在校学生的邮件问题</title>
+      <link>https://cppfans.org/1618.html</link>
+      <pubDate>Sat, 15 Feb 2014 09:55:06 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1618.html</guid>
+      <description>原邮件如下： eliteYang: 您好. 我是一名软件工程专业的大学生,我们一门课的期末作业要求是访谈一位已经从业的前辈.我个人也是非常喜欢C++,当老师留这个作业的时候我就想到了博主.希望博主能在百忙之中能抽出一点时间,简短的回答一下问题,不必要太专业和复杂. 1.访谈对象的个人信息:称呼;毕业大学;</description>
+    </item>
+    
+    <item>
+      <title>[转]C&#43;&#43;强大背后</title>
+      <link>https://cppfans.org/1557.html</link>
+      <pubDate>Wed, 22 Jan 2014 05:00:05 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1557.html</guid>
+      <description>在31年前(1979年)，一名刚获得博士学位的研究员，为了开发一个软件项目发明了一门新编程语言，该研究员名为Bjarne Stroustrup，该门语言则命名为——C with classes，四年后改称为C++。C++是一门通用编程语言，支持多种编程范式，包括过程式、面向对象(object</description>
+    </item>
+    
+    <item>
+      <title>[转]被诅咒的程序员的七宗罪</title>
+      <link>https://cppfans.org/1546.html</link>
+      <pubDate>Tue, 24 Dec 2013 02:41:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1546.html</guid>
+      <description>七宗罪（Seven deadly sins），13世纪道明会神父圣多玛斯·阿奎纳列举出各种恶行的表现。这些恶行最初是由希腊神学修道士庞义伐草撰出8种损害个人灵性的恶行，分别是贪食、色欲、贪婪、暴怒、懒惰、伤悲、自负及傲慢。 程序员生来不平等。有的伟大。有的渴望伟大。有的就是废物。 下面是一些程序员</description>
+    </item>
+    
+    <item>
+      <title>字库识别网站——求字体网</title>
+      <link>https://cppfans.org/1537.html</link>
+      <pubDate>Wed, 11 Dec 2013 05:43:16 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1537.html</guid>
+      <description>看到别人网站上的一些字体比较好看，却苦于不知道是什么字体，搜索来到了求字体网站，网站的功能很简单，上传图片分析字体，并且提供输入字体名预览的功能。 上传了字体图片之后，发现识别出来了，并且非常准确，就是博客logo的字体，是方正正准黑简体，识别结果还是非常满意的。 大家如果有什么觉得</description>
+    </item>
+    
+    <item>
+      <title>[转]告诉你How To一眼认出英语单词的意思</title>
+      <link>https://cppfans.org/1515.html</link>
+      <pubDate>Sat, 16 Nov 2013 15:14:12 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1515.html</guid>
+      <description>via:http://blog.30c.org/2800.html 请大家想一想，英语是谁发明的？英国人呗！英国人认不认识汉语？不认识！那么英国人在学英语单词的时候需不需要记住单词的汉语意思？不需要，英国人的英语课本里根本就没有汉字，何谈记住单词的汉语意思？那么既然英国人学英语不需要记住(甚至根本就见不到)单词的汉语意思，那么中国人学英语为什么</description>
+    </item>
+    
+    <item>
+      <title>谈谈当今的游戏行业(1)——是否端游已死，页游将死？</title>
+      <link>https://cppfans.org/1471.html</link>
+      <pubDate>Wed, 10 Jul 2013 15:31:50 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1471.html</guid>
+      <description>本系列文章可能有好几篇，现在暂时不能确定具体数量。这种发表观点类型的文章本来应该应该用微信来发布的，不过微信我还在申请公众平台审核，而且那公众平台我才刚开始看了下，还没深入了解，所以就先写在博客上了。 &amp;nbsp; 本文中心：是否端游已死，页游将死？ &amp;nbsp; 过完年回来，听到最多的就是端游市场已经不行</description>
+    </item>
+    
+    <item>
+      <title>我也来说说扁平化设计</title>
+      <link>https://cppfans.org/1488.html</link>
+      <pubDate>Mon, 01 Jul 2013 14:23:42 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1488.html</guid>
+      <description>最近由于iOS7 beta版本的推出，导致了扁平化设计又被推上了一个热潮，所以我也凑个热闹，随便说一说。 到底什么是扁平化设计呢？ 扁平化完全属于二次元，这个概念最核心的地方就是放弃一切装饰效果，诸如阴影，透视，纹理，渐变等等能做出3D效果的元素一概不用。所有的元素的边界都干净利落，没</description>
+    </item>
+    
+    <item>
+      <title>谈谈程序员行业的“文人相轻”以及沟通问题</title>
+      <link>https://cppfans.org/1472.html</link>
+      <pubDate>Mon, 27 May 2013 17:05:33 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1472.html</guid>
+      <description>很早以前就想写这篇文章了，不过却因自己经验甚浅，不敢妄言，虽然现在写也可能引起一些争论，还是请大家平和的去看这篇文章。 自古以来便有文人相轻，这句话来自三国·魏·曹丕《典论·论文》,原文与译文如下： 原 文 文人相轻，自古而然。傅毅之于班固，伯仲之间耳，而固小之，与弟超书曰：“武仲以能属</description>
+    </item>
+    
+    <item>
+      <title>[转载]我眼中的技术高手 - lifesinger</title>
+      <link>https://cppfans.org/1467.html</link>
+      <pubDate>Wed, 20 Mar 2013 14:59:28 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1467.html</guid>
+      <description>今天发了一条微博： 会原生 JavaScript 不代表什么，懂 jQuery、YUI 等才真正好。怎么这么多人有原生主义情结呢？走出那点小天地，海阔天高。 很多人已经猜出，这是为了晚上的文章而发，提前收集大家的想法。这个话题，很早就想谈，肯定会引起口水仗，但有些事不辩不明，不理不清，与其和谐社会，不如辛亥革</description>
+    </item>
+    
+    <item>
+      <title>坚持写博客，即使你不擅长</title>
+      <link>https://cppfans.org/1387.html</link>
+      <pubDate>Tue, 23 Oct 2012 14:01:06 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1387.html</guid>
+      <description>前几天看到了伯乐在线翻译的《开发者拒绝写技术博客的常见理由》，里面列举了一些开发者不愿意写博客的原因。 1.我不是这方面的专家，我写的东西不权威 2.我不擅长写作 3.如果我出错了，岂不是在整个互联网上丢人了 4.我不知道写哪个人群适合看的文章 这位叫Major Hayden的Linux工程</description>
+    </item>
+    
+    <item>
+      <title>浅谈国产游戏业的问题——到底是谁玩了谁？</title>
+      <link>https://cppfans.org/1342.html</link>
+      <pubDate>Sun, 15 Jul 2012 14:29:32 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1342.html</guid>
+      <description>最近由于项目内的一些策划内容的调整，导致玩家大面积流失，针对最近的这些问题，思考了一下国内现在游戏行业存在的弊端，大家就当一篇杂谈，看看就好，万不可较真。 1.致力于圈钱国的内中小型游戏公司，甚至是大公司。 现在整个国情都浮躁起来了，所有的公司都想赚快钱，每周甚至每天都有各种花样的礼</description>
+    </item>
+    
+    <item>
+      <title>关于11.21博客访问异常的说明</title>
+      <link>https://cppfans.org/1011.html</link>
+      <pubDate>Mon, 21 Nov 2011 15:21:19 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1011.html</guid>
+      <description>今天打开博客发现速度很慢，而且有几率打不开，ping了一下发现丢包很严重，与IDC说了下，原来是37段内的主机均出现大量丢包的问题，估计是出现了些什么问题吧，而在我发文之前已经修好了，他们的速度还是很犀利的，谢谢主机商的快捷服务。 在此对今天的情况对大家说声道歉，今天一天都在公司忙</description>
+    </item>
+    
+  </channel>
+</rss>

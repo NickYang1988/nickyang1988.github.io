@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>breakpad on C&#43;&#43;爱好者博客</title>
+    <link>https://cppfans.org/tags/breakpad/</link>
+    <description>Recent content in breakpad on C&#43;&#43;爱好者博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Mon, 29 Sep 2014 06:23:27 +0000</lastBuildDate>
+    
+	<atom:link href="https://cppfans.org/tags/breakpad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>google-breakpad在C&#43;&#43; 11下编译错误修改</title>
+      <link>https://cppfans.org/1730.html</link>
+      <pubDate>Mon, 29 Sep 2014 06:23:27 +0000</pubDate>
+      
+      <guid>https://cppfans.org/1730.html</guid>
+      <description>我只用到了exception_handler模块，暂时还未用到Server模块，因为用到了C++ 11的一些特性，而google-breadpad还没有C++11版本，所以做了一些修改，集中在类型定义处 1. typedef typeof(((struct user*) 0)-&amp;gt;u_debugreg[0]) debugreg_t; 修改为 #if __cplusplus &amp;gt; 199711L&amp;lt;br /&amp;gt; typedef std::remove_reference&amp;lt;decltype(((struct user*) 0)-&amp;gt;u_debugreg[0])&amp;gt;::type debugreg_t;&amp;lt;br /&amp;gt; #else&amp;lt;br /&amp;gt; typedef typeof(((struct user*) 0)-&amp;gt;u_debugreg[0]) debugreg_t;&amp;lt;br /&amp;gt; #endif &amp;nbsp; 2. typedef typeof(((elf_aux_entry*) 0)-&amp;gt;a_un.a_val) elf_aux_val_t; 修改为 #if __cplusplus</description>
+    </item>
+    
+  </channel>
+</rss>
